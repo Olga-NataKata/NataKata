@@ -45,11 +45,18 @@
             "color": "--color-heading",
             "text_size": "h5"
           }
+        },
+        "icon_x8FNpQ": {
+          "type": "icon",
+          "settings": {
+            "image_width": 10
+          }
         }
       },
       "block_order": [
         "heading_n8BktR",
-        "heading_U9yDMG"
+        "heading_U9yDMG",
+        "icon_x8FNpQ"
       ],
       "settings": {
         "color_scheme": "scheme-3",
