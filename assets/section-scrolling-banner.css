@@ -71,7 +71,6 @@ color: rgba(var(--color-button), var(--bg-opacity));
 	.scroller-item img,
 	.scroller-item svg {
 		width: fit-content;
-		max-width: 7rem;
 		height: auto;
 	}
 }
