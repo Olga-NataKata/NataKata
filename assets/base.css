@@ -3595,3 +3595,12 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+/* transparent header start */
+
+:is(.header-transparent, .header--transparent) .search__input,
+:is(.header-transparent, .header--transparent) .search-modal {
+  background: transparent;
+}
+
+/* transparent header end */
