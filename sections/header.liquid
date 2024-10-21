@@ -11,6 +11,26 @@
   <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
+{%- liquid
+  for block in section.blocks
+    if block.type == '@app'
+      assign has_app_block = true
+    endif
+  endfor
+
+	assign transparent_header = false
+	assign pages_transparent_header = section.blocks | where: 'type', 'pages_transparent_header' | first
+	assign transparent_header_scheme = pages_transparent_header.settings.color_scheme
+
+	if pages_transparent_header and pages_transparent_header.settings.pages != blank and section.settings.sticky_header_type != 'none' 
+		for link in pages_transparent_header.settings.pages.links
+			if link.active 
+				assign transparent_header = true
+			endif
+		endfor
+	endif
+-%}
+
 
 <style>
   header-drawer {
@@ -94,30 +114,57 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+	{% if transparent_header %}
+		{% for scheme in settings.color_schemes -%}
+			{% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
+			{% if transparent_header_scheme.id == scheme.id %}
+				.transparent-header-scheme:not(.sticky),
+				.transparent-header-scheme.header-at-top {
+          --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        {% if scheme.settings.background_gradient != empty %}
+          --gradient-background: {{ scheme.settings.background_gradient }};
+        {% else %}
+          --gradient-background: {{ scheme.settings.background }};
+        {% endif %}
+
+        {% liquid
+          assign background_color = scheme.settings.background
+          assign background_color_brightness = background_color | color_brightness
+          if background_color_brightness <= 26
+            assign background_color_contrast = background_color | color_lighten: 50
+          elsif background_color_brightness <= 65
+            assign background_color_contrast = background_color | color_lighten: 5
+          else
+            assign background_color_contrast = background_color | color_darken: 25
+          endif
+        %}
+
+        --color-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+        --color-background-contrast: {{ background_color_contrast.red }},{{ background_color_contrast.green }},{{ background_color_contrast.blue }};
+        --color-shadow: {{ scheme.settings.shadow.red }},{{ scheme.settings.shadow.green }},{{ scheme.settings.shadow.blue }};
+        --color-button: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
+        --color-button-text: {{ scheme.settings.button_label.red }},{{ scheme.settings.button_label.green }},{{ scheme.settings.button_label.blue }};
+        --color-secondary-button: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        --color-secondary-button-text: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
+        --color-link: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
+        --color-badge-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+        --color-badge-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        --color-badge-border: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+        --payment-terms-background-color: rgb({{ scheme.settings.background.rgb }});
+				}
+			{% endif %}	
+		{% endfor %}
+			
+		.header-wrapper.transparent-header-scheme.header-at-top  {
+			background: transparent;
+		}
+	{% endif %}
 {%- endstyle -%}
 
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
 
-{%- liquid
-  for block in section.blocks
-    if block.type == '@app'
-      assign has_app_block = true
-    endif
-  endfor
 
-	assign transparent_header = false
-	assign pages_transparent_header = section.blocks | where: 'type', 'pages_transparent_header' | first
-
-	if pages_transparent_header and pages_transparent_header.settings.pages != blank and section.settings.sticky_header_type != 'none' 
-		for link in pages_transparent_header.settings.pages.links
-			if link.active 
-				assign transparent_header = true
-			endif
-		endfor
-	endif
--%}
-
-<{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %} {% if transparent_header == true %} header-transparent {% endif %} header-at-top">
+<{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %} {% if transparent_header == true %} header-transparent transparent-header-scheme {% endif %} header-at-top">
   {%- liquid
     assign social_links = false
     assign localization_forms = false
@@ -146,21 +193,41 @@
         <h1 class="header__heading">
       {%- endif -%}
           <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-            {%- if settings.logo != blank -%}
-              <div class="header__heading-logo-wrapper">
-                {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
-                {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
-                {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
-                {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-                {{ settings.logo | image_url: width: 600 | image_tag:
-                  class: 'header__heading-logo motion-reduce',
-                  widths: widths,
-                  height: logo_height,
-                  width: settings.logo_width,
-                  alt: logo_alt,
-                  sizes: sizes,
-                  preload: true
-                }}
+            {%- if settings.logo != blank or settings.logo_transparent != blank and transparent_header -%}
+              <div class="header__heading-logo-wrapper {% if settings.logo_transparent != blank %} has-transparent-logo{%  endif %}">
+
+								{%  if settings.logo != blank  %}
+									{%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+									{%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+									{% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
+									{% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+									{{ settings.logo | image_url: width: 600 | image_tag:
+										class: 'header__heading-logo header__heading-logo--default motion-reduce',
+										widths: widths,
+										height: logo_height,
+										width: settings.logo_width,
+										alt: logo_alt,
+										sizes: sizes,
+										preload: true
+									}}
+								{% endif %}
+
+								{%  if settings.logo_transparent != blank and transparent_header %}
+									
+									{%- assign logo_alt = settings.logo_transparent.alt | default: shop.name | escape -%}
+									{%- assign logo_height = settings.logo_width | divided_by: settings.logo_transparent.aspect_ratio -%}
+									{% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
+									{% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+									{{ settings.logo_transparent | image_url: width: 600 | image_tag:
+										class: 'header__heading-logo header__heading-logo--transparent motion-reduce',
+										widths: widths,
+										height: logo_height,
+										width: settings.logo_width,
+										alt: logo_alt,
+										sizes: sizes,
+										preload: true
+									}}								
+								{% endif %}
               </div>
             {%- else -%}
               <span class="h2">{{ shop.name }}</span>
@@ -697,6 +764,12 @@
 			"type": "pages_transparent_header",
 			"name": "Transparen header pages",
 			"settings": [
+				{
+					"type": "color_scheme",
+					"id": "color_scheme",
+					"label": "t:sections.all.colors.label",
+					"default": "scheme-2"
+				},
 				{
 					"type": "link_list",
 					"id": "pages",

@@ -3597,8 +3597,16 @@ details-disclosure > details {
 }
 
 /* transparent header start */
+.header-wrapper.transparent-header-scheme.header-at-top  {
+	background: transparent;
+}
 
-.js .header-transparent[data-sticky-type='on-scroll-up']:not(.sticky),
+.header-wrapper:not(.header-at-top):not(.sticky) .has-transparent-logo .header__heading-logo--transparent,
+.header-transparent.header-at-top .has-transparent-logo .header__heading-logo--default {
+	display: none;
+}
+
+.js .header-transparent:not(.sticky),
 .js .header-transparent.header-at-top {
   background: transparent;
 }
