@@ -104,9 +104,20 @@
       assign has_app_block = true
     endif
   endfor
+
+	assign transparent_header = false
+	assign pages_transparent_header = section.blocks | where: 'type', 'pages_transparent_header' | first
+
+	if pages_transparent_header and pages_transparent_header.settings.pages != blank and section.settings.sticky_header_type != 'none' 
+		for link in pages_transparent_header.settings.pages.links
+			if link.active 
+				assign transparent_header = true
+			endif
+		endfor
+	endif
 -%}
 
-<{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
+<{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %} {% if transparent_header == true %} header-transparent {% endif %} header-at-top">
   {%- liquid
     assign social_links = false
     assign localization_forms = false
@@ -119,7 +130,7 @@
       assign localization_forms = true
     endif
   -%}
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
+  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %} {% if transparent_header == true %} header--transparent {% endif %}">
     {%- liquid
       if section.settings.menu != blank
         render 'header-drawer'
