@@ -26,9 +26,35 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "scrolling_banner_ycLY4R": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "heading_n8BktR": {
+          "type": "heading",
+          "settings": {
+            "text": "Add campaign or promotional text here",
+            "color": "--color-heading",
+            "text_size": "h5"
+          }
+        }
+      },
+      "block_order": [
+        "heading_n8BktR"
+      ],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "scroll_speed": 45,
+        "scroll_direction": "left",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_top_mb": 10,
+        "padding_bottom_mb": 10
+      }
     }
   },
   "order": [
-    "book_slideshow_6hMAUj"
+    "book_slideshow_6hMAUj",
+    "scrolling_banner_ycLY4R"
   ]
 }
