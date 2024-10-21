@@ -13,6 +13,17 @@
   "sections": {
     "header": {
       "type": "header",
+      "blocks": {
+        "pages_transparent_header_dyhR3w": {
+          "type": "pages_transparent_header",
+          "settings": {
+            "pages": "transparent-header"
+          }
+        }
+      },
+      "block_order": [
+        "pages_transparent_header_dyhR3w"
+      ],
       "settings": {
         "logo_position": "top-center",
         "menu": "main-menu",
