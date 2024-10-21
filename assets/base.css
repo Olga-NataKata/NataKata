@@ -3602,7 +3602,7 @@ details-disclosure > details {
 }
 
 .shopify-section-header-hidden .header-wrapper:not(.header-at-top) .has-transparent-logo .header__heading-logo--transparent,
-.header-transparent.header-at-top .has-transparent-logo .header__heading-logo--default {
+:not(.shopify-section-header-hidden) .header-transparent.header-at-top .has-transparent-logo .header__heading-logo--default {
 	display: none;
 }
 
