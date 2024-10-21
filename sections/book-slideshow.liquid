@@ -156,62 +156,77 @@
 
     
 <script defer>
-      let pages_count = document.querySelectorAll(".page").length;
-      if (pages_count % 2 !== 0) {
-        const lastPage = document.querySelector(".page:last-child");
-        const newPage = lastPage.cloneNode(true);
-        newPage.classList.add("hard");
-        newPage.style.background =
-          "#c0392b url('https://cdn.shopify.com/s/files/1/0669/3670/1123/files/3.webp?v=1729489868') no-repeat center/cover";
-        newPage.style.color = "#fff";
-        newPage.style.fontWeight = "bold";
-        newPage.innerHTML = "Thank You for visiting <small>~ NataKuku</small>";
-        document.querySelector(".flipbook").appendChild(newPage);
-      }
-      // Initialize the flipbook
-      $(".flipbook").turn();
+      document.addEventListener("DOMContentLoaded", function () {
+        let pages_count = document.querySelectorAll(".page").length;
 
-      // Get the video element
-      const videos = document.querySelectorAll(".BookVideo");
-
-      // Add click event listener to each video
-      videos.forEach((video) => {
-        video.addEventListener("pause", () => {
-          video.play();
-        });
-        video.addEventListener("ended", () => {
-          video.play();
-        })
-      });
-
-
-      // Add random dot functionality
-      const dots = document.querySelectorAll(".dot-link");
-      dots.forEach((dot) => {
-        const image = dot.previousElementSibling; // Select the img element before the dot
-
-        const imageWidth = image.offsetWidth;
-        const imageHeight = image.offsetHeight;
-
-        let randomX, randomY;
-
-        if (window.innerWidth < 768) {
-          // Generate random positions for the dot within the image boundaries (tablet)
-          randomX = Math.floor(Math.random() * (imageWidth - 50)) + 125;
-          randomY = Math.floor(Math.random() * (imageHeight - 50)) + 125;
-        } else if (window.innerWidth < 480) {
-          // Generate random positions for the dot within the image boundaries (mobile)
-          randomX = Math.floor(Math.random() * (imageWidth - 50)) + 75;
-          randomY = Math.floor(Math.random() * (imageHeight - 50)) + 75;
-        } else {
-          // Generate random positions for the dot within the image boundaries (desktop)
-          randomX = Math.floor(Math.random() * (imageWidth - 10)) + 250;
-          randomY = Math.floor(Math.random() * (imageHeight - 10)) + 250;
+        // Add a blank last page if the number of pages is odd
+        if (pages_count % 2 !== 0) {
+          const lastPage = document.querySelector(".page:last-child");
+          const newPage = lastPage.cloneNode(true);
+          newPage.classList.add("hard");
+          newPage.style.background =
+            "#c0392b url('../images/3.webp') no-repeat center/cover";
+          newPage.style.color = "#fff";
+          newPage.style.fontWeight = "bold";
+          newPage.innerHTML =
+            "Thank You for visiting <small>~ NataKuku</small>";
+          document.querySelector(".flipbook").appendChild(newPage);
         }
 
-        // Set the position of the dot
-        dot.style.left = `${randomX}px`;
-        dot.style.top = `${randomY}px`;
+        // Initialize the flipbook
+        $(".flipbook").turn();
+
+        // Add page flip event listener to handle videos dynamically
+        $(".flipbook").on("turning", function (event, page, view) {
+          const visiblePages = $(this).turn("view");
+          console.log("Visible Pages:", visiblePages);
+
+          // Play all videos initially
+          const allVideos = document.querySelectorAll(".BookVideo");
+          allVideos.forEach((video) => {
+            console.log(video);
+            if (video.paused) {
+              console.log(video.paused);
+              video.play();
+            }
+          });
+        });
+
+        // Ensure videos loop when they end
+        const videos = document.querySelectorAll(".BookVideo");
+        videos.forEach((video) => {
+          video.addEventListener("ended", () => {
+            video.play(); // Replay the video once it ends
+          });
+        });
+
+        // Random dot positioning logic
+        const dots = document.querySelectorAll(".dot-link");
+        dots.forEach((dot) => {
+          const image = dot.previousElementSibling; // Select the img element before the dot
+          const imageWidth = image.offsetWidth;
+          const imageHeight = image.offsetHeight;
+
+          let randomX, randomY;
+
+          if (window.innerWidth < 768) {
+            // Generate random positions for the dot within the image boundaries (tablet)
+            randomX = Math.floor(Math.random() * (imageWidth - 50)) + 125;
+            randomY = Math.floor(Math.random() * (imageHeight - 50)) + 125;
+          } else if (window.innerWidth < 480) {
+            // Generate random positions for the dot within the image boundaries (mobile)
+            randomX = Math.floor(Math.random() * (imageWidth - 50)) + 75;
+            randomY = Math.floor(Math.random() * (imageHeight - 50)) + 75;
+          } else {
+            // Generate random positions for the dot within the image boundaries (desktop)
+            randomX = Math.floor(Math.random() * (imageWidth - 10)) + 250;
+            randomY = Math.floor(Math.random() * (imageHeight - 10)) + 250;
+          }
+
+          // Set the position of the dot
+          dot.style.left = `${randomX}px`;
+          dot.style.top = `${randomY}px`;
+        });
       });
     </script>
 
