@@ -286,6 +286,8 @@
   {%- render 'cart-notification', color_scheme: section.settings.color_scheme, desktop_menu_type: section.settings.menu_type_desktop -%}
 {%- endif -%}
 
+{% comment %} <script src="{{ 'header.js' | asset_url }}"></script> {% endcomment %}
+
 {% javascript %}
   class StickyHeader extends HTMLElement {
     constructor() {
@@ -296,8 +298,24 @@
       this.header = document.querySelector('.section-header');
       this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' || this.getAttribute('data-sticky-type') === 'reduce-logo-size';
       this.headerBounds = {};
+			this.headerTransparent = this.header.querySelector('.header-transparent');
 
       this.setHeaderHeight();
+
+			if(this.headerTransparent){
+				const setTopPosition = () => { 
+					this.headerTopPosition = this.header.offsetHeight;
+					this.header.style.marginBottom = `-${this.header.offsetHeight}px`;
+				}
+
+				setTopPosition();
+
+				let resizeTimeout;
+				window.addEventListener('resize', () => {
+					clearTimeout(resizeTimeout);
+					resizeTimeout = setTimeout(setTopPosition, 60);
+				});
+      } 
 
       window.matchMedia('(max-width: 990px)').addEventListener('change', this.setHeaderHeight.bind(this));
 
@@ -315,15 +333,31 @@
       this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
       window.addEventListener('scroll', this.onScrollHandler, false);
 
+      this.onScroll();
       this.createObserver();
     }
 
     setHeaderHeight() {
-      document.documentElement.style.setProperty('--header-height', `${this.header.offsetHeight}px`);
+			const updateHeaderHeight = () => {
+				document.documentElement.style.setProperty('--header-height', `${this.header.offsetHeight}px`);
+			};
+
+			updateHeaderHeight();
+
+			let resizeTimeout;
+
+			const onResize = () => {
+					clearTimeout(resizeTimeout);
+					resizeTimeout = setTimeout(updateHeaderHeight, 60);
+			};
+
+			window.addEventListener('resize', onResize);
+			window.addEventListener('orientationchange', onResize);
     }
 
     disconnectedCallback() {
       this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+			this.headerTransparent.classList.remove('header-transparent');
       window.removeEventListener('scroll', this.onScrollHandler);
     }
 
@@ -359,9 +393,16 @@
           requestAnimationFrame(this.hide.bind(this));
         }
       } else if (scrollTop <= this.headerBounds.top) {
+				this.classList.remove('sticky');			
         this.header.classList.remove('scrolled-past-header');
         requestAnimationFrame(this.reset.bind(this));
       }
+
+			if (scrollTop === 0 ) {
+				this.classList.add('header-at-top');
+			} else {
+				this.classList.remove('header-at-top');
+			}		
 
       this.currentScrollTop = scrollTop;
     }
@@ -376,6 +417,7 @@
     reveal() {
       if (this.headerIsAlwaysSticky) return;
       this.header.classList.add('shopify-section-header-sticky', 'animate');
+			this.classList.add('sticky');		
       this.header.classList.remove('shopify-section-header-hidden');
     }
 
@@ -638,7 +680,19 @@
   "blocks": [
     {
       "type": "@app"
-    }
+    },
+		{
+			"type": "pages_transparent_header",
+			"name": "Transparen header pages",
+			"settings": [
+				{
+					"type": "link_list",
+					"id": "pages",
+					"label": "Pages",
+					"info": "Add pages where should be a transparen header. Works with sticky header."
+				}
+			]
+		}
   ]
 }
 {% endschema %}
