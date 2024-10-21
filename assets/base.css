@@ -3597,9 +3597,18 @@ details-disclosure > details {
 }
 
 /* transparent header start */
+.header-wrapper.transparent-header-scheme.header-at-top  {
+	background: transparent;
+}
 
-:is(.header-transparent, .header--transparent) .search__input,
-:is(.header-transparent, .header--transparent) .search-modal {
+.section-header:not(.scrolled-past-header) .header-transparent .has-transparent-logo .header__heading-logo--default,
+.section-header.scrolled-past-header .header-wrapper:not(.header-at-top) .has-transparent-logo .header__heading-logo--transparent,
+.shopify-section-header-hidden .header-wrapper:not(.header-at-top) .has-transparent-logo .header__heading-logo--transparent {
+	display: none;
+}
+
+.js .header-transparent:not(.sticky),
+.js .header-transparent.header-at-top {
   background: transparent;
 }
 

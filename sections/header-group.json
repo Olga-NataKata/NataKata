@@ -17,6 +17,7 @@
         "pages_transparent_header_dyhR3w": {
           "type": "pages_transparent_header",
           "settings": {
+            "color_scheme": "scheme-4",
             "pages": "transparent-header"
           }
         }
