@@ -3598,11 +3598,6 @@ details-disclosure > details {
 
 /* transparent header start */
 
-:is(.header-transparent, .header--transparent) .search__input,
-:is(.header-transparent, .header--transparent) .search-modal {
-  background: transparent;
-}
-
 .js .header-transparent[data-sticky-type='on-scroll-up']:not(.sticky),
 .js .header-transparent.header-at-top {
   background: transparent;
