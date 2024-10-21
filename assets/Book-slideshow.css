@@ -80,7 +80,7 @@
   border-radius: 50%;
   text-decoration: none;
   pointer-events: auto;
-  opacity: 0; /* Initially invisible */
+
   animation: pulse 500ms infinite;
   transition: opacity 0.5s ease; /* Smooth fade-in/out transition */
 }
@@ -93,11 +93,6 @@
     box-shadow: 0 0 0 5px white;
     opacity: 0;
   }
-}
-
-/* Smoothly show the dot when hovering over the image */
-.page:hover .dot-link {
-  opacity: 1; /* Fade in */
 }
 
 /* Description box styling with smooth fade-in/fade-out */
