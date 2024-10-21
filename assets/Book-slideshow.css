@@ -14,11 +14,13 @@
 
 .flipbook {
   width: 1200px;
-  height: 600px;
+  height: 1000px;
 }
 
 .flipbook .hard {
-  background: #c0392b url("https://cdn.shopify.com/s/files/1/0669/3670/1123/files/pexels-wesleydavi-3622624.jpg?v=1729489701") no-repeat center/cover !important;
+  background: #c0392b
+    url("https://cdn.shopify.com/s/files/1/0669/3670/1123/files/pexels-wesleydavi-3622624.jpg?v=1729489701")
+    no-repeat center/cover !important;
   color: #fff;
   font-weight: bold;
 }
