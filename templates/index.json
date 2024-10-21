@@ -33,14 +33,23 @@
         "heading_n8BktR": {
           "type": "heading",
           "settings": {
-            "text": "Add campaign or promotional text here",
+            "text": "NATA KUKU",
+            "color": "--color-heading",
+            "text_size": "h5"
+          }
+        },
+        "heading_U9yDMG": {
+          "type": "heading",
+          "settings": {
+            "text": "NEW COLLECTION",
             "color": "--color-heading",
             "text_size": "h5"
           }
         }
       },
       "block_order": [
-        "heading_n8BktR"
+        "heading_n8BktR",
+        "heading_U9yDMG"
       ],
       "settings": {
         "color_scheme": "scheme-3",
