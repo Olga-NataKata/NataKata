@@ -165,7 +165,7 @@
           const newPage = lastPage.cloneNode(true);
           newPage.classList.add("hard");
           newPage.style.background =
-            "#c0392b url('https://cdn.shopify.com/s/files/1/0669/3670/1123/files/3.webp?v=1729489868') no-repeat center/cover";
+            "#c0392b url('../images/3.webp') no-repeat center/cover";
           newPage.style.color = "#fff";
           newPage.style.fontWeight = "bold";
           newPage.innerHTML =
@@ -176,13 +176,7 @@
         // Initialize the flipbook
         $(".flipbook").turn();
 
-				// Add event listener to play the video again when it's paused
-				if (video) {
-					video.addEventListener("pause", function () {
-						video.currentTime = 0; // Reset the video to the start
-						video.play(); // Play the video again
-					});
-				}
+				
         // Add page flip event listener to handle videos dynamically
         $(".flipbook").on("turning", function (event, page, view) {
           const visiblePages = $(this).turn("view");
@@ -233,15 +227,9 @@
           // Set the position of the dot
           dot.style.left = `${randomX}px`;
           dot.style.top = `${randomY}px`;
-            //   dot calm animation
-
         });
       });
-      document.addEventListener('DOMContentLoaded', function() {
-        const elements = document.querySelectorAll('.dot-link, .description-box');
-        elements.forEach(function(element) {
-          const dotLink = element.querySelector('.dot-link');
-          const descriptionBox = element.querySelector('.description-box');
+
 
           // Show description box when mouse enters the dot-link
           dotLink.addEventListener('mouseenter', function() {
@@ -252,8 +240,7 @@
           dotLink.addEventListener('mouseleave', function() {
             descriptionBox.style.display = 'none';
           });
-        });
-      });
+
     </script>
 
 {% schema %}
