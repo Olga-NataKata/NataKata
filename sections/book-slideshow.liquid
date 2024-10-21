@@ -131,7 +131,7 @@
       <div>
         <video
           class="BookVideo"
-          src="videos/30e02f337fa44d71cd7aec3827594490_1729110255622.mp4"
+          src="https://cdn.shopify.com/videos/c/o/v/9bc4266139e4411980f7c23c847ccb7b.mp4"
           style="pointer-events: none"
           controls
           autoplay
@@ -226,6 +226,25 @@
           // Set the position of the dot
           dot.style.left = `${randomX}px`;
           dot.style.top = `${randomY}px`;
+            //   dot calm animation
+
+        });
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('.dot-link, .description-box');
+        elements.forEach(function(element) {
+          const dotLink = element.querySelector('.dot-link');
+          const descriptionBox = element.querySelector('.description-box');
+
+          // Show description box when mouse enters the dot-link
+          dotLink.addEventListener('mouseenter', function() {
+            descriptionBox.style.display = 'block';
+          });
+
+          // Hide description box when mouse leaves the dot-link
+          dotLink.addEventListener('mouseleave', function() {
+            descriptionBox.style.display = 'none';
+          });
         });
       });
     </script>

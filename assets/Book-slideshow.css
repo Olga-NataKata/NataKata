@@ -14,7 +14,7 @@
 
 .flipbook {
   width: 1200px;
-  height: 1000px;
+  height: 800px;
 }
 
 .flipbook .hard {
@@ -80,7 +80,18 @@
   text-decoration: none;
   pointer-events: auto;
   opacity: 0; /* Initially invisible */
+  animation: pulse 500ms infinite;
   transition: opacity 0.5s ease; /* Smooth fade-in/out transition */
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 gray;
+  }
+  100% {
+    box-shadow: 0 0 0 5px white;
+    opacity: 0;
+  }
 }
 
 /* Smoothly show the dot when hovering over the image */
@@ -109,6 +120,7 @@
   width: 200px; /* Fixed width for the description box */
   white-space: normal;
   z-index: 10;
+  animation: fade-in 0.5s ease;
   transition: opacity 0.5s ease; /* Smooth fade-in/out */
 }
 
@@ -150,6 +162,12 @@
     width: 300px;
     height: 200px;
   }
+
+  .dot-link {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
 }
 
 /* Media query for tablets */
@@ -157,6 +175,11 @@
   .flipbook {
     width: 500px;
     height: 300px;
+  }
+  .dot-link {
+    width: 20px;
+    height: 20px;
+    display: block;
   }
 }
 
