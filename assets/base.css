@@ -3613,3 +3613,28 @@ details-disclosure > details {
 }
 
 /* transparent header end */
+
+.section-padding,
+.section-responsive-padding.page-width,
+.section-responsive-padding {
+  --_padding-top: var(--padding-top, 0);
+  --_padding-bottom: var(--padding-bottom, 0);
+  padding-top: var(--_padding-top);
+  padding-bottom: var(--_padding-bottom);
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+	.section-responsive-padding.page-width,
+	.section-responsive-padding {
+	padding-top: calc((var(--_padding-top) + var(--padding-top-mb)) / 2);		
+	padding-bottom: calc((var(--_padding-bottom) + var(--padding-bottom-mb)) / 2);
+  }
+}
+
+@media screen and (max-width: 749px) {
+	.section-responsive-padding.page-width,
+	.section-responsive-padding {
+    padding-top: var(--padding-top-mb);
+    padding-bottom: var(--padding-bottom-mb);
+  }
+}
