@@ -132,10 +132,12 @@
       // });
 
       // Add event listener to play the video again when it's paused
-      video.addEventListener("pause", function () {
-        video.currentTime = 0; // Reset the video to the start
-        video.play(); // Play the video again
-      });
+			if (video) {
+				video.addEventListener("pause", function () {
+					video.currentTime = 0; // Reset the video to the start
+					video.play(); // Play the video again
+				});
+			}
 
       // Add random dot functionality
       const dots = document.querySelectorAll(".dot-link");
