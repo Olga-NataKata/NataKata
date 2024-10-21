@@ -3601,7 +3601,7 @@ details-disclosure > details {
 	background: transparent;
 }
 
-.header-wrapper:not(.header-at-top):not(.sticky) .has-transparent-logo .header__heading-logo--transparent,
+.shopify-section-header-hidden .header-wrapper:not(.header-at-top) .has-transparent-logo .header__heading-logo--transparent,
 .header-transparent.header-at-top .has-transparent-logo .header__heading-logo--default {
 	display: none;
 }
