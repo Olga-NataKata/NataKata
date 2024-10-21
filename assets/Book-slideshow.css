@@ -6,7 +6,7 @@
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background-image: url("https://cdn.shopify.com/s/files/1/0669/3670/1123/files/background.svg?v=1729505044");
+  background-image: url("https://cdn.shopify.com/s/files/1/0669/3670/1123/files/3.webp?v=1729489868");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -50,7 +50,7 @@
 }
 
 .hard.page img {
-  max-width: 100%;
+  width: 200px;
   height: auto; /* Adjust height automatically to maintain aspect ratio */
   object-fit: cover;
   overflow: hidden;
