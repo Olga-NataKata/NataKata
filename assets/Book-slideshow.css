@@ -14,8 +14,8 @@
 
 .flipbook {
   width: 1200px;
-  height: 700px;
-  margin-top: 200px;
+  height: 600px;
+  margin-top: 150px;
 }
 
 .flipbook .hard {
@@ -81,16 +81,27 @@
   text-decoration: none;
   pointer-events: auto;
 
-  animation: pulse 500ms infinite;
   transition: opacity 0.5s ease; /* Smooth fade-in/out transition */
 }
 
+.dot-link:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: white; /* Dot color: white */
+  border-radius: 50%;
+  animation: pulse 1500ms infinite;
+}
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 gray;
   }
   100% {
-    box-shadow: 0 0 0 5px white;
+    box-shadow: 0 0 0 17px white;
     opacity: 0;
   }
 }
@@ -155,8 +166,8 @@
 /* Media query for mobile devices */
 @media (max-width: 480px) {
   .flipbook {
-    width: 300px;
-    height: 200px;
+    width: 90%;
+    height: 600px;
   }
 
   .dot-link {
@@ -170,8 +181,10 @@
 @media (min-width: 481px) and (max-width: 768px) {
   .flipbook {
     width: 500px;
-    height: 300px;
+    height: 600px;
+    margin-top: 100px;
   }
+
   .dot-link {
     width: 20px;
     height: 20px;

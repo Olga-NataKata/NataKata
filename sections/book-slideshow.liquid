@@ -174,7 +174,30 @@
         }
 
         // Initialize the flipbook
-        $(".flipbook").turn();
+        function getCornerSize() {
+          var screenWidth = $(window).width();
+
+          if (screenWidth < 768) {
+            // Mobile
+            return 2000;
+          } else if (screenWidth >= 768 && screenWidth <= 1024) {
+            // Tablet
+            return 400;
+          } else {
+            // PC
+            return 60;
+          }
+        }
+
+        // Initialize flipbook with dynamic cornerSize
+        $(".flipbook").turn({
+          cornerSize: getCornerSize(), // Set corner size based on device
+        });
+
+        // Adjust cornerSize on window resize
+        $(window).resize(function () {
+          $(".flipbook").turn("options", { cornerSize: getCornerSize() });
+        });
 
 				
         // Add page flip event listener to handle videos dynamically
