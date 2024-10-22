@@ -13,6 +13,34 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "link_list_QfQhHG": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
+        "link_list_E8zj8L": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
+        "link_list_wWVK6q": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_QfQhHG",
+        "link_list_E8zj8L",
+        "link_list_wWVK6q"
+      ],
       "settings": {
         "color_scheme": "scheme-3",
         "newsletter_enable": true,
