@@ -10,6 +10,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+	position: relative;
 }
 
 .flipbook {
@@ -202,11 +203,18 @@
     background-color: #333333;
   }
 
-	.book-flipbook__overlay {
+	.book-flipbook-body::before {
 		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-image: url("https://cdn.shopify.com/s/files/1/0669/3670/1123/files/pexels-rachel-claire-5864245.jpg?v=1729513551");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		position: relative;	
 		filter: blur(10px);
-		inset: 0;
 	}
+
 }
 
 /* Media query for tablets */
