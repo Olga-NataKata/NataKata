@@ -186,7 +186,7 @@
     z-index: 1;
   }
 
-  .slider-button {
+  .book-flipbook-body .slider-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #000000;
@@ -204,17 +204,17 @@
     background-color: #333333;
   }
 
-  .book-flipbook-body::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: url("https://cdn.shopify.com/s/files/1/0669/3670/1123/files/pexels-rachel-claire-5864245.jpg?v=1729513551");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(10px);
-  }
+	.book-flipbook-body::before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-image: url("https://cdn.shopify.com/s/files/1/0669/3670/1123/files/pexels-rachel-claire-5864245.jpg?v=1729513551");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		filter: blur(3px);
+	}
 }
 
 /* Media query for tablets */
