@@ -185,7 +185,7 @@
     gap: 10px;
   }
 
-  .slider-button {
+  .book-flipbook-body .slider-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #000000;
@@ -212,7 +212,7 @@
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		filter: blur(10px);
+		filter: blur(3px);
 	}
 }
 
