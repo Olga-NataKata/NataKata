@@ -36,6 +36,14 @@
             "swatch_shape": "circle"
           }
         },
+        "inventory_iN8wGG": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "uppercase",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
@@ -65,6 +73,7 @@
         "title",
         "price",
         "variant_picker",
+        "inventory_iN8wGG",
         "quantity_selector",
         "buy_buttons",
         "description",
