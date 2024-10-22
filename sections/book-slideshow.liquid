@@ -44,7 +44,7 @@
           class="BookVideo"
           src="https://cdn.shopify.com/videos/c/o/v/9bc4266139e4411980f7c23c847ccb7b.mp4"
           style="pointer-events: none"
-          controls
+          controls="false"
           autoplay
           muted
           playsinline
@@ -101,7 +101,7 @@
           class="BookVideo"
           src="https://cdn.shopify.com/videos/c/o/v/9bc4266139e4411980f7c23c847ccb7b.mp4"
           style="pointer-events: none"
-          controls
+          controls="false"
           autoplay
           muted
           playsinline
@@ -133,7 +133,7 @@
           class="BookVideo"
           src="https://cdn.shopify.com/videos/c/o/v/9bc4266139e4411980f7c23c847ccb7b.mp4"
           style="pointer-events: none"
-          controls
+          controls="false"
           autoplay
           muted
           playsinline
@@ -194,12 +194,20 @@
           cornerSize: getCornerSize(), // Set corner size based on device
         });
 
-        // Adjust cornerSize on window resize
-        $(window).resize(function () {
-          $(".flipbook").turn("options", { cornerSize: getCornerSize() });
+        // // Adjust cornerSize on window resize
+        // $(window).resize(function () {
+        //   $(".flipbook").turn("options", { cornerSize: getCornerSize() });
+        // });
+        
+
+        // Set controls to false for all videos
+        const videos = document.querySelectorAll(".BookVideo");
+        videos.forEach((video) => {
+          video.controls = false;
         });
 
-				
+
+
         // Add page flip event listener to handle videos dynamically
         $(".flipbook").on("turning", function (event, page, view) {
           const visiblePages = $(this).turn("view");
@@ -208,7 +216,6 @@
           // Play all videos initially
           const allVideos = document.querySelectorAll(".BookVideo");
           allVideos.forEach((video) => {
-            console.log(video);
             if (video.paused) {
               console.log(video.paused);
               video.play();
@@ -217,8 +224,8 @@
         });
 
         // Ensure videos loop when they end
-        const videos = document.querySelectorAll(".BookVideo");
-        videos.forEach((video) => {
+        const videosLoop = document.querySelectorAll(".BookVideo");
+        videosLoop.forEach((video) => {
           video.addEventListener("ended", () => {
             video.play(); // Replay the video once it ends
           });
@@ -253,18 +260,41 @@
         });
       });
 
+      if (window.innerWidth <= 480) {
+        // Select the flipbook that has already been initialized
+        var flipbook = $(".flipbook");
 
-          // Show description box when mouse enters the dot-link
-          dotLink.addEventListener('mouseenter', function() {
-            descriptionBox.style.display = 'block';
-          });
+        // Create a container for both buttons
+        var buttonContainer = document.createElement('div');
+        buttonContainer.classList.add('button-container'); // You can style this container via CSS
 
-          // Hide description box when mouse leaves the dot-link
-          dotLink.addEventListener('mouseleave', function() {
-            descriptionBox.style.display = 'none';
-          });
+        // Create 'Next' button
+        var nextButton = document.createElement('button');
+        nextButton.classList.add('slider-button', 'slider-button--next');
+        nextButton.innerHTML = '>';
+        nextButton.addEventListener('click', function() {
+            // Call Turn.js 'next' method to go to the next page
+            flipbook.turn('next');
+        });
 
-    </script>
+        // Create 'Previous' button
+        var prevButton = document.createElement('button');
+        prevButton.classList.add('slider-button', 'slider-button--prev');
+        prevButton.innerHTML = '<';
+        prevButton.addEventListener('click', function() {
+            // Call Turn.js 'previous' method to go to the previous page
+            flipbook.turn('previous');
+        });
+
+        // Append both buttons to the container
+        buttonContainer.appendChild(prevButton);
+        buttonContainer.appendChild(nextButton);
+
+        // Insert the button container after the flipbook
+        flipbook[0].parentNode.insertBefore(buttonContainer, flipbook[0].nextSibling);
+    }
+
+</script>
 
 {% schema %}
     {
