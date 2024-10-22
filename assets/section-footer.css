@@ -1,9 +1,5 @@
 .footer {
-  border-top: 0.1rem solid rgba(var(--color-foreground), 1);
-}
-
-.footer:not(.color-scheme-1) {
-  border-top: none;
+  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
 
 .footer__content-top {
