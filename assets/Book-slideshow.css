@@ -201,6 +201,12 @@
   .slider-button:hover {
     background-color: #333333;
   }
+
+	.book-flipbook__overlay {
+		position: absolute;
+		filter: blur(10px);
+		inset: 0;
+	}
 }
 
 /* Media query for tablets */
