@@ -17,7 +17,7 @@
 
           if (flipbook) {
             // Create a container for both buttons
-            const buttonContainer = document.createElement("div"); // Use document.createElement instead of document.createElement
+            const buttonContainer = document.createElement("div"); // Use document.createElement instead of this.createElement
             buttonContainer.classList.add("button-container"); // Add CSS class for styling
 
             // Create 'Next' button
@@ -89,7 +89,7 @@
         }
 
         // Initialize the flipbook
-        this.querySelector(".flipbook").turn({
+        $(".flipbook").turn({
           cornerSize: this.getCornerSize(),
         });
 
@@ -101,11 +101,11 @@
         });
 
         // Page flip event
-        this.querySelector(".flipbook").on("turning", function () {
+        $(".flipbook").on("turning", function () {
           const visiblePages = $(this).turn("view");
           console.log("Visible Pages:", visiblePages);
 
-          const allVideos = this.querySelectorAll(".BookVideo");
+          const allVideos = document.querySelectorAll(".BookVideo");
           allVideos.forEach((video) => video.play());
         });
 
