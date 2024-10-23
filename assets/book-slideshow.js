@@ -6,47 +6,33 @@
       constructor() {
         super();
         this.initSlideshow = this.initSlideshow.bind(this);
+        this.randomizeDots = this.randomizeDots.bind(this);
       }
 
       connectedCallback() {
         this.initSlideshow();
 
         if (window.innerWidth <= 480) {
-          // Select the flipbook that has already been initialized
-          const flipbook = this.querySelector(".flipbook"); // Use this.querySelector for Vanilla JS
+          const flipbook = this.querySelector(".flipbook");
 
           if (flipbook) {
-            // Create a container for both buttons
-            const buttonContainer = document.createElement("div"); // Use document.createElement instead of this.createElement
-            buttonContainer.classList.add("button-container"); // Add CSS class for styling
+            const buttonContainer = document.createElement("div");
+            buttonContainer.classList.add("button-container");
 
-            // Create 'Next' button
             const nextButton = document.createElement("button");
             nextButton.classList.add("slider-button", "slider-button--next");
             nextButton.innerHTML = ">";
-            nextButton.addEventListener("click", function () {
-              // Use Vanilla JS to trigger the next method for Turn.js
-              $(flipbook).turn("next");
-            });
+            nextButton.addEventListener("click", () => $(flipbook).turn("next"));
 
-            // Create 'Previous' button
             const prevButton = document.createElement("button");
             prevButton.classList.add("slider-button", "slider-button--prev");
             prevButton.innerHTML = "<";
-            prevButton.addEventListener("click", function () {
-              // Use Vanilla JS to trigger the previous method for Turn.js
-              $(flipbook).turn("previous");
-            });
+            prevButton.addEventListener("click", () => $(flipbook).turn("previous"));
 
-            // Append both buttons to the container
             buttonContainer.appendChild(prevButton);
             buttonContainer.appendChild(nextButton);
 
-            // Insert the button container after the flipbook
-            flipbook.parentNode.insertBefore(
-              buttonContainer,
-              flipbook.nextSibling
-            );
+            flipbook.parentNode.insertBefore(buttonContainer, flipbook.nextSibling);
           }
         }
       }
@@ -66,7 +52,6 @@
             "Thank You for visiting <small>~ NataKuku</small>";
           this.querySelector(".flipbook").appendChild(newPage);
         } else {
-          // in other case add 2 more pages
           const lastPage = this.querySelector(".page:last-child");
           const newPage = lastPage.cloneNode(true);
           newPage.classList.add("hard");
@@ -88,19 +73,16 @@
           this.querySelector(".flipbook").appendChild(newPage2);
         }
 
-        // Initialize the flipbook
         $(this).find(".flipbook").turn({
           cornerSize: this.getCornerSize(),
         });
 
-        // Video controls
         const videos = this.querySelectorAll(".BookVideo");
         videos.forEach((video) => {
           video.controls = false;
-          video.addEventListener("ended", () => video.play()); // Ensure loop
+          video.addEventListener("ended", () => video.play());
         });
 
-        // Page flip event
         $(this).find(".flipbook").on("turning", function () {
           const visiblePages = $(this).turn("view");
           console.log("Visible Pages:", visiblePages);
@@ -109,7 +91,6 @@
           allVideos.forEach((video) => video.play());
         });
 
-        // Random dot positioning logic
         this.randomizeDots();
       }
 
@@ -124,18 +105,14 @@
         const dots = this.querySelectorAll(".dot-link");
         dots.forEach((dot) => {
           const image = dot.previousElementSibling;
-          let randomX, randomY;
+          const maxX = image.width * 0.7;
+          const maxY = image.height * 0.7;
+          const minX = image.width * 0.3;
+          const minY = image.height * 0.3;
 
-          if (window.innerWidth < 480) {
-            randomX = Math.random() * (image.offsetWidth - 50) + 75;
-            randomY = Math.random() * (image.offsetHeight - 50) + 75;
-          } else if (window.innerWidth < 768) {
-            randomX = Math.random() * (image.offsetWidth - 50) + 125;
-            randomY = Math.random() * (image.offsetHeight - 50) + 125;
-          } else {
-            randomX = Math.random() * (image.offsetWidth - 10) + 250;
-            randomY = Math.random() * (image.offsetHeight - 10) + 250;
-          }
+          let randomX = Math.random() * (maxX - minX) + minX;
+          let randomY = Math.random() * (maxY - minY) + minY;
+
 
           dot.style.left = `${randomX}px`;
           dot.style.top = `${randomY}px`;
@@ -146,3 +123,4 @@
     customElements.define("book-slideshow", BookSlideshow);
   }
 })();
+
