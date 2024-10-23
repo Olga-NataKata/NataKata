@@ -89,7 +89,7 @@
         }
 
         // Initialize the flipbook
-        $(".flipbook").turn({
+        this.querySelector(".flipbook").turn({
           cornerSize: this.getCornerSize(),
         });
 
@@ -101,11 +101,11 @@
         });
 
         // Page flip event
-        $(".flipbook").on("turning", function () {
+        this.querySelector(".flipbook").on("turning", function () {
           const visiblePages = $(this).turn("view");
           console.log("Visible Pages:", visiblePages);
 
-          const allVideos = document.querySelectorAll(".BookVideo");
+          const allVideos = this.querySelectorAll(".BookVideo");
           allVideos.forEach((video) => video.play());
         });
 
