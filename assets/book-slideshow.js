@@ -17,7 +17,7 @@
 
           if (flipbook) {
             // Create a container for both buttons
-            const buttonContainer = document.createElement("div"); // Use document.createElement instead of this.createElement
+            const buttonContainer = document.createElement("div"); // Use document.createElement instead of document.createElement
             buttonContainer.classList.add("button-container"); // Add CSS class for styling
 
             // Create 'Next' button
