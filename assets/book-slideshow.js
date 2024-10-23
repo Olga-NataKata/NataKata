@@ -17,11 +17,11 @@
 
           if (flipbook) {
             // Create a container for both buttons
-            const buttonContainer = document.createElement("div"); // Use document.createElement instead of this.createElement
+            const buttonContainer = this.createElement("div"); // Use document.createElement instead of this.createElement
             buttonContainer.classList.add("button-container"); // Add CSS class for styling
 
             // Create 'Next' button
-            const nextButton = document.createElement("button");
+            const nextButton = this.createElement("button");
             nextButton.classList.add("slider-button", "slider-button--next");
             nextButton.innerHTML = ">";
             nextButton.addEventListener("click", function () {
@@ -30,7 +30,7 @@
             });
 
             // Create 'Previous' button
-            const prevButton = document.createElement("button");
+            const prevButton = this.createElement("button");
             prevButton.classList.add("slider-button", "slider-button--prev");
             prevButton.innerHTML = "<";
             prevButton.addEventListener("click", function () {
