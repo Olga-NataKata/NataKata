@@ -89,7 +89,7 @@
         }
 
         // Initialize the flipbook
-        $(".flipbook").turn({
+        $(this).find(".flipbook").turn({
           cornerSize: this.getCornerSize(),
         });
 
@@ -101,7 +101,7 @@
         });
 
         // Page flip event
-        $(".flipbook").on("turning", function () {
+        $(this).find(".flipbook").on("turning", function () {
           const visiblePages = $(this).turn("view");
           console.log("Visible Pages:", visiblePages);
 
