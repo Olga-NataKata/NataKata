@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; 
 
 (function () {
   if (!customElements.get("book-slideshow")) {
@@ -22,12 +22,16 @@
             const nextButton = document.createElement("button");
             nextButton.classList.add("slider-button", "slider-button--next");
             nextButton.innerHTML = ">";
-            nextButton.addEventListener("click", () => $(flipbook).turn("next"));
+            nextButton.addEventListener("click", () =>
+              $(flipbook).turn("next")
+            );
 
             const prevButton = document.createElement("button");
             prevButton.classList.add("slider-button", "slider-button--prev");
             prevButton.innerHTML = "<";
-            prevButton.addEventListener("click", () => $(flipbook).turn("previous"));
+            prevButton.addEventListener("click", () =>
+              $(flipbook).turn("previous")
+            );
 
             buttonContainer.appendChild(prevButton);
             buttonContainer.appendChild(nextButton);
@@ -39,6 +43,19 @@
 
       initSlideshow() {
         const pages_count = this.querySelectorAll(".page").length;
+        if(pages_count < 2) {
+          return;
+        }
+        if (window.innerWidth <= 480) {
+          const allPages = this.querySelectorAll(".page");
+          allPages.forEach((page) => {
+            const clonedPage = page.cloneNode(true); // Deep clone the page
+            clonedPage.classList.add("cloned"); // Add a class to identify cloned elements
+
+            page.parentNode.insertBefore(clonedPage, page.nextSibling);
+          });
+        }
+        
 
         if (pages_count % 2 !== 0) {
           const lastPage = this.querySelector(".page:last-child");
@@ -83,13 +100,15 @@
           video.addEventListener("ended", () => video.play());
         });
 
-        $(this).find(".flipbook").on("turning", function () {
-          const visiblePages = $(this).turn("view");
-          console.log("Visible Pages:", visiblePages);
+        $(this)
+          .find(".flipbook")
+          .on("turning", function () {
+            const visiblePages = $(this).turn("view");
+            
 
-          const allVideos = document.querySelectorAll(".BookVideo");
-          allVideos.forEach((video) => video.play());
-        });
+            const allVideos = document.querySelectorAll(".BookVideo");
+            allVideos.forEach((video) => video.play());
+          });
 
         this.randomizeDots();
       }
@@ -113,7 +132,6 @@
           let randomX = Math.random() * (maxX - minX) + minX;
           let randomY = Math.random() * (maxY - minY) + minY;
 
-
           dot.style.left = `${randomX}px`;
           dot.style.top = `${randomY}px`;
         });
@@ -123,4 +141,3 @@
     customElements.define("book-slideshow", BookSlideshow);
   }
 })();
-
