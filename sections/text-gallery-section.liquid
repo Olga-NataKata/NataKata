@@ -48,8 +48,31 @@
                 </div>
             {% endfor %}
         </div>
+        <div class="upload-image">
+            <h3>Upload New Image</h3>
+            <input type="file" accept="image/*" id="image-upload" />
+            <button id="upload-button">Upload</button>
+        </div>
     </div>
 </section>
 
 <link rel="stylesheet" href="{{ 'text-gallery-section.css' | asset_url }}">
+
+<script>
+    document.getElementById('upload-button').addEventListener('click', function() {
+        const fileInput = document.getElementById('image-upload');
+        const file = fileInput.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const newImage = document.createElement('div');
+                newImage.className = 'gallery-image';
+                newImage.innerHTML = `<img src="${event.target.result}" alt="Uploaded Image">`;
+                document.querySelector('.gallery-images').appendChild(newImage);
+            }
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
     
