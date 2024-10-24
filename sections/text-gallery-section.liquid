@@ -39,17 +39,18 @@
 
 <section class="text-gallery-section">
     <div class="container">
-    <h2>{{ section.settings.heading }}</h2>
-    <p>{{ section.settings.description }}</p>
-    <div class="gallery-images">
-        {% for block in section.blocks %}
-        <div class="gallery-image">
-            <img src="{{ block.settings.image | image_url: 'large' }}" alt="Gallery Image">
+        <h2>{{ section.settings.gallery_title }}</h2>
+        <p>{{ section.settings.gallery_description }}</p>
+        <div class="gallery-images">
+            {% for image in section.settings.gallery_images %}
+                <div class="gallery-image">
+                    <img src="{{ image | img_url: 'medium' }}" alt="{{ section.settings.gallery_title }}">
+                </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
     </div>
 </section>
+
 
 <link rel="stylesheet" href="{{ 'text-gallery-section.css' | asset_url }}">
     

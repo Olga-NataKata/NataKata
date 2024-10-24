@@ -88,7 +88,26 @@
     "text-gallery-section": {
       "type": "text-gallery-section",
       "settings": {
-        // Додай тут налаштування для твоєї секції, якщо потрібно
+        "gallery_title": {
+          "type": "text",
+          "label": "Gallery Title",
+          "default": "Gallery Section"
+        },
+        "gallery_description": {
+          "type": "textarea",
+          "label": "Gallery Description",
+          "default": "Add your gallery description here."
+        },
+        "gallery_images": {
+          "type": "list",
+          "label": "Gallery Images",
+          "default": [],
+          "info": "Add images for the gallery",
+          "item": {
+            "type": "image_picker",
+            "label": "Image"
+          }
+        }
       }
     }
   },
