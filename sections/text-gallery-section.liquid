@@ -1,0 +1,55 @@
+{% schema %}
+{
+    "name": "Text and Gallery Section",
+    "settings": [
+    {
+        "type": "text",
+        "id": "heading",
+        "label": "Section Heading",
+        "default": "Gallery Section"
+    },
+    {
+        "type": "textarea",
+        "id": "description",
+        "label": "Section Description",
+        "default": "Add your gallery description here."
+    }
+    ],
+    "blocks": [
+    {
+        "type": "image",
+        "name": "Gallery Image",
+        "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        }
+        ]
+    }
+    ],
+    "presets": [
+    {
+        "name": "Text and Gallery Section",
+        "category": "Custom"
+    }
+    ]
+}
+{% endschema %}
+
+<section class="text-gallery-section">
+    <div class="container">
+    <h2>{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.description }}</p>
+    <div class="gallery-images">
+        {% for block in section.blocks %}
+        <div class="gallery-image">
+            <img src="{{ block.settings.image | image_url: 'large' }}" alt="Gallery Image">
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+</section>
+
+<link rel="stylesheet" href="{{ 'text-gallery-section.css' | asset_url }}">
+    
