@@ -87,27 +87,41 @@
     },
     "text-gallery-section": {
       "type": "text-gallery-section",
-      "settings": {
-        "gallery_title": {
-          "type": "text",
-          "label": "Gallery Title",
-          "default": "Gallery Section"
+      "blocks": {
+        "image_aLYzcT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/11.webp"
+          }
         },
-        "gallery_description": {
-          "type": "textarea",
-          "label": "Gallery Description",
-          "default": "Add your gallery description here."
+        "image_4iDDmx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/10.webp"
+          }
         },
-        "gallery_images": {
-          "type": "list",
-          "label": "Gallery Images",
-          "default": [],
-          "info": "Add images for the gallery",
-          "item": {
-            "type": "image_picker",
-            "label": "Image"
+        "image_nDnXeU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pexels-alipazani-16850467.jpg"
+          }
+        },
+        "image_pqxVtg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pexels-oleksandra-19285596.jpg"
           }
         }
+      },
+      "block_order": [
+        "image_aLYzcT",
+        "image_4iDDmx",
+        "image_nDnXeU",
+        "image_pqxVtg"
+      ],
+      "settings": {
+        "heading": "New colection of winter",
+        "description": "Make yourself warm🔥"
       }
     }
   },
@@ -115,6 +129,6 @@
     "book_slideshow_6hMAUj",
     "scrolling_banner_ycLY4R",
     "book_slideshow_FiKUid",
-    "text-gallery-section" 
+    "text-gallery-section"
   ]
 }
