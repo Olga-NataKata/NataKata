@@ -41,35 +41,43 @@
 
 			<div  class="page">
 			{%- if block.settings.video != blank -%}
-					{{
-            block.settings.video
-            | video_tag:
-              autoplay: true,
-              loop: true,
-              controls: false,
-              muted: true,
-							class: 'BookVideo'
-          }} 
+				{{
+					block.settings.video
+					| video_tag:
+						autoplay: true,
+						loop: true,
+						controls: false,
+						muted: true,
+						class: 'BookVideo'
+				}} 
 			{%- else -%}
 
 				{% assign product = block.settings.product %}
-				{%- if product.featured_image != blank -%}
-					<img class="logo" src="{{ product.featured_image | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ product.featured_image.alt }}">
-					{%- if block.settings.heading != blank -%}
-						<p>{{ block.settings.heading | escape }}</p>
-					{%- endif -%}
-					{%- if block.settings.product != blank -%}
-						<a href="{{ product.url }}" class="dot-link">
-							<div class="description-box">
-								{%- if product.title != blank -%}
-									<strong class="title">{{ product.title }}</strong>
-								{%- endif -%}
-								{%- if product.description != blank -%}
-									<span class="subtitle">{{ product.description | strip_html | truncate: 100 }}</span>
-								{%- endif -%}
-							</div>
-						</a>
-					{%- endif -%}
+				{% liquid
+					
+					assign featured_image = product.featured_image
+					if block.settings.image != blank
+						assign featured_image = block.settings.image
+					endif
+				%}
+				{%- if featured_image != blank -%}
+					<img class="logo" src="{{ featured_image | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ featured_image.alt }}">
+				{%- endif -%}
+
+				{%- if block.settings.heading != blank -%}
+					<p>{{ block.settings.heading | escape }}</p>
+				{%- endif -%}
+				{%- if block.settings.product != blank -%}
+					<a href="{{ product.url }}" class="dot-link">
+						<div class="description-box">
+							{%- if product.title != blank -%}
+								<strong class="title">{{ product.title }}</strong>
+							{%- endif -%}
+							{%- if product.description != blank -%}
+								<span class="subtitle">{{ product.description | strip_html | truncate: 100 }}</span>
+							{%- endif -%}
+						</div>
+					</a>
 				{%- endif -%}
 			{%- endif -%}	
 			</div>

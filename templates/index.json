@@ -67,6 +67,13 @@
             "product": "classic-comfort-sweater",
             "heading": "Heading"
           }
+        },
+        "slide_NGHPqe": {
+          "type": "slide",
+          "settings": {
+            "product": "classic-comfort-sweater",
+            "heading": "Classic comfort sweater"
+          }
         }
       },
       "block_order": [
@@ -76,7 +83,8 @@
         "slide_4kNtEd",
         "slide_jzr8nt",
         "slide_zNayMT",
-        "slide_Kw9mgm"
+        "slide_Kw9mgm",
+        "slide_NGHPqe"
       ],
       "settings": {
         "color_scheme": "",
