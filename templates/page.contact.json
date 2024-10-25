@@ -17,6 +17,42 @@
         "padding_bottom": 0
       }
     },
+    "image_banner_YK9UKF": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_FHC3C7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact us",
+            "heading_size": "hxxl"
+          }
+        },
+        "text_Qfy9AT": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FHC3C7",
+        "text_Qfy9AT"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/3.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "form": {
       "type": "contact-form",
       "settings": {
@@ -30,6 +66,7 @@
   },
   "order": [
     "main",
+    "image_banner_YK9UKF",
     "form"
   ]
 }
