@@ -36,14 +36,6 @@
             "heading": "Heading"
           }
         },
-        "slide_4kNtEd": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/pexels-oleksandra-19285596.jpg",
-            "product": "classic-comfort-sweater",
-            "heading": "Heading"
-          }
-        },
         "slide_jzr8nt": {
           "type": "slide",
           "settings": {
@@ -72,7 +64,6 @@
         "slide_49rdjz",
         "slide_bqG87N",
         "slide_xHC78G",
-        "slide_4kNtEd",
         "slide_jzr8nt",
         "slide_zNayMT",
         "slide_NGHPqe"
@@ -83,7 +74,9 @@
         "front_image_bg": "shopify://shop_images/3.webp",
         "front_image": "shopify://shop_images/logo.svg",
         "front_heading": "Look book!",
-        "front_text": "~ NataKuku"
+        "front_text": "~ NataKuku",
+        "about_us_heading": "About us",
+        "about_us_text": "We are NataKuku"
       }
     },
     "scrolling_banner_ycLY4R": {
