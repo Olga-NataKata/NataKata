@@ -56,8 +56,9 @@
 				{% liquid
 					
 					assign featured_image = product.featured_image
-					if block.settings.image != blanks
-					assign featured_image = block.settings.image
+					if block.settings.image != blank
+						assign featured_image = block.settings.image
+					endif
 				%}
 				{%- if featured_image != blank -%}
 					<img class="logo" src="{{ featured_image | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ featured_image.alt }}">
