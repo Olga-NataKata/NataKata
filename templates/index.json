@@ -23,6 +23,7 @@
         "slide_bqG87N": {
           "type": "slide",
           "settings": {
+            "video": "shopify://files/videos/30e02f337fa44d71cd7aec3827594490_1729110255622.mp4",
             "product": "",
             "heading": "Heading"
           }
@@ -30,7 +31,8 @@
         "slide_xHC78G": {
           "type": "slide",
           "settings": {
-            "product": "",
+            "image": "shopify://shop_images/tall-buildings-surround-a-narrow-street-with-parked-cars.jpg",
+            "product": "classic-comfort-sweater",
             "heading": "Heading"
           }
         }
