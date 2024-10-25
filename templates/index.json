@@ -111,13 +111,27 @@
           "settings": {
             "image": "shopify://shop_images/pexels-oleksandra-19285596.jpg"
           }
+        },
+        "video_H43rCR": {
+          "type": "video",
+          "settings": {
+            "video_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+          }
+        },
+        "video_BedGEN": {
+          "type": "video",
+          "settings": {
+            "video_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+          }
         }
       },
       "block_order": [
         "image_aLYzcT",
         "image_4iDDmx",
         "image_nDnXeU",
-        "image_pqxVtg"
+        "image_pqxVtg",
+        "video_H43rCR",
+        "video_BedGEN"
       ],
       "settings": {
         "heading": "New colection of winter",
