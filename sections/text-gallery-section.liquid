@@ -61,7 +61,7 @@
                     </div>
                 {% elsif block.type == 'video' %}
                     <div class="gallery-item gallery-video">
-                        <video controls>
+                        <video autoplay muted loop playsinline>
                             <source src="{{ block.settings.video_url }}" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -71,6 +71,9 @@
         </div>
     </div>
 </div>
+
+<link rel="stylesheet" href="{{ 'text-gallery-section.css' | asset_url }}">
+
 
 <link rel="stylesheet" href="{{ 'text-gallery-section.css' | asset_url }}">
     
