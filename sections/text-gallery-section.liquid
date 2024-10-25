@@ -76,10 +76,12 @@
 
 <script>
     function toggleFullscreen(video) {
-        // Перевіряємо, чи вже увімкнено повноекранний режим
+        // Увімкнення/вимкнення звуку в залежності від повноекранного режиму
+        video.muted = !document.fullscreenElement; 
+
+        // Перевірка та увімкнення повноекранного режиму для натиснутого відео
         if (!document.fullscreenElement) {
             video.currentTime = 0;  // Починаємо з початку
-            video.muted = false;    // Увімкнення звуку
             if (video.requestFullscreen) {
                 video.requestFullscreen();
             } else if (video.webkitRequestFullscreen) { // Safari
@@ -90,13 +92,16 @@
         }
     }
 
-    // Подія для відключення звуку при виході з повноекранного режиму
+    // Подія для вимкнення звуку на всіх відео при виході з повноекранного режиму
     document.addEventListener('fullscreenchange', function() {
-        const video = document.querySelector('.gallery-video video');
-        if (!document.fullscreenElement && video) {
-            video.muted = true;  // Вимкнення звуку
-        }
+        // Знайти всі відео на сторінці
+        const videos = document.querySelectorAll('.gallery-video video');
         
+        if (!document.fullscreenElement) {
+            videos.forEach(v => {
+                v.muted = true;  // Вимкнення звуку на всіх відео
+            });
+        }
     });
 </script>
-    
+   
