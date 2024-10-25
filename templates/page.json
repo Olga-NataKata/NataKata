@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -6,9 +15,82 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "text_gallery_section_6AQC8P": {
+      "type": "text-gallery-section",
+      "blocks": {
+        "image_9MUtxY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/tall-buildings-surround-a-narrow-street-with-parked-cars.jpg"
+          }
+        },
+        "image_R3U6HH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/a-person-talking-to-their-laptop-screen.jpg"
+          }
+        },
+        "image_dV8PDn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/person-writing-in-notebook-beside-laptop-working-from-bed.jpg"
+          }
+        },
+        "video_4wmigx": {
+          "type": "video",
+          "settings": {
+            "video_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "image_9MUtxY",
+        "image_R3U6HH",
+        "image_dV8PDn",
+        "video_4wmigx"
+      ],
+      "settings": {
+        "heading": "Gallery Section",
+        "description": "Add your gallery description here."
+      }
+    },
+    "text_gallery_section_FRdEnT": {
+      "type": "text-gallery-section",
+      "blocks": {
+        "video_9erqpJ": {
+          "type": "video",
+          "settings": {
+            "video_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          }
+        },
+        "video_K3VgkP": {
+          "type": "video",
+          "settings": {
+            "video_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+          }
+        },
+        "video_Bt43RM": {
+          "type": "video",
+          "settings": {
+            "video_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "video_9erqpJ",
+        "video_K3VgkP",
+        "video_Bt43RM"
+      ],
+      "settings": {
+        "heading": "Gallery Section",
+        "description": "Add your gallery description here."
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "text_gallery_section_6AQC8P",
+    "text_gallery_section_FRdEnT"
   ]
 }

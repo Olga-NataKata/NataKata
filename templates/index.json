@@ -11,20 +11,80 @@
   "sections": {
     "book_slideshow_6hMAUj": {
       "type": "book-slideshow",
+      "blocks": {
+        "slide_49rdjz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/11.webp",
+            "product": "classic-comfort-sweater",
+            "heading": "Heading"
+          }
+        },
+        "slide_bqG87N": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/30e02f337fa44d71cd7aec3827594490_1729110255622.mp4",
+            "product": "",
+            "heading": "Heading"
+          }
+        },
+        "slide_xHC78G": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/tall-buildings-surround-a-narrow-street-with-parked-cars.jpg",
+            "product": "classic-comfort-sweater",
+            "heading": "Heading"
+          }
+        },
+        "slide_4kNtEd": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/pexels-oleksandra-19285596.jpg",
+            "product": "classic-comfort-sweater",
+            "heading": "Heading"
+          }
+        },
+        "slide_jzr8nt": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/30e02f337fa44d71cd7aec3827594490_1729110255622.mp4",
+            "product": "",
+            "heading": "Heading"
+          }
+        },
+        "slide_zNayMT": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/a-person-talking-to-their-laptop-screen.jpg",
+            "product": "classic-comfort-sweater",
+            "heading": "Heading"
+          }
+        },
+        "slide_Kw9mgm": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/pexels-leah-newhouse-50725-192445.jpg",
+            "product": "classic-comfort-sweater",
+            "heading": "Heading"
+          }
+        }
+      },
+      "block_order": [
+        "slide_49rdjz",
+        "slide_bqG87N",
+        "slide_xHC78G",
+        "slide_4kNtEd",
+        "slide_jzr8nt",
+        "slide_zNayMT",
+        "slide_Kw9mgm"
+      ],
       "settings": {
-        "image_height": "medium",
-        "desktop_image_width": "medium",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "alternate-left",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "color_scheme": "",
+        "background": "shopify://shop_images/pexels-rachel-claire-5864245.jpg",
+        "front_image_bg": "shopify://shop_images/3.webp",
+        "front_image": "shopify://shop_images/logo.svg",
+        "front_heading": "Look book!",
+        "front_text": "~ NataKuku"
       }
     },
     "scrolling_banner_ycLY4R": {
