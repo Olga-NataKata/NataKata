@@ -51,13 +51,14 @@
 							class: 'BookVideo'
           }} 
 			{%- else -%}
-				{%- if block.settings.image != blank -%}
-					<img class="logo" src="{{ block.settings.image | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ section.settings.image.alt }}">
+
+				{% assign product = block.settings.product %}
+				{%- if product.featured_image != blank -%}
+					<img class="logo" src="{{ product.featured_image | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ product.featured_image.alt }}">
 					{%- if block.settings.heading != blank -%}
 						<p>{{ block.settings.heading | escape }}</p>
 					{%- endif -%}
 					{%- if block.settings.product != blank -%}
-						{% assign product = block.settings.product %}
 						<a href="{{ product.url }}" class="dot-link">
 							<div class="description-box">
 								{%- if product.title != blank -%}
