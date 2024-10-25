@@ -36,6 +36,18 @@
 				<small>{{ section.settings.front_text }}</small>
 			{%- endif -%}
     </div>
+
+    <div class="page about-us-section">
+
+      {%- if section.settings.about_us_heading != blank -%}
+        <h2 class="about-us-look-book-title">{{ section.settings.about_us_heading }}</h2>
+
+      {%- endif -%}
+
+      {%- if section.settings.about_us_text != blank -%}
+        <p class="about-us-look-book-text">{{ section.settings.about_us_text }}</p>
+      {%- endif -%}
+    </div>
 		
 		{%- for block in section.blocks -%}
 
@@ -130,7 +142,29 @@
 			"id": "front_text",
 			"label": "Text",
 			"default": "~ NataKuku"
-		}
+		},
+    {
+      "type": "header",
+      "content": "About us"
+
+    },
+    {
+      "type": "text",
+      "id": "about_us_heading",
+      "label": "Heading",
+      "default": "About us"
+    },
+    { "type": "text",
+      "id": "about_us_text",
+      "label": "Text",
+      "default": "We are NataKuku"
+    },
+    {
+    "type": "image_picker",
+    "id": "about_image",
+    "label": "About Us Image"
+    }
+
   ],
 	"blocks": [
 		{
