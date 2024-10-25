@@ -60,18 +60,7 @@
         }
         
 
-        if (pages_count % 2 !== 0) {
-          const lastPage = this.querySelector(".page:last-child");
-          const newPage = lastPage.cloneNode(true);
-          newPage.classList.add("hard");
-          newPage.style.background =
-            `#c0392b url(${this.frontPageImg}) no-repeat center/cover`;
-          newPage.style.color = "#fff";
-          newPage.style.fontWeight = "bold";
-          newPage.innerHTML =
-            "Thank You for visiting <small>~ NataKuku</small>";
-          this.querySelector(".flipbook").appendChild(newPage);
-        }else if (pages_count % 2 === 0) {
+        if (pages_count % 2 === 0) {
           const lastPage = this.querySelector(".page:last-child");
           const newPage = lastPage.cloneNode(true);
           newPage.classList.add("hard");
@@ -83,6 +72,18 @@
             "Thank You for visiting <small>~ NataKuku</small>";
           this.querySelector(".flipbook").appendChild(newPage);
         }
+        // else if () {
+        //   const lastPage = this.querySelector(".page:last-child");
+        //   const newPage = lastPage.cloneNode(true);
+        //   newPage.classList.add("hard");
+        //   newPage.style.background =
+        //     `#c0392b url(${this.frontPageImg}) no-repeat center/cover`;
+        //   newPage.style.color = "#fff";
+        //   newPage.style.fontWeight = "bold";
+        //   newPage.innerHTML =
+        //     "Thank You for visiting <small>~ NataKuku</small>";
+        //   this.querySelector(".flipbook").appendChild(newPage);
+        // }
 
         $(this).find(".flipbook").turn({
           cornerSize: this.getCornerSize(),
