@@ -26,6 +26,18 @@
                     "label": "Image"
                 }
             ]
+        },
+        {
+            "type": "video",
+            "name": "Gallery Video",
+            "settings": [
+                {
+                    "type": "url",
+                    "id": "video_url",
+                    "label": "Video URL",
+                    "info": "Insert the URL of a video hosted on Shopify or an external service."
+                }
+            ]
         }
     ],
     "presets": [
@@ -41,11 +53,20 @@
     <div class="container">
         <h2>{{ section.settings.heading }}</h2>
         <p>{{ section.settings.description }}</p>
-        <div class="gallery-images">
+        <div class="gallery-content">
             {% for block in section.blocks %}
-                <div class="gallery-image">
-                    <img src="{{ block.settings.image | img_url: 'medium' }}" alt="{{ section.settings.heading }}">
-                </div>
+                {% if block.type == 'image' %}
+                    <div class="gallery-item gallery-image">
+                        <img src="{{ block.settings.image | img_url: 'medium' }}" alt="{{ section.settings.heading }}">
+                    </div>
+                {% elsif block.type == 'video' %}
+                    <div class="gallery-item gallery-video">
+                        <video controls>
+                            <source src="{{ block.settings.video_url }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
     </div>
