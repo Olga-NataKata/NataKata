@@ -57,7 +57,7 @@
             {% for block in section.blocks %}
                 {% if block.type == 'image' %}
                     <div class="gallery-item gallery-image">
-                        <img src="{{ block.settings.image | img_url: 'medium' }}" alt="{{ section.settings.heading }}">
+                        <img src="{{ block.settings.image | img_url: 'medium' }}" alt="{{ section.settings.heading }}" onclick="openFullscreenImage(this)">
                     </div>
                 {% elsif block.type == 'video' %}
                     <div class="gallery-item gallery-video">
@@ -76,32 +76,43 @@
 
 <script>
     function toggleFullscreen(video) {
-        // Увімкнення/вимкнення звуку в залежності від повноекранного режиму
         video.muted = !document.fullscreenElement; 
 
-        // Перевірка та увімкнення повноекранного режиму для натиснутого відео
         if (!document.fullscreenElement) {
-            video.currentTime = 0;  // Починаємо з початку
+            video.currentTime = 0;
             if (video.requestFullscreen) {
                 video.requestFullscreen();
-            } else if (video.webkitRequestFullscreen) { // Safari
+            } else if (video.webkitRequestFullscreen) {
                 video.webkitRequestFullscreen();
-            } else if (video.msRequestFullscreen) { // IE11
+            } else if (video.msRequestFullscreen) {
                 video.msRequestFullscreen();
             }
         }
     }
 
-    // Подія для вимкнення звуку на всіх відео при виході з повноекранного режиму
+    function openFullscreenImage(image) {
+        const fullscreenContainer = document.createElement('div');
+        fullscreenContainer.classList.add('fullscreen-image-container');
+        
+        const fullscreenImage = document.createElement('img');
+        fullscreenImage.src = image.src;
+        fullscreenImage.classList.add('fullscreen-image');
+
+        fullscreenContainer.appendChild(fullscreenImage);
+        document.body.appendChild(fullscreenContainer);
+
+        fullscreenContainer.onclick = function() {
+            document.body.removeChild(fullscreenContainer);
+        }
+    }
+
     document.addEventListener('fullscreenchange', function() {
-        // Знайти всі відео на сторінці
         const videos = document.querySelectorAll('.gallery-video video');
         
         if (!document.fullscreenElement) {
             videos.forEach(v => {
-                v.muted = true;  // Вимкнення звуку на всіх відео
+                v.muted = true;
             });
         }
     });
 </script>
-   
