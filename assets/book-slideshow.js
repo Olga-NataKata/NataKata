@@ -7,6 +7,7 @@
         super();
         this.initSlideshow = this.initSlideshow.bind(this);
         this.randomizeDots = this.randomizeDots.bind(this);
+				this.frontPageImg = this.dataset.frontPageImg;
       }
 
       connectedCallback() {
@@ -64,7 +65,7 @@
           const newPage = lastPage.cloneNode(true);
           newPage.classList.add("hard");
           newPage.style.background =
-            "#c0392b url('https://cdn.shopify.com/s/files/1/0669/3670/1123/files/3.webp?v=1729489868') no-repeat center/cover";
+            `#c0392b url(${this.frontPageImg}) no-repeat center/cover`;
           newPage.style.color = "#fff";
           newPage.style.fontWeight = "bold";
           newPage.innerHTML =
@@ -75,7 +76,7 @@
           const newPage = lastPage.cloneNode(true);
           newPage.classList.add("hard");
           newPage.style.background =
-            "#c0392b url('https://cdn.shopify.com/s/files/1/0669/3670/1123/files/3.webp?v=1729489868') no-repeat center/cover";
+            `#c0392b url(${this.frontPageImg}) no-repeat center/cover`;
           newPage.style.color = "#fff";
           newPage.style.fontWeight = "bold";
           newPage.innerHTML =
@@ -84,7 +85,7 @@
           const newPage2 = lastPage.cloneNode(true);
           newPage2.classList.add("hard");
           newPage2.style.background =
-            "#c0392b url('https://cdn.shopify.com/s/files/1/0669/3670/1123/files/3.webp?v=1729489868') no-repeat center/cover";
+            `#c0392b url(${this.frontPageImg}) no-repeat center/cover`;
           newPage2.style.color = "#fff";
           newPage2.style.fontWeight = "bold";
           newPage2.innerHTML =
