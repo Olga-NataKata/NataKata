@@ -225,7 +225,7 @@
 @media (min-width: 321px) and (max-width: 480px) {
   .flipbook {
     width: 620px;
-    height: 700px;
+    height: 500px;
     margin-left: -25%;
     position: relative;
   }
@@ -236,7 +236,7 @@
   }
   .button-container {
     position: absolute;
-    bottom: 100px;
+    bottom: calc(20% - 50px);
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -341,7 +341,7 @@
 @media (min-width: 1201px) and (max-width: 1600px) {
   .flipbook {
     width: 1200px;
-    height: 1000px; /* Зменшена висота */
+    height: 800px; /* Зменшена висота */
   }
 }
 
@@ -349,6 +349,6 @@
 @media (min-width: 1601px) {
   .flipbook {
     width: 1400px;
-    height: 1100px; /* Зменшена висота */
+    height: 600px; /* Зменшена висота */
   }
 }
