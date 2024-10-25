@@ -26,6 +26,18 @@
                     "label": "Image"
                 }
             ]
+        },
+        {
+            "type": "video",
+            "name": "Gallery Video",
+            "settings": [
+                {
+                    "type": "url",
+                    "id": "video_url",
+                    "label": "Video URL",
+                    "info": "Insert the URL of a video hosted on Shopify or an external service."
+                }
+            ]
         }
     ],
     "presets": [
@@ -37,19 +49,59 @@
 }
 {% endschema %}
 
-<section class="text-gallery-section">
+<div class="text-gallery-section">
     <div class="container">
         <h2>{{ section.settings.heading }}</h2>
         <p>{{ section.settings.description }}</p>
-        <div class="gallery-images">
+        <div class="gallery-content">
             {% for block in section.blocks %}
-                <div class="gallery-image">
-                    <img src="{{ block.settings.image | img_url: 'medium' }}" alt="{{ section.settings.heading }}">
-                </div>
+                {% if block.type == 'image' %}
+                    <div class="gallery-item gallery-image">
+                        <img src="{{ block.settings.image | img_url: 'medium' }}" alt="{{ section.settings.heading }}">
+                    </div>
+                {% elsif block.type == 'video' %}
+                    <div class="gallery-item gallery-video">
+                        <video autoplay muted loop playsinline onclick="toggleFullscreen(this)">
+                            <source src="{{ block.settings.video_url }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
     </div>
-</section>
+</div>
 
 <link rel="stylesheet" href="{{ 'text-gallery-section.css' | asset_url }}">
-    
+
+<script>
+    function toggleFullscreen(video) {
+        // Увімкнення/вимкнення звуку в залежності від повноекранного режиму
+        video.muted = !document.fullscreenElement; 
+
+        // Перевірка та увімкнення повноекранного режиму для натиснутого відео
+        if (!document.fullscreenElement) {
+            video.currentTime = 0;  // Починаємо з початку
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) { // Safari
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) { // IE11
+                video.msRequestFullscreen();
+            }
+        }
+    }
+
+    // Подія для вимкнення звуку на всіх відео при виході з повноекранного режиму
+    document.addEventListener('fullscreenchange', function() {
+        // Знайти всі відео на сторінці
+        const videos = document.querySelectorAll('.gallery-video video');
+        
+        if (!document.fullscreenElement) {
+            videos.forEach(v => {
+                v.muted = true;  // Вимкнення звуку на всіх відео
+            });
+        }
+    });
+</script>
+   
