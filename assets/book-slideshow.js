@@ -53,6 +53,8 @@
             clonedPage.classList.add("cloned"); // Add a class to identify cloned elements
 
             page.parentNode.insertBefore(clonedPage, page.nextSibling);
+            // очистити вміст оригінального елемента
+            page.innerHTML = "";
           });
         }
         
@@ -109,6 +111,9 @@
             const allVideos = document.querySelectorAll(".BookVideo");
             allVideos.forEach((video) => video.play());
           });
+
+        // disabling turning on the last page
+        $(this).find(".flipbook").turn("disable", pages_count - 1);
 
         this.randomizeDots();
       }
