@@ -71,26 +71,6 @@
           newPage.innerHTML =
             "Thank You for visiting <small>~ NataKuku</small>";
           this.querySelector(".flipbook").appendChild(newPage);
-        } else {
-          const lastPage = this.querySelector(".page:last-child");
-          const newPage = lastPage.cloneNode(true);
-          newPage.classList.add("hard");
-          newPage.style.background =
-            `#c0392b url(${this.frontPageImg}) no-repeat center/cover`;
-          newPage.style.color = "#fff";
-          newPage.style.fontWeight = "bold";
-          newPage.innerHTML =
-            "Thank You for visiting <small>~ NataKuku</small>";
-          this.querySelector(".flipbook").appendChild(newPage);
-          const newPage2 = lastPage.cloneNode(true);
-          newPage2.classList.add("hard");
-          newPage2.style.background =
-            `#c0392b url(${this.frontPageImg}) no-repeat center/cover`;
-          newPage2.style.color = "#fff";
-          newPage2.style.fontWeight = "bold";
-          newPage2.innerHTML =
-            "Thank You for visiting <small>~ NataKuku</small>";
-          this.querySelector(".flipbook").appendChild(newPage2);
         }
 
         $(this).find(".flipbook").turn({
