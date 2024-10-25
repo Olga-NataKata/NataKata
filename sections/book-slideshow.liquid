@@ -1,417 +1,173 @@
+{{ 'Book-slideshow.css' | asset_url | stylesheet_tag }}
 
- 
-<book-slideshow class="book-flipbook-body">
-		<div class="book-flipbook__overlay"></div>
-    <div class="flipbook">
-      <div
-        class="hard"
-        style="
-          background-image: url(https://cdn.shopify.com/s/files/1/0669/3670/1123/files/3.webp?v=1729489868);
-          background-size: cover;
-          background-position: center;
-        "
-      >
-        <img class="logo" src="https://cdn.shopify.com/s/files/1/0669/3670/1123/files/logo.svg?v=1729489868" alt="Logo" />
-        Look book! <small>~ NataKuku</small>
-      </div>
+{%- style -%}
+  #shopify-section-{{ section.id }}  {
+		{%- assign background_image = section.settings.background | image_url: width: 2000 -%}
+		{%- assign background_image_url = 'url(' | append: background_image | append: ')' -%}
+		--background-img: {{ background_image_url }};
+	}
 
-      <!-- Image 1 -->
-      <div class="page">
-        <img src="https://cdn.shopify.com/s/files/1/0669/3670/1123/files/pexels-oleksandra-19285596.jpg?v=1729489701" alt="jumper" />
-        <p>jumper</p>
-        <a href="#" class="dot-link">
-          <div class="description-box">
-            <strong class="title">jumper</strong>
-            <span class="subtitle">warm jumper for winter</span>
-          </div>
-        </a>
-      </div>
+  #shopify-section-{{ section.id }} .hard {
+		{%- assign background_image = section.settings.front_image_bg | image_url: width: 2000 -%}
+		{%- assign background_image_url = 'url(' | append: background_image | append: ')' -%}
+		--background-img: {{ background_image_url }};
+	}
+{%- endstyle -%}
 
-      <!-- Image 2 -->
-      <div class="page">
-        <img src="https://cdn.shopify.com/s/files/1/0669/3670/1123/files/pexels-oleksandra-19285596.jpg?v=1729489701" alt="Coat" />
-        <p>Coat</p>
-        <a href="#" class="dot-link">
-          <div class="description-box">
-            <strong class="title">Coat</strong>
-            <span class="subtitle">Coat for winter</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Video -->
-      <div class="page">
-        <video
-          class="BookVideo"
-          src="https://cdn.shopify.com/videos/c/o/v/9bc4266139e4411980f7c23c847ccb7b.mp4"
-          style="pointer-events: none"
-          loop
-          autoplay
-          muted
-          playsinline
-        ></video>
-      </div>
-
-      <!-- Image 3 -->
-      <div class="page">
-        <img src="https://cdn.shopify.com/s/files/1/0669/3670/1123/files/pexels-oleksandra-19285596.jpg?v=1729489701" alt="Shorts" />
-        <p>Shorts</p>
-        <a href="#" class="dot-link">
-          <div class="description-box">
-            <strong class="title">Shorts</strong>
-            <span class="subtitle">Summer Shorts</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- More Images -->
-      <div class="page">
-        <img src="https://cdn.shopify.com/s/files/1/0669/3670/1123/files/pexels-oleksandra-19285596.jpg?v=1729489701" alt="Shorts" />
-        <p>Shorts green</p>
-        <a href="#" class="dot-link">
-          <div class="description-box">
-            <strong class="title">Shorts green</strong>
-            <span class="subtitle">Summer Shorts, green</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Image 4 -->
-      <div class="page">
-        <img src="https://cdn.shopify.com/s/files/1/0669/3670/1123/files/pexels-oleksandra-19285596.jpg?v=1729489701" alt="T-shirt" />
-        <p>T-shirt</p>
-        <a href="#" class="dot-link">
-          <div class="description-box">
-            <strong class="title">T-shirt</strong>
-            <span class="subtitle"> T-shirt</span>
-          </div>
-        </a>
-      </div>
-      <div class="page">
-        <img src="https://cdn.shopify.com/s/files/1/0669/3670/1123/files/pexels-oleksandra-19285596.jpg?v=1729489701" alt="T-shirt" />
-        <p>T-shirt white</p>
-        <a href="#" class="dot-link">
-          <div class="description-box">
-            <strong class="title">T-shirt white</strong>
-            <span class="subtitle"> T-shirt white</span>
-          </div>
-        </a>
-      </div>
-      <div class="page">
-        <video
-          class="BookVideo"
-          src="https://cdn.shopify.com/videos/c/o/v/9bc4266139e4411980f7c23c847ccb7b.mp4"
-          style="pointer-events: none"
-          loop
-          autoplay
-          muted
-          playsinline
-        ></video>
-      </div>
-      <div class="page">
-        <img src="https://cdn.shopify.com/s/files/1/0669/3670/1123/files/pexels-oleksandra-19285596.jpg?v=1729489701" alt="T-shirt" />
-        <p>T-shirt</p>
-        <a href="#" class="dot-link">
-          <div class="description-box">
-            <strong class="title">T-shirt</strong>
-            <span class="subtitle"> T-shirt</span>
-          </div>
-        </a>
-      </div>
-      <div class="page">
-        <img src="https://cdn.shopify.com/s/files/1/0669/3670/1123/files/pexels-oleksandra-19285596.jpg?v=1729489701" alt="T-shirt" />
-        <p>T-shirt Black</p>
-        <a href="#" class="dot-link">
-          <div class="description-box">
-            <strong class="title">T-shirt Black</strong>
-            <span class="subtitle"> T-shirt Black</span>
-          </div>
-        </a>  
-      </div>
-      <!-- Image 3 -->
-      <div class="page">
-        <img src="https://cdn.shopify.com/s/files/1/0669/3670/1123/files/pexels-oleksandra-19285596.jpg?v=1729489701" alt="Shorts" />
-        <p>Shorts purple</p>
-        <a href="#" class="dot-link">
-          <div class="description-box">
-            <strong class="title">Shorts purple</strong>
-            <span class="subtitle">Summer Shorts purple</span>
-          </div>
-        </a>
-      </div>
-      <div class="page">
-        <video
-          class="BookVideo"
-          src="https://cdn.shopify.com/videos/c/o/v/9bc4266139e4411980f7c23c847ccb7b.mp4"
-          style="pointer-events: none"
-          loop
-          autoplay
-          muted
-          playsinline
-        ></video>
-      </div>
-
-      <!-- More Images -->
-      <div class="page">
-        <img src="https://cdn.shopify.com/s/files/1/0669/3670/1123/files/pexels-oleksandra-19285596.jpg?v=1729489701" alt="Shorts" />
-        <p>Shorts purple</p>
-        <a href="#" class="dot-link">
-          <div class="description-box">
-            <strong class="title">Shorts purple</strong>
-            <span class="subtitle">Summer Shorts purple</span>
-          </div>
-        </a>
-      </div>
+<book-slideshow class="book-flipbook-body color-{{ section.settings.scheme }}" data-section-id="{{ section.id }}" data-front-page-img="{{ section.settings.front_image_bg | image_url: 2000 }}">
+  <div class="book-flipbook__overlay"></div>
+  <div class="flipbook">
+    <div
+      class="hard"
+			id="front-page-{{ section.id }}"
+      style="
+        background-image: url(var(--background-img));
+        background-size: cover;
+        background-position: center;
+      "
+    >
+			{%- if section.settings.front_image != blank -%}
+				<img class="logo" src="{{ section.settings.front_image | image_url: width: 500 }}" width="500" height="auto"alt="{{ section.settings.front_image.alt }}">
+			{%- endif -%}
+			{%- if section.settings.front_heading != blank -%}
+				{{ section.settings.front_heading | escape }}
+			{%- endif -%}
+			{%- if section.settings.front_text != blank -%}
+				<small>{{ section.settings.front_text }}</small>
+			{%- endif -%}
     </div>
+		
+		{%- for block in section.blocks -%}
+
+			<div {% if block.settings.video == blank %} class="page" {% endif %}>
+			{%- if block.settings.video != blank -%}
+					{{
+            block.settings.video
+            | video_tag:
+              autoplay: true,
+              loop: true,
+              controls: false,
+              muted: true,
+							class: 'BookVideo'
+          }} 
+			{%- else -%}
+				{%- if block.settings.image != blank -%}
+					<img class="logo" src="{{ block.settings.image | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ section.settings.image.alt }}">
+					{%- if block.settings.heading != blank -%}
+						<p>{{ block.settings.heading | escape }}</p>
+					{%- endif -%}
+					{%- if block.settings.product != blank -%}
+						{% assign product = block.settings.product %}
+						<a href="{{ product.url }}" class="dot-link">
+							<div class="description-box">
+								{%- if product.title != blank -%}
+									<strong class="title">{{ product.title }}</strong>
+								{%- endif -%}
+								{%- if product.description != blank -%}
+									<span class="subtitle">{{ product.description | strip_html | truncate: 100 }}</span>
+								{%- endif -%}
+							</div>
+						</a>
+					{%- endif -%}
+				{%- endif -%}
+			{%- endif -%}	
+			</div>
+		{%- endfor -%}
+  </div>
 </book-slideshow>
 
-    
 <script src="{{ 'book-slideshow.js' | asset_url }}" type="module" defer="defer"></script>
 
 {% schema %}
+{
+  "name": "Book slideshow",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
     {
-      "name": "Book slideshow",
-      "class": "section",
-      "disabled_on": {
-        "groups": ["header", "footer"]
-      },
-      "settings": [
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+		{
+			"type": "image_picker",
+			"id": "background",
+			"label": "Background image"
+		},
+    {
+      "type": "header",
+      "content": "Front book page"
+    },
+    {
+      "type": "image_picker",
+      "id": "front_image_bg",
+      "label": "Background image"
+    },
+		{ "type": "image_picker",
+      "id": "front_image",
+      "label": "Image"
+    },
+		{
+			"type": "text",
+			"id": "front_heading",
+			"label": "Heading",
+			"default": "Look book!"
+		},
+		{
+			"type": "text",
+			"id": "front_text",
+			"label": "Text",
+			"default": "~ NataKuku"
+		}
+  ],
+	"blocks": [
+		{
+			"type": "slide",
+			"name": "Slide",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Image"
+				},
+				{
+					"type": "video",
+					"id": "video",
+					"label": "Video",
+					"info": "Video replaces image"
+				},
+				{
+					"type": "product",
+					"id": "product",
+					"label": "Product"
+				},
+				{
+					"type": "text",
+					"id": "heading",
+					"label": "Heading",
+					"default": "Heading"
+				}
+			]
+		},
+	],
+  "presets": [
+    {
+      "name": "book slideshow",
+			"blocks": [
         {
-          "type": "select",
-          "id": "image_height",
-          "options": [
-            {
-              "value": "adapt",
-              "label": "t:sections.multirow.settings.image_height.options__1.label"
-            },
-            {
-              "value": "small",
-              "label": "t:sections.multirow.settings.image_height.options__2.label"
-            },
-            {
-              "value": "medium",
-              "label": "t:sections.multirow.settings.image_height.options__3.label"
-            },
-            {
-              "value": "large",
-              "label": "t:sections.multirow.settings.image_height.options__4.label"
-            }
-          ],
-          "default": "medium",
-          "label": "t:sections.multirow.settings.image_height.label"
+          "type": "slide"
         },
         {
-          "type": "select",
-          "id": "desktop_image_width",
-          "options": [
-            {
-              "value": "small",
-              "label": "t:sections.multirow.settings.desktop_image_width.options__1.label"
-            },
-            {
-              "value": "medium",
-              "label": "t:sections.multirow.settings.desktop_image_width.options__2.label"
-            },
-            {
-              "value": "large",
-              "label": "t:sections.multirow.settings.desktop_image_width.options__3.label"
-            }
-          ],
-          "default": "medium",
-          "label": "t:sections.multirow.settings.desktop_image_width.label",
-          "info": "t:sections.multirow.settings.desktop_image_width.info"
+          "type": "slide"
         },
         {
-          "type": "select",
-          "id": "heading_size",
-          "options": [
-            {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
-            },
-            {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
-            },
-            {
-              "value": "hxl",
-              "label": "t:sections.all.heading_size.options__4.label"
-            },
-            {
-              "value": "hxxl",
-              "label": "t:sections.all.heading_size.options__5.label"
-            }
-          ],
-          "default": "h1",
-          "label": "t:sections.all.heading_size.label"
-        },
-        {
-          "type": "select",
-          "id": "text_style",
-          "options": [
-            {
-              "value": "body",
-              "label": "t:sections.multirow.settings.text_style.options__1.label"
-            },
-            {
-              "value": "subtitle",
-              "label": "t:sections.multirow.settings.text_style.options__2.label"
-            }
-          ],
-          "default": "body",
-          "label": "t:sections.multirow.settings.text_style.label"
-        },
-        {
-          "type": "select",
-          "id": "button_style",
-          "options": [
-            {
-              "value": "primary",
-              "label": "t:sections.multirow.settings.button_style.options__1.label"
-            },
-            {
-              "value": "secondary",
-              "label": "t:sections.multirow.settings.button_style.options__2.label"
-            }
-          ],
-          "default": "secondary",
-          "label": "t:sections.multirow.settings.button_style.label"
-        },
-        {
-          "type": "select",
-          "id": "desktop_content_position",
-          "options": [
-            {
-              "value": "top",
-              "label": "t:sections.multirow.settings.desktop_content_position.options__1.label"
-            },
-            {
-              "value": "middle",
-              "label": "t:sections.multirow.settings.desktop_content_position.options__2.label"
-            },
-            {
-              "value": "bottom",
-              "label": "t:sections.multirow.settings.desktop_content_position.options__3.label"
-            }
-          ],
-          "default": "middle",
-          "label": "t:sections.multirow.settings.desktop_content_position.label",
-          "info": "t:sections.multirow.settings.desktop_content_position.info"
-        },
-        {
-          "type": "select",
-          "id": "desktop_content_alignment",
-          "options": [
-            {
-              "value": "left",
-              "label": "t:sections.multirow.settings.desktop_content_alignment.options__1.label"
-            },
-            {
-              "value": "center",
-              "label": "t:sections.multirow.settings.desktop_content_alignment.options__2.label"
-            },
-            {
-              "value": "right",
-              "label": "t:sections.multirow.settings.desktop_content_alignment.options__3.label"
-            }
-          ],
-          "default": "left",
-          "label": "t:sections.multirow.settings.desktop_content_alignment.label"
-        },
-        {
-          "type": "select",
-          "id": "image_layout",
-          "options": [
-            {
-              "value": "alternate-left",
-              "label": "t:sections.multirow.settings.image_layout.options__1.label"
-            },
-            {
-              "value": "alternate-right",
-              "label": "t:sections.multirow.settings.image_layout.options__2.label"
-            },
-            {
-              "value": "align-left",
-              "label": "t:sections.multirow.settings.image_layout.options__3.label"
-            },
-            {
-              "value": "align-right",
-              "label": "t:sections.multirow.settings.image_layout.options__4.label"
-            }
-          ],
-          "default": "alternate-left",
-          "label": "t:sections.multirow.settings.image_layout.label",
-          "info": "t:sections.multirow.settings.image_layout.info"
-        },
-        {
-          "type": "color_scheme",
-          "id": "section_color_scheme",
-          "label": "t:sections.all.colors.label",
-          "default": "scheme-1"
-        },
-        {
-          "type": "color_scheme",
-          "id": "row_color_scheme",
-          "label": "t:sections.multirow.settings.container_color_scheme.label",
-          "default": "scheme-1"
-        },
-        {
-          "type": "header",
-          "content": "t:sections.multirow.settings.header_mobile.content"
-        },
-        {
-          "type": "select",
-          "id": "mobile_content_alignment",
-          "options": [
-            {
-              "value": "left",
-              "label": "t:sections.multirow.settings.mobile_content_alignment.options__1.label"
-            },
-            {
-              "value": "center",
-              "label": "t:sections.multirow.settings.mobile_content_alignment.options__2.label"
-            },
-            {
-              "value": "right",
-              "label": "t:sections.multirow.settings.mobile_content_alignment.options__3.label"
-            }
-          ],
-          "default": "left",
-          "label": "t:sections.multirow.settings.mobile_content_alignment.label"
-        },
-        {
-          "type": "header",
-          "content": "t:sections.all.padding.section_padding_heading"
-        },
-        {
-          "type": "range",
-          "id": "padding_top",
-          "min": 0,
-          "max": 100,
-          "step": 4,
-          "unit": "px",
-          "label": "t:sections.all.padding.padding_top",
-          "default": 36
-        },
-        {
-          "type": "range",
-          "id": "padding_bottom",
-          "min": 0,
-          "max": 100,
-          "step": 4,
-          "unit": "px",
-          "label": "t:sections.all.padding.padding_bottom",
-          "default": 36
-        }
-      ],
-      "presets": [
-        {
-          "name": "book slideshow",          
+          "type": "slide"
         }
       ]
     }
+  ]
+}
 {% endschema %}
