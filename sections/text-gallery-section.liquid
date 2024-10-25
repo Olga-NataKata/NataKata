@@ -57,7 +57,7 @@
             {% for block in section.blocks %}
                 {% if block.type == 'image' %}
                     <div class="gallery-item gallery-image">
-                        <img src="{{ block.settings.image | img_url: 'medium' }}" alt="{{ section.settings.heading }}" onclick="openFullscreenImage(this)">
+                        <img src="{{ block.settings.image | img_url: 'medium' }}" alt="{{ section.settings.heading }}" onclick="toggleFullscreen(this)">
                     </div>
                 {% elsif block.type == 'video' %}
                     <div class="gallery-item gallery-video">
@@ -75,44 +75,37 @@
 <link rel="stylesheet" href="{{ 'text-gallery-section.css' | asset_url }}">
 
 <script>
-    function toggleFullscreen(video) {
-        video.muted = !document.fullscreenElement; 
+    function toggleFullscreen(media) {
+        // Check if the clicked element is an image or video
+        const isVideo = media.tagName === 'VIDEO';
 
+        // Toggle fullscreen for media (image or video)
         if (!document.fullscreenElement) {
-            video.currentTime = 0;
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            } else if (video.webkitRequestFullscreen) {
-                video.webkitRequestFullscreen();
-            } else if (video.msRequestFullscreen) {
-                video.msRequestFullscreen();
+            if (media.requestFullscreen) {
+                media.requestFullscreen();
+            } else if (media.webkitRequestFullscreen) { // Safari
+                media.webkitRequestFullscreen();
+            } else if (media.msRequestFullscreen) { // IE11
+                media.msRequestFullscreen();
             }
+            // For video: unmute and start from the beginning
+            if (isVideo) {
+                media.currentTime = 0;
+                media.muted = false;
+            }
+        } else {
+            document.exitFullscreen();
         }
     }
 
-    function openFullscreenImage(image) {
-        const fullscreenContainer = document.createElement('div');
-        fullscreenContainer.classList.add('fullscreen-image-container');
-        
-        const fullscreenImage = document.createElement('img');
-        fullscreenImage.src = image.src;
-        fullscreenImage.classList.add('fullscreen-image');
-
-        fullscreenContainer.appendChild(fullscreenImage);
-        document.body.appendChild(fullscreenContainer);
-
-        fullscreenContainer.onclick = function() {
-            document.body.removeChild(fullscreenContainer);
-        }
-    }
-
+    // Event listener to mute video when exiting fullscreen
     document.addEventListener('fullscreenchange', function() {
         const videos = document.querySelectorAll('.gallery-video video');
-        
         if (!document.fullscreenElement) {
-            videos.forEach(v => {
-                v.muted = true;
+            videos.forEach(video => {
+                video.muted = true;
             });
         }
     });
 </script>
+    
