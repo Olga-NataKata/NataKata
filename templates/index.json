@@ -81,56 +81,14 @@
         "color_scheme": "",
         "background": "shopify://shop_images/pexels-rachel-claire-5864245.jpg",
         "front_image_bg": "shopify://shop_images/3.webp",
-        "front_image": "shopify://shop_images/logo.svg",
         "front_heading": "Look book!",
         "front_text": "~ NataKuku",
         "about_us_heading": "About us",
         "about_us_text": "We are NataKuku"
       }
-    },
-    "scrolling_banner_ycLY4R": {
-      "type": "scrolling-banner",
-      "blocks": {
-        "heading_n8BktR": {
-          "type": "heading",
-          "settings": {
-            "text": "NATA KUKU",
-            "text_size": "h5"
-          }
-        },
-        "heading_U9yDMG": {
-          "type": "heading",
-          "settings": {
-            "text": "NEW COLLECTION",
-            "text_size": "h5"
-          }
-        },
-        "icon_x8FNpQ": {
-          "type": "icon",
-          "settings": {
-            "image": "shopify://shop_images/Vector.svg",
-            "image_width": 10
-          }
-        }
-      },
-      "block_order": [
-        "heading_n8BktR",
-        "heading_U9yDMG",
-        "icon_x8FNpQ"
-      ],
-      "settings": {
-        "color_scheme": "scheme-5",
-        "scroll_speed": 45,
-        "scroll_direction": "left",
-        "padding_top": 10,
-        "padding_bottom": 10,
-        "padding_top_mb": 10,
-        "padding_bottom_mb": 10
-      }
     }
   },
   "order": [
-    "book_slideshow_6hMAUj",
-    "scrolling_banner_ycLY4R"
+    "book_slideshow_6hMAUj"
   ]
 }
