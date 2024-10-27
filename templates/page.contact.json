@@ -61,11 +61,47 @@
         "padding_top": 68,
         "padding_bottom": 68
       }
+    },
+    "contact_us_text_gr6wVf": {
+      "type": "contact_us_text",
+      "blocks": {
+        "social_link_Dkzqg8": {
+          "type": "social_link",
+          "settings": {
+            "platform_name": "Facebook",
+            "url": ""
+          }
+        },
+        "social_link_BMmqbU": {
+          "type": "social_link",
+          "settings": {
+            "platform_name": "Facebook",
+            "url": ""
+          }
+        },
+        "social_link_K6GcaD": {
+          "type": "social_link",
+          "settings": {
+            "platform_name": "Facebook",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "social_link_Dkzqg8",
+        "social_link_BMmqbU",
+        "social_link_K6GcaD"
+      ],
+      "settings": {
+        "heading": "Get in Touch",
+        "description": "Follow us on our social media channels."
+      }
     }
   },
   "order": [
     "main",
     "image_banner_YK9UKF",
+    "contact_us_text_gr6wVf",
     "form"
   ]
 }
