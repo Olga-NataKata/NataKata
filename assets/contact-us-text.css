@@ -1,119 +1,127 @@
 .contact-us-text-section {
     text-align: center;
-    margin: 50px 0;
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 20px;
 }
 
 .contact-us-text-section h2 {
-    font-size: 2rem; /* Базовий розмір заголовка */
-    margin-bottom: 20px;
+    font-size: 2.5rem;
     color: var(--color-heading);
+    margin-bottom: 20px;
 }
 
 .contact-us-text-section p {
-    font-size: 1.1rem; /* Базовий розмір опису */
-    margin-bottom: 40px;
+    font-size: 1.1rem;
     color: var(--color-text);
+    margin-bottom: 30px;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Відстань між іконками */
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .social-links img {
-    width: 40px; /* Базовий розмір іконок */
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Адаптація для екранів шириною до 1200px (ноутбуки) */
-@media (max-width: 1200px) {
-    .contact-us-text-section h2 {
-        font-size: 1.8rem;
-    }
+.social-links img:hover {
+    transform: scale(1.15);
+    opacity: 0.85;
+}
 
+/* Адаптивні стилі для планшетів */
+@media (max-width: 1024px) {
+    .contact-us-text-section {
+        padding: 15px;
+        margin: 40px auto;
+    }
+    
+    .contact-us-text-section h2 {
+        font-size: 2.2rem;
+    }
+    
     .contact-us-text-section p {
         font-size: 1rem;
     }
+    
+    .social-links img {
+        width: 45px;
+        height: 45px;
+    }
 }
 
-/* Адаптація для екранів шириною до 992px (великі планшети) */
-@media (max-width: 992px) {
-    .contact-us-text-section h2 {
-        font-size: 1.6rem;
+/* Адаптивні стилі для середніх пристроїв */
+@media (max-width: 768px) {
+    .contact-us-text-section {
+        margin: 30px auto;
+        padding: 10px;
     }
-
+    
+    .contact-us-text-section h2 {
+        font-size: 1.9rem;
+        margin-bottom: 15px;
+    }
+    
     .contact-us-text-section p {
         font-size: 0.95rem;
     }
-
+    
     .social-links img {
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
     }
 }
 
-/* Адаптація для екранів шириною до 768px (планшети) */
-@media (max-width: 768px) {
-    .contact-us-text-section h2 {
-        font-size: 1.4rem;
+/* Адаптивні стилі для маленьких пристроїв */
+@media (max-width: 480px) {
+    .contact-us-text-section {
+        margin: 20px auto;
+        padding: 5px;
     }
-
+    
+    .contact-us-text-section h2 {
+        font-size: 1.7rem;
+    }
+    
     .contact-us-text-section p {
         font-size: 0.9rem;
     }
+    
+    .social-links img {
+        width: 35px;
+        height: 35px;
+        margin: 5px;
+    }
+    
+    .social-links {
+        gap: 10px;
+    }
+}
 
+/* Адаптивні стилі для дуже маленьких екранів */
+@media (max-width: 360px) {
+    .contact-us-text-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .contact-us-text-section p {
+        font-size: 0.85rem;
+    }
+    
     .social-links img {
         width: 30px;
         height: 30px;
     }
-}
-
-/* Адаптація для екранів шириною до 576px (великі мобільні пристрої) */
-@media (max-width: 576px) {
-    .contact-us-text-section {
-        margin: 40px 0;
-    }
-
-    .contact-us-text-section h2 {
-        font-size: 1.2rem;
-    }
-
-    .contact-us-text-section p {
-        font-size: 0.85rem;
-    }
-
+    
     .social-links {
-        gap: 15px;
-    }
-
-    .social-links img {
-        width: 25px;
-        height: 25px;
-    }
-}
-
-/* Адаптація для екранів шириною до 320px (малі мобільні пристрої) */
-@media (max-width: 320px) {
-    .contact-us-text-section {
-        margin: 30px 0;
-    }
-
-    .contact-us-text-section h2 {
-        font-size: 1rem;
-    }
-
-    .contact-us-text-section p {
-        font-size: 0.8rem;
-    }
-
-    .social-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .social-links img {
-        width: 20px;
-        height: 20px;
+        gap: 8px;
     }
 }
