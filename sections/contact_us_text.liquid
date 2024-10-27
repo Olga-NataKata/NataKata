@@ -1,75 +1,81 @@
 {% schema %}
-    {
-        "name": "Contact Us Text Section",
-        "settings": [
-            {
-                "type": "text",
-                "id": "heading",
-                "label": "Section Heading",
-                "default": "Contact us"
-            },
-            {
-                "type": "textarea",
-                "id": "description",
-                "label": "Description",
-                "default": "If you have any questions about our products, their care, or ordering conditions, we’re always here to help. Send us a message, and our team will respond as soon as possible."
-            },
-            {
-                "type": "text",
-                "id": "email",
-                "label": "Email Address",
-                "default": "privacy@natakuku.com"
-            }
-        ],
-        "blocks": [
-            {
-                "type": "social_link",
-                "name": "Social Media Link",
-                "settings": [
-                    {
-                        "type": "text",
-                        "id": "platform_name",
-                        "label": "Platform Name",
-                        "default": "Facebook"
-                    },
-                    {
-                        "type": "url",
-                        "id": "url",
-                        "label": "Social Media URL"
-                    },
-                    {
-                        "type": "image_picker",
-                        "id": "icon",
-                        "label": "Social Media Icon"
-                    }
-                ]
-            }
-        ],
-        "presets": [
-            {
-                "name": "Contact Us Text Section",
-                "category": "Custom"
-            }
-        ]
-    }
-    {% endschema %}
+{
+    "name": "Contact Us Text Section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Section Heading",
+            "default": "Contact us"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description",
+            "default": "If you have any questions about our products, their care, or ordering conditions, we’re always here to help. Send us a message, and our team will respond as soon as possible."
+        },
+        {
+            "type": "text",
+            "id": "email",
+            "label": "Email Address",
+            "default": "privacy@natakuku.com"
+        },
+        {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background Image"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "social_link",
+            "name": "Social Media Link",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "platform_name",
+                    "label": "Platform Name",
+                    "default": "Facebook"
+                },
+                {
+                    "type": "url",
+                    "id": "url",
+                    "label": "Social Media URL"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "icon",
+                    "label": "Social Media Icon"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Contact Us Text Section",
+            "category": "Custom"
+        }
+    ]
+}
+{% endschema %}
     
-    <div class="contact-us-text-section">
-        <h2>{{ section.settings.heading }}</h2>
-        <p>{{ section.settings.description }}</p>
-        <p><strong>Email:</strong> <a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a></p>
-        
-        <h3>Follow us on social media:</h3>
-        <p>Stay updated with our latest releases by following us on social media.</p>
-        
-        <div class="social-links">
-            {% for block in section.blocks %}
-                <a href="{{ block.settings.url }}" target="_blank">
-                    <img src="{{ block.settings.icon | img_url: 'thumb' }}" alt="{{ block.settings.platform_name }}">
-                </a>
-            {% endfor %}
-        </div>
+<div class="contact-us-text-section" style="background-image: url({{ section.settings.background_image | img_url: 'master' }});">
+    <h2>{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.description }}</p>
+    <p><strong>Email:</strong> <a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a></p>
+    
+    <h3>Follow us on social media:</h3>
+    <p>Stay updated with our latest releases by following us on social media.</p>
+    
+    <div class="social-links">
+        {% for block in section.blocks %}
+            <a href="{{ block.settings.url }}" target="_blank">
+                <img src="{{ block.settings.icon | img_url: 'thumb' }}" alt="{{ block.settings.platform_name }}">
+            </a>
+        {% endfor %}
     </div>
+</div>
+
+<link rel="stylesheet" href="{{ 'contact-us-text.css' | asset_url }}">
     
-    <link rel="stylesheet" href="{{ 'contact-us-text.css' | asset_url }}">
-    
+   
