@@ -1,165 +1,171 @@
 .contact-us-text-section {
-    text-align: center;
-    margin: 50px auto;
-    max-width: 800px;
-    padding: 40px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff; /* Set text color to white for better readability */
-    border-radius: 8px;
+  text-align: center;
+  max-width: 100%;
+  padding: 40px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff; /* Set text color to white for better readability */
+  border-radius: 8px;
 }
 
 /* Headers */
 .contact-us-text-section h2 {
-    font-size: 2.5rem;
-    color: #fff; /* White color for headers */
-    margin-bottom: 20px;
+  font-size: 5.5rem;
+  color: #fff; /* White color for headers */
+  margin-bottom: 20px;
 }
 
 .contact-us-text-section h3 {
-    font-size: 1.8rem;
-    color: #fff; /* White color for subheaders */
-    margin-top: 30px;
+  font-size: 3.8rem;
+  color: #fff; /* White color for subheaders */
+  margin-top: 30px;
 }
 
 /* Paragraphs */
 .contact-us-text-section p {
-    font-size: 1.1rem;
-    color: #fff; /* White color for paragraphs */
-    margin-bottom: 30px;
+  font-size: 2.1rem;
+  color: #fff; /* White color for paragraphs */
+  margin-bottom: 30px;
 }
 
 /* Links */
 .contact-us-text-section a {
-    color: #fff; /* White color for links */
-    text-decoration: underline; /* Underline links */
+  color: #fff; /* White color for links */
+  text-decoration: underline; /* Underline links */
 }
 
 .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .social-links img {
-    width: 50px;
-    height: 50px;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .social-links img:hover {
-    transform: scale(1.15);
-    opacity: 0.85;
+  transform: scale(1.15);
+  opacity: 0.85;
 }
 
 /* Responsive styles */
 @media (max-width: 1024px) {
-    .contact-us-text-section {
-        padding: 30px;
-    }
+  .contact-us-text-section {
+    padding: 30px;
+  }
 }
 
 @media (max-width: 768px) {
-    .contact-us-text-section {
-        padding: 20px;
-    }
+  .contact-us-text-section {
+    padding: 20px;
+  }
 }
 
 @media (max-width: 480px) {
-    .contact-us-text-section {
-        padding: 15px;
-    }
+  .contact-us-text-section {
+    padding: 15px;
+  }
 }
 
 /* Responsive styles for tablets */
 @media (max-width: 1024px) {
-    .contact-us-text-section {
-        padding: 15px;
-        margin: 40px auto;
-    }
-    
-    .contact-us-text-section h2 {
-        font-size: 2.2rem;
-    }
-    
-    .contact-us-text-section p {
-        font-size: 1rem;
-    }
-    
-    .social-links img {
-        width: 45px;
-        height: 45px;
-    }
+  .contact-us-text-section {
+    padding: 15px;
+    margin: 40px auto;
+  }
+
+  .contact-us-text-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .contact-us-text-section h3 {
+    font-size: 2rem;
+  }
+
+  .contact-us-text-section p {
+    font-size: 1.5rem;
+  }
+
+  .social-links img {
+    width: 45px;
+    height: 45px;
+  }
 }
 
 /* Responsive styles for medium devices */
 @media (max-width: 768px) {
-    .contact-us-text-section {
-        margin: 30px auto;
-        padding: 10px;
-    }
-    
-    .contact-us-text-section h2 {
-        font-size: 1.9rem;
-        margin-bottom: 15px;
-    }
-    
-    .contact-us-text-section p {
-        font-size: 0.95rem;
-    }
-    
-    .social-links img {
-        width: 40px;
-        height: 40px;
-    }
+  .contact-us-text-section {
+    margin: 30px auto;
+    padding: 10px;
+  }
+
+  .contact-us-text-section h2 {
+    font-size: 2rem;
+  }
+
+  .contact-us-text-section h3 {
+    font-size: 1.8rem;
+  }
+
+  .contact-us-text-section p {
+    font-size: 1.3rem;
+  }
+
+  .social-links img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 /* Responsive styles for small devices */
 @media (max-width: 480px) {
-    .contact-us-text-section {
-        margin: 20px auto;
-        padding: 5px;
-    }
-    
-    .contact-us-text-section h2 {
-        font-size: 1.7rem;
-    }
-    
-    .contact-us-text-section p {
-        font-size: 0.9rem;
-    }
-    
-    .social-links img {
-        width: 35px;
-        height: 35px;
-        margin: 5px;
-    }
-    
-    .social-links {
-        gap: 10px;
-    }
+  .contact-us-text-section {
+    margin: 20px auto;
+    padding: 5px;
+  }
+
+  .contact-us-text-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .contact-us-text-section p {
+    font-size: 0.9rem;
+  }
+
+  .social-links img {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+  }
+
+  .social-links {
+    gap: 10px;
+  }
 }
 
 /* Responsive styles for very small screens */
 @media (max-width: 360px) {
-    .contact-us-text-section h2 {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-    }
-    
-    .contact-us-text-section p {
-        font-size: 0.85rem;
-    }
-    
-    .social-links img {
-        width: 30px;
-        height: 30px;
-    }
-    
-    .social-links {
-        gap: 8px;
-    }
+  .contact-us-text-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .contact-us-text-section p {
+    font-size: 0.85rem;
+  }
+
+  .social-links img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-links {
+    gap: 8px;
+  }
 }

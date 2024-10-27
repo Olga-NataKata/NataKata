@@ -65,7 +65,7 @@
     <p><strong>Email:</strong> <a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a></p>
     
     <h3>Follow us on social media:</h3>
-    <p>Stay updated with our latest releases by following us on social media.</p>
+    
     
     <div class="social-links">
         {% for block in section.blocks %}
@@ -74,6 +74,7 @@
             </a>
         {% endfor %}
     </div>
+    <p>Stay updated with our latest releases by following us on social media.</p>
 </div>
 
 <link rel="stylesheet" href="{{ 'contact-us-text.css' | asset_url }}">
