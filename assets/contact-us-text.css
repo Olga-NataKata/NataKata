@@ -35,6 +35,37 @@
     transform: scale(1.15);
     opacity: 0.85;
 }
+.contact-us-text-section {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 40px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* Білий колір тексту для кращої читабельності на фоні */
+    border-radius: 8px;
+}
+
+/* Адаптивність для менших екранів */
+@media (max-width: 1024px) {
+    .contact-us-text-section {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-us-text-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-us-text-section {
+        padding: 15px;
+    }
+}
+
 
 /* Адаптивні стилі для планшетів */
 @media (max-width: 1024px) {
