@@ -17,41 +17,6 @@
         "padding_bottom": 0
       }
     },
-    "image_banner_YK9UKF": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_FHC3C7": {
-          "type": "heading",
-          "settings": {
-            "heading": "Contact us",
-            "heading_size": "hxxl"
-          }
-        },
-        "rich_text_KDUgty": {
-          "type": "rich-text",
-          "settings": {
-            "text": "<p>If you have any questions about our products, their care, or ordering conditions, we’re always here to help. Send us a message, and our team will respond as soon as possible.<br/><strong>Email:  </strong><a href=\"mailto:privacy@natakuku.com\" title=\"mailto:privacy@natakuku.com\">privacy@natakuku.com<br/></a></p><h2>Follow us on social media: </h2><p>Stay updated with our latest releases by following us on social media.</p><p></p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_FHC3C7",
-        "rich_text_KDUgty"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/3.webp",
-        "image_overlay_opacity": 0,
-        "image_height": "large",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "contact_us_text_gr6wVf": {
       "type": "contact_us_text",
       "blocks": {
@@ -96,7 +61,6 @@
   },
   "order": [
     "main",
-    "image_banner_YK9UKF",
     "contact_us_text_gr6wVf",
     "form"
   ]
