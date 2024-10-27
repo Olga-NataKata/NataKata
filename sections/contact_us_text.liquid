@@ -1,0 +1,64 @@
+{% schema %}
+{
+    "name": "Contact Us Text Section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Section Heading",
+            "default": "Get in Touch"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description",
+            "default": "Follow us on our social media channels."
+        }
+    ],
+    "blocks": [
+        {
+            "type": "social_link",
+            "name": "Social Media Link",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "platform_name",
+                    "label": "Platform Name",
+                    "default": "Facebook"
+                },
+                {
+                    "type": "url",
+                    "id": "url",
+                    "label": "Social Media URL"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "icon",
+                    "label": "Social Media Icon"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Contact Us Text Section",
+            "category": "Custom"
+        }
+    ]
+}
+{% endschema %}
+
+<div class="contact-us-text-section">
+    <h2>{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.description }}</p>
+    <div class="social-links">
+        {% for block in section.blocks %}
+            <a href="{{ block.settings.url }}" target="_blank">
+                <img src="{{ block.settings.icon | img_url: 'thumb' }}" alt="{{ block.settings.platform_name }}">
+            </a>
+        {% endfor %}
+    </div>
+</div>
+
+<link rel="stylesheet" href="{{ 'contact-us-text.css' | asset_url }}">
+    

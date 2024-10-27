@@ -1,0 +1,119 @@
+.contact-us-text-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.contact-us-text-section h2 {
+    font-size: 2rem; /* Базовий розмір заголовка */
+    margin-bottom: 20px;
+    color: var(--color-heading);
+}
+
+.contact-us-text-section p {
+    font-size: 1.1rem; /* Базовий розмір опису */
+    margin-bottom: 40px;
+    color: var(--color-text);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Відстань між іконками */
+}
+
+.social-links img {
+    width: 40px; /* Базовий розмір іконок */
+    height: 40px;
+}
+
+/* Адаптація для екранів шириною до 1200px (ноутбуки) */
+@media (max-width: 1200px) {
+    .contact-us-text-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-us-text-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Адаптація для екранів шириною до 992px (великі планшети) */
+@media (max-width: 992px) {
+    .contact-us-text-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .contact-us-text-section p {
+        font-size: 0.95rem;
+    }
+
+    .social-links img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Адаптація для екранів шириною до 768px (планшети) */
+@media (max-width: 768px) {
+    .contact-us-text-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .contact-us-text-section p {
+        font-size: 0.9rem;
+    }
+
+    .social-links img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Адаптація для екранів шириною до 576px (великі мобільні пристрої) */
+@media (max-width: 576px) {
+    .contact-us-text-section {
+        margin: 40px 0;
+    }
+
+    .contact-us-text-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .contact-us-text-section p {
+        font-size: 0.85rem;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-links img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Адаптація для екранів шириною до 320px (малі мобільні пристрої) */
+@media (max-width: 320px) {
+    .contact-us-text-section {
+        margin: 30px 0;
+    }
+
+    .contact-us-text-section h2 {
+        font-size: 1rem;
+    }
+
+    .contact-us-text-section p {
+        font-size: 0.8rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-links img {
+        width: 20px;
+        height: 20px;
+    }
+}
