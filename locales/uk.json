@@ -1453,7 +1453,152 @@
         },
         "sort_by": "Сортувати за: {{option}}",
         "sort_hide_options_accessibility_label": "Приховати параметри сортування для підтверджених замовлень.",
-        "sort_show_options_accessibility_label": "Показати параметри сортування для підтверджених замовлень."
+        "sort_show_options_accessibility_label": "Показати параметри сортування для підтверджених замовлень.",
+        "sort_currently_sorted_by_accessibility_label": "Наразі відсортовано за: {{option}}",
+        "sort_title": "Сортувати",
+        "sort": {
+          "date": {
+            "newest": "Від новішого до найстарішого",
+            "oldest": "Від найстарішого до найновішого"
+          },
+          "location": {
+            "ascending": "Розташування (Арізона)",
+            "descending": "Розташування (ZA)"
+          },
+          "order_number": {
+            "ascending": "Номер замовлення (від низького до високого)",
+            "descending": "Номер замовлення (від високого до нижчого)"
+          },
+          "order_total": {
+            "ascending": "Загальна сума замовлення (від низького до високого)",
+            "descending": "Загальна сума замовлення (від високого до низького)"
+          }
+        },
+        "filter_title": "фільтр",
+        "filter": {
+          "clear_section": "Очистити розділ",
+          "clear_all": "Очистити все",
+          "apply": "Застосувати",
+          "date": {
+            "start_date": "Дата початку",
+            "end_date": "Кінцева дата",
+            "title": "Дата замовлення",
+            "today": "Сьогодні",
+            "last_7_days": "Останні 7 днів",
+            "last_30_days": "Останні 30 днів",
+            "last_90_days": "Останні 90 днів",
+            "last_365_days": "Останні 12 місяців"
+          }
+        },
+        "table_view": "Показати вигляд таблиці",
+        "show_order_actions_accessibility_label": "Показати дії замовлення для замовлення {{name}}"
+      },
+      "order_status": {
+        "attempted_delivery_label": "Спроба доставки",
+        "attempted_delivery_description": "Спроба доставки була невдалою.",
+        "attempted_to_deliver_label": "Спроба доставити",
+        "confirmed_description": "Ми отримали ваше замовлення.",
+        "on_its_way_description": "Цей вантаж уже в дорозі.",
+        "out_for_delivery_description": "Цей вантаж готовий до доставки.",
+        "preparing_for_shipping_label": "Підготовка до відправлення",
+        "preparing_for_shipping_description": "Ці предмети готуються до відправлення.",
+        "ready_for_pickup_label": "Готовий до самовивозу",
+        "ready_for_pickup_description": "Ці предмети готові до вивезення. Будь ласка, візьміть із собою підтвердження замовлення, коли ви заберете своє замовлення.",
+        "ready_for_pickup_location": "Ваше замовлення готове до отримання на місці",
+        "picked_up_label": "Підхопив",
+        "picked_up_description": "Ці речі були зібрані.",
+        "canceled_description": "Ваше замовлення було скасовано {{date}} .",
+        "canceled_label": "Скасовано",
+        "canceled_title": "Ваше замовлення скасовано",
+        "come_back": "Поверніться на цю сторінку, щоб отримати оновлення щодо статусу вашого відправлення.",
+        "company_tracking_number": "Номер відстеження {{company}} :",
+        "confirmed_label": "Підтверджено",
+        "confirmed_title": "Ваше замовлення підтверджено",
+        "confirmed_description_pickup": "Ви отримаєте електронний лист, коли ваше замовлення буде готове до отримання.",
+        "confirmed_description_digital": "Ви отримаєте електронний лист, коли ваше замовлення буде готове.",
+        "confirmed_description_gift_card_text": "Ви отримаєте текстове повідомлення, коли ваше замовлення буде готове.",
+        "delivered_description": "Цей вантаж доставлено.",
+        "complete_label": "Повний",
+        "delivered_label": "Доставлено",
+        "delivered_title": "Ваше відправлення доставлено",
+        "delivered_description_digital": {
+          "one": "Цей елемент завершено.",
+          "other": "Ці елементи завершені."
+        },
+        "delivered_description_gift_card": {
+          "one": "Подарункову картку надіслали електронною поштою.",
+          "other": "Подарункові карти були надіслані електронною поштою."
+        },
+        "delivered_description_gift_card_text": {
+          "one": "Подарункову картку надіслали текстовим повідомленням.",
+          "other": "Подарункові листівки надіслали смс."
+        },
+        "gift_card_label": {
+          "one": "Подарункова карта",
+          "other": "Подарункові карти"
+        },
+        "gift_card_resend": {
+          "one": "Повторно надіслати електронний лист",
+          "other": "Повторно надіслати електронні листи"
+        },
+        "gift_card_resend_text": {
+          "one": "Повторно надіслати текст",
+          "other": "Надіслати повідомлення повторно"
+        },
+        "gift_resend_success": {
+          "one": "Подарункова картка повторно надіслана",
+          "other": "Подарункові картки повторно надіслано"
+        },
+        "gift_resend_failure": {
+          "one": "Під час повторного надсилання подарункової картки виникла проблема. Спробуйте ще раз або зв'яжіться з нами.",
+          "other": "Під час повторного надсилання подарункових карток виникла проблема. Спробуйте ще раз або зв'яжіться з нами."
+        },
+        "gift_card_resend_description": {
+          "one": "Якщо його не було отримано, надішліть електронний лист повторно або",
+          "other": "Якщо вони не були отримані, надішліть електронні листи повторно або"
+        },
+        "gift_card_resend_description_text": {
+          "one": "Якщо його не було отримано, надішліть текст повторно або",
+          "other": "Якщо вони не були отримані, надішліть текст повторно або"
+        },
+        "confirmed_gift_card_additional_description": {
+          "one": "Подарункова картка буде надіслана окремим електронним листом.",
+          "other": "Кожну подарункову картку буде надіслано окремим електронним листом."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "Подарункова карта буде надіслана окремим текстом.",
+          "other": "Кожна подарункова картка буде надіслана окремим текстом."
+        },
+        "status_timestamp": "Оновлено {{date}}",
+        "estimated_delivery": "Очікується {{date}}",
+        "delivered": "Прибув {{date}}",
+        "buy_with_prime_logo_accessibility_label": "Купуйте Amazon з логотипом Prime",
+        "in_review_description": "Ми повідомимо вас, якщо нам знадобиться додаткова інформація або коли ваше замовлення буде підтверджено.",
+        "in_review_label": "В огляді",
+        "in_review_title": "Ваше замовлення розглядається",
+        "last_updated": "Останнє оновлення {{date}}",
+        "multiple_shipments_label": "Кілька відправлень",
+        "multiple_statuses_label": "Кілька статусів замовлення",
+        "no_tracking_number": "Для цього відправлення немає номера відстеження.",
+        "on_its_way_label": "На шляху",
+        "on_its_way_title": "Ваше відправлення вже в дорозі",
+        "out_for_delivery_label": "На доставку",
+        "out_for_delivery_title": "Ваше відправлення готове до доставки",
+        "resume_tracking": "Відновити відстеження",
+        "submitted_label": "Надіслано",
+        "submitted_description": "Переглянути замовлення та платіжні реквізити.",
+        "there_was_a_problem_label": "Виникла проблема",
+        "track_shipment": "Відстежити відправлення",
+        "request_return": "Вимагати повернення",
+        "view_order_for_details": "Перегляньте замовлення, щоб дізнатися більше",
+        "external_promise_manage_button_label": {
+          "buy_with_prime": "Керуйте на Amazon"
+        },
+        "amazon_buy_with_prime": {
+          "order_tracking_link": {
+            "text": "Керуйте за допомогою Amazon"
+          }
+        }
       }
     },
     "order_details": {
