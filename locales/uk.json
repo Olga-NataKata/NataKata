@@ -1234,6 +1234,135 @@
           "processing": "Обробка…",
           "submit": "Надіслати"
         }
+      },
+      "general": {
+        "errors": {
+          "delivery": {
+            "delivery_strategy_conditions_not_satisfied": "Для цього місця доступні стратегії доставки, але їх умови не виконуються.",
+            "out_of_stock_at_origin_location": "Немає запасів у місці походження.",
+            "invalid_signature": "Недійсний підпис про знижку."
+          },
+          "discount": {
+            "discounts_not_allowed_for_b2b": "У B2B-магазинах не допускаються знижки.",
+            "custom_discount_not_honoured": "Надана спеціальна знижка не була врахована.",
+            "unsupported_expectation": "Надана лінія знижки містила очікування, яке політика не могла інтерпретувати.",
+            "additional_requested_discount_code_discarded": "Запитаний додатковий код знижки відхилено.",
+            "allocations_mismatch": "Очікуваний розподіл знижки не відповідає фактичному розподілу знижки.",
+            "discount_title_too_long": "Назва знижки не може містити більше 255 символів."
+          },
+          "tax": {
+            "new_tax_must_be_accepted": "Щоб продовжити, потрібно прийняти новий податковий рядок у пропозиції продавця.",
+            "unresolvable_tax_terms": "Запропоновані умови є невирішеними з огляду на поточний контекст переговорів.",
+            "delivery_price_is_abstract": "Відповідна ціна доставки є абстрактною.",
+            "tax_inclusivity_mismatch": "Переговоріть із конкретним значенням totalTaxAndDutyAmount або totalAmountIncludedInTarget.",
+            "tax_exemption_not_supported": "Звільнення від сплати податків не підтримується для поточної сесії переговорів.",
+            "delivery_tax_exemption_not_supported": "Звільнення від податків для ліній доставки наразі не підтримується.",
+            "proposed_allocations_required": "Відсутнє поле «пропоновані розподіли».",
+            "merchandise_terms_must_be_defined": "Необхідно визначити товарні терміни.",
+            "delivery_terms_must_be_defined": "Необхідно визначити умови доставки.",
+            "merchandise_discount_terms_must_be_defined": "Необхідно визначити умови знижки на товар.",
+            "delivery_discount_terms_must_be_defined": "Необхідно визначити умови знижки на доставку.",
+            "allocated_required": "Відсутнє поле \"виділено\".",
+            "value_required": "Відсутнє поле \"значення\".",
+            "line_splits_not_supported": "Поле 'merchandise lines' має бути розділене таким чином, щоб кожне містило один компонент рядка в пропозиції продавця."
+          },
+          "payment": {
+            "manual_payments_not_allowed_for_b2b": "Платежі вручну заборонені в магазинах B2B.",
+            "positive_amount_expected": "Сума до сплати має бути більше 0.",
+            "total_amount_mismatch": "Загальна сума до сплати не відповідає сумі платежів.",
+            "subscription_terms_not_accepted": "Умови підписки не прийняті.",
+            "missing_session_id": "Відсутня інформація про сеанс кредитної картки.",
+            "gateway_not_supported": "Платіжний шлюз не підтримує збереження методу оплати.",
+            "credit_card_last_name_required": "\"прізвище\" не може бути нульовим.",
+            "credit_card_update_failed": "Не вдалося оновити кредитну картку.",
+            "installments_amount_invalid": "Недійсна сума для транзакції в розстрочку.",
+            "installments_test_mode_not_allowed": "Тестовий режим заборонений.",
+            "installments_gift_card_not_allowed": "Розстрочка не дозволяє використовувати подарункові картки.",
+            "installments_unsupported_currency": "Розстрочка не підтримує цю валюту.",
+            "installments_unsupported_shipping": "Розстрочка не підтримує доставку на цю адресу.",
+            "installments_unsupported_billing": "Розстрочка не підтримує цю платіжну адресу.",
+            "installments_unsupported_subscriptions": "Розстрочка не підтримує підписки.",
+            "installments_ineligible_line_item": "Розстрочку вимкнено для позиції цієї покупки.",
+            "shop_cash_not_allowed": "Купувати готівку заборонено без Shop Pay.",
+            "shop_cash_unsupported_checkout_source": "Shop Cash не підтримує цю касу.",
+            "shop_cash_gift_card_not_allowed": "Shop Cash не дозволяє купувати подарункові картки.",
+            "shop_cash_not_enabled": "Shop Cash не ввімкнено для цього магазину.",
+            "shop_cash_not_available": "Ця каса не підтримує готівку в магазині.",
+            "shop_cash_unsupported_subscriptions": "Shop Cash не підтримує підписки.",
+            "shop_cash_unsupported_shipping": "Shop Cash не підтримує товари без доставки.",
+            "invalid_address_type": "Наданий тип адреси недійсний для цього способу оплати.",
+            "missing_retail_attributions": "Роздрібні атрибуції потрібні для платежів кредитною карткою, введених вручну.",
+            "unexpected_retail_attributions": "Для оплати кредитною карткою несподівано надано роздрібні авторства.",
+            "invalid_card_source": "Цей сеанс не має дозволу на використання цього джерела карток.",
+            "wallet_content_missing": "Вміст гаманця відсутній.",
+            "payment_instrument_not_found": "Не вдалося знайти спосіб оплати",
+            "unauthorized_capture_method": "Налаштування методу збору платежів заборонено.",
+            "saved_payment_methods_not_allowed": "Збережені методи оплати заборонені.",
+            "saved_payment_methods_not_enabled": "Збережені способи оплати не активовані для цього магазину.",
+            "saved_payment_methods_cvv_verification_disabled": "Вибраний метод оплати вимагає перевірки CVV, яка не активована для цього магазину. Виберіть інший спосіб оплати.",
+            "store_credit_not_enabled": "Для цього магазину не активовано кредит.",
+            "store_credit_account_not_found": "Кредитний рахунок магазину не знайдено.",
+            "store_credit_account_mismatch": "Кредитний рахунок магазину не збігається з іменем покупця.",
+            "store_credit_mismatched_currency": "Валюта кредитного рахунку магазину не збігається з валютою оформлення замовлення.",
+            "store_credit_insufficient_funds": "На кредитному рахунку магазину недостатньо коштів.",
+            "store_credit_buying_gift_card": "Ви не можете використовувати кредит магазину, щоб купити подарункову картку.",
+            "gift_cards_not_allowed_for_b2b": "Подарункові картки заборонені в магазинах B2B.",
+            "method_required": "Потрібно запропонувати спосіб оплати.",
+            "paypal_express_address_invalid": "PayPal повернув недійсну адресу.",
+            "shop_cash_unsupported_currency": "Shop Cash не підтримує цю валюту.",
+            "market_manager_blocks_wallet_payments": "Метод оплати не підтримується менеджером маркету."
+          },
+          "tip": {
+            "not_accepted_by_shop": "Магазин не приймає чайові.",
+            "only_one_tip_line_allowed": "Кілька рядків підказок не підтримуються.",
+            "tips_not_allowed_for_b2b": "Чайові заборонені в магазинах B2B.",
+            "currency_change_reset": "Підказку скинуто через зміну валюти.",
+            "tips_not_allowed_for_deferred_purchase_options": "Чайові ще не підтримуються для варіантів відкладеної покупки."
+          },
+          "sale_attribution": {
+            "draft_order_not_exist": "Цей проект замовлення не існує в поточному магазині.",
+            "staff_member_not_exist": "Цього персоналу немає в поточному магазині.",
+            "location_not_exist": "Це місце не існує в поточному магазині.",
+            "point_of_sale_device_not_exist": "Цей пристрій для точки продажу не існує в поточному магазині.",
+            "unresolvable_target_merchandise_lines": "Зважаючи на поточний контекст переговорів, запропоновані атрибуції продажу неможливо вирішити."
+          },
+          "non_negotiable": {
+            "missing_non_negotiable_terms": "Пропозиція вашого покупця має містити non-negotiable_terms.",
+            "invalid_signature": "Підпис для {{target_terms}} недійсний."
+          },
+          "inventory": {
+            "missing_quantity_value": "Поле кількості відсутнє в рядках запасів покупця.",
+            "changing_behavior_not_allowed": "Цей клієнт не має дозволу змінювати поведінку інвентарю.",
+            "only_one_inventory_behavior_allowed": "Наразі на касу дозволена лише одна поведінка інвентаризації."
+          },
+          "optional_duties": {
+            "optional_duties_not_permitted": "Відмова від мит ​​не дозволяється для цієї каси."
+          },
+          "attribution": {
+            "retail_attribution_not_allowed": "Для цієї каси заборонено роздрібне зазначення.",
+            "retail_attribution_required": "Для цієї каси потрібне зазначення роздрібної торгівлі."
+          },
+          "captcha": {
+            "metadata_missing": "Для цього замовлення потрібно ввести код перевірки.",
+            "metadata_mismatch": "Наданий постачальник і тип captcha не відповідають очікуваним значенням.",
+            "token_missing": "Щоб завершити цю перевірку, потрібно надати маркер captcha.",
+            "job_enqueue_failed": "Завдання перевірки captcha не вдалося поставити в чергу.",
+            "job_already_queued": "Перевірка Captcha вже поставлена ​​в чергу для цього маркера Captcha.",
+            "token_expired": "Термін дії наданого токена captcha минув. Введіть нову кодову перевірку, щоб продовжити оплату.",
+            "token_invalid": "Наданий маркер captcha недійсний. Введіть нову кодову перевірку, щоб продовжити оплату.",
+            "token_not_valid_for_session": "Наданий captcha не можна використовувати з цією перевіркою."
+          },
+          "fx_reconciliation_override": {
+            "shop_currency_mismatch": "Отримана сума має бути у валюті магазину."
+          },
+          "checkout_source": {
+            "revoked": "Ця каса більше не доступна."
+          }
+        },
+        "full_price": "Повна ціна:",
+        "title": "Оплата - {{shopName}}",
+        "full_title": "{{pageTitle}} - {{shopName}} - Оплата",
+        "loading_title": "Оплата - {{shopName}}"
       }
     },
     "page_titles": {
