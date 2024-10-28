@@ -2972,6 +2972,118 @@
       "auto_complete_title": "Пропозиції",
       "billing_address": "Використовувати як платіжну адресу",
       "cancel": "Скасувати"
+    },
+    "payment_method_brands": {
+      "discover": "Відкрийте для себе",
+      "elo": "Ело",
+      "maestro": "Маестро",
+      "dankort": "Данкорт",
+      "hipercard": "Гіперкарта",
+      "laser": "Лазерна",
+      "shoppay": "Магазин Pay",
+      "storecredit": "Кредит магазину"
+    },
+    "shop_policies": {
+      "legal_notice": "Юридичне повідомлення",
+      "privacy_policy": "Політика конфіденційності",
+      "refund_policy": "Політика відшкодування",
+      "shipping_policy": "Політика доставки",
+      "subscription_policy": "Політика скасування",
+      "terms_of_sale": "Умови продажу",
+      "terms_of_service": "Умови обслуговування"
+    },
+    "ui_components": {
+      "closeNotification": "Закрити",
+      "expandNotification": "Переглянути більше",
+      "closeModal": "Закрити",
+      "submit": "Надіслати",
+      "processing": "Обробка…",
+      "increase": "Збільшити {{type}}",
+      "decrease": "Зменшити {{type}}",
+      "minimumReached": "Досягнуто мінімум {{value}}",
+      "maximumReached": "Досягнуто максимум {{value}}",
+      "january": "січня",
+      "february": "Лютий",
+      "march": "березень",
+      "april": "квітень",
+      "may": "травня",
+      "june": "червень",
+      "july": "липень",
+      "august": "серпень",
+      "september": "вересень",
+      "october": "жовтень",
+      "november": "Листопад",
+      "december": "грудень",
+      "monday": "понеділок",
+      "tuesday": "вівторок",
+      "wednesday": "Середа",
+      "thursday": "четвер",
+      "friday": "П'ятниця",
+      "saturday": "Субота",
+      "sunday": "неділя",
+      "mondayAbbreviation": "пн",
+      "tuesdayAbbreviation": "вт",
+      "wednesdayAbbreviation": "ми",
+      "thursdayAbbreviation": "чт",
+      "fridayAbbreviation": "О",
+      "sundayAbbreviation": "Нд",
+      "showNextMonth": "Показати наступний місяць, {{month}} {{year}}",
+      "showPreviousMonth": "Показати попередній місяць, {{month}} {{year}}",
+      "rangeStart": "Початок діапазону",
+      "inRange": "В діапазоні",
+      "rangeEnd": "Кінець діапазону",
+      "autocompleteOptionsAvailable": {
+        "one": "Доступно {{count}} товар",
+        "other": "Доступні товари: {{count}}"
+      },
+      "removeItem": "Видалити {{label}}",
+      "removeTag": "Видалити тег",
+      "month": {
+        "one": "місяць",
+        "other": "місяців"
+      },
+      "mapClusterTitle": {
+        "one": "Кластер маркера {{number}}",
+        "other": "Кластер із {{number}} маркерів"
+      },
+      "expandSheet": "Розгорнути",
+      "qrCode": "QR код",
+      "addFile": "Додати файл",
+      "dropzoneInvalidFileType": "Тип файлу не підтримується",
+      "dropzoneDraggedOver": "Перетягніть файл, щоб завантажити"
+    },
+    "profile_preview_bar": {
+      "customize_button": "Налаштувати",
+      "hide_bar": "Приховати панель",
+      "navigate_to_admin": "Перейдіть до адміністратора",
+      "close_preview": "Закрити попередній перегляд",
+      "previewing": "Ви переглядаєте:",
+      "saved_at": "Збережено {{date}} о {{time}}",
+      "viewing": "Ви переглядаєте:",
+      "not_available": "Дані профілю недоступні",
+      "actions_button": "Дії"
+    },
+    "active_inspector": {
+      "extension": {
+        "select": "Виберіть розширення під назвою {{extensionName}}",
+        "unselect": "Скасуйте вибір розширення під назвою {{extensionName}}",
+        "move_down": "Перемістіть розширення в наступне положення",
+        "move_up": "Перемістити розширення на попереднє положення",
+        "remove": "Видалити розширення",
+        "move_down_tooltip": "Перейти до наступної позиції",
+        "move_up_tooltip": "Перейти на попередню позицію",
+        "remove_tooltip": "видалити"
+      }
+    },
+    "settings": {
+      "title": "Налаштування",
+      "loading_accessibility_message": "Завантаження сторінки налаштувань",
+      "log_out_everywhere": {
+        "title": "Вийти всюди",
+        "description": "Якщо ви втратили пристрій або маєте проблеми з безпекою, вийдіть із будь-якого пристрою, щоб забезпечити безпеку свого облікового запису.",
+        "button": "Вийти всюди",
+        "warning_message": "Ви також вийдете з системи на цьому пристрої."
+      }
     }
   },
   "sections": {
@@ -3011,7 +3123,8 @@
       "next_announcement": "Наступне оголошення",
       "carousel": "Карусель",
       "announcement": "Оголошення",
-      "announcement_bar": "Панель оголошень"
+      "announcement_bar": "Панель оголошень",
+      "previous_announcement": "Попереднє оголошення"
     },
     "header": {
       "announcement": "Оголошення",
