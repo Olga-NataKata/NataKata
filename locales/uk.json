@@ -12,7 +12,36 @@
     "checkout": {
       "review": {
         "blocks": {
-          "contact_method_title": "контакт"
+          "contact_method_title": "контакт",
+          "billing_address_title": "Виставлення рахунків",
+          "shipping_address_title": "Відправити до",
+          "shipping_method_title": "Спосіб доставки",
+          "payment_method_title": "Спосіб оплати",
+          "change_link_label": "Зміна",
+          "change_contact_method_link_label": "Змінити контактну інформацію",
+          "change_billing_address_link_label": "Змінити платіжну адресу",
+          "change_shipping_address_link_label": "Змінити адресу доставки",
+          "change_shipping_method_link_label": "Змінити спосіб доставки",
+          "change_payment_method_link_label": "Змінити спосіб оплати",
+          "pick_up_in_store_shipping_method_html": "Самовивіз у магазині · %{location_name}",
+          "purchase_order_number_title": "номер замовлення на замовлення",
+          "change_purchase_order_number_label": "Змінити номер замовлення",
+          "change_delivery_method_link_label": "Змінити спосіб доставки",
+          "no_address": "(Без адреси)",
+          "no_purchase_order_number": "(Номера замовлення немає)",
+          "due_after_order_reviewed_html": "Сплачується після розгляду замовлення",
+          "review_title_free_order": "Перегляньте та завершіть своє замовлення",
+          "payment_method_saved_company_location": "Зберегти картку для цього місця"
+        },
+        "title": "огляд",
+        "review_title": "Огляд і оплата",
+        "checkout_as_guest": "Вийти як гість",
+        "checkout_a_different_way": "Оформити замовлення іншим способом",
+        "block_title": "Перегляньте свою інформацію",
+        "item_header": {
+          "change_value": "Змінити значення",
+          "section": "Розділ",
+          "value": "Значення"
         }
       },
       "pickup_point": {
@@ -404,7 +433,112 @@
         "failed_title": "Ваше замовлення не може бути доставлено",
         "failed_contact_merchant": "Зв’яжіться з %{company}, щоб організувати доставку.",
         "failed_contact_merchant_no_company": "Зв'яжіться з нами, щоб домовитися про доставку.",
-        "non_shippable_title": "Ваше замовлення виконано"
+        "non_shippable_title": "Ваше замовлення виконано",
+        "let_us_know": "Дайте нам знати",
+        "login_title": "Увійдіть, щоб переглянути всі деталі замовлення",
+        "login_description": "Ви можете знайти номер свого замовлення в квитанції, яку ви отримали електронною поштою.",
+        "login_description_phone": "Ви можете знайти номер свого замовлення в квитанції, яку ви отримали в текстовому повідомленні.",
+        "login_not_customer_html": "Не %{name}? Ви можете %{link}",
+        "login_reorder_link_text": {
+          "one": "придбайте також цей товар",
+          "other": "також купуйте ці продукти"
+        },
+        "customer_information_hidden_fields_message": "Увійдіть, щоб переглянути всю інформацію про клієнта.",
+        "cancelled_title": "Ваше замовлення скасовано",
+        "cancelled_description": "Ваше замовлення було скасовано %{date}. Зв'яжіться з нами, якщо у вас виникнуть запитання.",
+        "order_number_label": "Номер замовлення",
+        "customer_validation_error": "Введіть дійсну адресу електронної пошти або номер замовлення.",
+        "customer_validation_error_phone": "Введіть дійсний номер телефону або замовлення.",
+        "login": "авторизуватися",
+        "unfulfilled_items_title": "Підготовка до відправлення",
+        "unfulfilled_items_description": "Зараз ми готуємо ці товари до відправлення.",
+        "marker": {
+          "current": "Поточне місце відправлення",
+          "shipping": "Адреса доставки"
+        },
+        "pick_up_in_store_marker": {
+          "current": "Поточне місце відправлення",
+          "shipping": "Місце отримання"
+        },
+        "fulfillment": {
+          "fulfilled_table_title": "Товари в цій відправці",
+          "unfulfilled_table_title": "Предмети готуються до відправлення",
+          "product_image_label": "Зображення продукту",
+          "description_label": "опис",
+          "quantity_label": "Кількість"
+        },
+        "order_updates_description_missing": "Ви не отримуєте оновлення про доставку.",
+        "order_updates_subscribe_to_email_notifications": "Отримуйте оновлення про доставку електронною поштою",
+        "order_updates_subscribe_to_email_or_phone_notifications": "Отримуйте оновлення про доставку електронною поштою чи текстовим повідомленням",
+        "order_updates_subscribe_to_phone_notifications": "Отримуйте повідомлення про доставку за допомогою текстового повідомлення",
+        "order_updates_submit_subscription": "Надіслати",
+        "track_shipment": "Відстежити відправлення",
+        "other_options": "Інші варіанти",
+        "delivery_information_label": "Інформація про доставку:",
+        "gift_card_sent_confirmation": "Подарункові картки надіслано",
+        "qr_code": {
+          "send_link_to_phone": "Або надішліть посилання на свій телефон",
+          "title": "Трек на телефоні"
+        },
+        "shop_qr_with_sms_upsell": {
+          "qr_code": {
+            "title": "Скануйте за допомогою телефону"
+          },
+          "sms": {
+            "title": "Або надішліть посилання на свій телефон"
+          }
+        },
+        "view_business_customer_account": "Переглянути обліковий запис",
+        "breadcrumbs_submitted": "Надіслано",
+        "breadcrumbs_in_review": "В огляді",
+        "breadcrumbs_confirmed": "Підтверджено",
+        "missing_shipping_address_banner": {
+          "title": "Замовлення не має адреси доставки",
+          "text_html": "%{contact_us}, щоб додати свою адресу",
+          "contact_us": "Зв'яжіться з нами"
+        },
+        "first_payment_complete": "Перший платіж завершено",
+        "in_store_purchase": "Купівля в магазині",
+        "location_title": "Розташування",
+        "thank_you_ready_for_picked_up": "Ваше замовлення забрали в %{address}.",
+        "ready_for_delivery": "Готовий до доставки",
+        "order_updates_subscribe_to_email_notifications_failed": "Ми не можемо зберегти цей електронний лист для оновлень. Спробуйте ще раз або скористайтеся іншою електронною поштою.",
+        "order_updates_subscribe_to_email_notifications_email_already_exists": "Введена вами електронна адреса вже існує.",
+        "subscriptions_management": {
+          "title": "Підписка",
+          "description": "Перейдіть до свого облікового запису, щоб переглядати свої підписки та керувати ними.",
+          "button_label": "Керуйте своєю підпискою"
+        },
+        "manage_order_label": "Керуйте своїм замовленням",
+        "gift_card_confirmation_by_text_typ": {
+          "one": "За кілька хвилин ви отримаєте текстове повідомлення з подарунковою карткою.",
+          "other": "За кілька хвилин ви отримаєте текстове повідомлення з подарунковими картками."
+        },
+        "gift_card_confirmation_by_email_typ": {
+          "one": "За кілька хвилин ви отримаєте електронний лист із подарунковою карткою.",
+          "other": "За кілька хвилин ви отримаєте електронний лист із подарунковими картками."
+        },
+        "gift_card_email_title": {
+          "one": "Подарункову картку надіслали електронною поштою",
+          "other": "Подарункові карти були надіслані електронною поштою"
+        },
+        "gift_card_text_title": {
+          "one": "Подарункову картку надіслали смс-повідомленням",
+          "other": "Подарункові картки були надіслані текстовими повідомленнями"
+        },
+        "resend_gift_cards_by_email": "Повторно надіслати електронний лист",
+        "resend_gift_cards_by_text": "Повторно надіслати текстове повідомлення",
+        "gift_card_resent_confirmation": {
+          "one": "Подарункову картку надіслано повторно.",
+          "other": "Подарункові картки надіслано повторно."
+        },
+        "gift_card_resend_failure": {
+          "one": "Під час повторного надсилання подарункової картки виникла проблема. Спробуйте ще раз або зв'яжіться з нами.",
+          "other": "Під час повторного надсилання подарункових карток виникла проблема. Спробуйте ще раз або зв'яжіться з нами."
+        },
+        "vat_invoices": {
+          "title": "накладні з ПДВ"
+        }
       },
       "marketing": {
         "post_accept_marketing_checkbox_label": "Ви підписані на отримання електронною поштою новин і пропозицій",
@@ -428,7 +562,8 @@
           "title": "Ви скасували підписку",
           "description": "Ви більше не отримуватимете від нас нагадувань про кошик."
         },
-        "accept_shop_pay_marketing_checkbox_label": "Підпишіться на новини та пропозиції цього магазину"
+        "accept_shop_pay_marketing_checkbox_label": "Підпишіться на новини та пропозиції цього магазину",
+        "accept_marketing_checkbox_label": "Пишіть мені новини та пропозиції"
       },
       "shop_policies": {
         "refund_policy": "Політика відшкодування",
@@ -1363,6 +1498,9 @@
         "title": "Оплата - {{shopName}}",
         "full_title": "{{pageTitle}} - {{shopName}} - Оплата",
         "loading_title": "Оплата - {{shopName}}"
+      },
+      "vaulted": {
+        "change_button": "Зміна"
       }
     },
     "page_titles": {
