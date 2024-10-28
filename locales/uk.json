@@ -257,7 +257,8 @@
         "split_shipping_option_free": "Безкоштовна доставка",
         "split_shipping_option_lowest_price": "Найнижча ціна",
         "split_shipping_option_fastest": "Найшвидший",
-        "split_shipping_option_recommended": "Рекомендовано"
+        "split_shipping_option_recommended": "Рекомендовано",
+        "free_rate_label": "безкоштовно"
       },
       "processing": {
         "wait": {
@@ -910,7 +911,24 @@
         "different_shipping_address_text": "Використовуйте одноразову адресу для цього замовлення",
         "change_company_location_link_label": "Змінити місцезнаходження компанії",
         "change_location_link_label": "Змінити місце розташування",
-        "ship_to_company": "Відправити до {{companyName}}"
+        "ship_to_company": "Відправити до {{companyName}}",
+        "address_title": "Адреса",
+        "contact_method_title": "контакт",
+        "email_label": "Електронна пошта",
+        "email_placeholder": "Електронна пошта",
+        "company_label": "Компанія",
+        "address1_label": "Адреса",
+        "city_label": "місто",
+        "county_label": "графство",
+        "county_placeholder": "графство",
+        "state_label": "Держава",
+        "state_placeholder": "Держава",
+        "region_label": "Регіон",
+        "region_placeholder": "Регіон",
+        "emirate_label": "Емірат",
+        "emirate_placeholder": "Емірат",
+        "phone_label": "Телефон",
+        "phone_placeholder": "Телефон"
       },
       "delivery_options": {
         "free_total_label": "безкоштовно",
@@ -1156,7 +1174,15 @@
         "price_per_item": {
           "accessibility_label": "%{price} за товар",
           "label": "%{price}/шт"
-        }
+        },
+        "product_change_label": "Зміна",
+        "expand_order_summary_short": "Показати",
+        "collapse_order_summary_short": "Сховати",
+        "total_already_paid_label": "Платний",
+        "unit_price": {
+          "accessible_separator": "пер"
+        },
+        "duties_label": "Обов'язки"
       },
       "wallets": {
         "redirection_notice": "Після натискання « {{buttonLabel}} » ви будете перенаправлені на {{walletName}} щоб безпечно завершити покупку.",
@@ -1438,7 +1464,31 @@
           "one": "Платежі кредитними та дебетовими картками зараз недоступні.<br> <a href=\"%{current_url}\">Оновіть сторінку</a> або повторіть спробу пізніше.",
           "other": "Платежі кредитними та дебетовими картками зараз недоступні.<br> <a href=\"%{current_url}\">Оновіть цю сторінку</a> або спробуйте інший спосіб оплати."
         },
-        "card_fields_processing_error": "Виникла проблема з обробкою платежу. Спробуйте оновити цю сторінку або перевірте підключення до Інтернету."
+        "card_fields_processing_error": "Виникла проблема з обробкою платежу. Спробуйте оновити цю сторінку або перевірте підключення до Інтернету.",
+        "saved_credit_card_actions": {
+          "edit": "Редагувати",
+          "delete": "Видалити"
+        },
+        "saved_credit_cards_modal": {
+          "done": "Готово",
+          "cancel": "Скасувати"
+        },
+        "add_credit_card_modal": {
+          "save": "зберегти",
+          "cancel": "Скасувати"
+        },
+        "delete_credit_card_modal": {
+          "cancel": "Скасувати",
+          "delete": "Видалити"
+        },
+        "edit_credit_card_modal": {
+          "done": "Готово",
+          "cancel": "Скасувати"
+        },
+        "order_edit_banner_items_added": {
+          "one": "Додано"
+        },
+        "order_edit_banner_single_item_added": "Додано"
       },
       "payment_errors": {
         "amount_too_small": "Мінімальна сума платежу має перевищувати 0,50 доларів США. Спробуйте ще раз із більшою сумою.",
@@ -1757,7 +1807,38 @@
           "step_one": "%{shop_name} – Оплата"
         },
         "tooltip_accessibility_label": "Більше інформації",
-        "qr_code": "QR код"
+        "qr_code": "QR код",
+        "back_button_label": "Повернення",
+        "submit": "Надіслати",
+        "dates": {
+          "weekdays": {
+            "monday": "понеділок",
+            "tuesday": "вівторок",
+            "friday": "П'ятниця",
+            "sunday": "неділя"
+          },
+          "weekdays_abbreviation": {
+            "monday": "пн",
+            "tuesday": "вт",
+            "wednesday": "ми",
+            "thursday": "чт",
+            "friday": "О",
+            "sunday": "Нд"
+          },
+          "months": {
+            "january": "січня",
+            "march": "березень",
+            "april": "квітень",
+            "may": "травня",
+            "june": "червень",
+            "july": "липень",
+            "august": "серпень",
+            "october": "жовтень"
+          }
+        },
+        "sheet": {
+          "expand": "Розгорнути"
+        }
       },
       "vaulted": {
         "change_button": "Зміна"
@@ -1873,6 +1954,18 @@
       },
       "address_management": {
         "confirm_address_deletion": "Ви впевнені, що хочете видалити адресу {{address}} ?"
+      },
+      "billing": {
+        "edit": "Редагувати",
+        "delete": "Видалити",
+        "address_form": {
+          "save": "зберегти",
+          "cancel": "Скасувати"
+        }
+      },
+      "payment_summary": {
+        "manual_payment_gateway_label": "Інструкція",
+        "free_label": "безкоштовно"
       }
     },
     "page_titles": {
@@ -2798,6 +2891,19 @@
         "modal_po_number_input_max_length_error": "Максимальна кількість символів у номері замовлення на покупку {{maxLength}} .",
         "save": "зберегти",
         "title": "PO № {{poNumber}}"
+      },
+      "locations": {
+        "contact_email": "Електронна пошта",
+        "contact_list_title": "люди",
+        "contact_name": "Ім'я",
+        "own_role_contact_name": "Ви",
+        "tax_id": "Індивідуальний податковий номер",
+        "multiple_tax_exemptions_and": "і",
+        "tax_exemptions_modal_close": "Закрити",
+        "taxes_none": "жодного"
+      },
+      "location_selection": {
+        "selection_cancel_button": "Скасувати"
       }
     },
     "account_information": {
@@ -2905,6 +3011,21 @@
       },
       "apple_pay": {
         "loading": "Завантаження Apple Pay"
+      },
+      "store_credit": {
+        "details_modal": {
+          "amount_label": "Сума",
+          "date_label": "Дата",
+          "expirable_amounts_button": "Переглянути"
+        }
+      },
+      "payment_details": {
+        "close_payment_modal": "Закрити",
+        "edit_payment_method_button": "Редагувати"
+      },
+      "edit_payment_method": {
+        "save_payment_method_button": "зберегти",
+        "cancel_edit_payment_method_button": "Скасувати"
       }
     },
     "date": {
@@ -2971,7 +3092,8 @@
       "auto_complete_close_accessibility_label": "Закрити пропозиції",
       "auto_complete_title": "Пропозиції",
       "billing_address": "Використовувати як платіжну адресу",
-      "cancel": "Скасувати"
+      "cancel": "Скасувати",
+      "save": "зберегти"
     },
     "payment_method_brands": {
       "discover": "Відкрийте для себе",
@@ -2981,7 +3103,8 @@
       "hipercard": "Гіперкарта",
       "laser": "Лазерна",
       "shoppay": "Магазин Pay",
-      "storecredit": "Кредит магазину"
+      "storecredit": "Кредит магазину",
+      "visa": "Віза"
     },
     "shop_policies": {
       "legal_notice": "Юридичне повідомлення",
