@@ -1531,7 +1531,24 @@
           "delivery": {
             "delivery_strategy_conditions_not_satisfied": "Для цього місця доступні стратегії доставки, але їх умови не виконуються.",
             "out_of_stock_at_origin_location": "Немає запасів у місці походження.",
-            "invalid_signature": "Недійсний підпис про знижку."
+            "invalid_signature": "Недійсний підпис про знижку.",
+            "only_one_delivery_line_allowed": "Кошик повинен мати лише одну лінію доставки.",
+            "wrong_number_of_delivery_lines": "Для кожної групи товарів необхідно вказати лінію доставки.",
+            "external_delivery_promise_error": "Помилка отримання зовнішньої обіцянки доставки.",
+            "options_instructions_invalid": "Зазначені інструкції не відповідають очікуваному шаблону.",
+            "destination_address_required": "Щоб продовжити, потрібна адреса призначення.",
+            "pickup_points_unavailable": "Пункти видачі наразі недоступні.",
+            "local_pickup_delivery_line_detail_changed": "Щоб продовжити, потрібно змінити поточну стратегію самовивозу.",
+            "local_pickup_no_delivery_strategy_available": "Не знайдено доступної місцевої стратегії доставки.",
+            "origin_location_id_required": "Ідентифікатор місця відправлення потрібен, коли запитується РОЗДРІБНИЙ метод доставки.",
+            "invalid_origin_location_id": "Не вдалося знайти місцезнаходження, яке відповідає ідентифікатору вихідного місцезнаходження.",
+            "origin_location_id_not_allowed": "Запитані методи доставки не підтримують ідентифікатор місця відправлення.",
+            "auto_fulfill_not_allowed": "Цей сеанс не має права перевизначати поведінку виконання.",
+            "auto_fulfill_required": "Автоматичне виконання потрібне, коли запитується РОЗДРІБНИЙ спосіб доставки.",
+            "prefetch_shipping_rates_used": "Попередньо обрані тарифи доставки ніколи не повинні повертати тарифи.",
+            "fulfillment_constraints_not_satisfied": "Одне або кілька обмежень виконання не виконано.",
+            "must_fulfill_from_constraint_not_satisfied": "Обмеження виконання не виконано, оскільки елементи не можуть бути виконані з необхідних місць.",
+            "must_fulfill_from_same_location_constraint_not_satisfied": "Обмеження виконання не виконано, оскільки елементи не можуть бути виконані з одного місця."
           },
           "discount": {
             "discounts_not_allowed_for_b2b": "У B2B-магазинах не допускаються знижки.",
@@ -1648,12 +1665,99 @@
           },
           "checkout_source": {
             "revoked": "Ця каса більше не доступна."
+          },
+          "only_empty_terms_accepted": "Ця політика приймає лише пусті умови.",
+          "session_identifier_not_unique_error": "Щось пішло не так із вашим замовленням, будь ласка, спробуйте перевірити ще раз.",
+          "line_item_limit_reached": "Досягнуто максимальної кількості рядків-позицій.",
+          "session_is_already_finished": "Цей сеанс перевірки вже завершено.",
+          "merchandise": {
+            "only_value_constraint": "У товарному введенні допускаються лише точні значення.",
+            "merchandise_not_found": "Товар не знайдено.",
+            "merchandise_variant_not_found": "Варіант товару не знайдено.",
+            "merchandise_not_applicable": "Варіант продукту не можна придбати.",
+            "bundle_products_not_supported_for_b2b": "Збірні товари не можна додати до замовлень B2B для цього місця.",
+            "gift_card_quantity_mismatch": "При вказівці кодів подарункових карток кількість позиції та кількість кодів подарункових карток мають збігатися.",
+            "gift_card_not_supported": "Подарункові картки не підтримуються на цій касі.",
+            "gift_card_not_unique": "Подарункова картка з кодом {{code}} зустрічається більше одного разу в цій касі. Коди форматуються перед порівнянням.",
+            "gift_card_used": "Код подарункової картки {{code}} уже призначено подарунковій картці. Коди форматуються перед порівнянням.",
+            "gift_card_invalid": "Код подарункової картки {{code}} недійсний.",
+            "gift_card_code_changed": "Код подарункової картки {{proposed_code}} змінено на {{formatted_code}} відповідно до правил форматування.",
+            "gift_card_with_attributes_not_supported": "Подарункові картки зі спеціальними атрибутами не підтримуються на цій касі.",
+            "gift_card_with_components_not_supported": "Подарункові картки з компонентами не підтримуються на цій касі.",
+            "selling_plan_mismatch": "Підписку оновлено.",
+            "selling_plan_not_supported": "Підписки не підтримуються.",
+            "selling_plan_not_supported_b2b": "Підписки не підтримуються для оплати B2B.",
+            "price_mismatch": "Попередньо запропонована ціна на цей товар була недійсною та була оновлена.",
+            "inventory_not_found": "Для цього товару не знайдено асортименту.",
+            "product_not_published": "Товар не опублікований.",
+            "duplicated_stable_id": "Цей товарний рядок має той самий стабільний ідентифікатор, що й інший рядок.",
+            "minimum_quantity_not_met": "Кількість деяких товарів не відповідає мінімально необхідному.",
+            "maximum_quantity_exceeded": "Кількість деяких товарів перевищує максимально допустиму.",
+            "quantity_increment_not_met": "Кількість деяких товарів не відповідає обмеженням замовлення.",
+            "quantity_rules_not_met": "Кількість деяких товарів не відповідає обмеженням замовлення.",
+            "bundle_requires_components": "Цей набір товарів не містить компонентів.",
+            "title_too_long": "Назва товару задовга.",
+            "title_empty": "Назва товару порожня."
+          },
+          "buyer_identity": {
+            "business_customer_does_not_match_company": "Контакт компанії не має доступу до компанії.",
+            "customer_account_required": "Клієнт повинен увійти, щоб продовжити.",
+            "company_location_required": "Щоб продовжити, клієнт повинен вибрати місцезнаходження компанії.",
+            "contact_info_does_not_match_customer_account": "Вказана інформація про клієнта має збігатися з обліковим записом клієнта, у який ви ввійшли.",
+            "phone_number_does_not_match_expected_pattern": "Вказаний номер телефону не відповідає очікуваному шаблону.",
+            "email_required": "Електронна пошта потрібна, якщо товар купується за підпискою.",
+            "email_domain_is_invalid": "Цей домен не може бути дозволений.",
+            "missing_contact_method": "Відсутній дійсний спосіб зв’язку.",
+            "checkout_completion_target_is_missing": "Ціль завершення оформлення замовлення відсутня.",
+            "invalid_customer_profile": "Надано недійсний профіль клієнта.",
+            "customer_profile_access_restricted": "Checkout не має дозволу на доступ до профілю клієнта.",
+            "checkout_completion_target_is_invalid_proc": "Недійсна ціль завершення оформлення замовлення."
           }
         },
         "full_price": "Повна ціна:",
         "title": "Оплата - {{shopName}}",
         "full_title": "{{pageTitle}} - {{shopName}} - Оплата",
-        "loading_title": "Оплата - {{shopName}}"
+        "loading_title": "Оплата - {{shopName}}",
+        "page_title": "Оплата",
+        "error_page_title": "Помилка",
+        "skip_to_content": "Перейти до вмісту",
+        "breadcrumb": "Хлібний сухарь",
+        "continue_button_label": "Продовжити",
+        "complete_purchase_button_label": "Повне замовлення",
+        "pay_now_button_label": "Сплатіть зараз",
+        "authenticate_purchase_button_label": "Автентифікація платежу",
+        "edit_link_label": "Редагувати",
+        "all_rights_reserved": "Усі права захищено %{shop_name}",
+        "print_policies_link_label": "Роздрукувати",
+        "cart": "Візок",
+        "close_modal_label": "Закрити",
+        "close_notice_label": "Закрити",
+        "expand_notice_label": "Переглянути більше",
+        "continue_to_shipping_method": "Продовжити доставку",
+        "continue_to_payment_method": "Продовжити до оплати",
+        "continue_to_review": "Переглянути замовлення",
+        "back_to_cart": "Повернутися до кошика",
+        "back_to_contact_information": "Повернутися до інформації",
+        "back_to_shipping_method": "Повернутися до доставки",
+        "back_to_payment_method": "Повернення до оплати",
+        "choose_shipping_method": "Виберіть спосіб доставки",
+        "choose_payment_method": "Виберіть спосіб оплати",
+        "choose_billing_address": "Виберіть платіжну адресу",
+        "contact_us_html": "Зв'яжіться з нами для отримання додаткової інформації",
+        "autocomplete_title": "Пропозиції",
+        "autocomplete_single_item": "Доступний 1 товар",
+        "autocomplete_multi_item": "Доступні товари: {{number}}",
+        "autocomplete_close": "Закрити пропозиції",
+        "forwarding_indicator": {
+          "new_window": "Відкриється в новому вікні.",
+          "external": "Відкриває зовнішній веб-сайт.",
+          "external_and_new_window": "Відкриває зовнішній веб-сайт у новому вікні."
+        },
+        "checkout_context": {
+          "step_one": "%{shop_name} – Оплата"
+        },
+        "tooltip_accessibility_label": "Більше інформації",
+        "qr_code": "QR код"
       },
       "vaulted": {
         "change_button": "Зміна"
@@ -1766,6 +1870,9 @@
         "additional_information": {
           "title": "Додаткова інформація"
         }
+      },
+      "address_management": {
+        "confirm_address_deletion": "Ви впевнені, що хочете видалити адресу {{address}} ?"
       }
     },
     "page_titles": {
@@ -2114,6 +2221,10 @@
           }
         }
       }
+    },
+    "sentence": {
+      "two_words_connector": " і ",
+      "last_word_connector": ", і "
     }
   },
   "customer_accounts": {
