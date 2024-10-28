@@ -258,7 +258,20 @@
         "split_shipping_option_lowest_price": "Найнижча ціна",
         "split_shipping_option_fastest": "Найшвидший",
         "split_shipping_option_recommended": "Рекомендовано",
-        "free_rate_label": "безкоштовно"
+        "free_rate_label": "безкоштовно",
+        "subscription_shipping": "Доставка за підпискою",
+        "subscription_local_delivery": "Місцева доставка за підпискою",
+        "estimated_delivery_date": {
+          "one": "%{count} робочий день",
+          "other": "%{count} робочих днів"
+        },
+        "estimated_delivery_time": "Орієнтовна доставка %{time}",
+        "delivery_today": "Доставка в той же день %{time}",
+        "delivery_tomorrow": "Доставка наступного дня %{time}",
+        "two_day_delivery": "2-денна доставка %{time}",
+        "default_description": "Відправляється протягом 1 робочого дня",
+        "no_rates_for_cart_or_destination_notice": "Немає доступних методів доставки для вашого кошика або адреси",
+        "no_pickup_location_notice": "Принаймні один із ваших продуктів недоступний для отримання"
       },
       "processing": {
         "wait": {
@@ -873,7 +886,10 @@
         "vaulting_agreement_blank": "Вашу картку потрібно зберегти, оскільки оплата залишку цього замовлення має бути здійснена пізніше.",
         "sms_marketing_phone_invalid": "Введіть дійсний номер телефону",
         "address_suggestion_did_you_mean_html": "Ви мали на увазі %{html}?",
-        "split_cart_international_shipping_not_supported": "Під час міжнародної доставки для всіх товарів має використовуватися однаковий метод доставки. Оновіть спосіб доставки або створіть кілька замовлень."
+        "split_cart_international_shipping_not_supported": "Під час міжнародної доставки для всіх товарів має використовуватися однаковий метод доставки. Оновіть спосіб доставки або створіть кілька замовлень.",
+        "handle_phone_invalid": "Введіть дійсний номер телефону",
+        "handle_email_invalid": "Введіть дійсну електронну адресу",
+        "email_invalid": "Введіть дійсну електронну адресу"
       },
       "store_credit_errors": {
         "generic_error": "Виникла проблема з кредитом вашого магазину. Повторіть спробу або оновіть сторінку."
@@ -928,7 +944,10 @@
         "emirate_label": "Емірат",
         "emirate_placeholder": "Емірат",
         "phone_label": "Телефон",
-        "phone_placeholder": "Телефон"
+        "phone_placeholder": "Телефон",
+        "optional_first_name_label": "Ім'я (необов'язково)",
+        "address2_label": "Квартира, люкс і т.д.",
+        "shipping_used_as_billing_notice": "Це також буде використано як вашу платіжну адресу для цього замовлення."
       },
       "delivery_options": {
         "free_total_label": "безкоштовно",
@@ -1182,7 +1201,24 @@
         "unit_price": {
           "accessible_separator": "пер"
         },
-        "duties_label": "Обов'язки"
+        "duties_label": "Обов'язки",
+        "product_image_quantity_label": "Кількість: %{quantity}",
+        "scroll_order_summary": "Перейдіть до інших елементів",
+        "total_updated_label": "Оновлена ​​загальна ціна:",
+        "percent_off_shipping": "%{percent}% знижка на доставку",
+        "amount_off_shipping": "%{amount} знижки на доставку",
+        "payment_terms_totals": {
+          "due_on_fulfillment": "Загальна сума під час виконання",
+          "due_on_receipt": "Загальна сума під час отримання"
+        },
+        "may_be_charged_on_delivery": "Може стягуватися під час доставки",
+        "full_price": "Повна ціна: %{price}",
+        "alternative_payment_currency_total": "Стягується як %{amount_due}",
+        "recurring_total_tooltip": "Не включає доставку, податки, мита чи будь-які відповідні знижки.",
+        "higher_value_discount_applied": "<strong style=\"text-transform:uppercase\">%{code}</strong> не можна використати з існуючими знижками.",
+        "maximum_discount_code_limit_reached": "Ви досягли максимальної кількості кодів знижки. Видаліть існуючий код, щоб використовувати <strong style=\"text-transform:uppercase\">%{code}</strong> .",
+        "discount_code_application_failed": "<strong style=\"text-transform:uppercase\">%{code}</strong> зараз не працює. Зверніться до нас за допомогою.",
+        "error_duties_tooltip": "Це замовлення доставляється з іншої країни, тому під час доставки можуть стягуватися мита та податки."
       },
       "wallets": {
         "redirection_notice": "Після натискання « {{buttonLabel}} » ви будете перенаправлені на {{walletName}} щоб безпечно завершити покупку.",
@@ -1471,7 +1507,8 @@
         },
         "saved_credit_cards_modal": {
           "done": "Готово",
-          "cancel": "Скасувати"
+          "cancel": "Скасувати",
+          "view_all_label": "Переглянути всі збережені картки"
         },
         "add_credit_card_modal": {
           "save": "зберегти",
@@ -1479,7 +1516,8 @@
         },
         "delete_credit_card_modal": {
           "cancel": "Скасувати",
-          "delete": "Видалити"
+          "delete": "Видалити",
+          "confirmation": "Ви впевнені, що хочете видалити {{brandName}} що закінчується на {{lastDigits}} ?"
         },
         "edit_credit_card_modal": {
           "done": "Готово",
@@ -1488,7 +1526,30 @@
         "order_edit_banner_items_added": {
           "one": "Додано"
         },
-        "order_edit_banner_single_item_added": "Додано"
+        "order_edit_banner_single_item_added": "Додано",
+        "order_edit_banner_items_returned": {
+          "in_full": "Повернуто {{quantity}}"
+        },
+        "order_edit_banner_single_item_return_line_item_removed": "Знято з повернення",
+        "gift_card_wrapper": {
+          "apply_another_gift_card_label": "Застосуйте іншу подарункову картку",
+          "gift_card_label": "Подарункова картка %{identifier}"
+        },
+        "markets_pro_disclaimer_terms_and_conditions": "Правила та умови",
+        "purchase_order_number": {
+          "label": "Номер замовлення на замовлення (необов'язково)"
+        },
+        "pay_in_installments_split_pay_short": "4 платежі на суму %{amount}",
+        "saved_credit_card_cvv_verification": "Для підтвердження введіть код безпеки вашої картки.",
+        "expired_cards_info": {
+          "one": "Існує %{count} прострочена картка, яку ви можете переглядати та редагувати у своєму обліковому записі.",
+          "other": "Є %{count} прострочених карток, які ви можете переглядати та редагувати у своєму обліковому записі."
+        },
+        "local_payment_method_receiver_notice": "Після оформлення замовлення ви отримаєте реквізити для оплати. Здійсніть платіж через банкомат або онлайн протягом {{dueDays}} днів.",
+        "order_edit_banner_subtitle": "Ваше замовлення {{order_number}} оновлено. Перегляньте ці зміни, а потім сплатіть, щоб підтвердити замовлення.",
+        "markets_pro_disclaimer_label": "Натиснувши нижче та завершивши своє замовлення, ви погоджуєтеся придбати свої товари в Global-e як офіційного продавця для цієї транзакції на %{markets_pro_terms} і %{privacy_policy} Global-e. Global-e є міжнародним постачальником послуг доставки для %{shop_name}.",
+        "waiting_on_taxes_message": "Якщо ваші податки не обчислюються протягом наступних кількох секунд, оновіть сторінку.",
+        "gift_cards_unavailable": "Вашу подарункову картку більше не можна застосувати до цього замовлення, її було видалено"
       },
       "payment_errors": {
         "amount_too_small": "Мінімальна сума платежу має перевищувати 0,50 доларів США. Спробуйте ще раз із більшою сумою.",
@@ -1838,6 +1899,12 @@
         },
         "sheet": {
           "expand": "Розгорнути"
+        },
+        "continue_to_payment_plans_button_label": "Перейти до планів оплати",
+        "choose_delivery_strategy": "Виберіть спосіб доставки",
+        "autocomplete_powered_by_google": "Завдяки {{brandName}}",
+        "dropzone": {
+          "invalid_file_type": "Тип файлу не підтримується"
         }
       },
       "vaulted": {
@@ -1961,11 +2028,16 @@
         "address_form": {
           "save": "зберегти",
           "cancel": "Скасувати"
-        }
+        },
+        "same_as_shipping": "Така сама, як адреса доставки",
+        "add_address": "Використовуйте іншу адресу",
+        "address_confirm": "Ви впевнені, що хочете видалити цю адресу зі свого облікового запису?"
       },
       "payment_summary": {
         "manual_payment_gateway_label": "Інструкція",
-        "free_label": "безкоштовно"
+        "free_label": "безкоштовно",
+        "gift_card_current_balance_notice": "Поточний баланс %{amount}",
+        "credit_card_expires_on_notice": "Термін дії закінчується %{month}/%{year}"
       }
     },
     "page_titles": {
@@ -2801,7 +2873,17 @@
     },
     "B2B": {
       "orders": {
-        "order_list_column_headers_contact": "контакт"
+        "order_list_column_headers_contact": "контакт",
+        "draft_order_list": {
+          "hide_all_accessibility_label": "Сховати всі замовлення на перегляді",
+          "show_all_accessibility_label": "Показати всі замовлення на огляді",
+          "show_all_orders_in_review": "Показати всі замовлення на огляді",
+          "show_less_orders_in_review": "Показувати менше замовлень на огляді",
+          "pending_tab_accessibility_label": {
+            "no_pending_orders": "У вас немає незавершених замовлень"
+          }
+        },
+        "removed_company_contact_tooltip": "Вилучено з компанії"
       },
       "draft_order_details": {
         "payment_status": {
@@ -2811,7 +2893,13 @@
             "description_due_on_receipt": "Коли настане термін оплати, ви отримаєте рахунок-фактуру.",
             "description_due_on_receipt_partially_paid": "Це замовлення було частково оплачено. У вас є залишок. Коли настане термін оплати, ви отримаєте рахунок-фактуру.",
             "description_due_on_fulfillment": "Оплата здійснюється після виконання всіх пунктів цього замовлення.",
-            "description_due_on_fulfillment_partially_paid": "Це замовлення було частково оплачено. У вас є залишок. Оплата здійснюється після виконання всіх пунктів цього замовлення."
+            "description_due_on_fulfillment_partially_paid": "Це замовлення було частково оплачено. У вас є залишок. Оплата здійснюється після виконання всіх пунктів цього замовлення.",
+            "banner_due_today": "Ваш платіж має бути сьогодні",
+            "title_with_date": "Термін оплати {{date}}",
+            "title_due_on_receipt": "Платіж ще не настав",
+            "title_due_on_fulfillment": "Оплата після виконання",
+            "description_overdue": "Ваш платіж запізнюється.",
+            "description_partially_paid": "Це замовлення було частково оплачено. У вас є залишок."
           },
           "draft": {
             "description": "Деталі оплати визначаються під час підтвердження замовлення.",
@@ -2865,7 +2953,8 @@
           "hide_events_accessibility_label": "Приховати деталі проекту замовлення"
         },
         "subtitle": "Надіслано {{date}}",
-        "title": "Замовити {{name}}"
+        "title": "Замовити {{name}}",
+        "loading": "Завантаження деталей замовлення"
       },
       "payment_methods": {
         "payment_delete": {
@@ -2900,10 +2989,31 @@
         "tax_id": "Індивідуальний податковий номер",
         "multiple_tax_exemptions_and": "і",
         "tax_exemptions_modal_close": "Закрити",
-        "taxes_none": "жодного"
+        "taxes_none": "жодного",
+        "deposit_percentage": "{{percentage}} депозит",
+        "pagination": {
+          "load_more_accessibility_label": "Завантажити більше місць"
+        },
+        "staff_and_permissions_title": "Персонал і дозволи",
+        "tax_exemptions_modal_button_accessibility_label": "Переглянути всі звільнення від сплати податків",
+        "shipping_address_required": "Щоб розпочати розміщення замовлень, додайте адресу доставки до цього місця."
       },
       "location_selection": {
-        "selection_cancel_button": "Скасувати"
+        "selection_cancel_button": "Скасувати",
+        "list_item_without_address_accessibility_label": "{{name}} : немає адреси",
+        "list_loading_accessibility_message": "Завантаження списку місць",
+        "no_location_title": "Тільки особисті замовлення",
+        "search": "Пошук місця",
+        "description": "Якщо у вашому кошику вже є товари, зміна місця розташування може вплинути на ціни та кількість у кошику.",
+        "no_location_description": "Ви більше не маєте дозволу розміщувати замовлення для {{company}} . Ви ще можете робити індивідуальні замовлення."
+      },
+      "addresses": {
+        "add_billing_address_button": "Додайте платіжну адресу",
+        "add_billing_address_section_accessibility_label": "Додайте платіжну адресу",
+        "add_shipping_address_button": "Додайте адресу доставки",
+        "add_shipping_address_section_accessibility_label": "Додайте адресу доставки",
+        "save_new_billing_address_accessibility_label": "Зберегти платіжну адресу",
+        "save_new_shipping_address_accessibility_label": "Зберегти адресу доставки"
       }
     },
     "account_information": {
@@ -3010,22 +3120,81 @@
         }
       },
       "apple_pay": {
-        "loading": "Завантаження Apple Pay"
+        "loading": "Завантаження Apple Pay",
+        "errors": {
+          "generic": "Виникла проблема з Apple Pay. Повторіть спробу або скористайтеся іншим способом оплати.",
+          "missing_billing_address": "Для Apple Pay потрібна платіжна адреса. Будь ласка, додайте один до свого облікового запису."
+        }
       },
       "store_credit": {
         "details_modal": {
           "amount_label": "Сума",
           "date_label": "Дата",
-          "expirable_amounts_button": "Переглянути"
-        }
+          "expirable_amounts_button": "Переглянути",
+          "title": "Термін дії кредиту в магазині",
+          "expirable_amount_label": "Загальна сума терміну придатності",
+          "expired_amounts_button": "Переглянути прострочені суми"
+        },
+        "expirable_amounts_button": "Переглянути суми, термін придатності яких закінчується"
       },
       "payment_details": {
         "close_payment_modal": "Закрити",
-        "edit_payment_method_button": "Редагувати"
+        "edit_payment_method_button": "Редагувати",
+        "title": "Деталі способу оплати",
+        "credit_card_details_accessibility_label": "закінчується на {{lastDigits}}",
+        "payment_method_expiring_on": "Термін дії закінчується {{expiryDate}}",
+        "payment_method_expired_on": "Термін дії минув {{expiryDate}}",
+        "preauthorized_payments": "Попередньо авторизовані платежі",
+        "pre_authorized_payments": "Попередньо авторизовані платежі",
+        "invalid_payment_method": "Недійсний спосіб оплати",
+        "replace_payment_method": "Замінити спосіб оплати",
+        "total_amount_of_subscription_line_items_left_accessibility_label": "Загальна кількість елементів {{totalItems}} , відображається кількість елементів {{totalItemsToDisplay}} .",
+        "invalid_payment_method_message": "Використовуйте нову кредитну картку, щоб продовжувати отримувати наступні замовлення.",
+        "checkout_card_banner": "Цей спосіб оплати можна використовувати лише для попередньо авторизованих платежів. Він не з’явиться під час оплати, якщо ви ввійшли в цей магазин."
       },
       "edit_payment_method": {
         "save_payment_method_button": "зберегти",
-        "cancel_edit_payment_method_button": "Скасувати"
+        "cancel_edit_payment_method_button": "Скасувати",
+        "title": "Змінити спосіб оплати",
+        "payment_method_updated_toast": "Спосіб оплати оновлено",
+        "future_purchases_notice": "Цей спосіб оплати буде збережено для майбутніх покупок."
+      },
+      "card_fields": {
+        "card_expiry_label": "Термін придатності (MM / YY)",
+        "card_expiry_placeholder": "Термін придатності (MM / YY)",
+        "card_start_label": "Дата видачі (ММ / РР)",
+        "card_start_placeholder": "Дата видачі (ММ / РР)",
+        "field_errors": {
+          "credit_card_number_invalid": "Введіть дійсний номер картки"
+        },
+        "tooltip": {
+          "card_verification_value_explanation": "3-значний код безпеки зазвичай знаходиться на звороті вашої картки. Картки American Express мають 4-значний код, розташований на лицьовій стороні."
+        }
+      },
+      "payment_delete": {
+        "title": "Видалити спосіб оплати",
+        "payment_method_selector_no_alternative_payment": "Без способу заміни",
+        "description_without_replacement": "Цей спосіб оплати більше не буде доступний для майбутніх покупок.",
+        "description_with_replacement": "Видалення цього способу оплати вплине на попередні авторизації платежів. Ви можете замінити його на інший спосіб оплати, щоб продовжувати отримувати наступні замовлення.",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "Видалення цього способу оплати вплине на попередні авторизації платежів. Якщо ви не виберете альтернативний спосіб оплати, з цього способу оплати все одно стягуватиметься плата за будь-які непогашені залишки за наявними замовленнями. Вибір альтернативного способу оплати дозволить вам безперервно отримувати наступні замовлення на підписку.",
+          "with_pending_orders": "Видалення цього способу оплати призведе до видалення його з вашого облікового запису та більше не буде доступним для майбутніх покупок. Якщо ви не виберете інший спосіб оплати, з нього все одно буде стягнуто будь-яку непогашену залишок за наявними замовленнями.",
+          "with_subscriptions": "Видалення цього способу оплати вплине на попередні авторизації платежів. Замініть його іншим способом оплати, щоб продовжувати отримувати наступні замовлення."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "Видалення цього способу оплати вплине на попередні авторизації платежів. За допомогою цього способу оплати все одно стягуватиметься плата за будь-які непогашені залишки за наявними замовленнями, але ви не отримуватимете майбутні замовлення на підписку. Додайте альтернативний спосіб оплати, щоб продовжувати отримувати замовлення на підписку.",
+          "with_pending_orders": "Видалення цього способу оплати призведе до видалення його з вашого облікового запису, і він більше не буде доступний для майбутніх покупок. З нього все одно стягуватиметься плата за будь-які непогашені залишки за наявними замовленнями.",
+          "with_subscriptions": "Видалення цього способу оплати вплине на попередні авторизації платежів. Додайте альтернативний спосіб оплати, щоб продовжувати отримувати майбутні замовлення."
+        },
+        "replace_method_with_new_method_description": "Ваш {{currentPaymentMethodName}} буде видалено та замінено вашим {{newPaymentMethodName}} .",
+        "error_when_deleting": "Просимо вибачення, але щось пішло не так, і ми не змогли видалити цей спосіб оплати. Повторіть спробу пізніше або оновіть сторінку.",
+        "delete_and_replace_button_accessibility_label": "Видаліть {{currentPaymentMethodName}} і замініть на {{newPaymentMethodName}} ."
+      },
+      "add_payment_method": {
+        "payment_method_added_confirmation": "Спосіб оплати додано",
+        "billing_address": {
+          "add_billing_address_button_accessibility_label": "Додайте нову платіжну адресу"
+        }
       }
     },
     "date": {
@@ -3093,7 +3262,15 @@
       "auto_complete_title": "Пропозиції",
       "billing_address": "Використовувати як платіжну адресу",
       "cancel": "Скасувати",
-      "save": "зберегти"
+      "save": "зберегти",
+      "default_address": "Це моя адреса за умовчанням",
+      "default_address_creation_success_notification": "Додано адресу за умовчанням",
+      "default_address_update_success_notification": "Адресу за умовчанням оновлено",
+      "loading_add_form_accessibility_message": "Завантаження форми нової адреси",
+      "loading_edit_form_accessibility_message": "Завантаження форми редагування адреси",
+      "loading_form_accessibility_message": "Завантаження адресної форми",
+      "loading_finished_accessibility_message": "Форма адреси завантажена",
+      "save_accessibility_label": "Зберегти адресу {{address}}"
     },
     "payment_method_brands": {
       "discover": "Відкрийте для себе",
