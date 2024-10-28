@@ -576,6 +576,95 @@
     "B2B": {
       "orders": {
         "order_list_column_headers_contact": "контакт"
+      },
+      "draft_order_details": {
+        "payment_status": {
+          "pending": {
+            "description_authorized": "З вашого методу оплати буде стягнено плату в установлений термін, або ви можете оплатити зараз.",
+            "description_waiting_for_manual_payment": "Це замовлення очікує на оплату. Баланс буде оновлено після отримання платежу.",
+            "description_due_on_receipt": "Коли настане термін оплати, ви отримаєте рахунок-фактуру.",
+            "description_due_on_receipt_partially_paid": "Це замовлення було частково оплачено. У вас є залишок. Коли настане термін оплати, ви отримаєте рахунок-фактуру.",
+            "description_due_on_fulfillment": "Оплата здійснюється після виконання всіх пунктів цього замовлення.",
+            "description_due_on_fulfillment_partially_paid": "Це замовлення було частково оплачено. У вас є залишок. Оплата здійснюється після виконання всіх пунктів цього замовлення."
+          },
+          "draft": {
+            "description": "Деталі оплати визначаються під час підтвердження замовлення.",
+            "title": "Платіж ще не настав",
+            "in_review": {
+              "description": "Деталі оплати визначаються під час підтвердження замовлення.",
+              "title": "Платіж ще не настав"
+            },
+            "submitted": {
+              "description": "Здійсніть оплату, щоб підтвердити це замовлення.",
+              "title": "Оплатіть для підтвердження",
+              "deposit": {
+                "title": "Термін оплати настав",
+                "due_later": "Залишок нараховано на умовах {{translatedName}} і має бути сплачено {{dueDate}} .",
+                "due_on_fulfillment": "Залишок нараховується після виконання всіх пунктів цього замовлення.",
+                "due_on_receipt": "Ви отримаєте рахунок-фактуру на залишок.",
+                "due_on_date": "Залишок потрібно сплатити до {{dueDate}} ."
+              }
+            },
+            "deposit": {
+              "due_later": "{{depositAmount}} буде сплачено, коли ваше замовлення буде підтверджено. Баланс буде на умовах {{translatedName}} .",
+              "due_on_fulfillment": "{{depositAmount}} буде сплачено, коли ваше замовлення буде підтверджено. Залишок буде сплачено, коли замовлення буде виконано.",
+              "due_on_receipt": "{{depositAmount}} буде сплачено, коли ваше замовлення буде підтверджено. Залишок буде сплачено пізніше.",
+              "due_on_date": "{{depositAmount}} буде сплачено, коли ваше замовлення буде підтверджено. Залишок потрібно сплатити {{dueDate}} ."
+            }
+          },
+          "paid": {
+            "title": "Платний",
+            "title_with_date": "Оплачено {{date}}",
+            "description": "Ваше замовлення повністю оплачено."
+          },
+          "refund": {
+            "title": "Повернено",
+            "title_with_date": "Повернено {{date}}",
+            "description_full_refund": "Ви отримали повне відшкодування за це замовлення.",
+            "description_single_refund": "Ви отримали часткове відшкодування за це замовлення.",
+            "description_multiple_refunds": "Ви отримали часткове відшкодування за це замовлення."
+          },
+          "canceled": {
+            "title": "Платіж скасовано",
+            "description": "З вас не стягували плату."
+          },
+          "pay_now": "Сплатіть зараз",
+          "pay_now_accessibility_label": "Сплатіть зараз за замовлення {{orderName}}",
+          "title": "Статус платежу"
+        },
+        "order_timeline": {
+          "expand_events_label": "Показати деталі",
+          "expand_events_accessibility_label": "Показати деталі проекту замовлення",
+          "hide_events_label": "Приховати деталі",
+          "hide_events_accessibility_label": "Приховати деталі проекту замовлення"
+        },
+        "subtitle": "Надіслано {{date}}",
+        "title": "Замовити {{name}}"
+      },
+      "payment_methods": {
+        "payment_delete": {
+          "description_without_replacement": "Цей спосіб оплати більше не буде доступний для майбутніх покупок у цьому місці.",
+          "description_with_replacement": "Видалення цього способу оплати вплине на попередні авторизації платежів для цього місця. Замініть його іншим способом оплати, щоб продовжувати отримувати наступні замовлення."
+        },
+        "payment_details": {
+          "order_label": "Замовити {{name}}",
+          "draft_label": "Проект наказу {{name}}"
+        }
+      },
+      "purchase_order_number": {
+        "add_accessibility_label": "Додайте номер замовлення",
+        "add_modal_title": "Додайте номер замовлення",
+        "cancel": "Скасувати",
+        "close_modal_accessibility_label": "Закрити модальний номер замовлення",
+        "discard": "Відкинути",
+        "discard_changes_modal_title": "Скасувати зміни?",
+        "edit_accessibility_label": "Редагувати номер замовлення",
+        "edit_modal_title": "Редагувати номер замовлення",
+        "empty_state": "Без номера замовлення на замовлення",
+        "modal_po_number_input_label": "номер замовлення на замовлення",
+        "modal_po_number_input_max_length_error": "Максимальна кількість символів у номері замовлення на покупку {{maxLength}} .",
+        "save": "зберегти",
+        "title": "PO № {{poNumber}}"
       }
     },
     "account_information": {
@@ -605,6 +694,85 @@
         }
       },
       "add_button": "додати"
+    },
+    "errors": {
+      "address_deletion_error": {
+        "description": "Під час видалення цієї адреси виникла проблема. Повторіть спробу або оновіть сторінку."
+      },
+      "addresses_loading_issue": {
+        "description": "Помилка підключення. Перевірте підключення до Інтернету та повторіть спробу."
+      },
+      "banner_title": {
+        "one": "Є {{count}} помилка",
+        "other": "Є {{count}} помилок"
+      },
+      "failed_address_creation": {
+        "description": "Виникла проблема зі створенням адреси. Спробуйте оновити цю сторінку або перевірте підключення до Інтернету."
+      },
+      "failed_address_update": {
+        "description": "Під час оновлення адреси виникла проблема. Спробуйте оновити цю сторінку або перевірте підключення до Інтернету."
+      },
+      "load_orders_error": {
+        "title": "Не вдалося завантажити замовлення",
+        "description": "Повторіть спробу або поверніться пізніше.",
+        "retry_button": "Повторіть спробу"
+      },
+      "load_paypal_error": {
+        "description": "Виникла проблема із завантаженням PayPal. Спробуйте ще раз."
+      },
+      "logout_everywhere": {
+        "description": "Щось пішло не так під час виходу. Спробуйте ще раз."
+      },
+      "no_access_to_locations": {
+        "description": "Ви не маєте доступу до жодного місця"
+      },
+      "not_found": {
+        "description": "Перевірте URL-адресу або повторіть спробу через кілька хвилин.",
+        "title": "Виникла проблема із завантаженням цієї сторінки"
+      },
+      "order_not_found": {
+        "description": "Це замовлення не існує або у вас немає дозволу на його перегляд.",
+        "title": "Замовлення не знайдено"
+      },
+      "profile_update_error": {
+        "description": "Під час оновлення вашого профілю виникла проблема. Спробуйте оновити цю сторінку або перевірте підключення до Інтернету."
+      },
+      "retry_action_label": "Повторіть спробу",
+      "load_extension_error": {
+        "title": "Помилка",
+        "description": "Оновіть сторінку або повторіть спробу через кілька хвилин.",
+        "refresh_button": "Оновити сторінку"
+      }
+    },
+    "payment_methods": {
+      "title": "Способи оплати",
+      "add_payment_method_button": "Додати спосіб оплати",
+      "add_payment_method_banner": "Додайте спосіб оплати для швидшої оплати або попередньо авторизованих послуг",
+      "no_payment_methods_banner": "Немає доданих способів оплати",
+      "edit_payment_method_button_accessibility_label": "Змінити {{paymentMethodName}} що закінчується на {{lastDigits}}",
+      "edit_payment_method_brand_button_accessibility_label": "Редагувати {{paymentMethodName}}",
+      "delete_payment_method_button": "Видалити",
+      "delete_payment_method_button_accessibility_label": "Видалити {{paymentMethodName}}",
+      "back_button": "Назад",
+      "back_button_accessibility_label": "Назад до {{paymentMethodStepTitle}}",
+      "default": "За замовчуванням",
+      "generic_card": "картка",
+      "expiration_warning_button_accessibility_label": "Показати попередження про закінчення терміну дії для {{paymentMethodName}} що закінчується на {{lastDigits}}",
+      "expires_soon": "Термін дії цієї картки незабаром закінчується",
+      "expired": "Термін дії цієї картки закінчився",
+      "card_update_consent": "Цей спосіб оплати буде збережено для майбутніх покупок.",
+      "digital_wallet_title": "Цифровий гаманець",
+      "credit_or_debit_card_title": "Кредитна або дебетова картка",
+      "google_pay": {
+        "loading": "Завантаження Google Pay",
+        "errors": {
+          "generic": "Виникла проблема з Google Pay. Повторіть спробу або скористайтеся іншим способом оплати.",
+          "missing_billing_address": "Для Google Pay потрібна платіжна адреса. Будь ласка, додайте один до свого облікового запису."
+        }
+      },
+      "apple_pay": {
+        "loading": "Завантаження Apple Pay"
+      }
     }
   },
   "sections": {
@@ -624,7 +792,98 @@
   },
   "customer": {
     "order": {
-      "price": "Ціна"
+      "price": "Ціна",
+      "title": "Замовити {{ name }}",
+      "date_html": "Розміщено {{ date }}",
+      "cancelled_html": "Замовлення скасовано {{ date }}",
+      "cancelled_reason": "Причина: {{ reason }}",
+      "billing_address": "Платіжна адреса",
+      "payment_status": "Статус платежу",
+      "shipping_address": "Адреса доставки",
+      "fulfillment_status": "Статус виконання",
+      "discount": "Знижка",
+      "shipping": "Доставка",
+      "tax": "податок",
+      "product": "Продукт",
+      "quantity": "Кількість",
+      "total": "Всього",
+      "total_refunded": "Повернено",
+      "fulfilled_at_html": "Виконано {{ date }}",
+      "track_shipment": "Відстежити відправлення",
+      "tracking_url": "Посилання для відстеження",
+      "tracking_company": "Перевізник",
+      "tracking_number": "Номер відстеження",
+      "subtotal": "Проміжний підсумок",
+      "total_duties": "Обов'язки"
+    },
+    "login_page": {
+      "password": "Пароль",
+      "title": "Логін",
+      "sign_in": "Увійдіть",
+      "submit": "Надіслати",
+      "alternate_provider_separator": "або"
+    },
+    "orders": {
+      "title": "Історія замовлень",
+      "order_number": "порядок",
+      "order_number_link": "Номер замовлення {{ number }}",
+      "date": "Дата",
+      "payment_status": "Статус платежу",
+      "fulfillment_status": "Статус виконання",
+      "total": "Всього",
+      "none": "Ви ще не розмістили жодного замовлення."
+    },
+    "recover_password": {
+      "title": "Скинути пароль",
+      "subtext": "Ми надішлемо вам електронний лист для скидання пароля",
+      "success": "Ми надіслали вам електронний лист із посиланням для оновлення пароля."
+    },
+    "register": {
+      "title": "Створити акаунт",
+      "first_name": "ім'я",
+      "last_name": "Прізвище",
+      "email": "Електронна пошта",
+      "password": "Пароль",
+      "submit": "Створити"
+    },
+    "reset_password": {
+      "title": "Скинути пароль облікового запису",
+      "subtext": "Введіть новий пароль",
+      "password": "Пароль",
+      "password_confirm": "Підтвердьте пароль",
+      "submit": "Скинути пароль"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "how_to_use_gift_card": "Використовуйте код подарункової картки онлайн або QR-код у магазині",
+      "title": "Ось ваш баланс подарункової картки {{ value }} для {{ shop }} !",
+      "subtext": "Ваша подарункова картка",
+      "gift_card_code": "Код подарункової картки",
+      "shop_link": "Відвідайте інтернет-магазин",
+      "add_to_apple_wallet": "Додати в Apple Wallet",
+      "qr_image_alt": "QR-код — відскануйте, щоб отримати подарункову картку",
+      "copy_code": "Скопіюйте код подарункової картки",
+      "expiration_date": "Термін дії закінчується {{ expires_on }}",
+      "copy_code_success": "Код успішно скопійовано",
+      "expired": "Термін дії минув"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "Я хочу надіслати це як подарунок",
+      "expanded": "Форма одержувача подарункової картки розгорнута",
+      "collapsed": "Форма одержувача подарункової картки згорнута",
+      "email_label": "Електронна адреса одержувача",
+      "email_label_optional_for_no_js_behavior": "Електронна адреса одержувача (необов’язково)",
+      "email": "Електронна пошта",
+      "name_label": "Ім'я одержувача (необов'язково)",
+      "name": "Ім'я",
+      "message_label": "Повідомлення (необов'язково)",
+      "message": "повідомлення",
+      "max_characters": "Макс. символів {{ max_chars }}",
+      "send_on": "РРРР-ММ-ДД",
+      "send_on_label": "Надіслати (необов'язково)"
     }
   }
 }
