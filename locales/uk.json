@@ -1841,15 +1841,67 @@
         },
         "amazon_buy_with_prime": {
           "order_tracking_link": {
-            "text": "Керуйте за допомогою Amazon"
+            "text": "Керуйте за допомогою Amazon",
+            "new_window_disclaimer": "(відкриває нове вікно)"
+          }
+        },
+        "delivery_promise": {
+          "promise_line": {
+            "single_brand_label": "Доставка забезпечена",
+            "mixed_brands_label": "Доставка гарантована",
+            "not_delivered_by_label": "Не доставлено до {{date}}",
+            "modal_accessibility_button_label": "Деталі обіцянки доставки"
+          },
+          "claim_shop_cash_cta": {
+            "has_shop_app_label": "Отримайте готівку в магазині",
+            "no_shop_app_label": "{{appDownloadLink}} щоб отримати готівку в магазині",
+            "download_shop_app_label": "Завантажити магазин"
+          },
+          "details_modal": {
+            "title": "Доставка забезпечена",
+            "modal_accessiblity_label": "Деталі обіцянки доставки",
+            "delivery_by_label": "Доставка до {{date}}",
+            "delivery_guaranteed_by_label": "Гарантована доставка до {{date}}",
+            "shop_cash_claim": {
+              "may_be_eligible_label": "Ви можете мати право вимагати Shop Cash, якщо це замовлення надійде із запізненням.",
+              "may_be_eligible_not_authorized_label": "Можливо, ви маєте право вимагати Shop Cash, оскільки це замовлення надійшло із запізненням. Увійдіть, щоб переглянути деталі.",
+              "redeemed_label": "Ви вже вимагали Shop Cash, оскільки це замовлення надійшло із запізненням.",
+              "expired_label": "Це замовлення не підлягає претензії щодо затримки доставки, оскільки термін дії 30-денної гарантії закінчився.",
+              "no_shop_cash_label": "Це замовлення не відповідає вимогам щодо затримки доставки, оскільки воно не було оплачено за допомогою Shop Pay.",
+              "no_longer_guaranteed_label": "На ці товари більше не поширюється гарантія доставки.",
+              "claim_shop_cash_title": "Відскануйте, щоб отримати {{amount}} у Shop Cash",
+              "claim_shop_cash_description": "Ви можете використовувати Shop Cash для майбутніх покупок у додатку Shop."
+            }
           }
         }
-      }
+      },
+      "status_mark_as_delivered": "Позначити як доставлене",
+      "fulfillment_status_title": "Статус виконання: {{status}}",
+      "buy_again": "Купуйте знову",
+      "buy_again_accessibility_label": "Купуйте знову для замовлення {{orderId}}",
+      "manage": "Керувати",
+      "manage_accessiblity_label": "Керувати замовленням {{orderId}}",
+      "group_title_label": "Частина: {{groupTitle}}",
+      "havent_received_your_delivery": "Не отримали свою доставку?",
+      "didnt_pick_up_order": "Не забрали замовлення?",
+      "if_you_didnt_receive_this": "Якщо ви не отримали цього,",
+      "if_not_received": {
+        "one": "Якщо не було отримано,",
+        "other": "Якщо їх не отримали,"
+      },
+      "let_us_know": "Дайте нам знати",
+      "contact_us": "зв'яжіться з нами."
     },
     "order_details": {
       "contact": "контакт",
       "returns": {
-        "tracking_number": "Номер відстеження:"
+        "tracking_number": "Номер відстеження:",
+        "expand_events_label": "Показати деталі",
+        "hide_events_label": "Приховати деталі",
+        "ineligible_return_message": "Жоден товар у цьому замовленні не підлягає поверненню.",
+        "ineligible_return_message_when_returned": "Жодні додаткові товари в цьому замовленні не підлягають поверненню.",
+        "print_shipping_label": "Роздрукуйте транспортну етикетку",
+        "return_and_refund_modal_header": "Політика відшкодування"
       },
       "shipping": {
         "address": "Адреса доставки",
@@ -1922,7 +1974,87 @@
       },
       "vat_invoices": {
         "title": "ПДВ-фактури"
-      }
+      },
+      "shipment_timeline": {
+        "expand_events_label": "Показати деталі",
+        "expand_events_accessibility_label": "Показати деталі доставки замовлення",
+        "hide_events_label": "Приховати деталі",
+        "hide_events_accessibility_label": "Приховати деталі доставки замовлення"
+      },
+      "addresses_section_title": "Оплата та доставка",
+      "order_details": "Деталі замовлення",
+      "order_details_skeleton_accessibility_label": "Увійдіть, щоб переглянути всі деталі замовлення.",
+      "billing_address": "Платіжна адреса",
+      "card_ending_with": "закінчується на {{lastDigits}}",
+      "contact_information": "Контактна інформація",
+      "company": "Компанія",
+      "fully_refunded_label": "ПОВЕРНЕНО",
+      "group_title_label": "Частина: {{groupTitle}}",
+      "discount": "Знижка",
+      "hide_items": "Приховати елементи",
+      "loading": "Завантаження деталей замовлення",
+      "loading_finished_accessibility_message": "Деталі замовлення завантажено",
+      "location": "Розташування",
+      "image_gallery": {
+        "next": "Показати наступні елементи",
+        "previous": "Показати попередні елементи",
+        "load_more_items": {
+          "one": "Завантажити ще {{count}} елементів",
+          "other": "Завантажити ще {{count}} елементів"
+        }
+      },
+      "mobile_summary_toggle_button": {
+        "open": "Показати зведення замовлення",
+        "closed": "Приховати підсумок замовлення"
+      },
+      "no_data": "жодного",
+      "no_data_provided_accessibility_label": "{{fieldName}} порожнє",
+      "paid_amount": "Платний",
+      "partially_refunded_label": "ЧАСТКОВО ПОВЕРНЕНО",
+      "payment": {
+        "status_in_review": "Оплата після перевірки",
+        "status_unpaid": "Термін оплати: {{date}}",
+        "title": "Оплата",
+        "card_payment_details": "закінчується на {{lastDigits}} - {{formattedTransactionAmount}}",
+        "gift_card_payment_details": "закінчується на {{lastDigits}} - {{formattedTransactionAmount}}",
+        "store_credit_payment_details": "Кредит магазину - {{formattedTransactionAmount}}",
+        "shop_pay_installments": {
+          "paid_in_installments": "Оплачено через Shop Pay частинами",
+          "view_schedule": "Переглянути розклад"
+        },
+        "manual_payment_methods": {
+          "money_order": "Грошовий переказ - {{formattedTransactionAmount}}",
+          "cash_on_delivery": "Оплата при доставці (COD) - {{formattedTransactionAmount}}",
+          "bank_deposit": "Банківський депозит - {{formattedTransactionAmount}}",
+          "manual": "Вручну - {{formattedTransactionAmount}}"
+        },
+        "transactions": {
+          "show_all": "Показати все",
+          "show_less": "Показувати менше",
+          "details": "Подробиці",
+          "payment_details": "Платіжні реквізити"
+        },
+        "emv_details": {
+          "aid": "ДОПОМОГА:",
+          "source": "ДЖЕРЕЛО:"
+        }
+      },
+      "paid_with_shop_pay_installments_card": {
+        "paid_with_shop_pay_installments": "Оплата в розстрочку в магазині",
+        "description": "Слідкуйте за розкладом платежів за допомогою нагадувань у додатку Shop.",
+        "payment_reminders_button": "Отримуйте нагадування про оплату",
+        "desktop_qr_code_content": {
+          "title": "Пошук нагадувань",
+          "description": "Отримуйте нагадування про виплати за допомогою Shop."
+        }
+      },
+      "refunded_amount": "Повернено",
+      "request_return_failed": "Виникла проблема з обробкою вашого запиту. Спробуйте ще раз.",
+      "remaining_amount": "Залишилося",
+      "marketing_section_title": "Новини та пропозиції",
+      "marketing_description": "Ви отримуватимете маркетингові електронні листи. Ви можете скасувати підписку в будь-який час.",
+      "marketing_checkbox_label": "Пишіть мені новини та пропозиції",
+      "marketing_checkmark_label": "Ви підписані на отримання електронною поштою новин і пропозицій"
     },
     "B2B": {
       "orders": {
