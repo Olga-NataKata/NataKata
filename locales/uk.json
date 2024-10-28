@@ -693,6 +693,140 @@
         "price_and_quantity_update": {
           "title": "Оновлення ціни та кількості",
           "description": "Ціни та доступні кількості для цих товарів змінилися та оновлюються у вашому кошику."
+        },
+        "out_of_stock": {
+          "description": "Ці товари більше не доступні та були видалені з вашого кошика.",
+          "items_unavailable": "Деякі товари більше не доступні та були видалені з вашого кошика."
+        }
+      },
+      "contextual_availability": {
+        "title": {
+          "one": "Недоступний товар",
+          "other": "Недоступні продукти"
+        },
+        "products_not_available": {
+          "one": "Цей продукт буде видалено з вашого кошика, оскільки він недоступний у вашій країні/регіоні.",
+          "other": "Ці продукти буде видалено з вашого кошика, оскільки вони недоступні у вашій країні/регіоні."
+        },
+        "all_products_in_cart_unavailable": {
+          "one": "Цей продукт недоступний у вашій країні/регіоні.",
+          "other": "Ці продукти недоступні у вашій країні/регіоні."
+        },
+        "unavailable_label": "Недоступний"
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "Немає можливості доставки для %{count} товару",
+            "other": "Немає можливості доставки для %{count} позицій"
+          },
+          "message": {
+            "one": "Цей товар буде видалено з вашого кошика, оскільки для вашої адреси недоступні способи доставки.",
+            "other": "Ці товари буде видалено з вашого кошика, оскільки для вашої адреси недоступні способи доставки."
+          },
+          "label": "Без доставки"
+        }
+      },
+      "order_summary": {
+        "title": "Резюме замовлення",
+        "group_title_label": "Частина \"%{group_title}\"",
+        "number_items": {
+          "one": "%{count} елемент",
+          "other": "%{count} елементів"
+        },
+        "view_all_items": {
+          "one": "Переглянути %{count} елемент",
+          "other": "Переглянути всі %{count} елементів"
+        },
+        "more_items_modal": {
+          "clear_search": "Очистити пошук",
+          "empty_results": "Немає результатів для \"%{searchText}\". Перевірте правопис або використайте інше слово чи фразу.",
+          "number_items_shown": "%{shownNumber} із %{totalNumber} елементів"
+        },
+        "order_name_label": "Замовити %{name}",
+        "shopping_cart_label": "Кошик для покупок",
+        "discount_title": "Знижка",
+        "discount_title_stacking": {
+          "one": "Знижка",
+          "other": "Знижки"
+        },
+        "discount_order_stacking": {
+          "one": "Замовляйте знижку",
+          "other": "Замовляйте знижки"
+        },
+        "discount_label": "Код знижки",
+        "discount_not_found": "Не вдалося знайти дійсну знижку, яка відповідає введеному коду",
+        "discount_placeholder": "Код знижки",
+        "discount_code_applied": "Код знижки застосовано",
+        "gift_card_applied": "Подарункова картка застосована",
+        "enter_shipping_address": "Введіть адресу доставки",
+        "gift_card_title": "Подарункова карта",
+        "gift_card_label": "Подарункова карта",
+        "gift_card_placeholder": "Подарункова карта",
+        "gift_card_and_discount_title": "Код знижки або подарункова карта",
+        "gift_card_and_discount_label": "Код знижки або подарункова карта",
+        "gift_card_and_discount_placeholder": "Код знижки або подарункова карта",
+        "remove_gift_card_label": "Прозора подарункова карта",
+        "remove_discount_label": "Зняти знижку",
+        "return_restocking_fee_label": "Плата за поповнення запасів",
+        "return_shipping_fee_label": "Зворотна доставка",
+        "free_shipping_discount_label": "Безкоштовна доставка",
+        "applied_free_shipping_discount_label": "Прикладний",
+        "apply_discount_button_label": "Застосувати",
+        "applied_discount_message": "%{amount} знижки на загальну вартість замовлення",
+        "discount_has_been_applied": "Знижку застосовано",
+        "discount_has_been_removed": "Знижку видалено",
+        "gift_card_has_been_applied": "Подарункову картку застосовано",
+        "gift_card_has_been_removed": "Подарункову картку видалено",
+        "gift_card_subscriptions_notice": "Подарункові картки застосовуються лише до вашого першого платежу",
+        "discount_already_applied": "До цього замовлення застосована знижка. Ви не можете додати іншу знижку.",
+        "cart_does_not_meet_discount_requirements_notice": "Код знижки <strong style=\"text-transform:uppercase\">%{code}</strong> недійсний для товарів у вашому кошику",
+        "discount_requires_customer_notice": "Введіть інформацію про доставку, щоб застосувати код знижки <strong style=\"text-transform:uppercase\">%{code}</strong>",
+        "customer_does_not_meet_discount_requirements_notice": "Код знижки <strong style=\"text-transform:uppercase\">%{code}</strong> вам зараз недоступний",
+        "eligible_customer_missing_notice": "Код знижки <strong style=\"text-transform:uppercase\">%{code}</strong> вимагає відповідного клієнта",
+        "shipping_information_does_not_meet_discount_requirements_notice": "Код знижки <strong style=\"text-transform:uppercase\">%{code}</strong> недоступний для вашої адреси доставки",
+        "customer_already_used_once_per_customer_discount_notice": "Код знижки <strong style=\"text-transform:uppercase\">%{code}</strong> уже використано",
+        "subtotal_label": "Проміжний підсумок",
+        "subtotal_label_with_quantity": {
+          "one": "Проміжний підсумок • %{count} елемент",
+          "other": "Проміжний підсумок • %{count} елементів"
+        },
+        "shipping_label": "Доставка",
+        "pickup_label": "Самовивіз в магазині",
+        "no_pickup_location": "Немає доступних місць отримання.",
+        "tip_label": "Підказка",
+        "calculating_shipping": "Обчислення…",
+        "calculating": "Обчислення…",
+        "shipping_default_value": "Розраховується на наступному кроці",
+        "shipping_discount_title": "Знижка на доставку",
+        "shipping_pending_message": "Ще не доступний",
+        "shipping_policy_link": "Вартість доставки",
+        "taxes_label": "податки",
+        "estimated_taxes_label": "Орієнтовні податки",
+        "information_estimated_taxes_label": "Податки (приблизно)",
+        "estimated_taxes_finalization_tooltip_content": "Остаточний податок і загальну суму буде підтверджено електронною поштою або текстовим повідомленням після розміщення замовлення.",
+        "order_total_label": "Всього замовлення",
+        "total_savings": "Повна економія",
+        "total_label": "Всього",
+        "total_outstanding_label": "Сума до оплати",
+        "partial_total_label": "Всього",
+        "free_total_label": "безкоштовно",
+        "free_shipping_total_label": "безкоштовно",
+        "paid_label": "Платний",
+        "payment_due_label": "Термін оплати",
+        "vat_label_html": "Включаючи %{amount} податків",
+        "duties_included_label": "Усього враховуються податки та збори. Без додаткових оплат при доставці.",
+        "discount_and_gift_card_savings_notice": "Після %{discount_amount} знижок і %{gift_card_amount} подарункових карток",
+        "discount_savings_notice": "Після %{discount_amount} знижок",
+        "gift_card_savings_notice": "Після %{gift_card_amount} у подарункових картках",
+        "cost_table_title": "Підсумок витрат",
+        "cost_table_item_column_header": "Пункт",
+        "cost_table_value_column_header": "Значення",
+        "description_label": "опис",
+        "price_label": "Ціна",
+        "price_per_item": {
+          "accessibility_label": "%{price} за товар",
+          "label": "%{price}/шт"
         }
       }
     },
@@ -962,7 +1096,82 @@
       }
     },
     "order_details": {
-      "contact": "контакт"
+      "contact": "контакт",
+      "returns": {
+        "tracking_number": "Номер відстеження:"
+      },
+      "shipping": {
+        "address": "Адреса доставки",
+        "address_map_marker": "Адреса доставки",
+        "method": "Спосіб доставки",
+        "summary": "Доставка",
+        "free": "безкоштовно",
+        "free_shipping_discount": "Безкоштовна доставка",
+        "one_time": "Одноразова доставка",
+        "subscription": "Доставка за підпискою"
+      },
+      "pickup": {
+        "pickup": "Пікап",
+        "pickup_location": "Місце отримання",
+        "pickup_point": "Пункт самовивозу"
+      },
+      "show_items": "Показати елементи",
+      "show_order_summary": "Показати зведення замовлення",
+      "hide_order_summary": "Приховати підсумок замовлення",
+      "subtitle": "Підтверджено {{date}}",
+      "subtotal": "Проміжний підсумок",
+      "summary_list_title_accessibility_label": "Товари замовлення",
+      "summary_title": "Резюме замовлення",
+      "summary_totals_title_accessibility_label": "Сума замовлення",
+      "shop_order_tracking": {
+        "download_shop_to_track": "Завантажте магазин, щоб відстежити пакет",
+        "track_order_with_shop": "Відстежуйте замовлення в магазині",
+        "title_header": "Скануйте за допомогою телефону",
+        "real_time_delivery_updates": "Shop надішле вам оновлення доставки в реальному часі, щойно ваше замовлення буде відправлено."
+      },
+      "edit_summary": {
+        "added": "Додано",
+        "added_with_quantity": "Додано {{quantity}}",
+        "removed": "Видалено",
+        "removed_with_quantity": "Видалено {{quantity}}",
+        "updated_at": "Ваше замовлення оновлено {{date}}",
+        "returned": "Повернувся",
+        "returned_with_quantities": "Повернуто {{delta}} із {{total}}",
+        "removed_with_quantities": "Видалено {{delta}} із {{total}}",
+        "return_line_item_removed": "Знято з повернення",
+        "return_line_item_removed_with_quantities": "Видалено {{delta}} із повернення"
+      },
+      "shop_pay": {
+        "order_completed_with": "Замовлення виконано с",
+        "learn_more": "Дізнайтесь більше"
+      },
+      "taxes": "податки",
+      "taxes_included": "Включаючи {{amount}} податків",
+      "duties_and_taxes_included": "Усього входять мита та податки. Без додаткових оплат при доставці.",
+      "duties": "Обов'язки",
+      "ok_duties_tooltip": "Це замовлення доставляється з іншої країни, тому до загальної суми замовлення додано мита.",
+      "error_duties_tooltip": "Це замовлення доставляється з іншої країни, тому під час доставки можуть стягуватися мита та податки.",
+      "zero_duties_tooltip": "Це замовлення доставляється з іншої країни. На замовлення такої вартості мито не стягується.",
+      "tip": "Підказка",
+      "title": "Замовити {{name}}",
+      "total": "Всього",
+      "unit_price": "{{price}} /шт",
+      "pagination": {
+        "load_more": "Завантажте більше",
+        "load_more_accessibility_label": "Завантажити більше елементів",
+        "loading_accessibility_label": "Завантаження елементів"
+      },
+      "login_to_view_all_order_details": "Увійдіть, щоб переглянути всі деталі замовлення.",
+      "log_in": "авторизуватися",
+      "logged_in_account_no_permission_to_order": "Ви ввійшли як {{email}} . Цей обліковий запис не має дозволу на керування цим замовленням.",
+      "log_in_to_a_different_account": "Увійдіть в інший обліковий запис",
+      "fees": {
+        "restocking_fee": "Плата за поповнення запасів",
+        "return_shipping_fee": "Зворотна доставка"
+      },
+      "vat_invoices": {
+        "title": "ПДВ-фактури"
+      }
     },
     "B2B": {
       "orders": {
@@ -1177,7 +1386,60 @@
         "tomorrow": "Завтра о {{time}}"
       }
     },
-    "enable_javascript": "Щоб переглянути свій обліковий запис, увімкніть JavaScript у налаштуваннях браузера або увійдіть за допомогою іншого браузера."
+    "enable_javascript": "Щоб переглянути свій обліковий запис, увімкніть JavaScript у налаштуваннях браузера або увійдіть за допомогою іншого браузера.",
+    "addresses": {
+      "add_button": "Додайте адресу",
+      "add_button_text": "додати",
+      "add_button_accessibility_label": "Додайте адресу",
+      "back_button": "Назад",
+      "back_button_accessibility_label": "Повернутися до редагування адреси {{address}}",
+      "add_address_banner": "Додайте адреси для використання під час оплати",
+      "no_addresses_banner": "Адреси не додано",
+      "address_deleted_notification": "Адреса видалена",
+      "cancel_adding_address_accessibility_label": "Скасувати додавання адреси",
+      "cancel_deletion_button": "Скасувати",
+      "cancel_deletion_button_accessibility_label": "Скасувати видалення {{address}}",
+      "default_address": {
+        "title": "Адреса за умовчанням",
+        "title_accessibility_label": "Адреса за умовчанням: {{address}}"
+      },
+      "delete_button": "Видалити",
+      "delete_button_accessibility_label": "Видалити {{address}}",
+      "delete_confirmation_button": "Видалити адресу",
+      "delete_confirmation_button_accessibility_label": "Видалити {{address}}",
+      "delete_confirmation_message": "Видалити адресу? Існуючі замовлення не впливають.",
+      "delete_confirmation_title": "Видалити адресу?",
+      "delete_confirmation_description": "Існуючі замовлення не впливають.",
+      "edit_button": "Редагувати",
+      "edit_button_accessibility_label": "Редагувати {{address}}",
+      "edit_section_accessibility_label": "Редагувати {{address}}",
+      "edit_modal_title": {
+        "default": "Редагувати адресу",
+        "billing": "Редагувати платіжну адресу",
+        "shipping": "Редагувати адресу доставки"
+      },
+      "loading_accessibility_message": "Адреса завантаження",
+      "loading_addresses_accessibility_message": "Завантаження адрес",
+      "loading_billing_accessibility_message": "Завантаження платіжної адреси",
+      "loading_finished_accessibility_message": "Завантажено нову сторінку адрес",
+      "loading_shipping_accessibility_message": "Завантаження адреси доставки",
+      "pagination": {
+        "load_more": "Завантажте більше",
+        "load_more_accessibility_label": "Завантажити більше адрес"
+      },
+      "save_new_address_accessibility_label": "Зберегти адресу",
+      "title": "Адреси",
+      "billing_address_dropdown_placeholder": "Платіжна адреса"
+    },
+    "address_form": {
+      "attention": "Увага",
+      "attention_company": "Компанія/увага",
+      "attention_help_text": "Ім'я особи або відділу",
+      "auto_complete_close_accessibility_label": "Закрити пропозиції",
+      "auto_complete_title": "Пропозиції",
+      "billing_address": "Використовувати як платіжну адресу",
+      "cancel": "Скасувати"
+    }
   },
   "sections": {
     "cart": {
