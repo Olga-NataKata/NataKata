@@ -25,14 +25,14 @@
           "type": "link_list",
           "settings": {
             "heading": "",
-            "menu": "footer"
+            "menu": "footer-care"
           }
         },
         "link_list_wWVK6q": {
           "type": "link_list",
           "settings": {
             "heading": "",
-            "menu": "footer"
+            "menu": "footer-menu-help"
           }
         }
       },
