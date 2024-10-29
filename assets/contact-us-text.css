@@ -57,26 +57,26 @@
 /* Responsive styles */
 @media (max-width: 1024px) {
   .contact-us-text-section {
-    padding: 30px;
+    padding: 150px;
   }
 }
 
 @media (max-width: 768px) {
   .contact-us-text-section {
-    padding: 20px;
+    padding: 150px;
   }
 }
 
 @media (max-width: 480px) {
   .contact-us-text-section {
-    padding: 15px;
+    padding: 90px;
   }
 }
 
 /* Responsive styles for tablets */
 @media (max-width: 1024px) {
   .contact-us-text-section {
-    padding: 15px;
+    padding: 150px;
     margin: 40px auto;
   }
 
@@ -102,7 +102,7 @@
 @media (max-width: 768px) {
   .contact-us-text-section {
     margin: 30px auto;
-    padding: 10px;
+    padding: 150px;
   }
 
   .contact-us-text-section h2 {
@@ -127,7 +127,7 @@
 @media (max-width: 480px) {
   .contact-us-text-section {
     margin: 20px auto;
-    padding: 5px;
+    padding: 90px;
   }
 
   .contact-us-text-section h2 {
