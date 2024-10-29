@@ -1696,6 +1696,10 @@ details[open] > .share-button__fallback {
   min-height: calc(var(--inputs-border-width) * 2);
 }
 
+.select option {
+	background: rgb(var(--color-background));
+}
+
 /* Field */
 
 .field {
