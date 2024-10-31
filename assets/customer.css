@@ -753,3 +753,48 @@ li[data-address] > h2 {
 .addresses form > div:nth-of-type(7) + div[id] {
   margin-top: 1.5rem;
 }
+
+.login--image-grid {
+	display: grid;
+	gap: 4rem 6rem;
+}
+
+.login__image img {
+	width: 100%;
+	height: auto;
+}
+
+.customer:not(.account):not(.order).login--image-grid {
+	max-width: calc(var(--page-width) - 8rem);
+}
+
+@media only screen and (max-width: 749px) {
+	.login--image-grid .login__image {
+		order: -1;
+	}
+}
+
+@media only screen and (min-width: 750px) {
+	.login--image-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		gap: 4rem 6rem;
+	}
+
+	.login--image-grid .login__wrapp {
+		text-align: left;
+	}
+
+	.login--image-grid .login__wrapp a {
+		margin-left: 0;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.login--image-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem 8rem;
+	}
+}
