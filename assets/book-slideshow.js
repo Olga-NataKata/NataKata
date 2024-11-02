@@ -1,4 +1,4 @@
-"use strict"; 
+"use strict";
 
 (function () {
   if (!customElements.get("book-slideshow")) {
@@ -7,7 +7,7 @@
         super();
         this.initSlideshow = this.initSlideshow.bind(this);
         this.randomizeDots = this.randomizeDots.bind(this);
-				this.frontPageImg = this.dataset.frontPageImg;
+        this.frontPageImg = this.dataset.frontPageImg;
       }
 
       connectedCallback() {
@@ -37,14 +37,17 @@
             buttonContainer.appendChild(prevButton);
             buttonContainer.appendChild(nextButton);
 
-            flipbook.parentNode.insertBefore(buttonContainer, flipbook.nextSibling);
+            flipbook.parentNode.insertBefore(
+              buttonContainer,
+              flipbook.nextSibling
+            );
           }
         }
       }
 
       initSlideshow() {
         const pages_count = this.querySelectorAll(".page").length;
-        if(pages_count < 2) {
+        if (pages_count < 2) {
           return;
         }
         if (window.innerWidth <= 480) {
@@ -58,14 +61,12 @@
             page.innerHTML = "";
           });
         }
-        
 
         if (pages_count % 2 === 0) {
           const lastPage = this.querySelector(".page:last-child");
           const newPage = lastPage.cloneNode(true);
           newPage.classList.add("hard");
-          newPage.style.background =
-            `#c0392b url(${this.frontPageImg}) no-repeat center/cover`;
+          newPage.style.background = `#c0392b url(${this.frontPageImg}) no-repeat center/cover`;
           newPage.style.color = "#fff";
           newPage.style.fontWeight = "bold";
           newPage.innerHTML =
@@ -99,14 +100,15 @@
           .find(".flipbook")
           .on("turning", function () {
             const visiblePages = $(this).turn("view");
-            
 
             const allVideos = document.querySelectorAll(".BookVideo");
             allVideos.forEach((video) => video.play());
           });
 
         // disabling turning on the last page
-        $(this).find(".flipbook").turn("disable", pages_count - 1);
+        $(this)
+          .find(".flipbook")
+          .turn("disable", pages_count - 1);
 
         this.randomizeDots();
       }
@@ -121,17 +123,14 @@
       randomizeDots() {
         const dots = this.querySelectorAll(".dot-link");
         dots.forEach((dot) => {
-          const image = dot.previousElementSibling;
-          const maxX = image.width * 0.7;
-          const maxY = image.height * 0.7;
-          const minX = image.width * 0.3;
-          const minY = image.height * 0.3;
+          // Randomize the position between 0 and 100% for both top and left
+          const randomTop = Math.random() * 100;
+          const randomLeft = Math.random() * 50;
 
-          let randomX = Math.random() * (maxX - minX) + minX;
-          let randomY = Math.random() * (maxY - minY) + minY;
-
-          dot.style.left = `${randomX}px`;
-          dot.style.top = `${randomY}px`;
+          // Apply the randomized position to each dot
+          dot.style.position = "absolute";
+          dot.style.top = `${randomTop}%`;
+          dot.style.left = `${randomLeft}%`;
         });
       }
     }

@@ -90,8 +90,16 @@
 							{%- if product.description != blank -%}
 								<span class="subtitle">{{ product.description | strip_html | truncate: 100 }}</span>
 							{%- endif -%}
+							
 						</div>
 					</a>
+					{%- if product.price != blank -%}
+						<div class="dot-link">
+							
+								<span class="description-box">{{ product.price }}</span>
+							
+						</div>
+					{%- endif -%}
 				{%- endif -%}
 			{%- endif -%}	
 			</div>

@@ -70,6 +70,9 @@
   left: 50%;
   transform: translateX(-50%);
   color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 /* Dot styling: white dot, initially hidden, with smooth transition */
@@ -162,6 +165,51 @@
   font-size: 14px;
   margin-bottom: 10px;
 }
+
+/* About Us section styling */
+.about-us-section {
+  max-width: 90%;
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Added semi-transparent background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow for separation */
+}
+
+/* Title styling */
+.about-us-look-book-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff; /* Changed to white */
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+/* Text styling */
+.about-us-look-book-text {
+  font-size: 1.1rem;
+  color: #ffffff; /* Changed to white */
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.page .price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
 /* Media query for extra small mobile devices */
 @media (max-width: 320px) {
   .flipbook {
@@ -215,6 +263,10 @@
     background-position: center;
     background-repeat: no-repeat;
     filter: blur(3px);
+  }
+  .page .p-tag-title {
+    font-size: 14px;
+    bottom: 50px;
   }
 }
 
@@ -272,59 +324,25 @@
     background-repeat: no-repeat;
     filter: blur(3px);
   }
-}
-
-/* Main container styling */
-/* .page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f7f7f7;
-  padding: 20px;
-} */
-
-/* About Us section styling */
-.about-us-section {
-  max-width: 90%;
-  width: 100%;
-  padding: 40px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.7); /* Added semi-transparent background for contrast */
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow for separation */
-}
-
-/* Title styling */
-.about-us-look-book-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ffffff; /* Changed to white */
-  margin-bottom: 20px;
-  line-height: 1.3;
-}
-
-/* Text styling */
-.about-us-look-book-text {
-  font-size: 1.1rem;
-  color: #ffffff; /* Changed to white */
-  line-height: 1.6;
-  margin-bottom: 0;
+  .page .p-tag-title {
+    font-size: 20px;
+    bottom: 50px;
+  }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .about-us-section {
-      max-width: 95%;
-      padding: 20px;
+    max-width: 95%;
+    padding: 20px;
   }
 
   .about-us-look-book-title {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .about-us-look-book-text {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 }
 
