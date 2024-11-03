@@ -113,13 +113,13 @@
 .description-box {
   display: none; /* Always block, but initially hidden using opacity */
   position: absolute;
-  top: 35px; /* Position the description below the dot */
-  left: -70px; /* Adjust to center the description under the dot */
+  top: 30px; /* Position the description below the dot */
+
   background-color: rgba(
     255,
     255,
     255,
-    0.9
+    0.7
   ); /* White background with opacity */
   color: black; /* Black text */
   padding: 10px;
@@ -127,7 +127,8 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
   font-family: Arial, sans-serif;
   font-size: 14px;
-  width: 200px; /* Fixed width for the description box */
+  width: 200px; /* Width is determined by content */
+  height: fit-content;
   white-space: normal;
   z-index: 10;
   animation: fade-in 0.5s ease;
@@ -140,7 +141,7 @@
 }
 
 /* Styling for the title inside the description */
-.description-box .title {
+.description-box .description-box-title {
   font-size: 16px;
   font-weight: bold;
   display: block;
@@ -148,9 +149,10 @@
 }
 
 /* Styling for the subtitle inside the description */
-.description-box .subtitle {
+.description-box .description-box-subtitle {
   font-size: 12px;
   color: gray; /* Subtitle in a lighter color */
+  max-width: 100%;
 }
 
 .flipbook .page video {

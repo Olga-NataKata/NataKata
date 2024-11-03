@@ -82,17 +82,19 @@
 					<p class ="p-tag-title">{{ block.settings.heading | escape }}</p>
 				{%- endif -%}
 				{%- if block.settings.product != blank -%}
-					<a href="{{ product.url }}" class="dot-link">
+					<div class="dot-link">
 						<div class="description-box">
+							<a href="{{ product.url }}">
 							{%- if product.title != blank -%}
-								<strong class="title">{{ product.title }}</strong>
+								<strong class="description-box-title">{{ product.title }}</strong>
 							{%- endif -%}
+							</a>
 							{%- if product.description != blank -%}
-								<span class="subtitle">{{ product.description | strip_html | truncate: 100 }}</span>
+								<span class="description-box-subtitle">{{ product.description | strip_html | truncate: 100 }}</span>
 							{%- endif -%}
 							
-						</div>
-					</a>
+						</div>	
+					</div>
 					{%- if product.price != blank -%}
 						<div class="dot-link">
 							

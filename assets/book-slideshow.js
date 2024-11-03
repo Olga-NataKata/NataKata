@@ -124,8 +124,8 @@
         const dots = this.querySelectorAll(".dot-link");
         dots.forEach((dot) => {
           // Randomize the position between 0 and 100% for both top and left
-          const randomTop = Math.random() * 100;
-          const randomLeft = Math.random() * 50;
+          const randomTop = Math.random(2, 98) * 50;
+          const randomLeft = Math.random(2, 98) * 50;
 
           // Apply the randomized position to each dot
           dot.style.position = "absolute";
