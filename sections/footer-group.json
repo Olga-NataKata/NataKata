@@ -60,48 +60,21 @@
       "settings": {
         "caption": "",
         "heading": "",
-        "heading_size": "h1",
+        "heading_size": "h0",
         "heading_alignment": "center",
         "layout": "row",
         "color_scheme": "scheme-3",
         "container_color_scheme": "",
         "open_first_collapsible_row": false,
+        "image": "shopify://shop_images/person-writing-in-notebook-beside-laptop-working-from-bed.jpg",
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "footer": {
       "type": "footer",
-      "blocks": {
-        "link_list_QfQhHG": {
-          "type": "link_list",
-          "settings": {
-            "heading": "",
-            "menu": "footer"
-          }
-        },
-        "link_list_E8zj8L": {
-          "type": "link_list",
-          "settings": {
-            "heading": "",
-            "menu": "footer-care"
-          }
-        },
-        "link_list_wWVK6q": {
-          "type": "link_list",
-          "settings": {
-            "heading": "",
-            "menu": "footer-menu-help"
-          }
-        }
-      },
-      "block_order": [
-        "link_list_QfQhHG",
-        "link_list_E8zj8L",
-        "link_list_wWVK6q"
-      ],
       "settings": {
         "color_scheme": "scheme-3",
         "newsletter_enable": true,
