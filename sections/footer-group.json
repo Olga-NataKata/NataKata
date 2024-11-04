@@ -78,7 +78,7 @@
         "open_first_collapsible_row": false,
         "image": "shopify://shop_images/person-writing-in-notebook-beside-laptop-working-from-bed.jpg",
         "image_ratio": "adapt",
-        "desktop_layout": "image_second",
+        "desktop_layout": "image_first",
         "padding_top": 100,
         "padding_bottom": 100
       }
