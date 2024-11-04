@@ -97,9 +97,7 @@
 					</div>
 					{%- if product.price != blank -%}
 						<div class="dot-link">
-							
-								<span class="description-box">{{ product.price }}</span>
-							
+							<span class="description-box">{{ product.price | money }}</span>
 						</div>
 					{%- endif -%}
 				{%- endif -%}
