@@ -45,9 +45,9 @@
   position: relative; /* Needed for absolute positioning of the dot */
 }
 .page img {
-  width: 100%; /* Зображення розтягується на всю ширину контейнера */
-  height: 100%; /* Розтягується на всю висоту */
-  object-fit: cover; /* Покриває весь блок, обрізаючи краї, якщо необхідно */
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
   overflow: hidden;
   pointer-events: none;
   position: relative;
