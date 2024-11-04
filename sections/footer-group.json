@@ -19,7 +19,7 @@
           "settings": {
             "heading": "Collapsible row",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>Once you have added the items to your shopping bag, you can verify your selection, modify it and proceed to checkout.</p>",
             "page": ""
           }
         },
