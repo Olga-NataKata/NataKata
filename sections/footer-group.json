@@ -17,7 +17,7 @@
         "collapsible_row_3dCzNJ": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "How can I place an online order?",
             "icon": "none",
             "row_content": "<p>Once you have added the items to your shopping bag, you can verify your selection, modify it and proceed to checkout.</p>",
             "page": ""
@@ -26,9 +26,9 @@
         "collapsible_row_pyPkET": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "When can I consider my order as confirmed?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>At the end of the buying process you will receive the order acknowledgment email containing a recap of the order that we received, along with the information that we are processing it. We inform you that the content of your order acknowledgment can no longer be changed.</p>",
             "page": ""
           }
         },
