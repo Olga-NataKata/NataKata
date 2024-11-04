@@ -88,6 +88,9 @@
 
         $(this).find(".flipbook").turn({
           cornerSize: this.getCornerSize(),
+					gradients: true,
+					display: 'double',
+					acceleration: true,
         });
 
         const videos = this.querySelectorAll(".BookVideo");

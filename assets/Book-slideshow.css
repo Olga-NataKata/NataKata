@@ -14,10 +14,23 @@
   gap: 10px;
 }
 
+.flipbook__book-shadow {
+	position: absolute;
+	height: 600px;
+	width: 100px;
+	left: calc(50% - 100px);
+	z-index: 800;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG8AAAABCAYAAADQO/BKAAAASElEQVQYlZ2NSQrAMAwDR0n//2X3kBpMkEOoQGjBiyJCLJxUTf7bOV+VJifC+KrR5Fu6PYxHkoDxMf0s3TQcwNPoPrffyh96AcOpHU0esqcJAAAAAElFTkSuQmCC);
+}
+
+.flipbook-wrapper {
+	position: relative;
+  margin-top: 150px;
+}
+
 .flipbook {
   width: 1200px;
   height: 100%;
-  margin-top: 150px;
   z-index: 1;
 }
 
@@ -353,6 +366,8 @@
   .flipbook {
     width: 500px;
     height: 540px; /* Зменшена висота */
+  }
+  .flipbook-wrapper {
     margin-top: 100px;
   }
   .dot-link {
