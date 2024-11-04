@@ -109,6 +109,10 @@
   text-underline-offset: 0.3rem;
 }
 
+.collapsible-content__grid {
+	align-items: center;
+}
+
 /* check for flexbox gap in older Safari versions */
 @supports not (inset: 10px) {
   @media screen and (min-width: 750px) {
