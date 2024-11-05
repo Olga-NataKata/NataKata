@@ -113,6 +113,10 @@
 	align-items: center;
 }
 
+.collapsible-content .accordion:last-child {
+	margin-bottom: 0;
+}
+
 /* check for flexbox gap in older Safari versions */
 @supports not (inset: 10px) {
   @media screen and (min-width: 750px) {

@@ -16,97 +16,99 @@
 
 <book-slideshow class="book-flipbook-body color-{{ section.settings.scheme }}" data-section-id="{{ section.id }}" data-front-page-img="{{ section.settings.front_image_bg | image_url: 2000 }}">
   <div class="book-flipbook__overlay"></div>
-  <div class="flipbook">
-    <div
-      class="hard"
-			id="front-page-{{ section.id }}"
-      style="
-        background-image: url(var(--background-img));
-        background-size: cover;
-        background-position: center;
-      "
-    >
-			{%- if section.settings.front_image != blank -%}
-				<img class="logo" src="{{ section.settings.front_image | image_url: width: 500 }}" width="500" height="auto"alt="{{ section.settings.front_image.alt }}">
-			{%- endif -%}
-			{%- if section.settings.front_heading != blank -%}
-				{{ section.settings.front_heading | escape }}
-			{%- endif -%}
-			{%- if section.settings.front_text != blank -%}
-				<small>{{ section.settings.front_text }}</small>
-			{%- endif -%}
-    </div>
-
-    <div class="page">
-		<div class="about-us-section">
-
-			{%- if section.settings.about_us_heading != blank -%}
-			<h2 class="about-us-look-book-title">{{ section.settings.about_us_heading }}</h2>
-
-			{%- endif -%}
-
-			{%- if section.settings.about_us_text != blank -%}
-			<p class="about-us-look-book-text">{{ section.settings.about_us_text }}</p>
-			{%- endif -%}
-		</div>
-    </div>
-		
-		{%- for block in section.blocks -%}
-
-			<div  class="page">
-			{%- if block.settings.video != blank -%}
-				{{
-					block.settings.video
-					| video_tag:
-						autoplay: true,
-						loop: true,
-						controls: false,
-						muted: true,
-						class: 'BookVideo'
-				}} 
-			{%- else -%}
-
-				{% assign product = block.settings.product %}
-				{% liquid
-					
-					assign featured_image = product.featured_image
-					if block.settings.image != blank
-						assign featured_image = block.settings.image
-					endif
-				%}
-				{%- if featured_image != blank -%}
-					<img src="{{ featured_image | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ featured_image.alt }}">
-				{%- endif -%}
-
-				{%- if block.settings.heading != blank -%}
-					<p class ="p-tag-title">{{ block.settings.heading | escape }}</p>
-				{%- endif -%}
-				{%- if block.settings.product != blank -%}
-					<div class="dot-link">
-						<div class="description-box">
-							<a href="{{ product.url }}">
-							{%- if product.title != blank -%}
-								<strong class="description-box-title">{{ product.title }}</strong>
-							{%- endif -%}
-							</a>
-							{%- if product.description != blank -%}
-								<span class="description-box-subtitle">{{ product.description | strip_html | truncate: 100 }}</span>
-							{%- endif -%}
-							
-						</div>	
-					</div>
-					{%- if product.price != blank -%}
-						<div class="dot-link">
-							
-								<span class="description-box">{{ product.price }}</span>
-							
-						</div>
+		<div class="flipbook__wrapper">
+			<div class="flipbook__book-shadow"> </div>
+			<div class="flipbook">
+				<div
+					class="hard"
+					id="front-page-{{ section.id }}"
+					style="
+						background-image: url(var(--background-img));
+						background-size: cover;
+						background-position: center;
+					"
+				>
+					{%- if section.settings.front_image != blank -%}
+						<img class="logo" src="{{ section.settings.front_image | image_url: width: 500 }}" width="500" height="auto"alt="{{ section.settings.front_image.alt }}">
 					{%- endif -%}
-				{%- endif -%}
-			{%- endif -%}	
+					{%- if section.settings.front_heading != blank -%}
+						{{ section.settings.front_heading | escape }}
+					{%- endif -%}
+					{%- if section.settings.front_text != blank -%}
+						<small>{{ section.settings.front_text }}</small>
+					{%- endif -%}
+				</div>
+
+				<div class="page">
+				<div class="about-us-section">
+
+					{%- if section.settings.about_us_heading != blank -%}
+					<h2 class="about-us-look-book-title">{{ section.settings.about_us_heading }}</h2>
+
+					{%- endif -%}
+
+					{%- if section.settings.about_us_text != blank -%}
+					<p class="about-us-look-book-text">{{ section.settings.about_us_text }}</p>
+					{%- endif -%}
+				</div>
+				</div>
+				
+				{%- for block in section.blocks -%}
+
+					<div  class="page">
+					{%- if block.settings.video != blank -%}
+						{{
+							block.settings.video
+							| video_tag:
+								autoplay: true,
+								loop: true,
+								controls: false,
+								muted: true,
+								class: 'BookVideo'
+						}} 
+					{%- else -%}
+
+						{% assign product = block.settings.product %}
+						{% liquid
+							
+							assign featured_image = product.featured_image
+							if block.settings.image != blank
+								assign featured_image = block.settings.image
+							endif
+						%}
+						{%- if featured_image != blank -%}
+							<img class="logo" src="{{ featured_image | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ featured_image.alt }}">
+						{%- endif -%}
+
+						{%- if block.settings.heading != blank -%}
+							<p class ="p-tag-title">{{ block.settings.heading | escape }}</p>
+						{%- endif -%}
+						{%- if block.settings.product != blank -%}
+							<div class="dot-link">
+								<div class="description-box">
+									<a href="{{ product.url }}">
+									{%- if product.title != blank -%}
+										<strong class="description-box-title">{{ product.title }}</strong>
+									{%- endif -%}
+									</a>
+									{%- if product.description != blank -%}
+										<span class="description-box-subtitle">{{ product.description | strip_html | truncate: 100 }}</span>
+									{%- endif -%}
+									
+								</div>	
+							</div>
+							{%- if product.price != blank -%}
+								<div class="dot-link">
+									<span class="description-box">{{ product.price | money }}</span>
+								</div>
+							{%- endif -%}
+						{%- endif -%}
+					{%- endif -%}	
+					</div>
+				{%- endfor -%}
 			</div>
-		{%- endfor -%}
-  </div>
+		</div>
+  
 </book-slideshow>
 
 <script src="{{ 'book-slideshow.js' | asset_url }}" type="module" defer="defer"></script>
