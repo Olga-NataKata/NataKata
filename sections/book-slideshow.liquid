@@ -17,7 +17,7 @@
 <book-slideshow class="book-flipbook-body color-{{ section.settings.scheme }}" data-section-id="{{ section.id }}" data-front-page-img="{{ section.settings.front_image_bg | image_url: 2000 }}">
   <div class="book-flipbook__overlay"></div>
 		<div class="flipbook__wrapper">
-			<div class="flipbook__book-shadow"> </div>
+			
 			<div class="flipbook">
 				<div
 					class="hard"
@@ -40,6 +40,7 @@
 				</div>
 
 				<div class="page">
+				<div class="flipbook__book-shadow"> </div>
 				<div class="about-us-section">
 
 					{%- if section.settings.about_us_heading != blank -%}
@@ -56,6 +57,7 @@
 				{%- for block in section.blocks -%}
 
 					<div  class="page">
+						<div class="flipbook__book-shadow"> </div>
 					{%- if block.settings.video != blank -%}
 						{{
 							block.settings.video

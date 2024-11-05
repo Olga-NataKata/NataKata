@@ -56,9 +56,18 @@
             const clonedPage = page.cloneNode(true); // Deep clone the page
             clonedPage.classList.add("cloned"); // Add a class to identify cloned elements
 
-            page.parentNode.insertBefore(clonedPage, page.nextSibling);
-            // очистити вміст оригінального елемента
+            const shadow = page.querySelector(".flipbook__book-shadow");
+            const shadow_on_cloned_page = clonedPage.querySelector(
+              ".flipbook__book-shadow"
+            )
             page.innerHTML = "";
+            clonedPage.removeChild(shadow_on_cloned_page);
+            if (shadow) {
+              
+              page.appendChild(shadow);
+            }
+
+            page.parentNode.insertBefore(clonedPage, page.nextSibling);
           });
         }
 
@@ -88,9 +97,9 @@
 
         $(this).find(".flipbook").turn({
           cornerSize: this.getCornerSize(),
-					gradients: true,
-					display: 'double',
-					acceleration: true,
+          gradients: true,
+          display: "double",
+          acceleration: true,
         });
 
         const videos = this.querySelectorAll(".BookVideo");
@@ -102,23 +111,12 @@
         $(this)
           .find(".flipbook")
           .on("turning", function (event, page, view) {
-              const visiblePages = $(this).turn("view");
 
-              // Play all videos on the page
-              const allVideos = document.querySelectorAll(".BookVideo");
-              allVideos.forEach((video) => video.play());
+            // Play all videos on the page
+            const allVideos = document.querySelectorAll(".BookVideo");
+            allVideos.forEach((video) => video.play());
 
-              // Add shadow to each visible page
-              visiblePages.forEach((pageNumber) => {
-                  // Check if shadow already exists on the page
-                  const pageElement = $(this).turn("pageElement", pageNumber);
-                  if (!pageElement.find(".flipbook__book-shadow").length) {
-                      // Append shadow element if it doesn't exist
-                      pageElement.append('<div class="flipbook__book-shadow"></div>');
-                  }
-              });
           });
-
 
         // disabling turning on the last page
         $(this)

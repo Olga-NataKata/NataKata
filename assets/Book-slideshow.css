@@ -15,16 +15,16 @@
 }
 
 .flipbook__book-shadow {
-	position: absolute;
-	height: 600px;
-	width: 100px;
-	left: calc(50% - 100px);
-	z-index: 800;
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG8AAAABCAYAAADQO/BKAAAASElEQVQYlZ2NSQrAMAwDR0n//2X3kBpMkEOoQGjBiyJCLJxUTf7bOV+VJifC+KrR5Fu6PYxHkoDxMf0s3TQcwNPoPrffyh96AcOpHU0esqcJAAAAAElFTkSuQmCC);
+  position: absolute;
+  height: 100%;
+  width: 111px;
+  right: 0;
+  z-index: 800;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG8AAAABCAYAAADQO/BKAAAASElEQVQYlZ2NSQrAMAwDR0n//2X3kBpMkEOoQGjBiyJCLJxUTf7bOV+VJifC+KrR5Fu6PYxHkoDxMf0s3TQcwNPoPrffyh96AcOpHU0esqcJAAAAAElFTkSuQmCC);
 }
 
 .flipbook-wrapper {
-	position: relative;
+  position: relative;
   margin-top: 150px;
 }
 
@@ -59,8 +59,8 @@
 }
 .page img {
   width: 100%;
-  height: 100%; 
-  object-fit: cover; 
+  height: 100%;
+  object-fit: cover;
   overflow: hidden;
   pointer-events: none;
   position: relative;
