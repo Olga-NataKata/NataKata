@@ -100,42 +100,25 @@
         });
 
         $(this)
-      .find(".flipbook")
-      .on("turning", function (event, page, view) {
-        const visiblePages = $(this).turn("view");
-        
-        const allVideos = document.querySelectorAll(".BookVideo");
-        allVideos.forEach((video) => video.play());
-        
-        const shadow = document.querySelector(".flipbook__book-shadow");
-        shadow.style.display = "none";
+          .find(".flipbook")
+          .on("turning", function (event, page, view) {
+              const visiblePages = $(this).turn("view");
 
-        let holdTimeout;
-        const holdDuration = 500; // Duration in milliseconds for hold action
+              // Play all videos on the page
+              const allVideos = document.querySelectorAll(".BookVideo");
+              allVideos.forEach((video) => video.play());
 
-        // Start detecting a "hold" on the corner
-        $(this).on("mousedown touchstart", ".page-corner", function(event) {
-          holdTimeout = setTimeout(() => {
-            onCornerHold(); // Trigger custom hold action
-          }, holdDuration);
-        });
+              // Add shadow to each visible page
+              visiblePages.forEach((pageNumber) => {
+                  // Check if shadow already exists on the page
+                  const pageElement = $(this).turn("pageElement", pageNumber);
+                  if (!pageElement.find(".flipbook__book-shadow").length) {
+                      // Append shadow element if it doesn't exist
+                      pageElement.append('<div class="flipbook__book-shadow"></div>');
+                  }
+              });
+          });
 
-        // Clear the hold timeout if released early
-        $(this).on("mouseup touchend", function(event) {
-          clearTimeout(holdTimeout);
-        });
-
-        // Define your hold action
-        function onCornerHold() {
-          console.log("Corner hold detected on turning!");
-          // Custom action, e.g., stop all videos
-          allVideos.forEach((video) => video.pause());
-        }
-      })
-      .on("turned", function () {
-        const shadow = document.querySelector(".flipbook__book-shadow");
-        shadow.style.display = "block";
-      });
 
         // disabling turning on the last page
         $(this)
