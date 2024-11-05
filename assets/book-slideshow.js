@@ -100,13 +100,42 @@
         });
 
         $(this)
-          .find(".flipbook")
-          .on("turning", function () {
-            const visiblePages = $(this).turn("view");
+      .find(".flipbook")
+      .on("turning", function (event, page, view) {
+        const visiblePages = $(this).turn("view");
+        
+        const allVideos = document.querySelectorAll(".BookVideo");
+        allVideos.forEach((video) => video.play());
+        
+        const shadow = document.querySelector(".flipbook__book-shadow");
+        shadow.style.display = "none";
 
-            const allVideos = document.querySelectorAll(".BookVideo");
-            allVideos.forEach((video) => video.play());
-          });
+        let holdTimeout;
+        const holdDuration = 500; // Duration in milliseconds for hold action
+
+        // Start detecting a "hold" on the corner
+        $(this).on("mousedown touchstart", ".page-corner", function(event) {
+          holdTimeout = setTimeout(() => {
+            onCornerHold(); // Trigger custom hold action
+          }, holdDuration);
+        });
+
+        // Clear the hold timeout if released early
+        $(this).on("mouseup touchend", function(event) {
+          clearTimeout(holdTimeout);
+        });
+
+        // Define your hold action
+        function onCornerHold() {
+          console.log("Corner hold detected on turning!");
+          // Custom action, e.g., stop all videos
+          allVideos.forEach((video) => video.pause());
+        }
+      })
+      .on("turned", function () {
+        const shadow = document.querySelector(".flipbook__book-shadow");
+        shadow.style.display = "block";
+      });
 
         // disabling turning on the last page
         $(this)
