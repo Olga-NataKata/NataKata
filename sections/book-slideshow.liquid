@@ -40,7 +40,7 @@
 				</div>
 
 				<div class="page">
-				<div class="flipbook__book-shadow"> </div>
+				<div class="flipbook__book-shadow-left"> </div>
 				<div class="about-us-section">
 
 					{%- if section.settings.about_us_heading != blank -%}
@@ -57,7 +57,7 @@
 				{%- for block in section.blocks -%}
 
 					<div  class="page">
-						<div class="flipbook__book-shadow"> </div>
+						<div class="flipbook__book-shadow-left"> </div>
 					{%- if block.settings.video != blank -%}
 						{{
 							block.settings.video

@@ -50,15 +50,16 @@
         if (pages_count < 2) {
           return;
         }
+        const allPages = this.querySelectorAll(".page");
         if (window.innerWidth <= 480) {
-          const allPages = this.querySelectorAll(".page");
+          
           allPages.forEach((page) => {
             const clonedPage = page.cloneNode(true); // Deep clone the page
             clonedPage.classList.add("cloned"); // Add a class to identify cloned elements
 
-            const shadow = page.querySelector(".flipbook__book-shadow");
+            const shadow = page.querySelector(".flipbook__book-shadow-left");
             const shadow_on_cloned_page = clonedPage.querySelector(
-              ".flipbook__book-shadow"
+              ".flipbook__book-shadow-left"
             )
             page.innerHTML = "";
             clonedPage.removeChild(shadow_on_cloned_page);
@@ -70,6 +71,16 @@
             page.parentNode.insertBefore(clonedPage, page.nextSibling);
           });
         }
+
+        allPages.forEach((page, index) => {
+          const shadow = page.querySelector(".flipbook__book-shadow-left");
+          if (index % 2 === 1 && shadow) {
+            //remove flipbook__book-shadow-left class
+            shadow.classList.remove("flipbook__book-shadow-left");
+            //add flipbook__book-shadow-right class
+            shadow.classList.add("flipbook__book-shadow-right");
+          }
+        });
 
         if (pages_count % 2 === 0) {
           const lastPage = this.querySelector(".page:last-child");
