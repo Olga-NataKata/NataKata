@@ -61,6 +61,7 @@
               ".flipbook__book-shadow-left"
             );
             page.innerHTML = "";
+            page.classList.add("vanish-back-ground");
             clonedPage.removeChild(shadow_on_cloned_page);
             if (shadow) {
               page.appendChild(shadow);

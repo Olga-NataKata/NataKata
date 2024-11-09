@@ -72,6 +72,10 @@
   gap: 10px;
   /* border: 1px solid rgba(0, 0, 0, 0.11); */
   position: relative; /* Needed for absolute positioning of the dot */
+
+}
+.flipbook .vanish-back-ground {
+  background: rgba(0, 0, 0, 0.1);  
 }
 .page img {
   width: 100%;
