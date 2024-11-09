@@ -18,7 +18,7 @@
   position: absolute;
   height: 100%;
   width: 111px;
-  right: -25px;
+  right: 0;
   z-index: 400;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG8AAAABCAYAAADQO/BKAAAASElEQVQYlZ2NSQrAMAwDR0n//2X3kBpMkEOoQGjBiyJCLJxUTf7bOV+VJifC+KrR5Fu6PYxHkoDxMf0s3TQcwNPoPrffyh96AcOpHU0esqcJAAAAAElFTkSuQmCC);
 }
@@ -34,7 +34,7 @@
   position: absolute;
   height: 100%;
   width: 111px;
-  left: -25px;
+  left: 0;
   z-index: 400;
   transform: rotate(180deg);
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG8AAAABCAYAAADQO/BKAAAASElEQVQYlZ2NSQrAMAwDR0n//2X3kBpMkEOoQGjBiyJCLJxUTf7bOV+VJifC+KrR5Fu6PYxHkoDxMf0s3TQcwNPoPrffyh96AcOpHU0esqcJAAAAAElFTkSuQmCC);
