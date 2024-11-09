@@ -145,21 +145,24 @@
         const dots = this.querySelectorAll(".dot-link");
         dots.forEach((dot) => {
           // Randomize the position between 0 and 100% for both top and left
-          const randomTop = Math.random(2, 98) * 50;
-          const randomLeft = Math.random(2, 98) * 50;
+          const randomTop = Math.random(50, 100) * 50;
+          const randomLeft = Math.random(50, 100) * 45;
 
-          // Apply the randomized position to each dot
+          // Apply the randomized position and styles to each dot
           dot.style.position = "absolute";
-          let is_style_top_empty = dot.style.top === "";
-          let is_style_left_empty = dot.style.left === "";
-          if (is_style_top_empty) {
-            console.log(
-              "🚀 ~ BookSlideshow ~ dots.forEach ~ dot.style.top:",
-              dot.style.top
-            );
+          dot.style.width = "30px";
+          dot.style.height = "30px";
+          dot.style.backgroundColor = "white";
+          dot.style.borderRadius = "50%";
+          dot.style.textDecoration = "none";
+          dot.style.pointerEvents = "auto";
+          dot.style.transition = "opacity 0.5s ease";
+          dot.style.zIndex = "800";
+
+          if (!dot.style.top) {
             dot.style.top = `${randomTop}%`;
           }
-          if (is_style_left_empty) {
+          if (!dot.style.left) {
             dot.style.left = `${randomLeft}%`;
           }
         });
