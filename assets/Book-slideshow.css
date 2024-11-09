@@ -18,7 +18,7 @@
   position: absolute;
   height: 100%;
   width: 111px;
-  right: 0;
+  right: -25px;
   z-index: 400;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG8AAAABCAYAAADQO/BKAAAASElEQVQYlZ2NSQrAMAwDR0n//2X3kBpMkEOoQGjBiyJCLJxUTf7bOV+VJifC+KrR5Fu6PYxHkoDxMf0s3TQcwNPoPrffyh96AcOpHU0esqcJAAAAAElFTkSuQmCC);
 }
@@ -27,7 +27,7 @@
   position: absolute;
   height: 100%;
   width: 111px;
-  left: 0;
+  left: -25px;
   z-index: 400;
   transform: rotate(180deg);
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG8AAAABCAYAAADQO/BKAAAASElEQVQYlZ2NSQrAMAwDR0n//2X3kBpMkEOoQGjBiyJCLJxUTf7bOV+VJifC+KrR5Fu6PYxHkoDxMf0s3TQcwNPoPrffyh96AcOpHU0esqcJAAAAAElFTkSuQmCC);
@@ -99,7 +99,7 @@
 
 /* Dot styling: white dot, initially hidden, with smooth transition */
 .dot-link {
-  position: absolute;
+  position: absolute;.flipbook__book-shadow-left
   width: 30px;
   height: 30px;
   background-color: white; /* Dot color: white */
