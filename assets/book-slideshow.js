@@ -64,6 +64,9 @@
             clonedPage.removeChild(shadow_on_cloned_page);
             if (shadow) {
               page.appendChild(shadow);
+              // add class flipbook__book-shadow-left-mobile
+              shadow.classList.remove("flipbook__book-shadow-left");
+              shadow.classList.add("flipbook__book-shadow-left-mobile");
             }
 
             page.parentNode.insertBefore(clonedPage, page.nextSibling);
