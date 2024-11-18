@@ -129,6 +129,7 @@
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
     "preloader_logo_image": "shopify://shop_images/logo.svg",
+    "show_images": "first_load",
     "preloader_image1": "shopify://shop_images/11.webp",
     "preloader_image2": "shopify://shop_images/10.webp",
     "preloader_image3": "shopify://shop_images/tall-buildings-surround-a-narrow-street-with-parked-cars.jpg",
