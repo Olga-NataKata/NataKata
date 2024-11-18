@@ -128,6 +128,15 @@
     "show_cart_note": true,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
+    "preloader_logo_image": "shopify://shop_images/logo.svg",
+    "preloader_image1": "shopify://shop_images/11.webp",
+    "preloader_image2": "shopify://shop_images/10.webp",
+    "preloader_image3": "shopify://shop_images/tall-buildings-surround-a-narrow-street-with-parked-cars.jpg",
+    "preloader_image4": "shopify://shop_images/pexels-wesleydavi-3622624.jpg",
+    "preloader_image5": "shopify://shop_images/pexels-thegiansepillo-1595943-3304941.jpg",
+    "preloader_image6": "shopify://shop_images/pexels-alipazani-16850467.jpg",
+    "preloader_image7": "shopify://shop_images/pexels-leah-newhouse-50725-192445.jpg",
+    "preloader_image8": "shopify://shop_images/pexels-oleksandra-19285596.jpg",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -142,9 +151,7 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "color_schemes": {
       "scheme-1": {
         "settings": {
