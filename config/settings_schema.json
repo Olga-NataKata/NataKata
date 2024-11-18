@@ -1470,5 +1470,109 @@
         "default": "scheme-1"
       }
     ]
+  },
+	{
+    "name": "Preloader",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Theme preloader"
+      },
+      {
+        "type": "select",
+        "id": "theme_preloader_pages",
+        "options": [
+          {
+            "value": "no_preloader",
+            "label": "No preloader"
+          },
+          {
+            "value": "show_on_all_pages",
+            "label": "For all pages"
+          }
+        ],
+        "default": "show_on_all_pages",
+        "label": "Enable preloader"
+      },
+			{
+				"type": "color_scheme",
+				"id": "theme_preloader_color_scheme",
+				"label": "t:sections.all.colors.label",
+				"default": "scheme-3"
+			},
+      {
+        "type": "image_picker",
+        "id": "preloader_logo_image",
+        "label": "Preloader logo image",
+        "info": "This image would be disabled if used preloader text option."
+      },
+      {
+        "type": "text",
+        "id": "preloader_logo",
+        "label": "Preloader text",
+        "info": "Add preloader text"
+      },
+      {
+        "type": "select",
+        "id": "show_images",
+        "options": [
+          {
+            "value": "hide_images",
+            "label": "Hide images"
+          },
+          {
+            "value": "first_load",
+            "label": "First time site load"
+          },
+          {
+            "value": "all_load",
+            "label": "All time site load"
+          }
+        ],
+        "default": "all_load",
+        "label": "Show animated images",
+        "info": "Show animated images on the first site loading or every time."
+      },
+      {
+        "type": "image_picker",
+        "id": "preloader_image1",
+        "label": "Preloader animated image"
+      },
+      {
+        "type": "image_picker",
+        "id": "preloader_image2",
+        "label": "Preloader animated image"
+      },
+      {
+        "type": "image_picker",
+        "id": "preloader_image3",
+        "label": "Preloader animated image"
+      },
+      {
+        "type": "image_picker",
+        "id": "preloader_image4",
+        "label": "Preloader animated image"
+      },
+      {
+        "type": "image_picker",
+        "id": "preloader_image5",
+        "label": "Preloader animated image"
+      },
+      {
+        "type": "image_picker",
+        "id": "preloader_image6",
+        "label": "Preloader animated image"
+      },
+      {
+        "type": "image_picker",
+        "id": "preloader_image7",
+        "label": "Preloader animated image"
+      },
+      {
+        "type": "image_picker",
+        "id": "preloader_image8",
+        "label": "Preloader animated image"
+      }
+    ]
   }
 ]
