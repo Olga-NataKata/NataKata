@@ -14,58 +14,38 @@
     "collapsible_content_D7XGhP": {
       "type": "collapsible-content",
       "blocks": {
-        "collapsible_row_3dCzNJ": {
+        "collapsible_row_hdmwaV": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "1. How can I place an online order?",
-            "icon": "none",
-            "row_content": "<p>Once you have added the items to your shopping bag, you can verify your selection, modify it and proceed to checkout.</p>",
+            "heading": "Shipping",
+            "icon": "truck",
+            "row_content": "<p>We offer worldwide shipping. Since many of our items are handcrafted and exclusive, please check product availability before placing your order.</p>",
             "page": ""
           }
         },
-        "collapsible_row_pyPkET": {
+        "collapsible_row_p7QxR7": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "2. When can I consider my order as confirmed?",
-            "icon": "none",
-            "row_content": "<p>At the end of the buying process you will receive the order acknowledgment email containing a recap of the order that we received, along with the information that we are processing it. We inform you that the content of your order acknowledgment can no longer be changed.</p>",
+            "heading": "Payment",
+            "icon": "price_tag",
+            "row_content": "<p>Full payment is required at checkout to confirm your order. You can choose from available payment options during checkout. Once payment is received, we’ll start preparing your order for shipment.</p>",
             "page": ""
           }
         },
-        "collapsible_row_xjXkBC": {
+        "collapsible_row_Xe9fbd": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "3. Can I modify or cancel my online order?",
-            "icon": "none",
-            "row_content": "<p>As per our General Terms and Conditions of Sale, once an Order has been submitted it cannot be further modified or cancelled.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_LdhmAR": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "4. How can I make an online pre-order?",
-            "icon": "none",
-            "row_content": "<p>You have the opportunity to pre-order a selection of products before their commercial launch or distribution and placement in the market.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_rtmzH6": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "5. Which payment methods are accepted?",
-            "icon": "none",
-            "row_content": "<p>A dedicated personalization service is available for those who wish to make their Miu Miu garments, bags and accessories special. This service offers the opportunity to select fine workmanship and customizations, made following your specific requests. </p>",
+            "heading": "Shipping Terms & Timelines",
+            "icon": "stopwatch",
+            "row_content": "<p>Delivery times vary depending on your location and shipping provider. Once your order ships, we’ll provide you with a tracking number so you can check your order’s status anytime.</p>",
             "page": ""
           }
         }
       },
       "block_order": [
-        "collapsible_row_3dCzNJ",
-        "collapsible_row_pyPkET",
-        "collapsible_row_xjXkBC",
-        "collapsible_row_LdhmAR",
-        "collapsible_row_rtmzH6"
+        "collapsible_row_hdmwaV",
+        "collapsible_row_p7QxR7",
+        "collapsible_row_Xe9fbd"
       ],
       "settings": {
         "caption": "",
