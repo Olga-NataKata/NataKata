@@ -1,6 +1,6 @@
 
 body {
-		--preloader-animation-speed: 1.4s;
+		--preloader-animation-speed: .01s;
 }
 .preloader {
 		left: 0; top: 0;
