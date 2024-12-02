@@ -77,7 +77,6 @@
 @media (max-width: 1024px) {
   .contact-us-text-section {
     padding: 150px;
-    margin: 40px auto;
   }
 
   .contact-us-text-section h2 {
@@ -101,7 +100,6 @@
 /* Responsive styles for medium devices */
 @media (max-width: 768px) {
   .contact-us-text-section {
-    margin: 30px auto;
     padding: 150px;
   }
 
@@ -126,7 +124,7 @@
 /* Responsive styles for small devices */
 @media (max-width: 480px) {
   .contact-us-text-section {
-    margin: 20px auto;
+
     padding: 90px;
   }
 
@@ -153,7 +151,7 @@
 @media (max-width: 360px) {
   .contact-us-text-section h2 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+
   }
 
   .contact-us-text-section p {
