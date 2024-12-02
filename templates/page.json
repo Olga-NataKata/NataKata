@@ -19,36 +19,15 @@
     "text_gallery_section_6AQC8P": {
       "type": "text-gallery-section",
       "blocks": {
-        "image_9MUtxY": {
+        "image_kQHFpr": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/11.webp"
-          }
-        },
-        "image_R3U6HH": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/a-person-talking-to-their-laptop-screen.jpg"
-          }
-        },
-        "image_dV8PDn": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/person-writing-in-notebook-beside-laptop-working-from-bed.jpg"
-          }
-        },
-        "video_4wmigx": {
-          "type": "video",
-          "settings": {
-            "video_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+            "image": "shopify://shop_images/pexels-caio-mantovani-97605853-29310356-optimized.webp"
           }
         }
       },
       "block_order": [
-        "image_9MUtxY",
-        "image_R3U6HH",
-        "image_dV8PDn",
-        "video_4wmigx"
+        "image_kQHFpr"
       ],
       "settings": {
         "heading": "Gallery Section",
