@@ -56,8 +56,17 @@
         <div class="gallery-content">
             {% for block in section.blocks %}
                 {% if block.type == 'image' %}
+									{%- liquid
+										assign image_height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio
+									-%}
+
 									<div class="gallery-item gallery-image" onclick="toggleFullscreen(this)">
-										{{ block.settings.image | image_url: width: 1920 }}
+										{{ block.settings.image 
+											| image_url: width: 1920 
+											| image_tag:
+												width: block.settings.image.width,
+												height: image_height
+										}}
 									</div>
                 {% elsif block.type == 'video' %}
                     <div class="gallery-item gallery-video">
