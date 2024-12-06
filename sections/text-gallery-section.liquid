@@ -56,9 +56,9 @@
         <div class="gallery-content">
             {% for block in section.blocks %}
                 {% if block.type == 'image' %}
-                    <div class="gallery-item gallery-image">
-                        <img src="{{ block.settings.image | image_url: 'medium'}}" alt="{{ section.settings.heading }}" onclick="toggleFullscreen(this)">
-                    </div>
+									<div class="gallery-item gallery-image" onclick="toggleFullscreen(this)">
+										{{ block.settings.image | image_url: 3800 }}
+									</div>
                 {% elsif block.type == 'video' %}
                     <div class="gallery-item gallery-video">
                         <video autoplay muted loop playsinline onclick="toggleFullscreen(this)">
