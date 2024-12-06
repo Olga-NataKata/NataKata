@@ -57,7 +57,7 @@
             {% for block in section.blocks %}
                 {% if block.type == 'image' %}
 									<div class="gallery-item gallery-image" onclick="toggleFullscreen(this)">
-										{{ block.settings.image | image_url: width: 1920}}
+										{{ block.settings.image | image_url: width: 1920 }}
 									</div>
                 {% elsif block.type == 'video' %}
                     <div class="gallery-item gallery-video">
