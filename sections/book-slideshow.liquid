@@ -86,7 +86,14 @@
 							<p class ="p-tag-title">{{ block.settings.heading | escape }}</p>
 						{%- endif -%}
 						{%- if block.settings.product != blank -%}
-							<div class="dot-link">
+							<div id="dot-{{ section.id }}-{{ block.id }}-{{ forloop.index }}" class="dot-link">
+								{%- style -%}
+									#dot-{{ section.id }}-{{ block.id }}-{{ forloop.index }} {
+										--top: {{ block.settings.dot_top }}%;
+										--left: {{ block.settings.dot_left }}%;
+									}
+								{%- endstyle -%}
+
 								<div class="description-box">
 									<a href="{{ product.url }}">
 									{%- if product.title != blank -%}
@@ -100,7 +107,13 @@
 								</div>	
 							</div>
 							{%- if product.price != blank -%}
-								<div class="dot-link">
+								<div id="dot-2-{{ section.id }}-{{ block.id }}-{{ forloop.index }}" class="dot-link">
+									{%- style -%}
+										#dot-2-{{ section.id }}-{{ block.id }}-{{ forloop.index }} {
+											--top: {{ block.settings.dot_top_2 }}%;
+											--left: {{ block.settings.dot_left_2 }}%;
+										}
+									{%- endstyle -%}
 									<span class="description-box">{{ product.price | money }}</span>
 								</div>
 							{%- endif -%}
@@ -208,6 +221,50 @@
 					"id": "heading",
 					"label": "Heading",
 					"default": "Heading"
+				},
+				{
+					"type": "header",
+					"content": "First dot postion"
+				},
+				{
+					"type": "range",
+					"id": "dot_top",
+					"min": 0,
+					"max": 100,
+					"step": 1,
+					"label": "Top",
+					"default": 20
+				},
+				{
+					"type": "range",
+					"id": "dot_left",
+					"min": 0,
+					"max": 100,
+					"step": 1,
+					"label": "Left",
+					"default": 25
+				},
+				{
+					"type": "header",
+					"content": "Second dot postion"
+				},
+				{
+					"type": "range",
+					"id": "dot_top_2",
+					"min": 0,
+					"max": 100,
+					"step": 1,
+					"label": "Top",
+					"default": 40
+				},
+				{
+					"type": "range",
+					"id": "dot_left_2",
+					"min": 0,
+					"max": 100,
+					"step": 1,
+					"label": "Left",
+					"default": 55
 				}
 			]
 		},

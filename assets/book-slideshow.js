@@ -163,12 +163,12 @@
           dot.style.transition = "opacity 0.5s ease";
           dot.style.zIndex = "800";
 
-          if (!dot.style.top) {
-            dot.style.top = `${randomTop}%`;
-          }
-          if (!dot.style.left) {
-            dot.style.left = `${randomLeft}%`;
-          }
+          // if (!dot.style.top) {
+          //   dot.style.top = `${randomTop}%`;
+          // }
+          // if (!dot.style.left) {
+          //   dot.style.left = `${randomLeft}%`;
+          // }
         });
       }
     }

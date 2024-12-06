@@ -110,6 +110,8 @@
 /* Dot styling: white dot, initially hidden, with smooth transition */
 .dot-link {
   position: absolute;
+	left: var(--left);
+	top: var(--top);
   width: 30px;
   height: 30px;
   background-color: white; /* Dot color: white */
