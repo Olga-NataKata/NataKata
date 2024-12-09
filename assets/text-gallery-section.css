@@ -45,7 +45,6 @@
   
 .gallery-item img, .gallery-item video {
     width: 100%;
-    height: 400px; /* Встановіть бажану висоту для зображень і відео */
     object-fit: cover; /* Зберігає пропорції зображень і відео */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
