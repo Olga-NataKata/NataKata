@@ -12,71 +12,45 @@
     "book_slideshow_6hMAUj": {
       "type": "book-slideshow",
       "blocks": {
-        "slide_49rdjz": {
+        "slide_mXgY8m": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/11.webp",
-            "product": "classic-comfort-sweater",
-            "heading": "Heading"
+            "product": "t-shirt",
+            "heading": "T-shirt",
+            "dot_top": 46,
+            "dot_left": 22,
+            "dot_top_2": 60,
+            "dot_left_2": 55
           }
         },
-        "slide_bqG87N": {
+        "slide_XEVXhX": {
           "type": "slide",
           "settings": {
             "video": "shopify://files/videos/30e02f337fa44d71cd7aec3827594490_1729110255622.mp4",
             "product": "",
-            "heading": "Heading"
+            "heading": "",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
           }
         },
-        "slide_xHC78G": {
+        "slide_7N4C9W": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/tall-buildings-surround-a-narrow-street-with-parked-cars.jpg",
-            "product": "classic-comfort-sweater",
-            "heading": "Heading"
-          }
-        },
-        "slide_jzr8nt": {
-          "type": "slide",
-          "settings": {
-            "video": "shopify://files/videos/30e02f337fa44d71cd7aec3827594490_1729110255622.mp4",
-            "product": "",
-            "heading": "Heading"
-          }
-        },
-        "slide_zNayMT": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/a-person-talking-to-their-laptop-screen.jpg",
-            "product": "classic-comfort-sweater",
-            "heading": "Heading"
-          }
-        },
-        "slide_RAjMqG": {
-          "type": "slide",
-          "settings": {
-            "video": "shopify://files/videos/30e02f337fa44d71cd7aec3827594490_1729110255622.mp4",
-            "product": "",
-            "heading": "Heading"
-          }
-        },
-        "slide_mkcGMz": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/10.webp",
-            "product": "classic-comfort-sweater",
-            "heading": "Classic comfort sweater"
+            "product": "t-shirt-2",
+            "heading": "T-shirt",
+            "dot_top": 5,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
           }
         }
       },
       "block_order": [
-        "slide_49rdjz",
-        "slide_bqG87N",
-        "slide_xHC78G",
-        "slide_jzr8nt",
-        "slide_zNayMT",
-        "slide_RAjMqG",
-        "slide_mkcGMz"
+        "slide_mXgY8m",
+        "slide_XEVXhX",
+        "slide_7N4C9W"
       ],
       "settings": {
         "color_scheme": "",

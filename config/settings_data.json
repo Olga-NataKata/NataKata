@@ -152,6 +152,13 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "1173261918193615741": {
+        "type": "shopify://apps/geo-pro-geolocation/blocks/geopro/16fc5313-7aee-4e90-ac95-f50fc7c8b657",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
@@ -177,7 +184,7 @@
       },
       "scheme-3": {
         "settings": {
-          "background": "#222222",
+          "background": "#000000",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ff4646",
