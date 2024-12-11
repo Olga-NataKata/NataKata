@@ -1136,6 +1136,10 @@ summary::-webkit-details-marker {
   padding-bottom: 100%;
 }
 
+.media--110 {
+  padding-bottom: 110%;
+}
+
 .media--portrait {
   padding-bottom: 125%;
 }

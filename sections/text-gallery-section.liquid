@@ -61,12 +61,15 @@
 									-%}
 
 									<div class="gallery-item gallery-image" onclick="toggleFullscreen(this)">
-										{{ block.settings.image 
-											| image_url: width: 1920 
-											| image_tag:
-												width: block.settings.image.width,
-												height: image_height
-										}}
+										<div class="media media--110">
+
+											{{ block.settings.image 
+												| image_url: width: 1920 
+												| image_tag:
+													width: block.settings.image.width,
+													height: image_height
+											}}
+										</div>
 									</div>
                 {% elsif block.type == 'video' %}
                     <div class="gallery-item gallery-video">
