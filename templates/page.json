@@ -19,6 +19,12 @@
     "text_gallery_section_6AQC8P": {
       "type": "text-gallery-section",
       "blocks": {
+        "image_raGDhX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2-fotor-20241212221840.jpg"
+          }
+        },
         "image_kQHFpr": {
           "type": "image",
           "settings": {
@@ -27,6 +33,7 @@
         }
       },
       "block_order": [
+        "image_raGDhX",
         "image_kQHFpr"
       ],
       "settings": {
