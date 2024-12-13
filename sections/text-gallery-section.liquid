@@ -93,6 +93,12 @@
 
         // Toggle fullscreen for media (image or video)
         if (!document.fullscreenElement) {
+            let media_block = media.querySelector('.media');
+            if (media_block.classList.contains('media--110')) {
+                media_block.classList.remove('media--110');
+                media_block.classList.add('media--16-9');
+            }
+
             if (media.requestFullscreen) {
                 media.requestFullscreen();
             } else if (media.webkitRequestFullscreen) { // Safari
@@ -106,7 +112,11 @@
                 media.muted = false;
             }
         } else {
+            let media_block = media.querySelector('.media');
+            media_block.classList.remove('media--16-9');
+            media_block.classList.add('media--110');
             document.exitFullscreen();
+
         }
     }
 
