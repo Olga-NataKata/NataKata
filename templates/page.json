@@ -30,11 +30,18 @@
           "settings": {
             "image": "shopify://shop_images/pexels-caio-mantovani-97605853-29310356-optimized.webp"
           }
+        },
+        "image_eanYR6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3.jpg"
+          }
         }
       },
       "block_order": [
         "image_raGDhX",
-        "image_kQHFpr"
+        "image_kQHFpr",
+        "image_eanYR6"
       ],
       "settings": {
         "heading": "Gallery Section",
