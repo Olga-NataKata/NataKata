@@ -12,21 +12,10 @@
     "book_slideshow_6hMAUj": {
       "type": "book-slideshow",
       "blocks": {
-        "slide_mXgY8m": {
+        "slide_G3gHMB": {
           "type": "slide",
           "settings": {
-            "product": "t-shirt",
-            "heading": "T-shirt",
-            "dot_top": 46,
-            "dot_left": 22,
-            "dot_top_2": 60,
-            "dot_left_2": 55
-          }
-        },
-        "slide_XEVXhX": {
-          "type": "slide",
-          "settings": {
-            "video": "shopify://files/videos/30e02f337fa44d71cd7aec3827594490_1729110255622.mp4",
+            "image": "shopify://shop_images/1.jpg",
             "product": "",
             "heading": "",
             "dot_top": 20,
@@ -34,23 +23,10 @@
             "dot_top_2": 40,
             "dot_left_2": 55
           }
-        },
-        "slide_7N4C9W": {
-          "type": "slide",
-          "settings": {
-            "product": "t-shirt-2",
-            "heading": "T-shirt",
-            "dot_top": 5,
-            "dot_left": 25,
-            "dot_top_2": 40,
-            "dot_left_2": 55
-          }
         }
       },
       "block_order": [
-        "slide_mXgY8m",
-        "slide_XEVXhX",
-        "slide_7N4C9W"
+        "slide_G3gHMB"
       ],
       "settings": {
         "color_scheme": "",
