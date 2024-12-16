@@ -35,11 +35,36 @@
             "dot_top_2": 40,
             "dot_left_2": 55
           }
+        },
+        "slide_KWTMf9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/2_217b964c-0596-41e1-8a3c-f970a509b9c5.jpg",
+            "product": "",
+            "heading": "",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
+        "slide_QEtVb3": {
+          "type": "slide",
+          "settings": {
+            "product": "",
+            "heading": "Heading",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
         }
       },
       "block_order": [
         "slide_M3969L",
-        "slide_WX8WWk"
+        "slide_WX8WWk",
+        "slide_KWTMf9",
+        "slide_QEtVb3"
       ],
       "settings": {
         "color_scheme": "",
