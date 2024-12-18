@@ -54,7 +54,7 @@
         "heading_alignment": "center",
         "layout": "row",
         "color_scheme": "scheme-3",
-        "container_color_scheme": "",
+        "container_color_scheme": "scheme-3",
         "open_first_collapsible_row": false,
         "image_ratio": "small",
         "desktop_layout": "image_first",
