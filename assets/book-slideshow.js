@@ -7,139 +7,126 @@
         super();
         this.initSlideshow = this.initSlideshow.bind(this);
         this.randomizeDots = this.randomizeDots.bind(this);
+        this.resizeLookBook = this.resizeLookBook.bind(this);
         this.frontPageImg = this.dataset.frontPageImg;
+        this.allPages = this.querySelectorAll(".page");
       }
 
       connectedCallback() {
         this.initSlideshow();
+        $(window).on("resize", this.resizeLookBook);
 
-        if (window.innerWidth <= 480) {
+        if (this.isMobile()) {
           const flipbook = this.querySelector(".flipbook");
-
           if (flipbook) {
-            const buttonContainer = document.createElement("div");
-            buttonContainer.classList.add("button-container");
-
-            const nextButton = document.createElement("button");
-            nextButton.classList.add("slider-button", "slider-button--next");
-            nextButton.innerHTML = ">";
-            nextButton.addEventListener("click", () =>
-              $(flipbook).turn("next")
-            );
-
-            const prevButton = document.createElement("button");
-            prevButton.classList.add("slider-button", "slider-button--prev");
-            prevButton.innerHTML = "<";
-            prevButton.addEventListener("click", () =>
-              $(flipbook).turn("previous")
-            );
-
-            buttonContainer.appendChild(prevButton);
-            buttonContainer.appendChild(nextButton);
-
+            const navigationButtons = this.createNavigationButtons(flipbook);
             flipbook.parentNode.insertBefore(
-              buttonContainer,
+              navigationButtons,
               flipbook.nextSibling
             );
           }
         }
       }
 
+      isMobile() {
+        return window.innerWidth <= 480;
+      }
+
+      createNavigationButtons(flipbook) {
+        const buttonContainer = document.createElement("div");
+        buttonContainer.classList.add("button-container");
+
+        const nextButton = document.createElement("button");
+        nextButton.classList.add("slider-button", "slider-button--next");
+        nextButton.innerHTML = ">";
+        nextButton.addEventListener("click", () => $(flipbook).turn("next"));
+
+        const prevButton = document.createElement("button");
+        prevButton.classList.add("slider-button", "slider-button--prev");
+        prevButton.innerHTML = "<";
+        prevButton.addEventListener("click", () =>
+          $(flipbook).turn("previous")
+        );
+
+        buttonContainer.appendChild(prevButton);
+        buttonContainer.appendChild(nextButton);
+
+        return buttonContainer;
+      }
+
       initSlideshow() {
-        const pages_count = this.querySelectorAll(".page").length;
-        if (pages_count < 2) {
-          return;
-        }
-        const allPages = this.querySelectorAll(".page");
-        if (window.innerWidth <= 480) {
-          allPages.forEach((page) => {
-            const clonedPage = page.cloneNode(true); // Deep clone the page
-            clonedPage.classList.add("cloned"); // Add a class to identify cloned elements
+        const pages = this.querySelectorAll(".page");
+        console.log("1");
+        const pagesCount = pages.length;
+        console.log("2");
 
-            const shadow = page.querySelector(".flipbook__book-shadow-left");
-            const shadow_on_cloned_page = clonedPage.querySelector(
-              ".flipbook__book-shadow-left"
-            );
-            page.innerHTML = "";
-            page.classList.add("vanish-back-ground");
-            clonedPage.removeChild(shadow_on_cloned_page);
-            if (shadow) {
-              page.appendChild(shadow);
-              // add class flipbook__book-shadow-left-mobile
-              shadow.classList.remove("flipbook__book-shadow-left");
-              shadow.classList.add("flipbook__book-shadow-left-mobile");
-            }
-
+        if (this.isMobile()) {
+          pages.forEach((page) => {
+            const clonedPage = page.cloneNode(true);
+            clonedPage.classList.add("cloned");
+            this.handlePageShadows(page, clonedPage);
             page.parentNode.insertBefore(clonedPage, page.nextSibling);
           });
         }
+        console.log("3");
 
-        allPages.forEach((page, index) => {
+        pages.forEach((page, index) => {
           const shadow = page.querySelector(".flipbook__book-shadow-left");
           if (index % 2 === 1 && shadow) {
-            //remove flipbook__book-shadow-left class
             shadow.classList.remove("flipbook__book-shadow-left");
-            //add flipbook__book-shadow-right class
             shadow.classList.add("flipbook__book-shadow-right");
           }
         });
+        console.log("4");
 
-        if (pages_count % 2 === 0) {
-          const lastPage = this.querySelector(".page:last-child");
-          const newPage = lastPage.cloneNode(true);
-          newPage.classList.add("hard");
-          newPage.style.background = `#c0392b url(${this.frontPageImg}) no-repeat center/cover`;
-          newPage.style.color = "#fff";
-          newPage.style.fontWeight = "bold";
-          newPage.innerHTML =
-            "Thank You for visiting <small>~ NataKuku</small>";
-          this.querySelector(".flipbook").appendChild(newPage);
-        }
-        // else if () {
-        //   const lastPage = this.querySelector(".page:last-child");
-        //   const newPage = lastPage.cloneNode(true);
-        //   newPage.classList.add("hard");
-        //   newPage.style.background =
-        //     `#c0392b url(${this.frontPageImg}) no-repeat center/cover`;
-        //   newPage.style.color = "#fff";
-        //   newPage.style.fontWeight = "bold";
-        //   newPage.innerHTML =
-        //     "Thank You for visiting <small>~ NataKuku</small>";
-        //   this.querySelector(".flipbook").appendChild(newPage);
-        // }
-
-        $(this).find(".flipbook").turn({
-          cornerSize: this.getCornerSize(),
-          gradients: true,
-          display: "double",
-          acceleration: true,
-        });
+        const flipbook = $(this).find(".flipbook");
+        this.initializeTurnJS(flipbook, this.getCornerSize());
 
         const videos = this.querySelectorAll(".BookVideo");
         videos.forEach((video) => {
           video.controls = false;
           video.addEventListener("ended", () => video.play());
         });
+        console.log("5");
 
-        $(this)
-          .find(".flipbook")
-          .on("turning", function (event, page, view) {
-            // Play all videos on the page
-            const allVideos = document.querySelectorAll(".BookVideo");
-            allVideos.forEach((video) => video.play());
-          });
+        flipbook.on("turning", () => {
+          this.playAllVideos();
+          this.randomizeDots();
+        });
+        console.log("6");
 
-        // disabling turning on the last page
-        $(this)
-          .find(".flipbook")
-          .turn("disable", pages_count - 1);
+        flipbook.turn("disable", pagesCount - 1);
+        // this.randomizeDots();
+        console.log("7");
+      }
 
-        this.randomizeDots();
-        $(this).find(".flipbook").on("turning", this.randomizeDots);
+      handlePageShadows(page, clonedPage) {
+        const shadow = page.querySelector(".flipbook__book-shadow-left");
+        const shadowOnClonedPage = clonedPage.querySelector(
+          ".flipbook__book-shadow-left"
+        );
+
+        if (shadowOnClonedPage) clonedPage.removeChild(shadowOnClonedPage);
+
+        if (shadow) {
+          page.innerHTML = "";
+          page.appendChild(shadow);
+          shadow.classList.remove("flipbook__book-shadow-left");
+          shadow.classList.add("flipbook__book-shadow-left-mobile");
+        }
+      }
+
+      initializeTurnJS(flipbook, cornerSize) {
+        flipbook.turn({
+          cornerSize,
+          gradients: true,
+          display: "double",
+          acceleration: true,
+        });
       }
 
       getCornerSize() {
-        let screenWidth = window.innerWidth;
+        const screenWidth = window.innerWidth;
         if (screenWidth < 768) return 2000; // Mobile
         if (screenWidth <= 1024) return 400; // Tablet
         return 60; // PC
@@ -148,28 +135,104 @@
       randomizeDots() {
         const dots = this.querySelectorAll(".dot-link");
         dots.forEach((dot) => {
-          // Randomize the position between 0 and 100% for both top and left
-          const randomTop = Math.random(50, 100) * 50;
-          const randomLeft = Math.random(50, 100) * 45;
+          const randomTop = Math.random() * 100; // Randomize between 0% and 100%
+          const randomLeft = Math.random() * 100;
 
-          // Apply the randomized position and styles to each dot
           dot.style.position = "absolute";
           dot.style.width = "30px";
           dot.style.height = "30px";
           dot.style.backgroundColor = "white";
           dot.style.borderRadius = "50%";
-          dot.style.textDecoration = "none";
-          dot.style.pointerEvents = "auto";
           dot.style.transition = "opacity 0.5s ease";
           dot.style.zIndex = "800";
 
-          // if (!dot.style.top) {
-          //   dot.style.top = `${randomTop}%`;
-          // }
-          // if (!dot.style.left) {
-          //   dot.style.left = `${randomLeft}%`;
-          // }
+          dot.style.top = `${randomTop}%`;
+          dot.style.left = `${randomLeft}%`;
         });
+      }
+
+      playAllVideos() {
+        const allVideos = this.querySelectorAll(".BookVideo");
+        allVideos.forEach((video) => video.play());
+      }
+
+      reInitializeSlideshow() {
+        // const flipbook = $(this).find(".flipbook");
+        // // Detach all pages
+        // console.log("resize");
+        // // Safe pages from being detached
+        // let allPages = [];
+        // // Destroy Turn.js instance
+        // console.log("destroy");
+        // allPages = $(this).find(".page").detach();
+        // console.log(allPages);
+        // // Destroy the flipbook
+        // $(flipbook).turn("destroy");
+        // $(flipbook).html("");
+        // console.log("append");
+        // // Append pages ensuring valid pages are attached
+        // $.each(allPages, function (index, page) {
+        //   // Clear styles
+        //   $(page).removeAttr("style");
+        //   // Clear all classes except page, hard, and about-us
+        //   $(page).attr("class", function(i, c) {
+        //     return c.split(" ").filter(cls => ["page", "hard", "about-us"].includes(cls)).join(" ");
+        //   });
+        //   $(page).appendTo(flipbook); // Ensure valid appending
+        // });
+        // // Reinitialize turnJS
+        // this.allPages = this.querySelectorAll(".page");
+        // this.initSlideshow();
+      }
+
+      resizeLookBook() {
+        console.log("resize");
+        const flipbook = $(this).find(".flipbook");
+        const parent = flipbook.parent().parent();
+        const parentWidth = parent.width();
+        const parentHeight = parent.height();
+
+        const { width, height } = this.calculateDimensions(
+          parentWidth,
+          parentHeight
+        );
+
+        flipbook.css({ width, height });
+        flipbook.turn("size", width, height);
+      }
+
+      calculateDimensions(parentWidth, parentHeight) {
+        const breakpointsWidth = {
+          320: { width: 570 },
+          450: { width: 600 },
+          768: { width: 558 },
+          1024: { width: 514 },
+          1400: { width: 1090 },
+          1920: { width: 1210 },
+        };
+        const breakpointsHeight = {
+          320: { height: 150 },
+          450: { height: 250 },
+          768: { height: 300 },
+          1024: { height: 600 },
+          1400: { height: 900 },
+          1920: { height: 1000 },
+        };
+
+        const widthBreakpoint = Object.keys(breakpointsWidth).find(
+          (key) => parentWidth <= parseInt(key)
+        );
+        const heightBreakpoint = Object.keys(breakpointsHeight).find(
+          (key) => parentHeight <= parseInt(key)
+        );
+
+        const widthDimensions = breakpointsWidth[widthBreakpoint];
+        const heightDimensions = breakpointsHeight[heightBreakpoint];
+
+        return {
+          width: widthDimensions.width,
+          height: heightDimensions.height,
+        };
       }
     }
 

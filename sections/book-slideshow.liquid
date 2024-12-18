@@ -39,19 +39,19 @@
 					{%- endif -%}
 				</div>
 
-				<div class="page">
-				<div class="flipbook__book-shadow-left"> </div>
-				<div class="about-us-section">
+				<div class="page about-us">
+					<div class="flipbook__book-shadow-left"> </div>
+					<div class="about-us-section">
 
-					{%- if section.settings.about_us_heading != blank -%}
-					<h2 class="about-us-look-book-title">{{ section.settings.about_us_heading }}</h2>
+						{%- if section.settings.about_us_heading != blank -%}
+						<h2 class="about-us-look-book-title">{{ section.settings.about_us_heading }}</h2>
 
-					{%- endif -%}
+						{%- endif -%}
 
-					{%- if section.settings.about_us_text != blank -%}
-					<p class="about-us-look-book-text">{{ section.settings.about_us_text }}</p>
-					{%- endif -%}
-				</div>
+						{%- if section.settings.about_us_text != blank -%}
+						<p class="about-us-look-book-text">{{ section.settings.about_us_text }}</p>
+						{%- endif -%}
+					</div>
 				</div>
 				
 				{%- for block in section.blocks -%}
