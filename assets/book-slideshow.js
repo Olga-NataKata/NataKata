@@ -156,33 +156,11 @@
         allVideos.forEach((video) => video.play());
       }
 
-      reInitializeSlideshow() {
-        // const flipbook = $(this).find(".flipbook");
-        // // Detach all pages
-        // console.log("resize");
-        // // Safe pages from being detached
-        // let allPages = [];
-        // // Destroy Turn.js instance
-        // console.log("destroy");
-        // allPages = $(this).find(".page").detach();
-        // console.log(allPages);
-        // // Destroy the flipbook
-        // $(flipbook).turn("destroy");
-        // $(flipbook).html("");
-        // console.log("append");
-        // // Append pages ensuring valid pages are attached
-        // $.each(allPages, function (index, page) {
-        //   // Clear styles
-        //   $(page).removeAttr("style");
-        //   // Clear all classes except page, hard, and about-us
-        //   $(page).attr("class", function(i, c) {
-        //     return c.split(" ").filter(cls => ["page", "hard", "about-us"].includes(cls)).join(" ");
-        //   });
-        //   $(page).appendTo(flipbook); // Ensure valid appending
-        // });
-        // // Reinitialize turnJS
-        // this.allPages = this.querySelectorAll(".page");
-        // this.initSlideshow();
+      removeNavigationButtons() {
+        const buttonContainer = this.querySelector(".button-container");
+        if (buttonContainer) {
+          buttonContainer.parentNode.removeChild(buttonContainer);
+        }
       }
 
       resizeLookBook() {
@@ -199,24 +177,46 @@
 
         flipbook.css({ width, height });
         flipbook.turn("size", width, height);
+
+        if (this.isMobile()) {
+          if (!this.querySelector(".button-container")) {
+            const navigationButtons = this.createNavigationButtons(flipbook[0]);
+            flipbook[0].parentNode.insertBefore(
+              navigationButtons,
+              flipbook[0].nextSibling
+            );
+          }
+        } else {
+          this.removeNavigationButtons();
+        }
       }
 
       calculateDimensions(parentWidth, parentHeight) {
         const breakpointsWidth = {
-          320: { width: 570 },
-          450: { width: 600 },
-          768: { width: 558 },
-          1024: { width: 514 },
-          1400: { width: 1090 },
-          1920: { width: 1210 },
+          344: { width: 620 },
+          390: { width: 620 },
+          430: { width: 620 },
+          480: { width: 640 }, // Mobile Portrait
+          540: { width: 500 },
+          768: { width: 600 }, // Mobile Landscape / Small Tablet
+          912: { width: 700 },
+          1024: { width: 800 }, // Tablet
+          1200: { width: 900 },
+          1280: { width: 1200 }, // Desktop Small
+          1920: { width: 1400 }, // Desktop Large
         };
+
         const breakpointsHeight = {
-          320: { height: 150 },
-          450: { height: 250 },
-          768: { height: 300 },
-          1024: { height: 600 },
-          1400: { height: 900 },
-          1920: { height: 1000 },
+          344: { height: 144 },
+          390: { height: 190 },
+          480: { height: 220 }, // Mobile Portrait
+          768: { height: 380 }, // Mobile Landscape / Small Tablet
+          882: { height: 600 },
+          940: { height: 600 },
+          1024: { height: 668 }, // Tablet
+          1280: { height: 924 }, // Desktop Small
+          1368: { height: 1000 },
+          1920: { height: 1080 }, // Desktop Large
         };
 
         const widthBreakpoint = Object.keys(breakpointsWidth).find(
