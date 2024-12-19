@@ -19,29 +19,43 @@
     "text_gallery_section_6AQC8P": {
       "type": "text-gallery-section",
       "blocks": {
-        "image_raGDhX": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/2-fotor-20241212221840.jpg"
-          }
-        },
-        "image_kQHFpr": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/pexels-caio-mantovani-97605853-29310356-optimized.webp"
-          }
-        },
         "image_eanYR6": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/3.jpg"
           }
+        },
+        "image_ArncFP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_Artwork.jpg"
+          }
+        },
+        "image_4UzAfq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_7141_3_137f6df5-ee3c-4c25-a83e-e03daf4b12ca.jpg"
+          }
+        },
+        "image_APxcAC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DD3A2274.JPG_copy_1_-1.jpg"
+          }
+        },
+        "image_KmF9xq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_7141_copy.jpg"
+          }
         }
       },
       "block_order": [
-        "image_raGDhX",
-        "image_kQHFpr",
-        "image_eanYR6"
+        "image_eanYR6",
+        "image_ArncFP",
+        "image_4UzAfq",
+        "image_APxcAC",
+        "image_KmF9xq"
       ],
       "settings": {
         "heading": "Gallery Section",
@@ -51,28 +65,15 @@
     "text_gallery_section_FRdEnT": {
       "type": "text-gallery-section",
       "blocks": {
-        "video_9erqpJ": {
-          "type": "video",
-          "settings": {
-            "video_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-          }
-        },
-        "video_K3VgkP": {
-          "type": "video",
-          "settings": {
-            "video_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
-          }
-        },
         "video_Bt43RM": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "video_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
           }
         }
       },
       "block_order": [
-        "video_9erqpJ",
-        "video_K3VgkP",
         "video_Bt43RM"
       ],
       "settings": {
