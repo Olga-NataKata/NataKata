@@ -221,14 +221,15 @@
 
         const widthBreakpoint = Object.keys(breakpointsWidth).find(
           (key) => parentWidth <= parseInt(key)
-        );
+        ) || Math.max(...Object.keys(breakpointsWidth));
+    
         const heightBreakpoint = Object.keys(breakpointsHeight).find(
           (key) => parentHeight <= parseInt(key)
-        );
-
+        ) || Math.max(...Object.keys(breakpointsHeight));
+    
         const widthDimensions = breakpointsWidth[widthBreakpoint];
         const heightDimensions = breakpointsHeight[heightBreakpoint];
-
+    
         return {
           width: widthDimensions.width,
           height: heightDimensions.height,

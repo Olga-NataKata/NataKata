@@ -191,11 +191,10 @@
 }
 
 .flipbook .page video {
-  max-width: 100%;
-  min-height: 100%;
+  /* fit the video to the page */
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  overflow: hidden;
-  pointer-events: none;
 }
 
 .flipbook .page small {
@@ -295,7 +294,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
