@@ -57,7 +57,7 @@
 /* Responsive styles */
 @media (max-width: 1024px) {
   .contact-us-text-section {
-    padding: 150px;
+    padding: 200px;
   }
 }
 
@@ -76,7 +76,7 @@
 /* Responsive styles for tablets */
 @media (max-width: 1024px) {
   .contact-us-text-section {
-    padding: 150px;
+    padding: 200px;
   }
 
   .contact-us-text-section h2 {
@@ -124,7 +124,6 @@
 /* Responsive styles for small devices */
 @media (max-width: 480px) {
   .contact-us-text-section {
-
     padding: 110px;
   }
 
@@ -151,7 +150,6 @@
 @media (max-width: 360px) {
   .contact-us-text-section h2 {
     font-size: 1.5rem;
-
   }
 
   .contact-us-text-section p {
