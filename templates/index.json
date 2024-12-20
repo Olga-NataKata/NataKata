@@ -15,7 +15,7 @@
         "slide_M3969L": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/c81f9ecfbf3f84136113680a097ff11c.jpg",
+            "image": "shopify://shop_images/IMG_7139.jpg",
             "product": "",
             "heading": "",
             "dot_top": 20,
@@ -24,10 +24,10 @@
             "dot_left_2": 55
           }
         },
-        "slide_jJhVxc": {
+        "slide_bniTed": {
           "type": "slide",
           "settings": {
-            "video": "shopify://files/videos/Sequence 02_Sub_01,00_3.mp4",
+            "video": "shopify://files/videos/copy_A45A1AA3-7EDF-4151-B5E1-B3656D090DDD.mov",
             "product": "",
             "heading": "Heading",
             "dot_top": 20,
@@ -48,12 +48,36 @@
             "dot_left_2": 55
           }
         },
+        "slide_jJhVxc": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/Sequence 02_Sub_01,00_3.mp4",
+            "product": "",
+            "heading": "Heading",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
         "slide_KWTMf9": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/2_217b964c-0596-41e1-8a3c-f970a509b9c5.jpg",
             "product": "",
             "heading": "",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
+        "slide_wfw3WN": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/copy_8093E509-F9EF-411A-9BB4-3F11A6CD9275.mov",
+            "product": "",
+            "heading": "Heading",
             "dot_top": 20,
             "dot_left": 25,
             "dot_top_2": 40,
@@ -87,9 +111,11 @@
       },
       "block_order": [
         "slide_M3969L",
-        "slide_jJhVxc",
+        "slide_bniTed",
         "slide_WX8WWk",
+        "slide_jJhVxc",
         "slide_KWTMf9",
+        "slide_wfw3WN",
         "slide_fGgp49",
         "slide_wbn4Bk"
       ],
