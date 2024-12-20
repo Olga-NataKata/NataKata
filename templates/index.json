@@ -12,18 +12,6 @@
     "book_slideshow_6hMAUj": {
       "type": "book-slideshow",
       "blocks": {
-        "slide_M3969L": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/IMG_7139.jpg",
-            "product": "",
-            "heading": "",
-            "dot_top": 20,
-            "dot_left": 25,
-            "dot_top_2": 40,
-            "dot_left_2": 55
-          }
-        },
         "slide_bniTed": {
           "type": "slide",
           "settings": {
@@ -84,18 +72,6 @@
             "dot_left_2": 55
           }
         },
-        "slide_fGgp49": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/1eaf13f811bdd2e5160dbfd1bdf8f415.jpg",
-            "product": "",
-            "heading": "Heading",
-            "dot_top": 20,
-            "dot_left": 25,
-            "dot_top_2": 40,
-            "dot_left_2": 55
-          }
-        },
         "slide_wbn4Bk": {
           "type": "slide",
           "settings": {
@@ -107,22 +83,33 @@
             "dot_top_2": 40,
             "dot_left_2": 55
           }
+        },
+        "slide_fGgp49": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1eaf13f811bdd2e5160dbfd1bdf8f415.jpg",
+            "product": "",
+            "heading": "Heading",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
         }
       },
       "block_order": [
-        "slide_M3969L",
         "slide_bniTed",
         "slide_WX8WWk",
         "slide_jJhVxc",
         "slide_KWTMf9",
         "slide_wfw3WN",
-        "slide_fGgp49",
-        "slide_wbn4Bk"
+        "slide_wbn4Bk",
+        "slide_fGgp49"
       ],
       "settings": {
         "color_scheme": "",
         "background": "shopify://shop_images/IMG_1403_2.jpg",
-        "front_image_bg": "shopify://shop_images/IMG_7147.jpg",
+        "front_image_bg": "shopify://shop_images/1eaf13f811bdd2e5160dbfd1bdf8f415.jpg",
         "front_heading": "Look book!",
         "front_text": "~ NataKuku",
         "about_us_heading": "About us",
