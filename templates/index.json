@@ -16,8 +16,8 @@
           "type": "slide",
           "settings": {
             "video": "shopify://files/videos/copy_A45A1AA3-7EDF-4151-B5E1-B3656D090DDD.mov",
-            "product": "",
-            "heading": "Heading",
+            "product": "bomber",
+            "heading": "",
             "dot_top": 20,
             "dot_left": 25,
             "dot_top_2": 40,
@@ -28,7 +28,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/4_d29c445c-b874-487c-a402-44e830ddd81f.jpg",
-            "product": "",
+            "product": "bomber",
             "heading": "",
             "dot_top": 20,
             "dot_left": 25,
@@ -40,8 +40,8 @@
           "type": "slide",
           "settings": {
             "video": "shopify://files/videos/Sequence 02_Sub_01,00_3.mp4",
-            "product": "",
-            "heading": "Heading",
+            "product": "bomber",
+            "heading": "",
             "dot_top": 20,
             "dot_left": 25,
             "dot_top_2": 40,
@@ -52,7 +52,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/2_217b964c-0596-41e1-8a3c-f970a509b9c5.jpg",
-            "product": "",
+            "product": "cardigan",
             "heading": "",
             "dot_top": 20,
             "dot_left": 25,
@@ -64,8 +64,8 @@
           "type": "slide",
           "settings": {
             "video": "shopify://files/videos/copy_8093E509-F9EF-411A-9BB4-3F11A6CD9275.mov",
-            "product": "",
-            "heading": "Heading",
+            "product": "cardigan",
+            "heading": "",
             "dot_top": 20,
             "dot_left": 25,
             "dot_top_2": 40,
@@ -76,8 +76,8 @@
           "type": "slide",
           "settings": {
             "video": "shopify://files/videos/copy_F5D9CC4C-6E6D-4512-8876-ABE0CC7DC13D.mov",
-            "product": "",
-            "heading": "Heading",
+            "product": "sweater",
+            "heading": "",
             "dot_top": 20,
             "dot_left": 25,
             "dot_top_2": 40,
@@ -88,8 +88,8 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/1eaf13f811bdd2e5160dbfd1bdf8f415.jpg",
-            "product": "",
-            "heading": "Heading",
+            "product": "sweater",
+            "heading": "",
             "dot_top": 20,
             "dot_left": 25,
             "dot_top_2": 40,
