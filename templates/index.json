@@ -16,9 +16,9 @@
           "type": "slide",
           "settings": {
             "video": "shopify://files/videos/copy_A45A1AA3-7EDF-4151-B5E1-B3656D090DDD.mov",
-            "product": "",
-            "heading": "Heading",
-            "dot_top": 20,
+            "product": "bomber",
+            "heading": "",
+            "dot_top": 21,
             "dot_left": 25,
             "dot_top_2": 40,
             "dot_left_2": 55
@@ -27,8 +27,8 @@
         "slide_WX8WWk": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/4_d29c445c-b874-487c-a402-44e830ddd81f.jpg",
-            "product": "",
+            "image": "shopify://shop_images/7_f71d8038-8dfb-43b2-9e08-16f9895e9673.jpg",
+            "product": "bomber",
             "heading": "",
             "dot_top": 20,
             "dot_left": 25,
@@ -40,8 +40,8 @@
           "type": "slide",
           "settings": {
             "video": "shopify://files/videos/Sequence 02_Sub_01,00_3.mp4",
-            "product": "",
-            "heading": "Heading",
+            "product": "bomber",
+            "heading": "",
             "dot_top": 20,
             "dot_left": 25,
             "dot_top_2": 40,
@@ -51,8 +51,8 @@
         "slide_KWTMf9": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/2_217b964c-0596-41e1-8a3c-f970a509b9c5.jpg",
-            "product": "",
+            "image": "shopify://shop_images/IMG_7333.jpg",
+            "product": "cardigan",
             "heading": "",
             "dot_top": 20,
             "dot_left": 25,
@@ -64,8 +64,8 @@
           "type": "slide",
           "settings": {
             "video": "shopify://files/videos/copy_8093E509-F9EF-411A-9BB4-3F11A6CD9275.mov",
-            "product": "",
-            "heading": "Heading",
+            "product": "cardigan",
+            "heading": "",
             "dot_top": 20,
             "dot_left": 25,
             "dot_top_2": 40,
@@ -76,8 +76,8 @@
           "type": "slide",
           "settings": {
             "video": "shopify://files/videos/copy_F5D9CC4C-6E6D-4512-8876-ABE0CC7DC13D.mov",
-            "product": "",
-            "heading": "Heading",
+            "product": "sweater",
+            "heading": "",
             "dot_top": 20,
             "dot_left": 25,
             "dot_top_2": 40,
@@ -87,7 +87,91 @@
         "slide_fGgp49": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/1eaf13f811bdd2e5160dbfd1bdf8f415.jpg",
+            "image": "shopify://shop_images/Untitled_8_copy_2_-1.jpg",
+            "product": "sweater",
+            "heading": "",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
+        "slide_rNMMcm": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_Artwork-7.jpg",
+            "product": "",
+            "heading": "Heading",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
+        "slide_8kf4ec": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/copy_3B5F8D97-AB2F-4654-BF5C-24137D4B4E6E.mov",
+            "product": "",
+            "heading": "Heading",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
+        "slide_pEjJHW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_Artwork_3.jpg",
+            "product": "",
+            "heading": "Heading",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
+        "slide_kVUxzP": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/copy_C10CA709-461A-4AD6-B943-99F0B45802F2.mov",
+            "product": "",
+            "heading": "Heading",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
+        "slide_4rwz4q": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_8_copy_1_-1.jpg",
+            "product": "",
+            "heading": "Heading",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
+        "slide_BTe7nb": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_8_copy-1.jpg",
+            "product": "",
+            "heading": "Heading",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
+        "slide_kjKqjr": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/copy_D65AD08B-EDE6-4909-9BC5-0F6E29576449.mov",
             "product": "",
             "heading": "Heading",
             "dot_top": 20,
@@ -104,14 +188,21 @@
         "slide_KWTMf9",
         "slide_wfw3WN",
         "slide_wbn4Bk",
-        "slide_fGgp49"
+        "slide_fGgp49",
+        "slide_rNMMcm",
+        "slide_8kf4ec",
+        "slide_pEjJHW",
+        "slide_kVUxzP",
+        "slide_4rwz4q",
+        "slide_BTe7nb",
+        "slide_kjKqjr"
       ],
       "settings": {
         "color_scheme": "",
         "background": "shopify://shop_images/IMG_1403_2.jpg",
         "front_image_bg": "shopify://shop_images/1eaf13f811bdd2e5160dbfd1bdf8f415.jpg",
-        "front_heading": "Look book!",
-        "front_text": "~ NataKuku",
+        "front_heading": "",
+        "front_text": "",
         "about_us_heading": "About us",
         "about_us_text": "Bold, stylish, and provocative, Nata Kuku introduces a fresh wave in the fashion world. Founded this year, Nata Kuku has already made a name as an innovator reshaping the concept of luxury in the 21st century. This brand is for those who aren’t afraid to stand out and set their own rules.Nata Kuku pieces aren’t just clothing—they’re a manifesto of boldness and confidence. Modern and daring, they blend elegance with defiance and are crafted for those who embrace going against the current. The brand embodies exclusivity and attention to detail, offering unique solutions in every piece.Nata Kuku is a new voice in luxury that speaks loudly and confidently."
       }
