@@ -27,7 +27,7 @@
         "slide_WX8WWk": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/4_d29c445c-b874-487c-a402-44e830ddd81f.jpg",
+            "image": "shopify://shop_images/7_f71d8038-8dfb-43b2-9e08-16f9895e9673.jpg",
             "product": "bomber",
             "heading": "",
             "dot_top": 20,
@@ -51,7 +51,7 @@
         "slide_KWTMf9": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/2_217b964c-0596-41e1-8a3c-f970a509b9c5.jpg",
+            "image": "shopify://shop_images/IMG_7333.jpg",
             "product": "cardigan",
             "heading": "",
             "dot_top": 20,
@@ -87,9 +87,93 @@
         "slide_fGgp49": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/1eaf13f811bdd2e5160dbfd1bdf8f415.jpg",
+            "image": "shopify://shop_images/Untitled_8_copy_2_-1.jpg",
             "product": "sweater",
             "heading": "",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
+        "slide_rNMMcm": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_Artwork-7.jpg",
+            "product": "",
+            "heading": "Heading",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
+        "slide_8kf4ec": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/copy_3B5F8D97-AB2F-4654-BF5C-24137D4B4E6E.mov",
+            "product": "",
+            "heading": "Heading",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
+        "slide_pEjJHW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_Artwork_3.jpg",
+            "product": "",
+            "heading": "Heading",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
+        "slide_kVUxzP": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/copy_C10CA709-461A-4AD6-B943-99F0B45802F2.mov",
+            "product": "",
+            "heading": "Heading",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
+        "slide_4rwz4q": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_8_copy_1_-1.jpg",
+            "product": "",
+            "heading": "Heading",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
+        "slide_BTe7nb": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_8_copy-1.jpg",
+            "product": "",
+            "heading": "Heading",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
+        "slide_kjKqjr": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/copy_D65AD08B-EDE6-4909-9BC5-0F6E29576449.mov",
+            "product": "",
+            "heading": "Heading",
             "dot_top": 20,
             "dot_left": 25,
             "dot_top_2": 40,
@@ -104,7 +188,14 @@
         "slide_KWTMf9",
         "slide_wfw3WN",
         "slide_wbn4Bk",
-        "slide_fGgp49"
+        "slide_fGgp49",
+        "slide_rNMMcm",
+        "slide_8kf4ec",
+        "slide_pEjJHW",
+        "slide_kVUxzP",
+        "slide_4rwz4q",
+        "slide_BTe7nb",
+        "slide_kjKqjr"
       ],
       "settings": {
         "color_scheme": "",
