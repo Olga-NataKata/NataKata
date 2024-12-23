@@ -24,14 +24,14 @@
         "heading_F78TrP": {
           "type": "heading",
           "settings": {
-            "heading": "NEW COLLECTION",
+            "heading": "DEBUT COLLECTION",
             "heading_size": "h1"
           }
         },
         "text_EqbURN": {
           "type": "text",
           "settings": {
-            "text": "TOP NEW",
+            "text": "",
             "text_style": "body"
           }
         },
