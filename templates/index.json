@@ -76,8 +76,8 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Untitled_10.jpg",
-            "product": "",
-            "heading": "Heading",
+            "product": "sweater",
+            "heading": "",
             "dot_top": 20,
             "dot_left": 25,
             "dot_top_2": 40,
