@@ -72,6 +72,18 @@
             "dot_left_2": 55
           }
         },
+        "slide_TapXFA": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_10.jpg",
+            "product": "",
+            "heading": "Heading",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
         "slide_wbn4Bk": {
           "type": "slide",
           "settings": {
@@ -187,6 +199,7 @@
         "slide_jJhVxc",
         "slide_KWTMf9",
         "slide_wfw3WN",
+        "slide_TapXFA",
         "slide_wbn4Bk",
         "slide_fGgp49",
         "slide_rNMMcm",
