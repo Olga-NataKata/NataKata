@@ -56,7 +56,7 @@
 				
 				{%- for block in section.blocks -%}
 
-					<div  class="page">
+					<div  class="flipbook-page page">
 						<div class="flipbook__book-shadow-left"> </div>
 					{%- if block.settings.video != blank -%}
 						{{
@@ -74,17 +74,28 @@
 						{% liquid
 							
 							assign featured_image = product.featured_image
+							assign featured_image_mb = product.featured_image
+
 							if block.settings.image != blank
 								assign featured_image = block.settings.image
+								assign featured_image_mb = featured_image
+							endif
+							if block.settings.image_mb != blank
+								assign featured_image_mb = block.settings.image_mb
 							endif
 						%}
 						{%- if featured_image != blank -%}
-							<img class="logo" src="{{ featured_image | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ featured_image.alt }}">
+							<img class="flipbook-page__img flipbook-page__img-pc logo" class="" src="{{ featured_image | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ featured_image.alt }}">
+						{%- endif -%}
+
+						{%- if featured_image_mb != blank -%}
+							<img class="flipbook-page__img flipbook-page__img-mb logo" src="{{ featured_image_mb | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ featured_image_mb.alt }}">
 						{%- endif -%}
 
 						{%- if block.settings.heading != blank -%}
 							<p class ="p-tag-title">{{ block.settings.heading | escape }}</p>
 						{%- endif -%}
+
 						{%- if block.settings.product != blank -%}
 							<div id="dot-{{ section.id }}-{{ block.id }}-{{ forloop.index }}" class="dot-link">
 								{%- style -%}
@@ -203,7 +214,14 @@
 				{
 					"type": "image_picker",
 					"id": "image",
-					"label": "Image"
+					"label": "Image",
+					"info": "3:4 ratio"
+				},
+				{
+					"type": "image_picker",
+					"id": "image_mb",
+					"label": "Image mobile",
+					"info": "9:16 ratio"
 				},
 				{
 					"type": "video",
@@ -267,7 +285,7 @@
 					"default": 55
 				}
 			]
-		},
+		}
 	],
   "presets": [
     {

@@ -307,7 +307,7 @@
 }
 
 /* Media query for small mobile devices */
-@media (min-width: 321px) and (max-width: 480px) {
+@media (min-width: 321px) and (max-width: 990px) {
   .flipbook {
     width: 620px;
     height: 500px;
@@ -575,4 +575,23 @@
   .button-container {
     bottom: 50px; /* Ще вище для великого екрану */
   }
+}
+
+
+@media screen and (min-width: 990px) {
+	.flipbook-page__img-mb {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 989px) {
+	.flipbook-page__img-pc {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 990px) {
+	.flipbook-page__img-mb {
+		display: none;
+	}
 }
