@@ -65,16 +65,15 @@
     "text_gallery_section_FRdEnT": {
       "type": "text-gallery-section",
       "blocks": {
-        "video_Bt43RM": {
+        "video_3ciLgj": {
           "type": "video",
-          "disabled": true,
           "settings": {
-            "video_url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+            "video_url": ""
           }
         }
       },
       "block_order": [
-        "video_Bt43RM"
+        "video_3ciLgj"
       ],
       "settings": {
         "heading": "Gallery Section",
