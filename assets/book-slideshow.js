@@ -91,7 +91,6 @@
 
         flipbook.on("turning", () => {
           this.playAllVideos();
-          this.randomizeDots();
         });
         console.log("6");
 
