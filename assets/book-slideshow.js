@@ -97,7 +97,7 @@
         flipbook.turn("disable", pagesCount - 1);
         // this.randomizeDots();
         console.log("7");
-				this.resizeLookBook();
+				// this.resizeLookBook();
       }
 
       handlePageShadows(page, clonedPage) {
@@ -192,7 +192,7 @@
       }
 
       calculateDimensions(parentWidth, parentHeight) {
-				const mobileRatio = 16 / 9;
+				const mobileRatio = 9 / 16;
 				const pcRatio =  3 / 4;
         const breakpointsWidth = {
           344: { width: 680 },
@@ -225,6 +225,13 @@
           1280: { height: Math.round(breakpointsWidth[1280].width * pcRatio) }, // Desktop Small
           1920: { height: Math.round(breakpointsWidth[1920].width * pcRatio) }, // Desktop Large
         };
+
+				console.log(pcRatio, mobileRatio);
+
+				
+
+				console.log(breakpointsHeight);
+				
 
         const widthBreakpoint = Object.keys(breakpointsWidth).find(
           (key) => parentWidth <= parseInt(key)
