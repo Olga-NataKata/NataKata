@@ -29,7 +29,7 @@
       }
 
       isMobile() {
-        return window.innerWidth <= 480;
+        return window.innerWidth < 990;
       }
 
       createNavigationButtons(flipbook) {
@@ -97,6 +97,7 @@
         flipbook.turn("disable", pagesCount - 1);
         // this.randomizeDots();
         console.log("7");
+        this.resizeLookBook();
       }
 
       handlePageShadows(page, clonedPage) {
@@ -191,47 +192,78 @@
       }
 
       calculateDimensions(parentWidth, parentHeight) {
+        const pcRatio = 3 / 4;
+        const mobileRatio = 9 / 16;
+
         const breakpointsWidth = {
-          344: { width: 620 },
-          390: { width: 620 },
-          430: { width: 620 },
-          480: { width: 640 }, // Mobile Portrait
-          540: { width: 500 },
-          768: { width: 600 }, // Mobile Landscape / Small Tablet
-          912: { width: 700 },
+          344: { width: 680 },
+          390: { width: 700 },
+          430: { width: 750 },
+          480: { width: 850 }, // Mobile Portrait
+          540: { width: 900 },
+          768: { width: 1000 }, // Mobile Landscape / Small Tablet
+          882: { width: 1000 }, // Mobile Landscape / Small Tablet
+          940: { width: 1000 },
+          990: { width: 1000 },
           1024: { width: 800 }, // Tablet
           1200: { width: 900 },
-          1280: { width: 1200 }, // Desktop Small
-          1920: { width: 1400 }, // Desktop Large
+          1280: { width: 950 }, // Desktop Small
+          1920: { width: 1100 }, // Desktop Large
         };
 
         const breakpointsHeight = {
-          344: { height: 144 },
-          390: { height: 190 },
-          480: { height: 220 }, // Mobile Portrait
-          768: { height: 380 }, // Mobile Landscape / Small Tablet
-          882: { height: 600 },
-          940: { height: 600 },
-          1024: { height: 668 }, // Tablet
-          1280: { height: 924 }, // Desktop Small
-          1368: { height: 1000 },
-          1920: { height: 1080 }, // Desktop Large
+          344: {
+            height: Math.round(breakpointsWidth[344].width * mobileRatio),
+          },
+          390: {
+            height: Math.round(breakpointsWidth[390].width * mobileRatio),
+          },
+          430: {
+            height: Math.round(breakpointsWidth[430].width * mobileRatio),
+          }, // Mobile Portrait
+          480: {
+            height: Math.round(breakpointsWidth[480].width * mobileRatio),
+          }, // Mobile Portrait
+          540: {
+            height: Math.round(breakpointsWidth[540].width * mobileRatio),
+          }, // Mobile Portrait
+          768: {
+            height: Math.round(breakpointsWidth[768].width * mobileRatio),
+          }, // Mobile Landscape / Small Tablet
+          882: {
+            height: Math.round(breakpointsWidth[882].width * mobileRatio),
+          },
+          940: {
+            height: Math.round(breakpointsWidth[940].width * mobileRatio),
+          },
+          990: { height: Math.round(breakpointsWidth[990].width * pcRatio) },
+          1024: { height: Math.round(breakpointsWidth[1024].width * pcRatio) }, // Tablet
+          1200: { height: Math.round(breakpointsWidth[1200].width * pcRatio) }, // Desktop Small
+          1280: { height: Math.round(breakpointsWidth[1280].width * pcRatio) }, // Desktop Small
+          1920: { height: Math.round(breakpointsWidth[1920].width * pcRatio) }, // Desktop Large
         };
 
-        const widthBreakpoint = Object.keys(breakpointsWidth).find(
-          (key) => parentWidth <= parseInt(key)
-        ) || Math.max(...Object.keys(breakpointsWidth));
-    
-        const heightBreakpoint = Object.keys(breakpointsHeight).find(
-          (key) => parentHeight <= parseInt(key)
-        ) || Math.max(...Object.keys(breakpointsHeight));
-    
+        const widthBreakpoint =
+          Object.keys(breakpointsWidth).find(
+            (key) => parentWidth <= parseInt(key)
+          ) || Math.max(...Object.keys(breakpointsWidth));
+        const heightBreakpoint =
+          Object.keys(breakpointsHeight).find(
+            (key) => parentWidth <= parseInt(key)
+          ) || Math.max(...Object.keys(breakpointsHeight));
+
         const widthDimensions = breakpointsWidth[widthBreakpoint];
         const heightDimensions = breakpointsHeight[heightBreakpoint];
-    
+
+        if (this.isMobile()) {
+          console.log("mobile");
+        }
+
         return {
           width: widthDimensions.width,
-          height: heightDimensions.height,
+          height: Math.round(
+            widthDimensions.width * (this.isMobile() ? pcRatio : mobileRatio)
+          ),
         };
       }
     }
