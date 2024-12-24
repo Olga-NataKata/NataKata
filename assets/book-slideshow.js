@@ -15,6 +15,7 @@
       connectedCallback() {
         this.initSlideshow();
         $(window).on("resize", this.resizeLookBook);
+        $(window).on("orientationchange", this.resizeLookBook);
 
         if (this.isMobile()) {
           const flipbook = this.querySelector(".flipbook");
