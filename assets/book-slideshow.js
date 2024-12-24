@@ -207,7 +207,7 @@
           1024: { width: 800 }, // Tablet
           1200: { width: 900 },
           1280: { width: 1200 }, // Desktop Small
-          1920: { width: 1400 }, // Desktop Large
+          1920: { width: 1250 }, // Desktop Large
         };
 
         const breakpointsHeight = {
@@ -225,13 +225,6 @@
           1280: { height: Math.round(breakpointsWidth[1280].width * pcRatio) }, // Desktop Small
           1920: { height: Math.round(breakpointsWidth[1920].width * pcRatio) }, // Desktop Large
         };
-
-				console.log(pcRatio, mobileRatio);
-
-				
-
-				console.log(breakpointsHeight);
-				
 
         const widthBreakpoint = Object.keys(breakpointsWidth).find(
           (key) => parentWidth <= parseInt(key)
