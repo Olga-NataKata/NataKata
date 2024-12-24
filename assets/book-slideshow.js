@@ -97,7 +97,7 @@
         flipbook.turn("disable", pagesCount - 1);
         // this.randomizeDots();
         console.log("7");
-				// this.resizeLookBook();
+        // this.resizeLookBook();
       }
 
       handlePageShadows(page, clonedPage) {
@@ -192,8 +192,9 @@
       }
 
       calculateDimensions(parentWidth, parentHeight) {
-				const mobileRatio = 9 / 16;
-				const pcRatio =  3 / 4;
+        const pcRatio = 3 / 4;
+        const mobileRatio = 9 / 16;
+
         const breakpointsWidth = {
           344: { width: 680 },
           390: { width: 700 },
@@ -211,14 +212,30 @@
         };
 
         const breakpointsHeight = {
-          344: { height: Math.round(breakpointsWidth[344].width * mobileRatio)},
-          390: { height: Math.round(breakpointsWidth[390].width * mobileRatio) },
-          430: { height: Math.round(breakpointsWidth[430].width * mobileRatio) }, // Mobile Portrait
-          480: { height: Math.round(breakpointsWidth[480].width * mobileRatio) }, // Mobile Portrait
-          540: { height: Math.round(breakpointsWidth[540].width * mobileRatio) }, // Mobile Portrait
-          768: { height: Math.round(breakpointsWidth[768].width * mobileRatio) }, // Mobile Landscape / Small Tablet
-          882: { height: Math.round(breakpointsWidth[882].width * mobileRatio) },
-          940: { height: Math.round(breakpointsWidth[940].width * mobileRatio) },
+          344: {
+            height: Math.round(breakpointsWidth[344].width * mobileRatio),
+          },
+          390: {
+            height: Math.round(breakpointsWidth[390].width * mobileRatio),
+          },
+          430: {
+            height: Math.round(breakpointsWidth[430].width * mobileRatio),
+          }, // Mobile Portrait
+          480: {
+            height: Math.round(breakpointsWidth[480].width * mobileRatio),
+          }, // Mobile Portrait
+          540: {
+            height: Math.round(breakpointsWidth[540].width * mobileRatio),
+          }, // Mobile Portrait
+          768: {
+            height: Math.round(breakpointsWidth[768].width * mobileRatio),
+          }, // Mobile Landscape / Small Tablet
+          882: {
+            height: Math.round(breakpointsWidth[882].width * mobileRatio),
+          },
+          940: {
+            height: Math.round(breakpointsWidth[940].width * mobileRatio),
+          },
           990: { height: Math.round(breakpointsWidth[990].width * pcRatio) },
           1024: { height: Math.round(breakpointsWidth[1024].width * pcRatio) }, // Tablet
           1200: { height: Math.round(breakpointsWidth[1200].width * pcRatio) }, // Desktop Small
@@ -226,20 +243,27 @@
           1920: { height: Math.round(breakpointsWidth[1920].width * pcRatio) }, // Desktop Large
         };
 
-        const widthBreakpoint = Object.keys(breakpointsWidth).find(
-          (key) => parentWidth <= parseInt(key)
-        ) || Math.max(...Object.keys(breakpointsWidth));
-    
-        const heightBreakpoint = Object.keys(breakpointsHeight).find(
-          (key) => parentHeight <= parseInt(key)
-        ) || Math.max(...Object.keys(breakpointsHeight));
-    
+        const widthBreakpoint =
+          Object.keys(breakpointsWidth).find(
+            (key) => parentWidth <= parseInt(key)
+          ) || Math.max(...Object.keys(breakpointsWidth));
+        const heightBreakpoint =
+          Object.keys(breakpointsHeight).find(
+            (key) => parentWidth <= parseInt(key)
+          ) || Math.max(...Object.keys(breakpointsHeight));
+
         const widthDimensions = breakpointsWidth[widthBreakpoint];
         const heightDimensions = breakpointsHeight[heightBreakpoint];
-    
+
+        if (this.isMobile()) {
+          console.log("mobile");
+        }
+
         return {
           width: widthDimensions.width,
-          height: heightDimensions.height,
+          height: Math.round(
+            widthDimensions.width * (this.isMobile() ? pcRatio : mobileRatio)
+          ),
         };
       }
     }
