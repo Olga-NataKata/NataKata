@@ -182,10 +182,24 @@
         },
         "slide_kjKqjr": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "video": "shopify://files/videos/copy_D65AD08B-EDE6-4909-9BC5-0F6E29576449.mov",
             "product": "top",
             "heading": "",
+            "dot_top": 20,
+            "dot_left": 25,
+            "dot_top_2": 40,
+            "dot_left_2": 55
+          }
+        },
+        "slide_iEMDMy": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1_f8cea0d4-6514-494a-98e2-b31828bcea69.jpg",
+            "image_mb": "shopify://shop_images/1_f9a4e61c-e34f-4e08-9681-c4d702ed8dc9.jpg",
+            "product": "sweater-1",
+            "heading": "Sweater azure",
             "dot_top": 20,
             "dot_left": 25,
             "dot_top_2": 40,
@@ -208,7 +222,8 @@
         "slide_kVUxzP",
         "slide_4rwz4q",
         "slide_BTe7nb",
-        "slide_kjKqjr"
+        "slide_kjKqjr",
+        "slide_iEMDMy"
       ],
       "settings": {
         "color_scheme": "",
