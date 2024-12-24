@@ -202,13 +202,13 @@
           480: { width: 850 }, // Mobile Portrait
           540: { width: 900 },
           768: { width: 1000 }, // Mobile Landscape / Small Tablet
-          882: { width: 1200 }, // Mobile Landscape / Small Tablet
-          940: { width: 1200 },
-          990: { width: 1200 },
+          882: { width: 1000 }, // Mobile Landscape / Small Tablet
+          940: { width: 1000 },
+          990: { width: 1000 },
           1024: { width: 800 }, // Tablet
           1200: { width: 900 },
-          1280: { width: 1200 }, // Desktop Small
-          1920: { width: 1250 }, // Desktop Large
+          1280: { width: 950 }, // Desktop Small
+          1920: { width: 1100 }, // Desktop Large
         };
 
         const breakpointsHeight = {
