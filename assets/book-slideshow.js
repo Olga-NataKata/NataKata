@@ -190,6 +190,20 @@
         } else {
           this.removeNavigationButtons();
         }
+        // if (this.isMobile()) {
+        //   pages.forEach((page) => {
+        //     const clonedPage = page.cloneNode(true);
+        //     clonedPage.classList.add("cloned");
+        //     this.handlePageShadows(page, clonedPage);
+        //     page.parentNode.insertBefore(clonedPage, page.nextSibling);
+        //   });
+        // }else {
+        //   pages.forEach((page) => {
+        //     if (page.classList.contains("cloned")) {
+        //       page.parentNode.removeChild(page);
+        //     }
+        //   });
+        // }
       }
 
       calculateDimensions(parentWidth, parentHeight) {

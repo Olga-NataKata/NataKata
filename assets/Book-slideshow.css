@@ -41,7 +41,8 @@
 }
 .flipbook__wrapper {
   position: relative;
-  margin-top: 150px;
+  margin-top: 200px;
+  margin-bottom: 150px;
 }
 
 .flipbook {
@@ -577,21 +578,20 @@
   }
 }
 
-
 @media screen and (min-width: 990px) {
-	.flipbook-page__img-mb {
-		display: none;
-	}
+  .flipbook-page__img-mb {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 989px) {
-	.flipbook-page__img-pc {
-		display: none;
-	}
+  .flipbook-page__img-pc {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 990px) {
-	.flipbook-page__img-mb {
-		display: none;
-	}
+  .flipbook-page__img-mb {
+    display: none;
+  }
 }
