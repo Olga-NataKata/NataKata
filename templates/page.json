@@ -67,6 +67,7 @@
       "blocks": {
         "video_3ciLgj": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "video_url": ""
           }
