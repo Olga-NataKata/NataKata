@@ -128,8 +128,15 @@
 
       getCornerSize() {
         const screenWidth = window.innerWidth;
-        if (screenWidth < 768) return 2000; // Mobile
-        if (screenWidth <= 1024) return 400; // Tablet
+
+        if (screenWidth < 768) {
+          return 2000; // Mobile
+        }
+
+        if (screenWidth <= 1024) {
+          return 400; // Tablet
+        }
+
         return 60; // PC
       }
 
@@ -164,9 +171,29 @@
         }
       }
 
+      changeCornerSize() {
+        const flipbook = $(this).find(".flipbook");
+        const cornerSize = this.getCornerSize();
+        flipbook.turn("options", { cornerSize });
+      }
+
       resizeLookBook() {
         console.log("resize");
         const flipbook = $(this).find(".flipbook");
+        const flipOptions = flipbook.turn("options");
+
+        const { cornerSize } = flipOptions;
+
+        console.groupCollapsed(
+          "%c BookSlideshow ~ resizeLookBook",
+          "color: #00b8d9; font-weight: bold"
+        );
+        console.log("flipbook:", flipbook);
+        console.log("flipOptions:", flipOptions);
+        console.log("cornerSize:", cornerSize);
+        console.groupEnd();
+        this.changeCornerSize();
+
         const parent = flipbook.parent().parent();
         const parentWidth = parent.width();
         const parentHeight = parent.height();
@@ -286,3 +313,6 @@
     customElements.define("book-slideshow", BookSlideshow);
   }
 })();
+console.log("🚀 ~ BookSlideshow ~ resizeLookBook ~ cornerSize:", cornerSize);
+console.log("🚀 ~ BookSlideshow ~ resizeLookBook ~ cornerSize:", cornerSize);
+console.log("🚀 ~ BookSlideshow ~ resizeLookBook ~ cornerSize:", cornerSize);
