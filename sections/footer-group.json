@@ -49,9 +49,9 @@
       ],
       "settings": {
         "caption": "",
-        "heading": "",
-        "heading_size": "h0",
-        "heading_alignment": "center",
+        "heading": "Business Name: FOP Kuznyetsova Olʹha Yuriyivna  Business Address: Ukrayina, 02147, m. Kyyiv, vul.Entuziastiv 35 kV 49                VAT: 3284109848 Phone number: +380939394603",
+        "heading_size": "h2",
+        "heading_alignment": "left",
         "layout": "row",
         "color_scheme": "scheme-3",
         "container_color_scheme": "scheme-3",
