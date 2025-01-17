@@ -126,10 +126,20 @@
         "padding_top_mb": 10,
         "padding_bottom_mb": 10
       }
+    },
+    "three_media_product_section_qQwNtX": {
+      "type": "three-media-product-section",
+      "settings": {
+        "section_text": "Three Media Section",
+        "media_image_1": "shopify://shop_images/17_17a36c3f-589d-48e2-8295-1088841dcf36.jpg",
+        "media_image_2": "shopify://shop_images/15_77cf5276-6253-4cf5-bc9b-9a0c331b1760.jpg",
+        "media_image_3": "shopify://shop_images/IMG_7196.jpg"
+      }
     }
   },
   "order": [
     "book_slideshow_6hMAUj",
-    "scrolling_banner_ycLY4R"
+    "scrolling_banner_ycLY4R",
+    "three_media_product_section_qQwNtX"
   ]
 }
