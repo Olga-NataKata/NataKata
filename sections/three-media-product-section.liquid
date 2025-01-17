@@ -1,163 +1,24 @@
-<section class="three-media-product-section">
-  <div class="three-media-product-section__container">
-    <!-- Media 1 -->
-    <div class="block-media-1">
-      <div class="block-media-1__content">
-        <h2>{{ section.settings.heading_1 }}</h2>
-        <p>{{ section.settings.description_1 }}</p>
-        <div class="block-media-1__media">
-          {% if section.settings.media_1_type == 'image' %}
-            <img src="{{ section.settings.media_1_image | img_url: 'medium' }}" alt="{{ section.settings.heading_1 }}">
-          {% elsif section.settings.media_1_type == 'video' %}
-            <video autoplay muted loop playsinline>
-              <source src="{{ section.settings.media_1_video_url }}" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    <!-- Media 2 -->
-    <div class="block-media-2">
-      <div class="block-media-2__content">
-        <h2>{{ section.settings.heading_2 }}</h2>
-        <p>{{ section.settings.description_2 }}</p>
-        <div class="block-media-2__media">
-          {% if section.settings.media_2_type == 'image' %}
-            <img src="{{ section.settings.media_2_image | img_url: 'medium' }}" alt="{{ section.settings.heading_2 }}">
-          {% elsif section.settings.media_2_type == 'video' %}
-            <video autoplay muted loop playsinline>
-              <source src="{{ section.settings.media_2_video_url }}" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    <!-- Media 3 -->
-    <div class="block-media-3">
-      <div class="block-media-3__content">
-        <h2>{{ section.settings.heading_3 }}</h2>
-        <p>{{ section.settings.description_3 }}</p>
-        <div class="block-media-3__media">
-          {% if section.settings.media_3_type == 'image' %}
-            <img src="{{ section.settings.media_3_image | img_url: 'medium' }}" alt="{{ section.settings.heading_3 }}">
-          {% elsif section.settings.media_3_type == 'video' %}
-            <video autoplay muted loop playsinline>
-              <source src="{{ section.settings.media_3_video_url }}" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 {% schema %}
-{
-  "name": "Three Media Section",
-  "class": "three-media-product-section",
-  "settings": [
-    {
-      "type": "text",
-      "id": "heading_1",
-      "label": "Heading 1",
-      "default": "Heading 1"
-    },
-    {
-      "type": "textarea",
-      "id": "description_1",
-      "label": "Description 1",
-      "default": "Description 1"
-    },
-    {
-      "type": "select",
-      "id": "media_1_type",
-      "label": "Media 1 Type",
-      "options": [
-        { "value": "image", "label": "Image" },
-        { "value": "video", "label": "Video" }
-      ]
-    },
-    {
-      "type": "image_picker",
-      "id": "media_1_image",
-      "label": "Media 1 Image"
-    },
-    {
-      "type": "url",
-      "id": "media_1_video_url",
-      "label": "Media 1 Video URL"
-    },
-    {
-      "type": "text",
-      "id": "heading_2",
-      "label": "Heading 2",
-      "default": "Heading 2"
-    },
-    {
-      "type": "textarea",
-      "id": "description_2",
-      "label": "Description 2",
-      "default": "Description 2"
-    },
-    {
-      "type": "select",
-      "id": "media_2_type",
-      "label": "Media 2 Type",
-      "options": [
-        { "value": "image", "label": "Image" },
-        { "value": "video", "label": "Video" }
-      ]
-    },
-    {
-      "type": "image_picker",
-      "id": "media_2_image",
-      "label": "Media 2 Image"
-    },
-    {
-      "type": "url",
-      "id": "media_2_video_url",
-      "label": "Media 2 Video URL"
-    },
-    {
-      "type": "text",
-      "id": "heading_3",
-      "label": "Heading 3",
-      "default": "Heading 3"
-    },
-    {
-      "type": "textarea",
-      "id": "description_3",
-      "label": "Description 3",
-      "default": "Description 3"
-    },
-    {
-      "type": "select",
-      "id": "media_3_type",
-      "label": "Media 3 Type",
-      "options": [
-        { "value": "image", "label": "Image" },
-        { "value": "video", "label": "Video" }
-      ]
-    },
-    {
-      "type": "image_picker",
-      "id": "media_3_image",
-      "label": "Media 3 Image"
-    },
-    {
-      "type": "url",
-      "id": "media_3_video_url",
-      "label": "Media 3 Video URL"
-    }
-  ],
-  "blocks": [],
-  "presets": [
-    {
-      "name": "Three Media Section"
-    }
-  ]
-}
-{% endschema %}
+  {
+    "name": "Three Media Product Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_text",
+        "label": "Text for the section",
+        "default": "Це нова секція"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Three Media Product Section",
+        "category": "Custom"
+      }
+    ]
+  }
+  {% endschema %}
+  
+  <div class="three-media-product-section">
+    <p>{{ section.settings.section_text }}</p>
+  </div>
+  
