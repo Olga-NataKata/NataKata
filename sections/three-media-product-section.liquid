@@ -14,14 +14,89 @@
         "label": "Image 1"
       },
       {
+        "type": "text",
+        "id": "media_image_1_text",
+        "label": "Image 1 Text"
+      },
+      {
+        "type": "select",
+        "id": "media_image_1_text_position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left",
+        "label": "Image 1 Text Position"
+      },    
+      {
         "type": "image_picker",
         "id": "media_image_2",
         "label": "Image 2"
       },
       {
+        "type": "text",
+        "id": "media_image_2_text",
+        "label": "Image 2 Text"
+      },
+      {
+        "type": "select",
+        "id": "media_image_2_text_position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left",
+        "label": "Image 2 Text Position"
+      },
+      {
         "type": "image_picker",
         "id": "media_image_3",
         "label": "Image 3"
+      },
+      {
+        "type": "text",
+        "id": "media_image_3_text",
+        "label": "Image 3 Text"
+      },
+      {
+        "type": "select",
+        "id": "media_image_3_text_position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left",
+        "label": "Image 3 Text Position"
       }
     ],
     "presets": [
@@ -37,16 +112,43 @@
   <div class="three-media-container">
     {% if section.settings.media_image_1 %}
       <div class="three-media1">
+        {% if section.settings.media_image_1_text %}
+          {% if section.settings.media_image_1_text_position == 'left' %}
+            <div class="three-media1-text-block left"><h2 class="three-media1-text">{{ section.settings.media_image_1_text }}</h2></div>
+          {% elsif section.settings.media_image_1_text_position == 'center' %}
+            <div class="three-media1-text-block center"><h2 class="three-media1-text">{{ section.settings.media_image_1_text }}</h2></div>
+          {% elsif section.settings.media_image_1_text_position == 'right' %}
+            <div class="three-media1-text-block right"><h2 class="three-media1-text">{{ section.settings.media_image_1_text }}</h2></div>
+          {% endif %}
+        {% endif %}
         <img src="{{ section.settings.media_image_1 | image_url: width: 1920 }}" alt="{{ section.settings.media_image_1.alt }}" width="1920" height="auto">
       </div>
     {% endif %}
     {% if section.settings.media_image_2 %}
       <div class="three-media2">
+        {% if section.settings.media_image_2_text %}
+          {% if section.settings.media_image_2_text_position == 'left' %}
+            <div class="three-media2-text-block left"><h2 class="three-media2-text">{{ section.settings.media_image_2_text }}</h2></div>
+          {% elsif section.settings.media_image_2_text_position == 'center' %}
+            <div class="three-media2-text-block center"><h2 class="three-media2-text">{{ section.settings.media_image_2_text }}</h2></div>
+          {% elsif section.settings.media_image_2_text_position == 'right' %}
+            <div class="three-media2-text-block right"><h2 class="three-media2-text">{{ section.settings.media_image_2_text }}</h2></div>
+          {% endif %}
+        {% endif %}
         <img src="{{ section.settings.media_image_2 | image_url: width: 1920 }}" alt="{{ section.settings.media_image_2.alt }}" width="1920" height="auto">
       </div>
     {% endif %}
     {% if section.settings.media_image_3 %}
       <div class="three-media3">
+        {% if section.settings.media_image_3_text %}
+          {% if section.settings.media_image_3_text_position == 'left' %}
+            <div class="three-media3-text-block left"><h2 class="three-media3-text">{{ section.settings.media_image_3_text }}</h2></div>
+          {% elsif section.settings.media_image_3_text_position == 'center' %}
+            <div class="three-media3-text-block center"><h2 class="three-media3-text">{{ section.settings.media_image_3_text }}</h2></div>
+          {% elsif section.settings.media_image_3_text_position == 'right' %} 
+            <div class="three-media3-text-block right"><h2 class="three-media3-text">{{ section.settings.media_image_3_text }}</h2></div>
+          {% endif %}
+        {% endif %}
         <img src="{{ section.settings.media_image_3 | image_url: width: 1920 }}" alt="{{ section.settings.media_image_3.alt }}" width="1920" height="auto">
       </div>
     {% endif %}
@@ -85,6 +187,53 @@
     top: 0;
     left: 0;
   }
+
+  .three-media1-text{ 
+    color: #FFF;
+    font-family: Poppins, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    z-index: 1;
+  }
+
+  .three-media2-text, .three-media3-text {
+    color: #FFF;
+    text-align: right;
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    z-index: 1;
+  }
+
+  .three-media1-text-block, .three-media2-text-block, .three-media3-text-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .three-media1-text-block.left, .three-media2-text-block.left, .three-media3-text-block.left {
+    justify-content: flex-start;
+    left: 10px;
+  }
+
+  .three-media1-text-block.right, .three-media2-text-block.right, .three-media3-text-block.right {
+    justify-content: flex-end;
+    right: 10px;
+  }
+
+  .three-media1-text-block.center, .three-media2-text-block.center, .three-media3-text-block.center {
+    justify-content: center;
+  }
+    
 </style>
 
 
