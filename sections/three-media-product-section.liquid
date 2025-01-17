@@ -5,53 +5,13 @@
       {
         "type": "text",
         "id": "section_text",
-        "label": "Text for the section",
-        "default": "Це нова секція"
+        "label": "Section Text",
+        "default": "Three Media Section"
       },
       {
-        "type": "url",
-        "id": "media_1",
-        "label": "Media 1 URL (Image/Video)"
-      },
-      {
-        "type": "select",
-        "id": "media_1_type",
-        "label": "Media 1 Type",
-        "options": [
-          { "value": "image", "label": "Image" },
-          { "value": "video", "label": "Video" }
-        ],
-        "default": "image"
-      },
-      {
-        "type": "url",
-        "id": "media_2",
-        "label": "Media 2 URL (Image/Video)"
-      },
-      {
-        "type": "select",
-        "id": "media_2_type",
-        "label": "Media 2 Type",
-        "options": [
-          { "value": "image", "label": "Image" },
-          { "value": "video", "label": "Video" }
-        ],
-        "default": "image"
-      },
-      {
-        "type": "url",
-        "id": "media_3",
-        "label": "Media 3 URL (Image/Video)"
-      },
-      {
-        "type": "select",
-        "id": "media_3_type",
-        "label": "Media 3 Type",
-        "options": [
-          { "value": "image", "label": "Image" },
-          { "value": "video", "label": "Video" }
-        ],
-        "default": "image"
+        "type": "image_picker",
+        "id": "1_media_image",
+        "label": "Image"
       }
     ],
     "presets": [
@@ -62,37 +22,13 @@
   }
   {% endschema %}
   
-  <div class="three-media-product-section">
-    <p>{{ section.settings.section_text }}</p>
-    <div class="media-block">
-      {% if section.settings.media_1_type == 'image' %}
-        <img src="{{ section.settings.media_1 }}" alt="Media 1" />
-      {% elsif section.settings.media_1_type == 'video' %}
-        <video controls>
-          <source src="{{ section.settings.media_1 }}" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      {% endif %}
-    </div>
-    <div class="media-block">
-      {% if section.settings.media_2_type == 'image' %}
-        <img src="{{ section.settings.media_2 }}" alt="Media 2" />
-      {% elsif section.settings.media_2_type == 'video' %}
-        <video controls>
-          <source src="{{ section.settings.media_2 }}" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      {% endif %}
-    </div>
-    <div class="media-block">
-      {% if section.settings.media_3_type == 'image' %}
-        <img src="{{ section.settings.media_3 }}" alt="Media 3" />
-      {% elsif section.settings.media_3_type == 'video' %}
-        <video controls>
-          <source src="{{ section.settings.media_3 }}" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+<div class="three-media-product-section">
+  <p>{{ section.settings.section_text }}</p>
+  <div class="grid grid--1-col">
+    <div class="grid__item">  
+      {% if section.settings.1_media_image %} 
+        <img src="{{ section.settings.1_media_image | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ section.settings.1_media_image.alt }}">
       {% endif %}
     </div>
   </div>
-  
+</div>
