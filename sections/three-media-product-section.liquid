@@ -10,7 +10,7 @@
       },
       {
         "type": "image_picker",
-        "id": "1_media_image",
+        "id": "media_image_1",
         "label": "Image"
       }
     ],
@@ -26,9 +26,10 @@
   <p>{{ section.settings.section_text }}</p>
   <div class="grid grid--1-col">
     <div class="grid__item">  
-      {% if section.settings.1_media_image %} 
-        <img src="{{ section.settings.1_media_image | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ section.settings.1_media_image.alt }}">
+      {% if section.settings.media_image_1 %} 
+        <img src="{{ section.settings.media_image_1 | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ section.settings.media_image_1.alt }}">
       {% endif %}
     </div>
   </div>
 </div>
+
