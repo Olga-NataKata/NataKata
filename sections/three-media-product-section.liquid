@@ -11,17 +11,17 @@
       {
         "type": "image_picker",
         "id": "media_image_1",
-        "label": "Image-1"
+        "label": "Image 1"
       },
       {
         "type": "image_picker",
         "id": "media_image_2",
-        "label": "Image-2"
+        "label": "Image 2"
       },
       {
         "type": "image_picker",
         "id": "media_image_3",
-        "label": "Image-3"
+        "label": "Image 3"
       }
     ],
     "presets": [
@@ -32,24 +32,21 @@
   }
   {% endschema %}
   
-<div class="three-media-product-section">
-  <p>{{ section.settings.section_text }}</p>
-  <div class="three-media-container">
-    <div class="three-media">  
-      {% if section.settings.media_image_1 %} 
-        <img src="{{ section.settings.media_image_1 | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ section.settings.media_image_1.alt }}">
-      {% endif %}
-    </div>
-    <div class="three-media">  
-      {% if section.settings.media_image_2 %} 
-        <img src="{{ section.settings.media_image_2 | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ section.settings.media_image_2.alt }}">
-      {% endif %}
-    </div>
-    <div class="three-media">  
-      {% if section.settings.media_image_3 %} 
-        <img src="{{ section.settings.media_image_3 | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ section.settings.media_image_3.alt }}">
-      {% endif %}
+  <div class="three-media-product-section">
+    <p>{{ section.settings.section_text }}</p>
+    <div class="three-media-container">
+      <div class="three-media">  
+        {% if section.settings.media_image_1 %} 
+          <img src="{{ section.settings.media_image_1 | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ section.settings.media_image_1.alt }}">
+        {% endif %}
+        {% if section.settings.media_image_2 %} 
+          <img src="{{ section.settings.media_image_2 | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ section.settings.media_image_2.alt }}">
+        {% endif %}
+        {% if section.settings.media_image_3 %} 
+          <img src="{{ section.settings.media_image_3 | image_url: width: 1920 }}" width="1920" height="auto"alt="{{ section.settings.media_image_3.alt }}">
+        {% endif %}
+      </div>
     </div>
   </div>
-</div>
+
 
