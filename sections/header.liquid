@@ -391,7 +391,8 @@
 
     connectedCallback() {
       this.header = document.querySelector('.section-header');
-      this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' || this.getAttribute('data-sticky-type') === 'reduce-logo-size';
+      this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' || this.getAttribute('data-sticky-type') === 'reduce-logo-size'|| this.getAttribute('data-sticky-type') === 'hide-logo-on-top-border';
+      this.isheaderHideLogo = this.getAttribute('data-sticky-type') === 'hide-logo-on-top-border';
       this.headerBounds = {};
 			this.headerTransparent = this.header.querySelector('.header-transparent');
 
@@ -417,6 +418,9 @@
       if (this.headerIsAlwaysSticky) {
         this.header.classList.add('shopify-section-header-sticky');
       };
+      console.log("this.headerIsAlwaysSticky", this.headerIsAlwaysSticky);
+      
+        
 
       this.currentScrollTop = 0;
       this.preventReveal = false;
@@ -496,9 +500,30 @@
 
 			if (scrollTop === 0 ) {
 				this.classList.add('header-at-top');
+        if (this.isheaderHideLogo === true && !window.matchMedia('(max-width: 990px)').matches) {
+          gsap.to(this.header, {
+            duration: 0.5,
+            y: 0,
+            ease: "power3.out",
+          });
+        }
 			} else {
-				this.classList.remove('header-at-top');
-			}		
+				this.classList.remove('header-at-top');     
+        let header_height = this.header.offsetHeight;
+        let nav_height = this.header.querySelector('sticky-header>header>nav').offsetHeight;
+        let header_element = this.header.querySelector('.header');
+        let padding_sum = parseInt(window.getComputedStyle(header_element).getPropertyValue('padding-top')) + parseInt(window.getComputedStyle(header_element).getPropertyValue('padding-bottom'));    
+        
+        if (this.isheaderHideLogo === true && !window.matchMedia('(max-width: 990px)').matches) {
+          gsap.to(this.header, {
+            duration: 0.5,
+            y: -header_height - -nav_height + padding_sum,
+            ease: "power3.out",
+          })
+        }
+			}
+      
+      		
 
       this.currentScrollTop = scrollTop;
     }
@@ -653,6 +678,10 @@
         {
           "value": "reduce-logo-size",
           "label": "t:sections.header.settings.sticky_header_type.options__4.label"
+        },
+        {
+          "value": "hide-logo-on-top-border",
+          "label": "t:sections.header.settings.sticky_header_type.options__5.label"
         }
       ],
       "default": "on-scroll-up",

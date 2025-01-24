@@ -3684,6 +3684,7 @@ details-disclosure > details {
 }
 
 /* transparent header start */
+
 .header-wrapper.transparent-header-scheme.header-at-top {
   background: transparent;
 }
