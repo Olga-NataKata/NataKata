@@ -9,9 +9,9 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/logo.svg",
-    "logo_transparent": "shopify://shop_images/logo.svg",
-    "logo_width": 80,
+    "logo": "shopify://shop_images/image_2025-01-23_173900467.png",
+    "logo_transparent": "shopify://shop_images/image_2025-01-23_173900467.png",
+    "logo_width": 1000,
     "type_header_font": "assistant_n7",
     "heading_scale": 100,
     "type_body_font": "inter_n4",
@@ -142,9 +142,7 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "color_schemes": {
       "scheme-1": {
         "settings": {
