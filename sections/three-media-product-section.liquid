@@ -1,257 +1,83 @@
 {% schema %}
 {
-  "name": "Three Media Section",
+  "name": "Media Slider Section",
   "settings": [
     {
-      "type": "select",
-      "id": "media_1_type",
-      "options": [
-        { "value": "image", "label": "Image" },
-        { "value": "video", "label": "Video" }
-      ],
-      "default": "image",
-      "label": "Media 1 Type"
-    },
-    {
-      "type": "image_picker",
-      "id": "media_image_1",
-      "label": "Image 1",
-      "info": "Select an image if media type is image."
-    },
-    {
-      "type": "url",
-      "id": "media_video_1",
-      "label": "Video URL 1",
-      "info": "Enter a video URL if media type is video."
-    },
-    {
       "type": "text",
-      "id": "media_image_1_text",
-      "label": "Image 1 Text"
-    },
-    {
-      "type": "text",
-      "id": "media_image_1_description",
-      "label": "Image 1 Description"
-    },
-    {
-      "type": "select",
-      "id": "media_image_1_text_position",
-      "options": [
-        { "value": "left", "label": "Left" },
-        { "value": "center", "label": "Center" },
-        { "value": "right", "label": "Right" }
-      ],
-      "default": "left",
-      "label": "Image 1 Text Position"
-    },
-    {
-      "type": "select",
-      "id": "media_2_type",
-      "options": [
-        { "value": "image", "label": "Image" },
-        { "value": "video", "label": "Video" }
-      ],
-      "default": "image",
-      "label": "Media 2 Type"
-    },
-    {
-      "type": "image_picker",
-      "id": "media_image_2",
-      "label": "Image 2",
-      "info": "Select an image if media type is image."
-    },
-    {
-      "type": "url",
-      "id": "media_video_2",
-      "label": "Video URL 2",
-      "info": "Enter a video URL if media type is video."
-    },
-    {
-      "type": "text",
-      "id": "media_image_2_text",
-      "label": "Image 2 Text"
-    },
-    {
-      "type": "text",
-      "id": "media_image_2_description",
-      "label": "Image 2 Description"
-    },
-    {
-      "type": "select",
-      "id": "media_image_2_text_position",
-      "options": [
-        { "value": "left", "label": "Left" },
-        { "value": "center", "label": "Center" },
-        { "value": "right", "label": "Right" }
-      ],
-      "default": "left",
-      "label": "Image 2 Text Position"
-    },
-    {
-      "type": "select",
-      "id": "media_3_type",
-      "options": [
-        { "value": "image", "label": "Image" },
-        { "value": "video", "label": "Video" }
-      ],
-      "default": "image",
-      "label": "Media 3 Type"
-    },
-    {
-      "type": "image_picker",
-      "id": "media_image_3",
-      "label": "Image 3",
-      "info": "Select an image if media type is image."
-    },
-    {
-      "type": "url",
-      "id": "media_video_3",
-      "label": "Video URL 3",
-      "info": "Enter a video URL if media type is video."
-    },
-    {
-      "type": "text",
-      "id": "media_image_3_text",
-      "label": "Image 3 Text"
-    },
-    {
-      "type": "text",
-      "id": "media_image_3_description",
-      "label": "Image 3 Description"
-    },
-    {
-      "type": "select",
-      "id": "media_image_3_text_position",
-      "options": [
-        { "value": "left", "label": "Left" },
-        { "value": "center", "label": "Center" },
-        { "value": "right", "label": "Right" }
-      ],
-      "default": "left",
-      "label": "Image 3 Text Position"
+      "id": "section_text",
+      "label": "Section Text"
     }
   ],
-  "presets": [{ "name": "Three Media Section" }]
+  "blocks": [
+    {
+      "type": "media",
+      "name": "Media Item",
+      "settings": [
+        {
+          "type": "select",
+          "id": "media_type",
+          "options": [
+            { "value": "image", "label": "Image" },
+            { "value": "video", "label": "Video" }
+          ],
+          "default": "image",
+          "label": "Media Type"
+        },
+        {
+          "type": "image_picker",
+          "id": "media_image",
+          "label": "Image",
+          "info": "Select an image if media type is image."
+        },
+        {
+          "type": "url",
+          "id": "media_video",
+          "label": "Video URL",
+          "info": "Enter a video URL if media type is video."
+        },
+        {
+          "type": "text",
+          "id": "media_text",
+          "label": "Media Text"
+        },
+        {
+          "type": "text",
+          "id": "media_description",
+          "label": "Media Description"
+        },
+        {
+          "type": "select",
+          "id": "text_position",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "left",
+          "label": "Text Position"
+        }
+      ],
+      "limit": 3
+    }
+  ],
+  "presets": [{ "name": "Media Slider Section" }]
 }
 {% endschema %}
+
 
 <div class="three-media-product-section">
   <p>{{ section.settings.section_text }}</p>
   <div class="three-media-container">
-    {% for i in (1..3) %}
-      {% assign media_type = "media_" | append: i | append: "_type" %}
-      {% assign image = "media_image_" | append: i %}
-      {% assign video = "media_video_" | append: i %}
-      {% assign text = "media_image_" | append: i | append: "_text" %}
-      {% assign description = "media_image_" | append: i | append: "_description" %}
-      {% assign text_position = "media_image_" | append: i | append: "_text_position" %}
-      {% if section.settings[media_type] == "image" and section.settings[image] %}
-        <div class="three-media{{ i }}">
-          {% if section.settings[text] %}
-            <div class="three-media{{ i }}-text-block {{ section.settings[text_position] }}">
-              <div class="column-container">
-                <h2 class="three-media{{ i }}-text">{{ section.settings[text] }}</h2>
-                <p class="three-media{{ i }}-description">{{ section.settings[description] }}</p>
-              </div>
-            </div>
-          {% endif %}
-          <img src="{{ section.settings[image] | image_url: width: 1920 }}" alt="{{ section.settings[image].alt }}" width="1920" height="auto">
-        </div>
-      {% elsif section.settings[media_type] == "video" and section.settings[video] %}
-        <div class="three-media{{ i }}">
-          {% if section.settings[text] %}
-            <div class="three-media{{ i }}-text-block {{ section.settings[text_position] }}">
-              <div class="column-container">
-                <h2 class="three-media{{ i }}-text">{{ section.settings[text] }}</h2>
-                <p class="three-media{{ i }}-description">{{ section.settings[description] }}</p>
-              </div>
-            </div>
-          {% endif %}
-          <video playsinline="playsinline" autoplay="autoplay" loop="loop" muted="muted" class="BookVideo" preload="metadata">
-            <source src="{{ section.settings[video] }}" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      {% endif %}
-    {% endfor %}
+    {%- for block in section.blocks -%}
+      <div class="three-media-item">
+        {% if block.settings.media_type == 'image' %}
+          <img src="{{ block.settings.media_image }}" alt="{{ block.settings.media_text }}" width="100%" height="auto"/>
+        {% else %}
+          <video src="{{ block.settings.media_video }}" controls></video>
+        {% endif %}
+        <h3>{{ block.settings.media_text }}</h3>
+        <p>{{ block.settings.media_description }}</p>
+      </div>
+    {%- endfor -%}
   </div>
 </div>
-
-<style>
-  .three-media-container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 20px;
-  }
-  .three-media1 {
-    grid-column: span 6;
-    grid-row: span 2;
-    aspect-ratio: 2 / 1;
-    position: relative;
-  }
-  .three-media2, .three-media3 {
-    grid-column: span 3;
-    grid-row: span 3;
-    aspect-ratio: 1 / 1;
-    position: relative;
-  }
-  .three-media1 img,
-  .three-media2 img,
-  .three-media3 img,
-  .three-media1 video,
-  .three-media2 video,
-  .three-media3 video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .three-media1-text, .three-media2-text, .three-media3-text {
-    color: #FFF;
-    font-family: Poppins, sans-serif;
-    font-size: 32px;
-    font-weight: 500;
-    line-height: normal;
-    margin: 0;
-  }
-  .three-media1-description, .three-media2-description, .three-media3-description {
-    color: #FFF;
-    font-family: Poppins;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: normal;
-    margin: 0;
-  }
-  .three-media1-text-block, .three-media2-text-block, .three-media3-text-block {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    z-index: 1;
-    align-items: center;
-    justify-content: center;
-  }
-  .three-media1-text-block.left, .three-media2-text-block.left, .three-media3-text-block.left {
-    justify-content: flex-start;
-    left: 50px;
-  }
-  .three-media1-text-block.right, .three-media2-text-block.right, .three-media3-text-block.right {
-    justify-content: flex-end;
-    right: 50px;
-  }
-  .three-media1-text-block.center, .three-media2-text-block.center, .three-media3-text-block.center {
-    justify-content: center;
-  }
-  .column-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-</style>
-
