@@ -441,13 +441,27 @@
 				document.documentElement.style.setProperty('--header-height', `${this.header.offsetHeight}px`);
 			};
 
+      const headerHeightMobile = () => {
+        const isMobile = window.matchMedia('(max-width: 990px)').matches;
+        // on rezize return header if less than isMobile
+        if (isMobile && this.isheaderHideLogo) {
+          gsap.to(this.header, {
+            duration: 0.5,
+            y: 0,
+            ease: "power3.out",
+          })
+        }
+      }
+
 			updateHeaderHeight();
+      headerHeightMobile();
 
 			let resizeTimeout;
 
 			const onResize = () => {
 					clearTimeout(resizeTimeout);
 					resizeTimeout = setTimeout(updateHeaderHeight, 60);
+          headerHeightMobile();
 			};
 
 			window.addEventListener('resize', onResize);
@@ -498,31 +512,39 @@
         requestAnimationFrame(this.reset.bind(this));
       }
 
-			if (scrollTop === 0 ) {
-				this.classList.add('header-at-top');
-        if (this.isheaderHideLogo === true && !window.matchMedia('(max-width: 990px)').matches) {
+      const isMobile = window.matchMedia('(max-width: 990px)').matches;
+
+      if (scrollTop === 0) {
+        this.classList.add('header-at-top');
+        if (this.isheaderHideLogo) {
           gsap.to(this.header, {
             duration: 0.5,
             y: 0,
-            ease: "power3.out",
+            ease: 'power3.out',
           });
         }
-			} else {
-				this.classList.remove('header-at-top');     
-        let header_height = this.header.offsetHeight;
-        let nav_height = this.header.querySelector('sticky-header>header>nav').offsetHeight;
-        let header_element = this.header.querySelector('.header');
-        let padding_sum = parseInt(window.getComputedStyle(header_element).getPropertyValue('padding-top')) + parseInt(window.getComputedStyle(header_element).getPropertyValue('padding-bottom'));    
-        
-        if (this.isheaderHideLogo === true && !window.matchMedia('(max-width: 990px)').matches) {
+      } else {
+        this.classList.remove('header-at-top');
+        const headerHeight = this.header.offsetHeight;
+        const navHeight = this.header.querySelector('sticky-header > header > nav').offsetHeight;
+        const headerElement = this.header.querySelector('.header');
+        const paddingSum = getPaddingSum(headerElement);
+
+        if (this.isheaderHideLogo && !isMobile) {
           gsap.to(this.header, {
             duration: 0.5,
-            y: -header_height - -nav_height + padding_sum,
-            ease: "power3.out",
-          })
+            y: -headerHeight + navHeight + paddingSum,
+            ease: 'power3.out',
+          });
         }
-			}
-      
+      }
+
+      function getPaddingSum(element) {
+        const styles = window.getComputedStyle(element);
+        const paddingTop = parseInt(styles.getPropertyValue('padding-top'), 10);
+        const paddingBottom = parseInt(styles.getPropertyValue('padding-bottom'), 10);
+        return paddingTop + paddingBottom;
+      }
       		
 
       this.currentScrollTop = scrollTop;
