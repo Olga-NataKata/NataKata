@@ -1,211 +1,112 @@
 {% schema %}
-  {
-    "name": "Three Media Section",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "media_image_1",
-        "label": "Image 1"
-      },
-      {
-        "type": "text",
-        "id": "media_image_1_text",
-        "label": "Image 1 Text"
-      },
-      {
-        "type": "text",
-        "id": "media_image_1_description",
-        "label": "Image 1 Description"
-      },
-      {
-        "type": "select",
-        "id": "media_image_1_text_position",
-        "options": [
-          {
-            "value": "left",
-            "label": "Left"
-          },
-          {
-            "value": "center",
-            "label": "Center"
-          },
-          {
-            "value": "right",
-            "label": "Right"
-          }
-        ],
-        "default": "left",
-        "label": "Image 1 Text Position"
-      },    
-      {
-        "type": "image_picker",
-        "id": "media_image_2",
-        "label": "Image 2"
-      },
-      {
-        "type": "text",
-        "id": "media_image_2_text",
-        "label": "Image 2 Text"
-      },
-      {
-        "type": "text",
-        "id": "media_image_2_description",
-        "label": "Image 2 Description"
-      },
-      {
-        "type": "select",
-        "id": "media_image_2_text_position",
-        "options": [
-          {
-            "value": "left",
-            "label": "Left"
-          },
-          {
-            "value": "center",
-            "label": "Center"
-          },
-          {
-            "value": "right",
-            "label": "Right"
-          }
-        ],
-        "default": "left",
-        "label": "Image 2 Text Position"
-      },
-      {
-        "type": "image_picker",
-        "id": "media_image_3",
-        "label": "Image 3"
-      },
-      {
-        "type": "text",
-        "id": "media_image_3_text",
-        "label": "Image 3 Text"
-      },
-      {
-        "type": "text",
-        "id": "media_image_3_description",
-        "label": "Image 3 Description"
-      },
-      {
-        "type": "select",
-        "id": "media_image_3_text_position",
-        "options": [
-          {
-            "value": "left",
-            "label": "Left"
-          },
-          {
-            "value": "center",
-            "label": "Center"
-          },
-          {
-            "value": "right",
-            "label": "Right"
-          }
-        ],
-        "default": "left",
-        "label": "Image 3 Text Position"
-      }
-    ],
-    "presets": [
-      {
-        "name": "Three Media Section"
-      }
-    ]
-  }
-  {% endschema %}
-  
+{
+  "name": "Three Media Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "media_image_1",
+      "label": "Image 1"
+    },
+    {
+      "type": "text",
+      "id": "media_image_1_text",
+      "label": "Image 1 Text"
+    },
+    {
+      "type": "text",
+      "id": "media_image_1_description",
+      "label": "Image 1 Description"
+    },
+    {
+      "type": "select",
+      "id": "media_image_1_text_position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left",
+      "label": "Image 1 Text Position"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_image_2",
+      "label": "Image 2"
+    },
+    {
+      "type": "text",
+      "id": "media_image_2_text",
+      "label": "Image 2 Text"
+    },
+    {
+      "type": "text",
+      "id": "media_image_2_description",
+      "label": "Image 2 Description"
+    },
+    {
+      "type": "select",
+      "id": "media_image_2_text_position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left",
+      "label": "Image 2 Text Position"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_image_3",
+      "label": "Image 3"
+    },
+    {
+      "type": "text",
+      "id": "media_image_3_text",
+      "label": "Image 3 Text"
+    },
+    {
+      "type": "text",
+      "id": "media_image_3_description",
+      "label": "Image 3 Description"
+    },
+    {
+      "type": "select",
+      "id": "media_image_3_text_position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left",
+      "label": "Image 3 Text Position"
+    }
+  ],
+  "presets": [{ "name": "Three Media Section" }]
+}
+{% endschema %}
+
 <div class="three-media-product-section">
   <p>{{ section.settings.section_text }}</p>
   <div class="three-media-container">
-    {% if section.settings.media_image_1 %}
-      <div class="three-media1">
-        {% if section.settings.media_image_1_text %}
-          {% if section.settings.media_image_1_text_position == 'left' %}
-            <div class="three-media1-text-block left">
+    {% for i in (1..3) %}
+      {% assign image = "media_image_" | append: i %}
+      {% assign text = "media_image_" | append: i | append: "_text" %}
+      {% assign description = "media_image_" | append: i | append: "_description" %}
+      {% assign text_position = "media_image_" | append: i | append: "_text_position" %}
+      {% if section.settings[image] %}
+        <div class="three-media{{ i }}">
+          {% if section.settings[text] %}
+            <div class="three-media{{ i }}-text-block {{ section.settings[text_position] }}">
               <div class="column-container">
-                <h2 class="three-media1-text">{{ section.settings.media_image_1_text }}</h2>
-                <p class="three-media1-description">{{ section.settings.media_image_1_description }}</p>
-              </div>
-            </div>
-          {% elsif section.settings.media_image_1_text_position == 'center' %}
-            <div class="three-media1-text-block center">
-              <div class="column-container">
-                <h2 class="three-media1-text">{{ section.settings.media_image_1_text }}</h2>
-                <p class="three-media1-description">{{ section.settings.media_image_1_description }}</p>
-              </div>
-            </div>
-          {% elsif section.settings.media_image_1_text_position == 'right' %}
-            <div class="three-media1-text-block right">
-              <div class="column-container">
-                <h2 class="three-media1-text">{{ section.settings.media_image_1_text }}</h2>  
-                <p class="three-media1-description">{{ section.settings.media_image_1_description }}</p>
+                <h2 class="three-media{{ i }}-text">{{ section.settings[text] }}</h2>
+                <p class="three-media{{ i }}-description">{{ section.settings[description] }}</p>
               </div>
             </div>
           {% endif %}
-        {% endif %}
-        <img src="{{ section.settings.media_image_1 | image_url: width: 1920 }}" alt="{{ section.settings.media_image_1.alt }}" width="1920" height="auto">
-      </div>
-    {% endif %}
-    {% if section.settings.media_image_2 %}
-      <div class="three-media2">
-        {% if section.settings.media_image_2_text %}
-          {% if section.settings.media_image_2_text_position == 'left' %}
-            <div class="three-media2-text-block left">
-              <div class="column-container">
-                <h2 class="three-media2-text">{{ section.settings.media_image_2_text }}</h2>
-                <p class="three-media2-description">{{ section.settings.media_image_2_description }}</p>
-              </div>
-            </div>
-          {% elsif section.settings.media_image_2_text_position == 'center' %}
-            <div class="three-media2-text-block center">
-              <div class="column-container">
-                <h2 class="three-media2-text">{{ section.settings.media_image_2_text }}</h2>
-                <p class="three-media2-description">{{ section.settings.media_image_2_description }}</p>
-              </div>
-            </div>
-          {% elsif section.settings.media_image_2_text_position == 'right' %}
-            <div class="three-media2-text-block right">
-              <div class="column-container">
-                <h2 class="three-media2-text">{{ section.settings.media_image_2_text }}</h2>
-                <p class="three-media2-description">{{ section.settings.media_image_2_description }}</p>
-              </div>
-            </div>
-          {% endif %}
-        {% endif %}
-        <img src="{{ section.settings.media_image_2 | image_url: width: 1920 }}" alt="{{ section.settings.media_image_2.alt }}" width="1920" height="auto">
-      </div>
-    {% endif %}
-    {% if section.settings.media_image_3 %}
-      <div class="three-media3">
-        {% if section.settings.media_image_3_text %}
-          {% if section.settings.media_image_3_text_position == 'left' %}
-            <div class="three-media3-text-block left">
-              <div class="column-container">  
-                <h2 class="three-media3-text">{{ section.settings.media_image_3_text }}</h2>
-                <p class="three-media3-description">{{ section.settings.media_image_3_description }}</p>
-              </div>
-            </div>
-          {% elsif section.settings.media_image_3_text_position == 'center' %}
-            <div class="three-media3-text-block center">
-              <div class="column-container">
-                <h2 class="three-media3-text">{{ section.settings.media_image_3_text }}</h2>
-                <p class="three-media3-description">{{ section.settings.media_image_3_description }}</p>
-              </div>
-            </div>
-          {% elsif section.settings.media_image_3_text_position == 'right' %}
-            <div class="three-media3-text-block right">
-              <div class="column-container">  
-                <h2 class="three-media3-text">{{ section.settings.media_image_3_text }}</h2>
-                <p class="three-media3-description">{{ section.settings.media_image_3_description }}</p>
-              </div>
-            </div>
-          {% endif %}
-        {% endif %}
-        <img src="{{ section.settings.media_image_3 | image_url: width: 1920 }}" alt="{{ section.settings.media_image_3.alt }}" width="1920" height="auto">
-      </div>
-    {% endif %}
+          <img src="{{ section.settings[image] | image_url: width: 1920 }}" alt="{{ section.settings[image].alt }}" width="1920" height="auto">
+        </div>
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
 
@@ -216,75 +117,44 @@
     grid-template-rows: repeat(4, 1fr);
     gap: 20px;
   }
-
   .three-media1 {
     grid-column: span 6;
     grid-row: span 2;
-    aspect-ratio: 2 / 1; /* Співвідношення 2:1 */
-    position: relative; /* Для правильного відображення картинки */
+    aspect-ratio: 2 / 1;
+    position: relative;
   }
-
   .three-media2, .three-media3 {
     grid-column: span 3;
     grid-row: span 3;
-    aspect-ratio: 1 / 1; /* Співвідношення 1:1 */
-    position: relative; /* Для правильного відображення картинки */
+    aspect-ratio: 1 / 1;
+    position: relative;
   }
-
   .three-media1 img,
   .three-media2 img,
   .three-media3 img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Для заповнення контейнера без спотворення */
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
   }
-
-  .three-media1-text{ 
+  .three-media1-text, .three-media2-text, .three-media3-text {
     color: #FFF;
     font-family: Poppins, sans-serif;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    margin: 0;
-  }
-
-  .three-media2-text, .three-media3-text {
-    color: #FFF;
-    text-align: right;
-    font-family: Poppins;
     font-size: 32px;
-    font-style: normal;
     font-weight: 500;
     line-height: normal;
     margin: 0;
   }
-
-  .three-media1-description{
+  .three-media1-description, .three-media2-description, .three-media3-description {
     color: #FFF;
-    text-align: right;
-    font-family: Poppins;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin: 0;
-  }
-
-  .three-media2-description, .three-media3-description {
-    color: #FFF;
-    text-align: right;
     font-family: Poppins;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: normal;
     margin: 0;
   }
-
   .three-media1-text-block, .three-media2-text-block, .three-media3-text-block {
     position: absolute;
     top: 0;
@@ -296,28 +166,21 @@
     align-items: center;
     justify-content: center;
   }
-
   .three-media1-text-block.left, .three-media2-text-block.left, .three-media3-text-block.left {
     justify-content: flex-start;
     left: 50px;
   }
-
   .three-media1-text-block.right, .three-media2-text-block.right, .three-media3-text-block.right {
     justify-content: flex-end;
     right: 50px;
   }
-
   .three-media1-text-block.center, .three-media2-text-block.center, .three-media3-text-block.center {
     justify-content: center;
   }
-
-
   .column-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
 </style>
-
-
 
