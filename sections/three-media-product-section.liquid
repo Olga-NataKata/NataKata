@@ -67,6 +67,12 @@
             ],
             "default": "left",
             "label": "Text Position"
+          },
+          {
+            "type": "product",
+            "id": "media_product",
+            "label": "Linked Product",
+            "info": "Select a product to link with this media item."
           }
         ],
         "limit": 3
@@ -74,7 +80,7 @@
     ],
     "presets": [{ "name": "Media Slider Section" }]
   }
-  {% endschema %}
+  {% endschema %}  
   
 <div class="three-media-container">
 {%- for block in section.blocks -%}
@@ -82,20 +88,45 @@
     {%- if block.settings.media_type == 'image' -%}
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          {%- if block.settings.media_image1 != blank -%}
-            <div class="swiper-slide">
-              <img src="{{ block.settings.media_image1 | image_url: width: 1920 }}" width="1920" height="auto" alt="{{ block.settings.media_text }}">
-            </div>
-          {%- endif -%}
-          {%- if block.settings.media_image2 != blank -%}
-            <div class="swiper-slide">
-              <img src="{{ block.settings.media_image2 | image_url: width: 1920 }}" width="1920" height="auto" alt="{{ block.settings.media_text }}">
-            </div>
-          {%- endif -%}
-          {%- if block.settings.media_image3 != blank -%}
-            <div class="swiper-slide">
-              <img src="{{ block.settings.media_image3 | image_url: width: 1920 }}" width="1920" height="auto" alt="{{ block.settings.media_text }}">
-            </div>
+          {%- if block.settings.media_product != blank -%}
+            
+            {%- if block.settings.media_image1 != blank -%}
+              <div class="swiper-slide">
+                <a href="{{ block.settings.media_product.url }}">
+                  <img src="{{ block.settings.media_image1 | image_url: width: 1920 }}" width="1920" height="auto" alt="{{ block.settings.media_text }}">
+                </a>
+              </div>
+            {%- endif -%}
+            {%- if block.settings.media_image2 != blank -%}
+              <div class="swiper-slide">
+                <a href="{{ block.settings.media_product.url }}">
+                  <img src="{{ block.settings.media_image2 | image_url: width: 1920 }}" width="1920" height="auto" alt="{{ block.settings.media_text }}">
+                </a>
+              </div>
+            {%- endif -%}
+            {%- if block.settings.media_image3 != blank -%}
+              <div class="swiper-slide">
+                <a href="{{ block.settings.media_product.url }}">
+                  <img src="{{ block.settings.media_image3 | image_url: width: 1920 }}" width="1920" height="auto" alt="{{ block.settings.media_text }}">
+                </a>
+              </div>
+            {%- endif -%}
+          {%- else -%}
+            {%- if block.settings.media_image1 != blank -%}
+              <div class="swiper-slide">
+                <img src="{{ block.settings.media_image1 | image_url: width: 1920 }}" width="1920" height="auto" alt="{{ block.settings.media_text }}">
+              </div>
+            {%- endif -%}
+            {%- if block.settings.media_image2 != blank -%}
+              <div class="swiper-slide">
+                <img src="{{ block.settings.media_image2 | image_url: width: 1920 }}" width="1920" height="auto" alt="{{ block.settings.media_text }}">
+              </div>
+            {%- endif -%}
+            {%- if block.settings.media_image3 != blank -%}
+              <div class="swiper-slide">
+                <img src="{{ block.settings.media_image3 | image_url: width: 1920 }}" width="1920" height="auto" alt="{{ block.settings.media_text }}">
+              </div>
+            {%- endif -%}
           {%- endif -%}
         </div>
         <div class="swiper-pagination"></div>
