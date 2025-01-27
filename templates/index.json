@@ -129,46 +129,6 @@
     },
     "three_media_product_section_qQwNtX": {
       "type": "three-media-product-section",
-      "blocks": {
-        "media_k469YE": {
-          "type": "media",
-          "settings": {
-            "media_type": "image",
-            "media_image": "shopify://shop_images/DD3A1976_JPG.jpg",
-            "media_video": "",
-            "media_text": "",
-            "media_description": "",
-            "text_position": "left"
-          }
-        },
-        "media_KwPx4V": {
-          "type": "media",
-          "settings": {
-            "media_type": "image",
-            "media_image": "shopify://shop_images/DD3A1974_JPG.jpg",
-            "media_video": "",
-            "media_text": "",
-            "media_description": "",
-            "text_position": "left"
-          }
-        },
-        "media_pB9WmU": {
-          "type": "media",
-          "settings": {
-            "media_type": "image",
-            "media_image": "shopify://shop_images/Untitled_8_copy_2_-1.jpg",
-            "media_video": "",
-            "media_text": "",
-            "media_description": "",
-            "text_position": "left"
-          }
-        }
-      },
-      "block_order": [
-        "media_k469YE",
-        "media_KwPx4V",
-        "media_pB9WmU"
-      ],
       "settings": {
         "section_text": "Three Media Section"
       }

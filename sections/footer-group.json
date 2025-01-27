@@ -14,6 +14,14 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "image_JJQr7x": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image_2025-01-23_173900467.png",
+            "image_width": 550,
+            "alignment": "right"
+          }
+        },
         "link_list_QfQhHG": {
           "type": "link_list",
           "settings": {
@@ -37,23 +45,24 @@
         }
       },
       "block_order": [
+        "image_JJQr7x",
         "link_list_QfQhHG",
         "link_list_E8zj8L",
         "link_list_wWVK6q"
       ],
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": true,
         "enable_language_selector": true,
-        "payment_enable": true,
+        "payment_enable": false,
         "show_policy": true,
         "margin_top": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     }
   },
