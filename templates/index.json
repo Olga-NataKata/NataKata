@@ -129,6 +129,55 @@
     },
     "three_media_product_section_qQwNtX": {
       "type": "three-media-product-section",
+      "blocks": {
+        "media_VPV7X9": {
+          "type": "media",
+          "settings": {
+            "media_type": "image",
+            "media_image1": "shopify://shop_images/3_cb138f35-7ea5-4536-bf03-1866c8589d7a.jpg",
+            "media_image2": "shopify://shop_images/5_69528514-2544-44c2-9a30-1d61db66e86a.jpg",
+            "media_image3": "shopify://shop_images/6_79c7f8ef-a9cb-4c02-9191-547f88ee18c8.jpg",
+            "media_video": "",
+            "media_text": "",
+            "media_description": "",
+            "text_position": "left",
+            "media_product": ""
+          }
+        },
+        "media_DpJCGm": {
+          "type": "media",
+          "settings": {
+            "media_type": "image",
+            "media_image1": "shopify://shop_images/14.jpg",
+            "media_image2": "shopify://shop_images/4_caf7d55c-d807-4cb5-8c35-c2ce9ee8fee3.jpg",
+            "media_image3": "shopify://shop_images/17.jpg",
+            "media_video": "",
+            "media_text": "",
+            "media_description": "",
+            "text_position": "left",
+            "media_product": ""
+          }
+        },
+        "media_6eTw3U": {
+          "type": "media",
+          "settings": {
+            "media_type": "image",
+            "media_image1": "shopify://shop_images/5.jpg",
+            "media_image2": "shopify://shop_images/3_788d6b8e-4a81-4fa6-ad86-191566d2953b.jpg",
+            "media_image3": "shopify://shop_images/2_2546e7da-bdb7-4f51-bda7-340a0ffe2d7b.jpg",
+            "media_video": "",
+            "media_text": "",
+            "media_description": "",
+            "text_position": "left",
+            "media_product": ""
+          }
+        }
+      },
+      "block_order": [
+        "media_VPV7X9",
+        "media_DpJCGm",
+        "media_6eTw3U"
+      ],
       "settings": {
         "section_text": "Three Media Section"
       }
