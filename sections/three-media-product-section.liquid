@@ -139,8 +139,10 @@
         {{ block.settings.media_video | video_tag: autoplay: true, loop: true, controls: false, muted: true }}
       {%- endif -%}
     {%- endif -%}
-    <h3>{{ block.settings.media_text }}</h3>
-    <p>{{ block.settings.media_description }}</p>
+    <div class="three-media-text {{ block.settings.text_position }}">
+      <h3>{{ block.settings.media_text }}</h3>
+      <p>{{ block.settings.media_description }}</p>
+    </div>
   </div>
 {%- endfor -%}
 </div>
@@ -181,15 +183,56 @@
     aspect-ratio: 1 / 1;   /* квадратне співвідношення */
   }
 
-
-  .three-media-item h3 {
-    font-size: 18px;
-    margin: 10px 0;
+  .three-media1 .three-media-text h3 {
+    font-size: 40px;
   }
 
-  .three-media-item p {
-    font-size: 14px;
-    color: #666;
+  .three-media1 .three-media-text p {
+    font-size: 20px;
+  }
+
+  .three-media2 .three-media-text h3,
+  .three-media3 .three-media-text h3 {
+    font-size: 32px;
+  }
+
+  .three-media2 .three-media-text p,
+  .three-media3 .three-media-text p {
+    font-size: 16px;
+  }
+  
+  .three-media-text {
+    position: absolute;
+    color: #fff;
+    z-index: 1;
+    padding: 0 100px 0 100px;
+  }
+
+  .three-media-text h3 {;
+    margin: 0;
+    color: #fff;
+  }
+
+  .three-media-text p {
+    line-height: 1.5;
+    margin: 0;
+    color: #fff;
+  }
+
+  .left {
+    left: 10px;
+    top: 50%;
+  }
+
+  .right {
+    right: 10px;
+    top: 50%;
+  }
+
+  .center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .swiper-container {
