@@ -18,7 +18,7 @@
           "type": "pages_transparent_header",
           "settings": {
             "color_scheme": "scheme-1",
-            "pages": "transparent-header"
+            "pages": ""
           }
         }
       },
