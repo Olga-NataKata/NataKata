@@ -89,7 +89,6 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           {%- if block.settings.media_product != blank -%}
-            
             {%- if block.settings.media_image1 != blank -%}
               <div class="swiper-slide">
                 <a href="{{ block.settings.media_product.url }}">
@@ -159,16 +158,11 @@
 
   .three-media-item {
     position: relative;
-    padding: 10px;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .three-media-item img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
   }
 
   .three-media1 {
