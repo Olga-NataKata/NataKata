@@ -11,7 +11,7 @@
   height: calc(100vh - 100%);
   height: calc(var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%)));
   top: 100%;
-  left: 0;
+  right: 0;
   background: rgba(var(--color-foreground), 0.5);
   opacity: 0;
   visibility: hidden;
@@ -27,10 +27,10 @@ menu-drawer > details[open] > summary::before {
 
 .menu-drawer {
   position: absolute;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   visibility: hidden;
   z-index: 3;
-  left: 0;
+  right: 0;
   top: 100%;
   width: 100%;
   padding: 0;
