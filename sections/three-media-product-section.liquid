@@ -248,20 +248,54 @@
   }
 
   .swiper-button-prev, .swiper-button-next {
-    display: block !important;
+    display: flex !important; 
+    justify-content: center; 
+    align-items: center; 
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    color: #000;
-    padding: 10px;
+    width: 40px; 
+    height: 40px; 
+    color: #fff;
+    margin: 0; 
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 24px; 
+  }
+
+
+  .swiper-button-disabled {
+    opacity: 0 !important;
   }
 
   .swiper-pagination-bullet {
-    background-color:#000;
+    background-color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
   }
-  
+
+  /* Optional: Adjust the position of prev and next arrows */
+  .swiper-button-prev {
+    left: 10px;
+  }
+
+  .swiper-button-next {
+    right: 10px;
+  }
+
+  /* Show buttons when hovering over the Swiper container */
+  .swiper-container:hover .swiper-button-prev,
+  .swiper-container:hover .swiper-button-next,
+  .swiper-container:hover .swiper-pagination-bullet,
+  .swiper-container:hover .swiper-button-disabled {
+    opacity: 1 !important;
+  }
 </style>
 
 <script>
@@ -277,4 +311,5 @@
     },
     
   });
+
 </script>
