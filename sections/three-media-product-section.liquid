@@ -274,10 +274,21 @@
     opacity: 0 !important;
   }
 
-  .swiper-pagination-bullet {
-    background-color: #fff;
+  .swiper-pagination {
     opacity: 0;
     transition: opacity 0.3s;
+    gap: 24px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 32px!important;
+    
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #fff !important;
   }
 
   /* Optional: Adjust the position of prev and next arrows */
@@ -292,7 +303,7 @@
   /* Show buttons when hovering over the Swiper container */
   .swiper-container:hover .swiper-button-prev,
   .swiper-container:hover .swiper-button-next,
-  .swiper-container:hover .swiper-pagination-bullet,
+  .swiper-container:hover .swiper-pagination,
   .swiper-container:hover .swiper-button-disabled {
     opacity: 1 !important;
   }
