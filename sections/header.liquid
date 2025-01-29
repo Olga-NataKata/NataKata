@@ -374,7 +374,11 @@
         {%- endif -%}
       </a>
     </div>
+    
   </header>
+  {% if settings.theme_preloader_pages == 'show_on_home_page' and template.name != 'index' %}
+    <div class="global-header-loading-bar"></div>
+  {% endif %}
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
 
 {%- if settings.cart_type == "notification" -%}
@@ -581,6 +585,24 @@
   }
 
   customElements.define('sticky-header', StickyHeader);
+
+  document.addEventListener("DOMContentLoaded", function () {
+    let loadingBar = document.querySelector(".global-header-loading-bar");
+
+    let width = 0;
+    let interval = setInterval(() => {
+        width += Math.random() * 10;
+        if (width >= 100) {
+            width = 100;
+            clearInterval(interval);
+            setTimeout(() => {
+              // move the loading bar -100% x axis
+                loadingBar.style.transform = "translateX(-100%)";
+            }, 500);
+        }
+        loadingBar.style.width = width + "%";
+    }, 50);
+  });
 {% endjavascript %}
 
 <script type="application/ld+json">

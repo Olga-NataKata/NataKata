@@ -3750,4 +3750,14 @@ details-disclosure > details {
     flex: 1 1 auto;
   }
 }
-
+.global-header-loading-bar {
+  display: block !important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: #000;
+  z-index: 9999;
+  transition: width 0.3s ease-out;
+}
