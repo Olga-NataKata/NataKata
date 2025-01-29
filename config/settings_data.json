@@ -128,6 +128,7 @@
     "show_cart_note": true,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
+    "theme_preloader_pages": "show_on_home_page",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
