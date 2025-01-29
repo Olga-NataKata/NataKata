@@ -391,6 +391,27 @@
   class StickyHeader extends HTMLElement {
     constructor() {
       super();
+      this.initLoadingBar();
+    }
+
+    initLoadingBar() {
+      document.addEventListener("DOMContentLoaded", function () {
+        let loadingBar = document.querySelector(".global-header-loading-bar");
+
+        let width = 0;
+        let interval = setInterval(() => {
+            width += Math.random() * 10;
+            if (width >= 100) {
+                width = 100;
+                clearInterval(interval);
+                setTimeout(() => {
+                  // move the loading bar -100% x axis
+                    loadingBar.style.transform = "translateX(-100%)";
+                }, 500);
+            }
+            loadingBar.style.width = width + "%";
+        }, 50);
+      });
     }
 
     connectedCallback() {
@@ -586,23 +607,6 @@
 
   customElements.define('sticky-header', StickyHeader);
 
-  document.addEventListener("DOMContentLoaded", function () {
-    let loadingBar = document.querySelector(".global-header-loading-bar");
-
-    let width = 0;
-    let interval = setInterval(() => {
-        width += Math.random() * 10;
-        if (width >= 100) {
-            width = 100;
-            clearInterval(interval);
-            setTimeout(() => {
-              // move the loading bar -100% x axis
-                loadingBar.style.transform = "translateX(-100%)";
-            }, 500);
-        }
-        loadingBar.style.width = width + "%";
-    }, 50);
-  });
 {% endjavascript %}
 
 <script type="application/ld+json">
