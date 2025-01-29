@@ -157,6 +157,10 @@
           "label": "Desktop logo width",
           "info": "Logo width is automatically optimized for mobile."
         },
+        "other_pages_logo_width": {
+          "label": "Other pages logo width",
+          "info": "Logo width is automatically optimized for mobile."
+        },
         "favicon": {
           "label": "Favicon image",
           "info": "Will be scaled down to 32 x 32px"
@@ -1114,6 +1118,21 @@
             "label": "Middle center"
           }
         },
+        "other_pages_logo_position": {
+          "label": "Other pages logo position",
+          "options__1": {
+            "label": "Middle left"
+          },
+          "options__2": {
+            "label": "Top left"
+          },
+          "options__3": {
+            "label": "Top center"
+          },
+          "options__4": {
+            "label": "Middle center"
+          }
+        },
         "menu": {
           "label": "Menu"
         },
@@ -1183,6 +1202,15 @@
         },
         "mobile_logo_position": {
           "label": "Mobile logo position",
+          "options__1": {
+            "label": "Center"
+          },
+          "options__2": {
+            "label": "Left"
+          }
+        },
+        "other_pages_mobile_logo_position": {
+          "label": "Other pages mobile logo position",
           "options__1": {
             "label": "Center"
           },
