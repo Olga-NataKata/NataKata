@@ -308,10 +308,11 @@
     </a>
 
     {% liquid
-      if settings.theme_preloader_pages == 'show_on_all_pages'
+      if settings.theme_preloader_pages == 'show_on_all_pages' or (settings.theme_preloader_pages == 'show_on_home_page' and template.name == 'index')
         render 'preloader'
       endif
-    %} 
+    %}
+
 
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
