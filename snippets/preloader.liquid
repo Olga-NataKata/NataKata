@@ -1,0 +1,62 @@
+{{ 'preloader.css' | asset_url | stylesheet_tag }}
+
+<div class="preloader color-{{ settings.theme_preloader_color_scheme }}">
+		<div class="preloader-holder">
+				<div class="preloader-logo active">
+						<div class="preloader-logo-image">
+								{% if settings.preloader_logo != blank %}
+										<h2 class="logo-title">{{ settings.preloader_logo }}</h2>
+								{% elsif settings.preloader_logo_image != blank %}
+										<h2>
+												<img
+													srcset="{{ settings.preloader_logo_image | image_url: width: 300 }} 300w"
+													src="{{ settings.preloader_logo_image | image_url: width: 300 }}"
+													loading="lazy"
+													class="header__heading-logo"
+													width="300"
+													height="{{ settings.preloader_logo_image.height }}"
+													alt="{{ settings.preloader_logo_image.alt | default: shop.name | escape }}"
+												/>
+										</h2>
+								{% else %}
+										<h2 class="logo-title">{{ shop.name }}</h2>
+								{% endif %}
+						</div>
+						<div class="logo-loader">100%</div>
+				</div>
+		</div>
+</div>
+
+<script>
+		"use strict";
+		let preloaderHomepageReloades = parseInt(sessionStorage.getItem('preloaderCounter') || 0);
+
+		
+
+		const loader = document.querySelector('.preloader');
+		loader.classList.add('active');
+		function loaderStart(_success) {
+				const inner = document.querySelector('.logo-loader');
+				let w = 0,
+						t = setInterval(function() {
+								w = w + 2;
+								inner.textContent = w+'%';
+								if (w === 100) {
+										clearInterval(t);
+										w = 0;
+										loader.classList.add('hide-loader');
+								}
+						}, 5);
+
+				function loaderEnd() {
+						
+						loader.classList.add('hide-loader');
+						
+				}
+				document.addEventListener('DOMContentLoaded', loaderEnd);
+				document.addEventListener('shopify:section:load', loaderEnd);
+		}
+
+		loaderStart();
+</script>
+

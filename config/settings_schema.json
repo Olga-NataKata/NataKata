@@ -1470,5 +1470,52 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "Preloader",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Theme preloader"
+      },
+      {
+        "type": "select",
+        "id": "theme_preloader_pages",
+        "options": [
+          {
+            "value": "no_preloader",
+            "label": "No preloader"
+          },
+          {
+            "value": "show_on_home_page",
+            "label": "For home page"
+          },
+          {
+            "value": "show_on_all_pages",
+            "label": "For all pages"
+          }
+        ],
+        "default": "show_on_all_pages",
+        "label": "Enable preloader"
+      },
+			{
+				"type": "color_scheme",
+				"id": "theme_preloader_color_scheme",
+				"label": "t:sections.all.colors.label",
+				"default": "scheme-3"
+			},
+      {
+        "type": "image_picker",
+        "id": "preloader_logo_image",
+        "label": "Preloader logo image",
+        "info": "This image would be disabled if used preloader text option."
+      },
+      {
+        "type": "text",
+        "id": "preloader_logo",
+        "label": "Preloader text",
+        "info": "Add preloader text"
+      }
+    ]
   }
 ]
