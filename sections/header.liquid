@@ -742,9 +742,10 @@
         requestAnimationFrame(this.reset.bind(this));
       }
 
+      const isHomePage = window.location.pathname === '/';
       const isMobile = window.matchMedia('(max-width: 990px)').matches;
 
-      if (scrollTop === 0) {
+      if (isHomePage && scrollTop === 0) {
         this.classList.add('header-at-top');
         if (this.isheaderHideLogo) {
           gsap.to(this.header, {
@@ -753,7 +754,7 @@
             ease: 'power3.out',
           });
         }
-      } else {
+      } else if (isHomePage) {
         this.classList.remove('header-at-top');
         const headerHeight = this.header.offsetHeight;
         const navHeight = this.header.querySelector('sticky-header > header > nav').offsetHeight;

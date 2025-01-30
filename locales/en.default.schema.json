@@ -1173,7 +1173,7 @@
             "label": "Always, reduce logo size"
           },
           "options__5": {
-            "label": "Always, hide logo on top border"
+            "label": "Always, hide logo on top border only on home page"
           }
         },
         "header__3": {
