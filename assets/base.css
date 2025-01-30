@@ -3751,8 +3751,7 @@ details-disclosure > details {
   }
 }
 .global-header-loading-bar {
-  display: block !important;
-  position: fixed;
+  display: flex !important;
   bottom: 0;
   left: 0;
   width: 0%;

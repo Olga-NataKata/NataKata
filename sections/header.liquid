@@ -59,6 +59,7 @@
   .list-menu {
     list-style: none;
     padding: 0;
+    padding-left: 17px;
     margin: 0;
   }
 
@@ -575,7 +576,6 @@
         {%- endif -%}
       </a>
     </div>
-    
   </header>
   {%- endif -%}
   {% if settings.theme_preloader_pages == 'show_on_home_page' and template.name != 'index' %}
@@ -602,7 +602,7 @@
 
         let width = 0;
         let interval = setInterval(() => {
-            width += Math.random() * 10;
+            width += Math.random() * 1000;
             if (width >= 100) {
                 width = 100;
                 clearInterval(interval);
