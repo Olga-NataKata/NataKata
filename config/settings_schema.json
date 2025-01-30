@@ -24,8 +24,8 @@
         "type": "range",
         "id": "logo_width",
         "min": 50,
-        "max": 1000,
-        "step": 10,
+        "max": 2000,
+        "step": 50,
         "default": 100,
         "unit": "px",
         "label": "t:settings_schema.logo.settings.logo_width.label"
