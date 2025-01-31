@@ -324,7 +324,11 @@
       }
     },
     "footer": {
-      "payment": "Payment methods"
+      "payment": "Payment methods",
+      "shipping": "Shipping",
+      "terms": "Terms & Conditions",
+      "privacy": "Privacy Policy",
+      "description": "We offer worldwide shipping. Since many of our items are handcrafted and exclusive, please check product availability before placing your order."
     },
     "featured_blog": {
       "view_all": "View all",
