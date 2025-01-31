@@ -768,6 +768,20 @@
             ease: 'power3.out',
           });
         }
+      } else {
+        if (scrollTop > this.currentScrollTop) {
+          gsap.to(this.header, {
+            duration: 0.5,
+            y: -this.header.offsetHeight,
+            ease: 'power3.out',
+          });
+        } else {
+          gsap.to(this.header, {
+            duration: 0.5,
+            y: 0,
+            ease: 'power3.out',
+          });
+        }
       }
 
       function getPaddingSum(element) {
