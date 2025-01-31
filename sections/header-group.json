@@ -27,7 +27,7 @@
       ],
       "settings": {
         "logo_position": "top-center",
-        "other_pages_logo_position": "top-left",
+        "other_pages_logo_position": "middle-left",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "hide-logo-on-top-border",

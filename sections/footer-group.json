@@ -14,21 +14,52 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "image_7JR6qb": {
-          "type": "image",
+        "info_pa8dP9": {
+          "type": "info",
           "settings": {
-            "image": "shopify://shop_images/image_2025-01-23_173900467.png",
-            "image_width": 550,
-            "alignment": "center"
+            "heading_1": "Shipping",
+            "heading_2": "Payment",
+            "heading_3": "Shipping Terms & Timelines",
+            "description": "We offer worldwide shipping. Since many of our items are handcrafted and exclusive, please check product availability before placing your order.",
+            "show_social": false,
+            "email_for_contact": false,
+            "email_address": "privacy@natakuku.com"
+          }
+        },
+        "info_TqDWfn": {
+          "type": "info",
+          "settings": {
+            "heading_1": "get in touch",
+            "heading_2": "",
+            "heading_3": "",
+            "description": "If you have any questions, suggestions, or would like to discuss collaboration opportunities, we’d love to hear from you! Drop usan email, and we’ll get back to you as soon as possible.",
+            "show_social": false,
+            "email_for_contact": true,
+            "email_address": "privacy@natakuku.com"
+          }
+        },
+        "info_DbpMyg": {
+          "type": "info",
+          "settings": {
+            "heading_1": "Follow us on social media",
+            "heading_2": "",
+            "heading_3": "",
+            "description": "Stay updated with our latest releases by following uson social media.",
+            "show_social": true,
+            "email_for_contact": false,
+            "email_address": "privacy@natakuku.com"
           }
         }
       },
       "block_order": [
-        "image_7JR6qb"
+        "info_pa8dP9",
+        "info_TqDWfn",
+        "info_DbpMyg"
       ],
       "settings": {
+        "custom_footer": "custom",
         "color_scheme": "scheme-1",
-        "newsletter_enable": false,
+        "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": false,
         "show_social": false,
