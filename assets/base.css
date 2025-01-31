@@ -2819,7 +2819,7 @@ details[open] > .header__submenu {
   }
 
   .header--top-center .header__inline-menu {
-    justify-self: center;
+    justify-self: flex-start;
   }
 
   .header--top-center .header__inline-menu > .list-menu--inline {
@@ -3785,4 +3785,8 @@ details-disclosure > details {
 .header__menu-item:hover span::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.header {
+  max-width: 100%;
 }

@@ -59,13 +59,12 @@
   .list-menu {
     list-style: none;
     padding: 0;
-    padding-left: 17px;
     margin: 0;
+    display: flex;
   }
 
   .list-menu--inline {
-    display: inline-flex;
-    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   summary.list-menu__item {
@@ -383,9 +382,7 @@
     {%- liquid
       if section.settings.menu != blank
         render 'header-drawer'
-      endif
-
-      
+      endif      
     -%}
 
       {%- if section.settings.other_pages_logo_position != 'middle-center' -%}
