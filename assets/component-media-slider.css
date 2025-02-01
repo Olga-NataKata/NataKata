@@ -1,0 +1,195 @@
+.three-media-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.three-media-item {
+  position: relative;
+}
+
+.three-media-item img {
+  width: 100%;
+  height: auto;
+}
+
+.three-media1 {
+  grid-column: span 6; /* займає весь ряд */
+  grid-row: span 2; /* займає два ряди */
+  aspect-ratio: 2 / 1; /* співвідношення сторін */
+}
+
+.three-media2,
+.three-media3 {
+  grid-column: span 3; /* займає половину колонки */
+  grid-row: span 3; /* займає три ряди */
+  aspect-ratio: 1 / 1; /* квадратне співвідношення */
+}
+
+.three-media1 .three-media-text h3 {
+  font-size: 40px;
+}
+
+.three-media1 .three-media-text p {
+  font-size: 20px;
+}
+
+.three-media2 .three-media-text h3,
+.three-media3 .three-media-text h3 {
+  font-size: 32px;
+}
+
+.three-media2 .three-media-text p,
+.three-media3 .three-media-text p {
+  font-size: 16px;
+}
+
+.three-media-text {
+  position: absolute;
+  color: #fff;
+  z-index: 1;
+  padding: 0 100px 0 100px;
+}
+
+.three-media-text h3 {
+  margin: 0;
+  color: #fff;
+}
+
+.three-media-text p {
+  line-height: 1.5;
+  margin: 0;
+  color: #fff;
+}
+
+.left {
+  left: 10px;
+  top: 50%;
+}
+
+.right {
+  right: 10px;
+  top: 50%;
+}
+
+.center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  margin: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px;
+}
+
+.swiper-button-disabled {
+  opacity: 0 !important;
+}
+
+.swiper-pagination {
+  opacity: 0;
+  transition: opacity 0.3s;
+  gap: 24px;
+  z-index: 1;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 32px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+}
+
+/* Optional: Adjust the position of prev and next arrows */
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+/* Show buttons when hovering over the Swiper container */
+.swiper-container:hover .swiper-button-prev,
+.swiper-container:hover .swiper-button-next,
+.swiper-container:hover .swiper-pagination,
+.swiper-container:hover .swiper-button-disabled {
+  opacity: 1 !important;
+}
+
+/* Adaptive Styles */
+@media (max-width: 1024px) {
+  .three-media-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .three-media1 {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+  .three-media2,
+  .three-media3 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .three-media-text {
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .three-media-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .three-media1,
+  .three-media2,
+  .three-media3 {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 30px;
+    height: 30px;
+  }
+}
