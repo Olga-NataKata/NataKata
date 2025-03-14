@@ -159,9 +159,14 @@
         "disabled": false,
         "settings": {}
       },
+      "6048552914641687618": {
+        "type": "shopify://apps/webrex-converter/blocks/app-embed/065e70d9-d1e0-4d56-a8a3-a58701e43093",
+        "disabled": false,
+        "settings": {}
+      },
       "1804893150726543839": {
         "type": "shopify://apps/nova-multi-currency-converter/blocks/app-embed/a5be3c35-cbd0-46a1-ac3a-1ace57a9c1ce",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     },
