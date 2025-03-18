@@ -203,6 +203,8 @@ cart-items {
 .dc-cart-left{
   width:100%;
   max-width: 552px;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 750px) {
