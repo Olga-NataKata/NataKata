@@ -267,7 +267,7 @@ cart-items {
   text-transform: uppercase;
   color: #000000;
 }
-.dt-total .totals{
+.dt-total .totals *{
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
