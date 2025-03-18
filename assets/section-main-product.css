@@ -1500,4 +1500,7 @@ a.product__text {
     width: 100%;
     max-width: 100%;
   }
+  .product__media-list{
+    gap: 0;
+  }
 }
