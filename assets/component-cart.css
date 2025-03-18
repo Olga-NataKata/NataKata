@@ -70,7 +70,7 @@ cart-items {
 }
 
 .cart__footer > div:only-child {
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 
 .cart__footer > * + * {
