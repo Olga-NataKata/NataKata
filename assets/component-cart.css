@@ -267,6 +267,15 @@ cart-items {
   text-transform: uppercase;
   color: #000000;
 }
+.dt-total .totals{
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #000000;
+}
 @media screen and (min-width: 750px) {
   .cart-note {
     max-width: 35rem;
