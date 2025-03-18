@@ -218,6 +218,10 @@ cart-items {
   text-transform: uppercase;
   color: #FFFFFF;
 }
+.dc_checkout-btn:before,
+.dc_checkout-btn:after{
+  display:none;
+}
 
 @media screen and (min-width: 750px) {
   .cart-note {
