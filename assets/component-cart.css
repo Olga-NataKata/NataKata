@@ -200,6 +200,11 @@ cart-items {
 	flex-direction: column;
 }
 
+.dc-cart-left{
+  width:100%;
+  max-width: 552px;
+}
+
 @media screen and (min-width: 750px) {
   .cart-note {
     max-width: 35rem;
