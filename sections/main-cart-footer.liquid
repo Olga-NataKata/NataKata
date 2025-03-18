@@ -50,13 +50,17 @@
         >
           {{ 'sections.cart.checkout' | t }}
         </button>
+
+        {% comment %}
+        {%- if additional_checkout_buttons -%}
+          <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
+            {{ content_for_additional_checkout_buttons }}
+          </div>
+        {%- endif -%}
+        {% endcomment %}
       </div>  
 
-      {%- if additional_checkout_buttons -%}
-        <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
-          {{ content_for_additional_checkout_buttons }}
-        </div>
-      {%- endif -%}
+      
 
       <div class="cart__blocks">
         {% for block in section.blocks %}
