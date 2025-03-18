@@ -87,8 +87,8 @@ cart-items {
 
 .cart__note label {
   display: flex;
-  align-items: flex-end;
-  position: absolute;
+  /* align-items: flex-end; */
+  /* position: absolute; */
   line-height: 1;
   height: 1.8rem;
   color: rgba(var(--color-foreground), 0.75);
