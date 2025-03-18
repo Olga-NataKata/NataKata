@@ -239,6 +239,15 @@ cart-items {
   padding: 15px 16px;
   border: 1px solid #000000;
 }
+.dc-shopmore{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 120px;
+  border: 1px solid #000000;
+
+}
 
 @media screen and (min-width: 750px) {
   .cart-note {
