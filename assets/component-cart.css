@@ -276,6 +276,9 @@ cart-items {
   text-transform: uppercase;
   color: #000000;
 }
+.totals__total-value{
+  
+}
 @media screen and (min-width: 750px) {
   .cart-note {
     max-width: 35rem;
