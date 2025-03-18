@@ -123,7 +123,7 @@
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
-    "currency_code_enabled": true,
+    "currency_code_enabled": false,
     "cart_type": "drawer",
     "show_vendor": false,
     "show_cart_note": true,
@@ -159,19 +159,9 @@
         "disabled": false,
         "settings": {}
       },
-      "1804893150726543839": {
-        "type": "shopify://apps/nova-multi-currency-converter/blocks/app-embed/a5be3c35-cbd0-46a1-ac3a-1ace57a9c1ce",
-        "disabled": true,
-        "settings": {}
-      },
       "776302416715791028": {
         "type": "shopify://apps/bucks/blocks/app-embed/4f0a9b06-9da4-4a49-b378-2de9d23a3af3",
         "disabled": false,
-        "settings": {}
-      },
-      "6048552914641687618": {
-        "type": "shopify://apps/webrex-converter/blocks/app-embed/065e70d9-d1e0-4d56-a8a3-a58701e43093",
-        "disabled": true,
         "settings": {}
       }
     },
