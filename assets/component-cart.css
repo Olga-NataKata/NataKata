@@ -218,6 +218,8 @@ cart-items {
   text-transform: uppercase;
   color: #FFFFFF;
   margin-top:56px;
+  width:100%;
+  max-width:100%;
 }
 .dc_checkout-btn:before,
 .dc_checkout-btn:after{
