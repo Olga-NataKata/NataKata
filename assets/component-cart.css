@@ -217,6 +217,7 @@ cart-items {
   line-height: 21px;
   text-transform: uppercase;
   color: #FFFFFF;
+  margin-top:56px;
 }
 .dc_checkout-btn:before,
 .dc_checkout-btn:after{
