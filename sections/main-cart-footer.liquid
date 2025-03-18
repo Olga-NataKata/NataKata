@@ -23,6 +23,20 @@
   data-id="{{ section.id }}"
 >
   <div class="page-width">
+    
+    <div class="dc-footer-top">
+      <div class="js-contents">
+        <div class="page-width">
+          <div class="dt-total">
+            <div class="totals">
+              <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
+              <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div class="cart__footer isolate section-{{ section.id }}-padding">
       
       <div class="dc-cart-left">
@@ -64,20 +78,6 @@
         {%- endif -%}
         {% endcomment %}
       </div>  
-
-
-      <div class="js-contents">
-        <div class="page-width">
-          <div class="dt-total">
-            <div class="totals">
-              <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
-              <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      
 
       {% comment %}
       <div class="cart__blocks">
