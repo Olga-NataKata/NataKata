@@ -258,7 +258,15 @@ cart-items {
   margin-top: 24px;
   text-decoration: none;
 }
-
+.dc-cart-title{
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #000000;
+}
 @media screen and (min-width: 750px) {
   .cart-note {
     max-width: 35rem;
