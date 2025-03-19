@@ -1524,3 +1524,6 @@ a.product__text {
   line-height: 21px;
   color: #000000;
 }
+.product__info-container>*+*{
+  margin-top: 13px;
+}
