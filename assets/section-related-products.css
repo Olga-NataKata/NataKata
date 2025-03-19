@@ -4,4 +4,11 @@
 
 .related-products__heading {
   margin: 0 0 3rem;
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #000000;
 }
