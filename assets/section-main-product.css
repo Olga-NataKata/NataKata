@@ -1582,6 +1582,7 @@ a.product__text {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  max-width: 100%;
 }
 .product-form__quantity .form__label{
   margin-bottom: 0;
