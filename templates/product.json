@@ -54,6 +54,15 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
           }
+        },
+        "collapsible_tab_QHfcKQ": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Product details",
+            "icon": "none",
+            "content": "<p>Color: Yellow<br/>Fabric: 100% neoprene mesh. Zipper - Riri<br/>Model’s measurements in the photo:  • Height: 174 cm, Bust: 98 cm, Waist: 88 cm, Hips: 100 cm</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -63,7 +72,8 @@
         "variant_picker",
         "inventory_iN8wGG",
         "quantity_selector",
-        "buy_buttons"
+        "buy_buttons",
+        "collapsible_tab_QHfcKQ"
       ],
       "settings": {
         "enable_sticky_info": true,
