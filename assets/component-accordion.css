@@ -63,3 +63,11 @@
 .accordion__content img {
   max-width: 100%;
 }
+.product__accordion .accordion__content{
+  padding: 27px 0;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+}
