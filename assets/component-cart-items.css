@@ -375,6 +375,6 @@ cart-remove-button .icon-remove {
 
 @media(min-width: 999px){
   .cart-item__details{
-    padding-left: 79px;
+    padding-left: 79px!important;
   }
 }
