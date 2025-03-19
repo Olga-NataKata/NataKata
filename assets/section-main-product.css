@@ -1548,4 +1548,5 @@ a.product__text {
 }
 .product-form__input .select__select{
   border-bottom: 1px solid #000000;
+  text-align: right;
 }
