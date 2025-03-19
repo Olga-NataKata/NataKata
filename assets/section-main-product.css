@@ -1563,10 +1563,10 @@ a.product__text {
   color: #000000;
 }
 
-.product-form__input--dropdown{
+.product-form__input--dropdown.product-form__input{
   position: relative;
 }
-.product-form__input--dropdown .product-form__input .form__label{
+.product-form__input--dropdown.product-form__input .form__label{
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
