@@ -1595,3 +1595,6 @@ a.product__text {
 .product-form__quantity .form__label .quantity__rules-cart{
   font-size: 14px;
 }
+.product-form__quantity .quantity{
+  width: 100%;
+}
