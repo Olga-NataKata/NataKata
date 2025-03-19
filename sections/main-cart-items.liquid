@@ -395,6 +395,7 @@
                           </span>
                         </a>
                       </cart-remove-button>
+                      {% comment %}
                       {%- render 'loading-spinner' -%}
                       <div class="cart-item__price-wrapper">
                         {%- if item.original_line_price != item.final_line_price -%}
@@ -435,6 +436,7 @@
                           </div>
                         {%- endif -%}
                       </div>
+                      {% endcomment %}
                     </td>
                   </tr>
                 {%- endfor -%}
