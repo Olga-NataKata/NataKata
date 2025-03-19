@@ -1597,7 +1597,7 @@ a.product__text {
 }
 .product-form__quantity .quantity:before,
 .product-form__quantity .quantity:after{
-  border: none;
+  display: none;
 }
 .product-form__quantity .quantity{
   width: 100%;
