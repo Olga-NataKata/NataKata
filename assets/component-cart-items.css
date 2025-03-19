@@ -121,6 +121,16 @@ cart-items .title-wrapper-with-link {
   line-height: calc(1 + 0.5 / var(--font-body-scale));
 }
 
+div.product-option{
+  margin-top: 8px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #000000;
+}
+
 .cart-item cart-remove-button {
   display: flex;
   margin-left: 1rem;
