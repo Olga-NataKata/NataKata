@@ -343,8 +343,10 @@ cart-remove-button .icon-remove {
     padding-left: 6rem;
   }
 
+  
   .cart-item__details {
     width: 50rem;
+    padding-left: 79px;
   }
 
   .cart-items thead th:first-child {
