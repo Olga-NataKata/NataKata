@@ -1527,3 +1527,8 @@ a.product__text {
 .product__info-container>*+*{
   margin-top: 10px;
 }
+.product-form__submit{
+  padding: 15px 120px;
+  background: #000000;
+  
+}
