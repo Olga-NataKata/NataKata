@@ -386,3 +386,6 @@ cart-remove-button .icon-remove {
   line-height: 21px;
   color: #000000;
 }
+dl div.product-option{
+  margin-top: 24px;
+}
