@@ -63,6 +63,8 @@ cart-items .title-wrapper-with-link {
 
 .cart-item__media {
   position: relative;
+  width: 130px;
+  height: 141px;
 }
 
 .cart-item__link {
