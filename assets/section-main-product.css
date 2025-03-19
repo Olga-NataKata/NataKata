@@ -1504,3 +1504,12 @@ a.product__text {
     gap: 0;
   }
 }
+
+.product__title>h1{
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+}
