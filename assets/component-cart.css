@@ -57,8 +57,8 @@ cart-items {
 
 .cart__items {
   position: relative;
-  padding-bottom: 16px;
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  padding-bottom: 0;
+  /* border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08); */
 }
 
 .cart__items--disabled {
