@@ -1585,4 +1585,10 @@ a.product__text {
 }
 .product-form__quantity .form__label{
   margin-bottom: 0;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
 }
