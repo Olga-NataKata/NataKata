@@ -396,6 +396,9 @@ dl div.product-option{
 dl div.product-option:first-child{
   margin-top: 0;
 }
+.quantity.cart-quantity{
+  max-width: 224px;
+}
 .quantity.cart-quantity:before,
 .quantity.cart-quantity:after{
   display: none;
