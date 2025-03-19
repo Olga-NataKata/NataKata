@@ -1542,3 +1542,7 @@ a.product__text {
 .product-form__submit:after{
   display: none;
 }
+.product-form__input .select:before,
+.product-form__input .select:after{
+  display: none;
+}
