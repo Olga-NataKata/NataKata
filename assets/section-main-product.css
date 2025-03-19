@@ -1573,4 +1573,8 @@ a.product__text {
   font-size: 20px;
   line-height: 26px;
   color: #000000;
+  position:absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translate(0, -50%);
 }
