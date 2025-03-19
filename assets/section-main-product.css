@@ -1555,5 +1555,10 @@ a.product__text {
 }
 .product-form__input .select__select{
   padding-right: 41px;
-  
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
 }
