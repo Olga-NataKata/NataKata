@@ -61,6 +61,7 @@
               <caption class="visually-hidden">
                 {{ 'sections.cart.title' | t }}
               </caption>
+              {% comment %}
               <thead>
                 <tr>
                   <th class="caption-with-letter-spacing" colspan="2" scope="col">
@@ -81,6 +82,7 @@
                   </th>
                 </tr>
               </thead>
+              {% endcomment %}
 
               <tbody>
                 {%- for item in cart.items -%}
