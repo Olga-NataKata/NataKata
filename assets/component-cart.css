@@ -228,7 +228,7 @@ cart-items {
 .dc_checkout-btn:after{
   display:none;
 }
-div.dc-label{
+label.dc-label{
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
