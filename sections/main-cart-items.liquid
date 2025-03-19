@@ -391,7 +391,9 @@
                           aria-label="{{ 'sections.cart.remove_title' | t: title: item.title | escape }}"
                         >
                           <span class="svg-wrapper">
-                            {{- 'icon-remove.svg' | inline_asset_content -}}
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 4.5H4.5L6 22.5H18L19.5 4.5H3M12 9V18M15.75 9L15 18M8.25 9L9 18M9 4.5L9.75 1.5H14.25L15 4.5" stroke="black" stroke-linecap="square"/>
+                            </svg>
                           </span>
                         </a>
                       </cart-remove-button>
