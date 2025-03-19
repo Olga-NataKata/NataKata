@@ -1514,7 +1514,7 @@ a.product__text {
   color: #000000;
 }
 .product__title{
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 }
 .price--large{
   font-family: 'DM Sans';
@@ -1525,5 +1525,5 @@ a.product__text {
   color: #000000;
 }
 .product__info-container>*+*{
-  margin-top: 13px;
+  margin-top: 10px;
 }
