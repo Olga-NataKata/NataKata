@@ -1530,5 +1530,11 @@ a.product__text {
 .product-form__submit{
   padding: 15px 120px;
   background: #000000;
-  
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
