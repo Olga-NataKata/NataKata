@@ -63,6 +63,24 @@
             "content": "<p>Color: Yellow<br/>Fabric: 100% neoprene mesh. Zipper - Riri<br/>Model’s measurements in the photo:  • Height: 174 cm, Bust: 98 cm, Waist: 88 cm, Hips: 100 cm</p>",
             "page": ""
           }
+        },
+        "collapsible_tab_MYfUyX": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Size guide",
+            "icon": "none",
+            "content": "<p>Color: Yellow<br/>Fabric: 100% neoprene mesh. Zipper - Riri<br/>Model’s measurements in the photo:  • Height: 174 cm, Bust: 98 cm, Waist: 88 cm, Hips: 100 cm</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_kV8qtV": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Care",
+            "icon": "none",
+            "content": "<p>Color: Yellow<br/>Fabric: 100% neoprene mesh. Zipper - Riri<br/>Model’s measurements in the photo:  • Height: 174 cm, Bust: 98 cm, Waist: 88 cm, Hips: 100 cm</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -73,7 +91,9 @@
         "inventory_iN8wGG",
         "quantity_selector",
         "buy_buttons",
-        "collapsible_tab_QHfcKQ"
+        "collapsible_tab_QHfcKQ",
+        "collapsible_tab_MYfUyX",
+        "collapsible_tab_kV8qtV"
       ],
       "settings": {
         "enable_sticky_info": true,
