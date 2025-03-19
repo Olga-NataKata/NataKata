@@ -1578,3 +1578,8 @@ a.product__text {
   z-index: 1;
   transform: translate(0, -50%);
 }
+.product-form__quantity{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
