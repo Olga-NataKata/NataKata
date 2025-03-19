@@ -60,7 +60,7 @@
           "settings": {
             "heading": "Product details",
             "icon": "none",
-            "content": "<p>Color: Yellow<br/>Fabric: 100% neoprene mesh. Zipper - Riri<br/>Model’s measurements in the photo:  • Height: 174 cm, Bust: 98 cm, Waist: 88 cm, Hips: 100 cm</p>",
+            "content": "<p><strong>Color:</strong> Yellow</p><p><strong>Fabric: </strong>100% neoprene mesh. Zipper - Riri<br/>Model’s measurements in the photo:  • Height: 174 cm, Bust: 98 cm, Waist: 88 cm, Hips: 100 cm</p>",
             "page": ""
           }
         },
