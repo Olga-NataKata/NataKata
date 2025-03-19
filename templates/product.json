@@ -69,7 +69,7 @@
           "settings": {
             "heading": "Size guide",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.tabs_size_guide.value }}</p>",
+            "content": "{{ product.metafields.custom.tabs_size_guide | metafield_tag }}",
             "page": ""
           }
         },
@@ -78,7 +78,7 @@
           "settings": {
             "heading": "Care",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.tabs_care.value }}</p>",
+            "content": "{{ product.metafields.custom.tabs_care_richtext_ | metafield_tag }}",
             "page": ""
           }
         }
