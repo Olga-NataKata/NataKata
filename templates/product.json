@@ -60,7 +60,7 @@
           "settings": {
             "heading": "Product details",
             "icon": "none",
-            "content": "{{ block.settings.page.content }}",
+            "content": "{{ product.description }}",
             "page": ""
           }
         },
