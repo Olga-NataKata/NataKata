@@ -1538,3 +1538,7 @@ a.product__text {
   text-transform: uppercase;
   color: #FFFFFF;
 }
+.product-form__submit:before,
+.product-form__submit:after{
+  display: none;
+}
