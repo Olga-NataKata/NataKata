@@ -1513,3 +1513,11 @@ a.product__text {
   line-height: 48px;
   color: #000000;
 }
+.price--large{
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #000000;
+}
