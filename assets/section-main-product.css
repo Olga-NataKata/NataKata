@@ -1605,3 +1605,6 @@ a.product__text {
 .product-form__input--dropdown.product-form__input{
   max-width: 100%;
 }
+.product-form__buttons{
+  max-width: 100%;
+}
