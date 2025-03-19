@@ -1608,7 +1608,7 @@ a.product__text {
 .product-form__buttons{
   max-width: 100%;
 }
-.quantity__input[type=number{
+.quantity__input[type=number]{
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
