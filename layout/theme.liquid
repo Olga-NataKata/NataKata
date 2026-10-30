@@ -308,7 +308,7 @@
     </a>
 
     {% liquid
-      if settings.theme_preloader_pages == 'show_on_all_pages' or (settings.theme_preloader_pages == 'show_on_home_page' and template.name == 'index')
+      if settings.theme_preloader_pages == 'show_on_all_pages' or settings.theme_preloader_pages == 'show_on_home_page' and template.name == 'index'
         render 'preloader'
       endif
     %}
@@ -385,3 +385,15 @@
     {%- endif -%}
   </body>
 </html>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: if settings.theme_preloader_pages == 'show_on_all_pages' or (settings.theme_preloader_pages
+    == 'show_on_home_page' and template.name == 'index')
+  to: if settings.theme_preloader_pages == 'show_on_all_pages' or settings.theme_preloader_pages
+    == 'show_on_home_page' and template.name == 'index'
+  position: 18865..19007
+{% endcomment %}
